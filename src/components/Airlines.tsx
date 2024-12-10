@@ -13,8 +13,8 @@ export const Airlines = () => {
       logo: "https://www.sunexpress.com/static/assets/images/sunexpress-logo.svg"
     },
     { 
-      name: "AnadoluJet", 
-      logo: "https://www.anadolujet.com/assets/images/aj_logo.svg"
+      name: "AJet", 
+      logo: "https://www.ajet.com.tr/assets/images/ajet-logo.svg"
     },
   ];
 

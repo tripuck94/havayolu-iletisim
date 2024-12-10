@@ -1,8 +1,14 @@
-import { Plane, RefreshCw, XCircle, PawPrint } from "lucide-react";
+import { Plane, RefreshCw, XCircle, PawPrint, Phone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 const services = [
+  {
+    title: "İletişim",
+    description: "7/24 müşteri hizmetleri desteği",
+    icon: Phone,
+    link: "/contact-services",
+  },
   {
     title: "Bilet Satış",
     description: "Tüm havayolları için en uygun fiyatlı biletler",

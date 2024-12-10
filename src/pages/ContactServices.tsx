@@ -1,47 +1,47 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PawPrint, Plane } from "lucide-react";
+import { Phone, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const airlines = [
   {
     name: "Türk Hava Yolları",
-    description: "Evcil hayvan taşıma prosedürleri ve kuralları için bizimle iletişime geçin.",
+    description: "İletişim ve müşteri hizmetleri için bizimle iletişime geçin.",
     requirements: [
-      "Kabin içi taşıma için maksimum 8 kg",
-      "Kargo bölümünde taşıma için veteriner raporu",
-      "Önceden rezervasyon yapılması zorunludur",
+      "7/24 müşteri hizmetleri desteği",
+      "Online destek kanalları",
+      "Sosyal medya üzerinden iletişim",
     ],
   },
   {
     name: "Pegasus",
-    description: "Evcil hayvanınızla seyahat için gerekli bilgiler ve destek.",
+    description: "Müşteri hizmetleri ve destek için iletişime geçin.",
     requirements: [
-      "Kabin içi taşıma için maksimum 7 kg",
-      "Taşıma kafesi zorunludur",
-      "24 saat önceden bildirim gereklidir",
+      "Çağrı merkezi desteği",
+      "WhatsApp üzerinden iletişim",
+      "E-posta desteği",
     ],
   },
   {
     name: "SunExpress",
-    description: "Evcil hayvan taşıma hizmetleri ve kuralları hakkında bilgi alın.",
+    description: "Her türlü soru ve talebiniz için iletişime geçebilirsiniz.",
     requirements: [
-      "Kabin içi ve kargo taşıma seçenekleri",
-      "Uluslararası uçuşlarda ek belgeler gereklidir",
-      "Özel taşıma kafesi şartları",
+      "Telefon ile destek",
+      "Online chat desteği",
+      "E-posta ile iletişim",
     ],
   },
   {
     name: "AJet",
-    description: "Evcil hayvanınızla güvenli seyahat için bizimle iletişime geçin.",
+    description: "Müşteri hizmetleri ve destek için bize ulaşın.",
     requirements: [
-      "Sadece kargo bölümünde taşıma",
-      "Sağlık belgesi zorunludur",
-      "Rezervasyon sırasında bildirim gereklidir",
+      "Çağrı merkezi hizmeti",
+      "Online destek",
+      "Sosyal medya desteği",
     ],
   },
 ];
 
-const PetServices = () => {
+const ContactServices = () => {
   const handleCall = () => {
     window.location.href = "tel:+905555555555";
   };
@@ -50,11 +50,11 @@ const PetServices = () => {
     <div className="container py-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
-          <PawPrint className="h-10 w-10 text-primary" />
-          Evcil Hayvan Taşıma Hizmetleri
+          <Phone className="h-10 w-10 text-primary" />
+          İletişim Hizmetleri
         </h1>
         <p className="text-lg text-gray-600">
-          Türkiye'deki tüm havayolları için evcil hayvan taşıma işlemlerinizi güvenle gerçekleştiriyoruz.
+          Tüm havayolları için iletişim ve destek hizmetlerimiz.
         </p>
       </div>
 
@@ -75,8 +75,8 @@ const PetServices = () => {
                 ))}
               </ul>
               <Button onClick={handleCall} className="w-full gap-2">
-                <PawPrint className="h-4 w-4" />
-                Rezervasyon Yap
+                <Phone className="h-4 w-4" />
+                İletişime Geç
               </Button>
             </CardContent>
           </Card>
@@ -86,4 +86,4 @@ const PetServices = () => {
   );
 };
 
-export default PetServices;
+export default ContactServices;
