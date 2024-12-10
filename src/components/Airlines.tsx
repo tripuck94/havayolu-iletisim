@@ -1,9 +1,21 @@
 export const Airlines = () => {
   const airlines = [
-    { name: "Türk Hava Yolları", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/THY_Turkish_Airlines_Logo_2.svg/2560px-THY_Turkish_Airlines_Logo_2.svg.png" },
-    { name: "Pegasus", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pegasus_Airlines_logo.svg/2560px-Pegasus_Airlines_logo.svg.png" },
-    { name: "SunExpress", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/SunExpress_logo.svg/2560px-SunExpress_logo.svg.png" },
-    { name: "AnadoluJet", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/AnadoluJet_logo.svg/2560px-AnadoluJet_logo.svg.png" },
+    { 
+      name: "Türk Hava Yolları", 
+      logo: "https://www.turkishairlines.com/theme/img/thy_logo.png"
+    },
+    { 
+      name: "Pegasus", 
+      logo: "https://www.flypgs.com/assets/images/pegasus-logo.svg"
+    },
+    { 
+      name: "SunExpress", 
+      logo: "https://www.sunexpress.com/static/assets/images/sunexpress-logo.svg"
+    },
+    { 
+      name: "AnadoluJet", 
+      logo: "https://www.anadolujet.com/assets/images/aj_logo.svg"
+    },
   ];
 
   return (
@@ -20,6 +32,10 @@ export const Airlines = () => {
                 src={airline.logo}
                 alt={airline.name}
                 className="max-h-12 w-auto object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://placehold.co/200x80?text=" + airline.name;
+                }}
               />
             </div>
           ))}
