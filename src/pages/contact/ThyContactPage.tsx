@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -17,8 +16,8 @@ const ThyContactPage = () => {
         
         <div className="text-center mb-12">
           <img 
-            src="https://www.turkishairlines.com/theme/img/thy_logo.png" 
-            alt="THY Logo" 
+            src="https://res.cloudinary.com/depx7gsdc/image/upload/c_scale,w_240,h_80/f_auto,q_auto/v1703354886/tripuck_wordpress_assets/TK/TK.png"
+            alt="Türk Hava Yolları Logo"
             className="h-20 mx-auto mb-8"
           />
           <h1 className="text-4xl font-bold mb-4 text-primary">
@@ -47,25 +46,21 @@ const ThyContactPage = () => {
         </div>
 
         <div className="max-w-xl mx-auto">
-          <Card className="mb-20">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Phone className="h-6 w-6 text-[#E81932]" />
-                Müşteri Hizmetleri
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-2xl font-bold text-center mb-4">0850 308 98 40</p>
-              <Button onClick={handleCall} className="w-full bg-[#E81932] hover:bg-[#c4152b] text-white">
-                <Phone className="h-4 w-4 mr-2" />
-                Hemen Ara
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-20">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <Phone className="h-8 w-8 text-[#E81932]" />
+              <h2 className="text-2xl font-bold">Müşteri Hizmetleri</h2>
+            </div>
+            <p className="text-3xl font-bold text-center mb-6">0850 308 98 40</p>
+            <Button onClick={handleCall} className="w-full bg-[#E81932] hover:bg-[#c4152b] text-white text-lg">
+              <Phone className="h-5 w-5 mr-2" />
+              Hemen Ara
+            </Button>
+          </div>
         </div>
 
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-          <Button onClick={handleCall} className="w-full bg-[#E81932] hover:bg-[#c4152b] text-white">
+          <Button onClick={handleCall} className="w-full bg-[#E81932] hover:bg-[#c4152b] text-white text-lg">
             <Phone className="h-5 w-5 mr-2" />
             Hemen Ara
           </Button>
