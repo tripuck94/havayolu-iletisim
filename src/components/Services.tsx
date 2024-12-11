@@ -4,10 +4,28 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    title: "İletişim",
-    description: "7/24 müşteri hizmetleri desteği",
+    title: "THY İletişim",
+    description: "Türk Hava Yolları iletişim ve destek",
     icon: Phone,
-    link: "/contact-services",
+    link: "/contact/thy",
+  },
+  {
+    title: "Pegasus İletişim",
+    description: "Pegasus iletişim ve destek",
+    icon: Phone,
+    link: "/contact/pegasus",
+  },
+  {
+    title: "SunExpress İletişim",
+    description: "SunExpress iletişim ve destek",
+    icon: Phone,
+    link: "/contact/sunexpress",
+  },
+  {
+    title: "AJet İletişim",
+    description: "AJet iletişim ve destek",
+    icon: Phone,
+    link: "/contact/ajet",
   },
   {
     title: "Bilet Satış",
