@@ -16,7 +16,7 @@ const SunexpressContactPage = () => {
         
         <div className="text-center mb-12">
           <img 
-            src="https://res.cloudinary.com/depx7gsdc/image/upload/c_scale,w_240,h_80/f_auto,q_auto/v1703354886/tripuck_wordpress_assets/XQ/XQ.png"
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_50,w_50,q_auto/images/airline/small/XQ"
             alt="SunExpress Logo"
             className="h-20 mx-auto mb-8"
           />
