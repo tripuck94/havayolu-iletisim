@@ -2,19 +2,19 @@ export const Airlines = () => {
   const airlines = [
     { 
       name: "Türk Hava Yolları", 
-      logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_25,w_25,q_auto/images/airline/small/TK.webp"
+      logo: "https://www.turkishairlines.com/theme/img/thy_logo.png"
     },
     { 
       name: "Pegasus", 
-      logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_25,w_25,q_auto/images/airline/small/PC.webp"
+      logo: "https://www.flypgs.com/assets/images/pegasus-logo.svg"
     },
     { 
       name: "SunExpress", 
-      logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_25,w_25,q_auto/images/airline/small/XQ.webp"
+      logo: "https://www.sunexpress.com/static/assets/images/sunexpress-logo.svg"
     },
     { 
       name: "AJet", 
-      logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_25,w_25,q_auto/images/airline/small/AJ.webp"
+      logo: "https://www.ajet.com.tr/assets/images/ajet-logo.svg"
     },
   ];
 
