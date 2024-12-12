@@ -16,7 +16,7 @@ const PegasusContactPage = () => {
         
         <div className="text-center mb-12">
           <img 
-            src="https://res.cloudinary.com/depx7gsdc/image/upload/c_scale,w_240,h_80/f_auto,q_auto/v1703354886/tripuck_wordpress_assets/PC/PC.png"
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_25,w_25,q_auto/images/airline/small/PC.webp"
             alt="Pegasus Logo"
             className="h-20 mx-auto mb-8"
           />
