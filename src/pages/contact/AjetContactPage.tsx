@@ -16,7 +16,7 @@ const AjetContactPage = () => {
         
         <div className="text-center mb-12">
           <img 
-            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_50,w_50,q_auto/images/airline/small/AJ.webp"
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/AJ.webp"
             alt="AJet Logo"
             className="h-20 mx-auto mb-8"
           />
