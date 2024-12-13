@@ -92,10 +92,18 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {mainServices.map((service) => (
-            <Link to={service.link} key={service.title}>
-              <Card className="group relative h-[300px] overflow-hidden rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+          {mainServices.map((service, index) => (
+            <Link 
+              to={service.link} 
+              key={service.title}
+              className={`${
+                index === 0 || index === 4 || index === 8 ? 'md:col-span-2 lg:col-span-1 lg:row-span-2' : ''
+              } ${
+                index === 2 ? 'lg:col-span-2' : ''
+              }`}
+            >
+              <Card className="group relative h-full overflow-hidden rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: service.bgImage }}
