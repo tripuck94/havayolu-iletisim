@@ -7,7 +7,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/ce88f604-b3ab-47b4-987f-7671ee4f2587.png" 
+              src="/lovable-uploads/04790e9a-9300-402d-92ec-824ca1c5a0db.png" 
               alt="Call Center Icon" 
               className="h-8 w-8"
             />
