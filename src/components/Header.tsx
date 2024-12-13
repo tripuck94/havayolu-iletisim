@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const Header = () => {
   const handleCall = () => {
-    window.location.href = "tel:08503089840";
+    window.location.href = "tel:08502428117";
   };
 
   return (
@@ -111,7 +111,7 @@ export const Header = () => {
             onClick={handleCall}
           >
             <Phone className="h-4 w-4" />
-            <span className="font-semibold">0850 308 98 40</span>
+            <span className="font-semibold">0850 242 81 17</span>
           </Button>
         </div>
       </nav>

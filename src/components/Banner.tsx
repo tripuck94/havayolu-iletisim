@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export const Banner = () => {
   const handleCall = () => {
-    window.location.href = "tel:+905555555555"; // Telefon numaranızı buraya ekleyin
+    window.location.href = "tel:08502428117";
   };
 
   return (

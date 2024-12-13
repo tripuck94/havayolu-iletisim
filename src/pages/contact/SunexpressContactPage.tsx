@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 
 const SunexpressContactPage = () => {
   const handleCall = () => {
-    window.location.href = "tel:08503089840";
+    window.location.href = "tel:08502428117";
   };
 
   return (
@@ -53,7 +53,7 @@ const SunexpressContactPage = () => {
               <Phone className="h-8 w-8 text-[#FFCD00]" />
               <h2 className="text-2xl font-bold">Müşteri Hizmetleri</h2>
             </div>
-            <p className="text-3xl font-bold text-center mb-6">0850 308 98 40</p>
+            <p className="text-3xl font-bold text-center mb-6">0850 242 81 17</p>
             <Button onClick={handleCall} className="w-full bg-[#FFCD00] hover:bg-[#e6b800] text-black text-lg">
               <Phone className="h-5 w-5 mr-2" />
               Hemen Ara

@@ -20,7 +20,7 @@ export const Contact = () => {
           <div className="flex flex-col items-center text-center">
             <Phone className="h-10 w-10 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Telefon</h3>
-            <p className="mb-4">+90 555 555 5555</p>
+            <p className="mb-4">0850 242 81 17</p>
             <Button
               variant="secondary"
               className="bg-white text-primary hover:bg-white/90"
