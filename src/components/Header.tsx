@@ -8,7 +8,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="bg-accent text-accent-foreground">
+    <header className="bg-accent text-accent-foreground relative z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
@@ -22,7 +22,7 @@ export const Header = () => {
           <div className="hidden md:flex items-center space-x-6">
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                Airlines
+                Havayolları
               </span>
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/contact/thy" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
@@ -41,64 +41,64 @@ export const Header = () => {
             </div>
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                Ticket Services
+                Bilet İşlemleri
               </span>
               <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Change Policy
+                  Değişiklik Politikası
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Name Change
+                  İsim Değişikliği
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Cancellation
+                  İptal ve İade
                 </Link>
               </div>
             </div>
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                Special Services
+                Özel Hizmetler
               </span>
               <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/pet-services" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Pet Policy
+                  Evcil Hayvan Politikası
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Minor
+                  Refakatsiz Çocuk
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Upgrade Class
+                  Sınıf Yükseltme
                 </Link>
               </div>
             </div>
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                More Policy
+                Yolcu Hizmetleri
               </span>
               <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Baggage Policy
+                  Bagaj Politikası
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Check-In
+                  Check-In İşlemleri
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Flight Delay
+                  Uçuş Gecikmesi
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Lost and Found
+                  Kayıp Eşya
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Manage Booking
+                  Rezervasyon Yönetimi
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Reservations
+                  Rezervasyonlar
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Special Assistance
+                  Özel Yardım
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  FAQs
+                  Sık Sorulan Sorular
                 </Link>
               </div>
             </div>
