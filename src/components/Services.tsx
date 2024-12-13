@@ -1,4 +1,4 @@
-import { Plane, RefreshCw, XCircle, PawPrint, Phone, Users, ShoppingCart, Luggage, ArrowRightLeft } from "lucide-react";
+import { Plane, RefreshCw, XCircle, PawPrint, Phone, Users, ShoppingCart, Luggage, ArrowRightLeft, ArrowUp, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -36,7 +36,7 @@ const mainServices = [
     description: "Ek bagaj hakkı satın alma ve bagaj işlemlerinizi yönetin.",
     icon: Luggage,
     link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1521727857535-28d2047cf87c?ixlib=rb-4.0.3')"
+    bgImage: "url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3')"
   },
   {
     title: "Evcil Hayvan",
@@ -51,6 +51,20 @@ const mainServices = [
     icon: Users,
     link: "/",
     bgImage: "url('https://images.unsplash.com/photo-1566454544259-f4b94c3d758c?ixlib=rb-4.0.3')"
+  },
+  {
+    title: "İlave Sınıf Yükseltme",
+    description: "Seyahat konforunuzu artırmak için sınıf yükseltme seçenekleri.",
+    icon: ArrowUp,
+    link: "/",
+    bgImage: "url('https://images.unsplash.com/photo-1587019158091-1a103c5dd17f?ixlib=rb-4.0.3')"
+  },
+  {
+    title: "Check-in",
+    description: "Online check-in yaparak havalimanında zaman kazanın.",
+    icon: CheckCircle,
+    link: "/",
+    bgImage: "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3')"
   }
 ];
 
