@@ -36,7 +36,7 @@ const mainServices = [
     description: "Ek bagaj hakkı satın alma ve bagaj işlemlerinizi yönetin.",
     icon: Luggage,
     link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3')"
+    bgImage: "url('https://images.unsplash.com/photo-1583296599188-0da1c7f05f72?ixlib=rb-4.0.3')"
   },
   {
     title: "Evcil Hayvan",
