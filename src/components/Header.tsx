@@ -20,12 +20,9 @@ export const Header = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="hover:text-white/90">
-              Ana Sayfa
-            </Link>
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                Havayolları
+                Airlines
               </span>
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/contact/thy" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
@@ -44,61 +41,64 @@ export const Header = () => {
             </div>
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                Bilet İşlemleri
+                Ticket Services
               </span>
               <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Değişiklik Politikası
+                  Change Policy
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  İsim Değişikliği
+                  Name Change
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  İptal ve İade
+                  Cancellation
                 </Link>
               </div>
             </div>
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                Özel Hizmetler
+                Special Services
               </span>
               <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/pet-services" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Evcil Hayvan Politikası
+                  Pet Policy
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Refakatsiz Çocuk
+                  Minor
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Sınıf Yükseltme
+                  Upgrade Class
                 </Link>
               </div>
             </div>
             <div className="relative group">
               <span className="hover:text-white/90 cursor-pointer">
-                Yolcu Hizmetleri
+                More Policy
               </span>
               <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Bagaj Politikası
+                  Baggage Policy
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Check-In İşlemleri
+                  Check-In
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Uçuş Gecikmesi
+                  Flight Delay
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Kayıp Eşya
+                  Lost and Found
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Rezervasyon Yönetimi
+                  Manage Booking
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Özel Yardım
+                  Reservations
                 </Link>
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Sık Sorulan Sorular
+                  Special Assistance
+                </Link>
+                <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                  FAQs
                 </Link>
               </div>
             </div>
