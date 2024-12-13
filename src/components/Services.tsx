@@ -70,22 +70,22 @@ const mainServices = [
 
 export const Services = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-gray-400">NELER</span>
-            <br />
-            SAĞLIYORUZ?
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+      <div className="container px-4 mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            Hizmetlerimiz
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Seyahat kararlarınızı detaylı bilgilerle almanıza yardımcı oluyoruz.
           </p>
         </div>
 
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold mb-8">UÇUŞUNUZUN KONTROLÜNÜ ALIN!</h3>
-          <p className="text-gray-600 mb-8 max-w-4xl">
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary/80 to-accent/80">
+            UÇUŞUNUZUN KONTROLÜNÜ ALIN!
+          </h3>
+          <p className="text-gray-600 text-center mb-8 max-w-4xl mx-auto">
             Farklı havayolları tarafından belirlenen politika ve prosedürler hakkında kapsamlı bilgilere ulaşabileceğiniz bir platform sunuyoruz. 
             Seyahat düzenlemelerinin zorlu bir görev olduğunu göz önünde bulundurarak, bagaj ücretleri, koltuk seçimi, evcil hayvanlarla seyahat, 
             iptal politikaları ve daha fazlası hakkında sizi bilgilendirerek yolculuğunuzu sorunsuz planlamanıza yardımcı oluyoruz.
@@ -95,17 +95,19 @@ export const Services = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {mainServices.map((service) => (
             <Link to={service.link} key={service.title}>
-              <Card className="group relative h-[300px] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Card className="group relative h-[300px] overflow-hidden rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: service.bgImage }}
                 >
-                  <div className="absolute inset-0 bg-black/50" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
                 </div>
-                <div className="relative h-full p-6 flex flex-col justify-end text-white">
-                  <service.icon className="h-12 w-12 mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-white/90">{service.description}</p>
+                <div className="relative h-full p-8 flex flex-col justify-end text-white">
+                  <div className="mb-4 transform transition-transform duration-500 group-hover:-translate-y-2">
+                    <service.icon className="h-12 w-12 mb-4 text-primary-foreground" />
+                    <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-white/90 text-sm">{service.description}</p>
+                  </div>
                 </div>
               </Card>
             </Link>
