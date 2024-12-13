@@ -18,6 +18,13 @@ const mainServices = [
     bgImage: "url('https://images.unsplash.com/photo-1587019158091-1a103c5dd17f?ixlib=rb-4.0.3')"
   },
   {
+    title: "Bilet İptali",
+    description: "İptal ve iade işlemleriniz için hızlı ve güvenilir destek.",
+    icon: XCircle,
+    link: "/",
+    bgImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3')"
+  },
+  {
     title: "Koltuk Seçimi",
     description: "Uçuşunuz için istediğiniz koltuğu önceden seçin.",
     icon: ArrowRightLeft,
@@ -30,13 +37,6 @@ const mainServices = [
     icon: Luggage,
     link: "/",
     bgImage: "url('https://images.unsplash.com/photo-1521727857535-28d2047cf87c?ixlib=rb-4.0.3')"
-  },
-  {
-    title: "Bilet İptali",
-    description: "İptal ve iade işlemleriniz için hızlı ve güvenilir destek.",
-    icon: XCircle,
-    link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3')"
   },
   {
     title: "Evcil Hayvan",
