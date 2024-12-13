@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Phone, Plane, Headphones, Luggage, Users, CreditCard, HelpCircle } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -7,12 +6,11 @@ export const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
-              <div className="relative">
-                <Phone className="h-6 w-6" />
-                <Plane className="h-6 w-6 absolute -right-3 -bottom-2" />
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/ce88f604-b3ab-47b4-987f-7671ee4f2587.png" 
+              alt="Call Center Icon" 
+              className="h-8 w-8"
+            />
           </Link>
           
           <div className="hidden md:flex items-center space-x-6">
