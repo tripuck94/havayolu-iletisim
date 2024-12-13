@@ -1,17 +1,35 @@
 import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Header = () => {
+  const handleCall = () => {
+    window.location.href = "tel:08503089840";
+  };
+
   return (
     <header className="bg-accent text-accent-foreground">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <img 
-              src="/lovable-uploads/04790e9a-9300-402d-92ec-824ca1c5a0db.png" 
-              alt="Call Center Icon" 
-              className="h-8 w-8"
-            />
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link to="/" className="flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/520d8ba8-17f4-4293-a58e-2783bd05931c.png" 
+                alt="Call Center Icon" 
+                className="h-8 w-8"
+              />
+            </Link>
+            
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hidden md:flex items-center gap-2 hover:bg-primary/10"
+              onClick={handleCall}
+            >
+              <Phone className="h-4 w-4" />
+              <span className="font-medium">0850 308 98 40</span>
+            </Button>
+          </div>
           
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="hover:text-white/90">
