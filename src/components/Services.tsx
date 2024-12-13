@@ -1,8 +1,15 @@
-import { Plane, RefreshCw, XCircle, PawPrint, Phone, Users, CreditCard, Luggage } from "lucide-react";
+import { Plane, RefreshCw, XCircle, PawPrint, Phone, Users, ShoppingCart, Luggage, ArrowRightLeft } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 const mainServices = [
+  {
+    title: "Bilet Satın Alma",
+    description: "Online bilet satın alma işlemlerinizi hızlı ve güvenli bir şekilde gerçekleştirin.",
+    icon: ShoppingCart,
+    link: "/",
+    bgImage: "url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-4.0.3')"
+  },
   {
     title: "Bilet Değişikliği",
     description: "Mevcut biletinizde tarih ve güzergah değişikliği yapabilirsiniz.",
@@ -11,16 +18,16 @@ const mainServices = [
     bgImage: "url('https://images.unsplash.com/photo-1587019158091-1a103c5dd17f?ixlib=rb-4.0.3')"
   },
   {
-    title: "Sınıf Yükseltme",
-    description: "Uçuş sınıfınızı yükselterek daha konforlu seyahat edin.",
-    icon: CreditCard,
+    title: "Koltuk Seçimi",
+    description: "Uçuşunuz için istediğiniz koltuğu önceden seçin.",
+    icon: ArrowRightLeft,
     link: "/",
     bgImage: "url('https://images.unsplash.com/photo-1540339832862-46d6239d0157?ixlib=rb-4.0.3')"
   },
   {
-    title: "İsim Değişikliği",
-    description: "Biletinizdeki yolcu bilgilerini güncelleyebilirsiniz.",
-    icon: Users,
+    title: "Bagaj Ekleme",
+    description: "Ek bagaj hakkı satın alma ve bagaj işlemlerinizi yönetin.",
+    icon: Luggage,
     link: "/",
     bgImage: "url('https://images.unsplash.com/photo-1521727857535-28d2047cf87c?ixlib=rb-4.0.3')"
   },
@@ -29,7 +36,7 @@ const mainServices = [
     description: "İptal ve iade işlemleriniz için hızlı ve güvenilir destek.",
     icon: XCircle,
     link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3')"
+    bgImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3')"
   },
   {
     title: "Evcil Hayvan",
