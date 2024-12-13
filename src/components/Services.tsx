@@ -2,41 +2,6 @@ import { Plane, RefreshCw, XCircle, PawPrint, Phone, Users, CreditCard, Luggage 
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
-const services = [
-  {
-    title: "THY İletişim",
-    description: "Türk Hava Yolları müşteri hizmetleri ve destek. 7/24 hizmetinizdeyiz.",
-    icon: Phone,
-    link: "/contact/thy",
-    color: "text-[#E81932]",
-    bgImage: "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3')"
-  },
-  {
-    title: "Pegasus İletişim",
-    description: "Pegasus Hava Yolları iletişim merkezi ve yolcu destek hizmetleri.",
-    icon: Phone,
-    link: "/contact/pegasus",
-    color: "text-[#FF9200]",
-    bgImage: "url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-4.0.3')"
-  },
-  {
-    title: "SunExpress İletişim",
-    description: "SunExpress müşteri hizmetleri ve rezervasyon destek hattı.",
-    icon: Phone,
-    link: "/contact/sunexpress",
-    color: "text-[#FFCD00]",
-    bgImage: "url('https://images.unsplash.com/photo-1521727857535-28d2047cf87c?ixlib=rb-4.0.3')"
-  },
-  {
-    title: "AJet İletişim",
-    description: "AJet yolcu hizmetleri ve bilet işlemleri için destek.",
-    icon: Phone,
-    link: "/contact/ajet",
-    color: "text-[#1B365D]",
-    bgImage: "url('https://images.unsplash.com/photo-1542296332-2e4473faf563?ixlib=rb-4.0.3')"
-  }
-];
-
 const mainServices = [
   {
     title: "Bilet Değişikliği",
@@ -120,25 +85,6 @@ export const Services = () => {
                   <service.icon className="h-12 w-12 mb-4" />
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                   <p className="text-white/90">{service.description}</p>
-                </div>
-              </Card>
-            </Link>
-          ))}
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mt-8">
-          {services.map((service) => (
-            <Link to={service.link} key={service.title}>
-              <Card className="group relative h-[200px] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: service.bgImage }}
-                >
-                  <div className="absolute inset-0 bg-black/50" />
-                </div>
-                <div className="relative h-full p-6 flex flex-col justify-end text-white">
-                  <service.icon className={`h-8 w-8 mb-2 ${service.color}`} />
-                  <h3 className="text-lg font-bold">{service.title}</h3>
                 </div>
               </Card>
             </Link>
