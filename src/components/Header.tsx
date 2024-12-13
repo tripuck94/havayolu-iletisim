@@ -11,25 +11,13 @@ export const Header = () => {
     <header className="bg-accent text-accent-foreground">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center gap-2">
-              <img 
-                src="/lovable-uploads/520d8ba8-17f4-4293-a58e-2783bd05931c.png" 
-                alt="Call Center Icon" 
-                className="h-8 w-8"
-              />
-            </Link>
-            
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hidden md:flex items-center gap-2 hover:bg-primary/10"
-              onClick={handleCall}
-            >
-              <Phone className="h-4 w-4" />
-              <span className="font-medium">0850 308 98 40</span>
-            </Button>
-          </div>
+          <Link to="/" className="flex items-center gap-2">
+            <img 
+              src="/lovable-uploads/520d8ba8-17f4-4293-a58e-2783bd05931c.png" 
+              alt="Call Center Icon" 
+              className="h-8 w-8"
+            />
+          </Link>
           
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="hover:text-white/90">
@@ -115,6 +103,16 @@ export const Header = () => {
               </div>
             </div>
           </div>
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className="flex items-center gap-2 hover:bg-primary/10 bg-white/90 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2 shadow-sm"
+            onClick={handleCall}
+          >
+            <Phone className="h-4 w-4" />
+            <span className="font-medium">0850 308 98 40</span>
+          </Button>
         </div>
       </nav>
     </header>
