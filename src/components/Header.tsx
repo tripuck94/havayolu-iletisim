@@ -107,11 +107,11 @@ export const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="flex items-center gap-2 hover:bg-primary/10 bg-white/90 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2 shadow-sm"
+            className="flex items-center gap-2 bg-white text-primary hover:bg-white/90 rounded-lg px-4 py-2 shadow-md border-2 border-primary/20"
             onClick={handleCall}
           >
             <Phone className="h-4 w-4" />
-            <span className="font-medium">0850 308 98 40</span>
+            <span className="font-semibold">0850 308 98 40</span>
           </Button>
         </div>
       </nav>
