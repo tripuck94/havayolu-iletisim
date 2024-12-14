@@ -6,7 +6,7 @@ export const mainServices = [
     description: "Online bilet satın alma işlemlerinizi hızlı ve güvenli bir şekilde gerçekleştirin.",
     icon: ShoppingCart,
     link: "/services/ticket-purchase",
-    bgImage: "url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/6a40b069-eb8d-4674-b153-0a6b2ea219a4.png')"
   },
   {
     title: "Bilet Değişikliği",
