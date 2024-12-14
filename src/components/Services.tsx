@@ -1,4 +1,4 @@
-import { Plane, RefreshCw, XCircle, PawPrint, Phone, Users, ShoppingCart, Luggage, ArrowRightLeft, ArrowUp, CheckCircle } from "lucide-react";
+import { Plane, RefreshCw, PawPrint, Phone, Users, ShoppingCart, Luggage, ArrowRightLeft, ArrowUp, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -8,21 +8,14 @@ const mainServices = [
     description: "Online bilet satın alma işlemlerinizi hızlı ve güvenli bir şekilde gerçekleştirin.",
     icon: ShoppingCart,
     link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-4.0.3')"
+    bgImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3')"
   },
   {
     title: "Bilet Değişikliği",
     description: "Mevcut biletinizde tarih ve güzergah değişikliği yapabilirsiniz.",
     icon: RefreshCw,
     link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1587019158091-1a103c5dd17f?ixlib=rb-4.0.3')"
-  },
-  {
-    title: "Bilet İptali",
-    description: "İptal ve iade işlemleriniz için hızlı ve güvenilir destek.",
-    icon: XCircle,
-    link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3')"
+    bgImage: "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3')"
   },
   {
     title: "Koltuk Seçimi",
@@ -57,7 +50,7 @@ const mainServices = [
     description: "Seyahat konforunuzu artırmak için sınıf yükseltme seçenekleri.",
     icon: ArrowUp,
     link: "/",
-    bgImage: "url('https://images.unsplash.com/photo-1587019158091-1a103c5dd17f?ixlib=rb-4.0.3')"
+    bgImage: "url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-4.0.3')"
   },
   {
     title: "Check-in",
