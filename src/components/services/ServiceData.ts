@@ -48,8 +48,8 @@ export const mainServices = [
     description: "Seyahat konforunuzu artırmak için sınıf yükseltme seçenekleri.",
     icon: ArrowUp,
     link: "/services/class-upgrade",
-    bgImage: "url('/lovable-uploads/0fe02586-04af-4d3d-842e-56c37907739b.png')",
-    bgSize: "contain",
+    bgImage: "url('/lovable-uploads/f510d99a-f3fd-490e-9038-ad0aeefb14b0.png')",
+    bgSize: "cover",
     bgPosition: "center"
   },
   {
