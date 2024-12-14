@@ -11,7 +11,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function getServiceContent(serviceName: string) {
   try {
-    const { data, error } = await supabase
+    let { data, error } = await supabase
       .from('service_contents')
       .select('*')
       .eq('service_name', serviceName)
@@ -20,6 +20,10 @@ export async function getServiceContent(serviceName: string) {
     if (error) {
       console.error('Error fetching service content:', error);
       throw error;
+    }
+
+    if (!data) {
+      throw new Error('No content found for service: ' + serviceName);
     }
 
     return data;
