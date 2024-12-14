@@ -2,34 +2,14 @@ import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
 import { BadgeCheck, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useQuery } from "@tanstack/react-query";
-import { getServiceContent } from "@/lib/supabase";
-import { ServiceContent } from "@/types/service";
+import { checkInContent } from "@/data/checkInContent";
 
 const CheckIn = () => {
-  const { data: content, isLoading } = useQuery({
-    queryKey: ['service-content', 'check-in'],
-    queryFn: () => getServiceContent('check-in'),
-  });
+  const content = checkInContent;
 
   const handleCall = () => {
     window.location.href = "tel:+905555555555";
   };
-
-  if (isLoading) {
-    return <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
-    </div>;
-  }
-
-  if (!content) {
-    return <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-800">İçerik yüklenemedi</h2>
-        <p className="text-gray-600">Lütfen daha sonra tekrar deneyin</p>
-      </div>
-    </div>;
-  }
 
   return (
     <div className="min-h-screen bg-gray-50">
