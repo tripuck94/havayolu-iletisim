@@ -6,28 +6,28 @@ export const mainServices = [
     description: "Online bilet satın alma işlemlerinizi hızlı ve güvenli bir şekilde gerçekleştirin.",
     icon: ShoppingCart,
     link: "/services/ticket-purchase",
-    bgImage: "url('/lovable-uploads/6a40b069-eb8d-4674-b153-0a6b2ea219a4.png')"
+    bgImage: "url('/lovable-uploads/fcf6d3d4-46ef-4c5e-8a48-a2e4159997a5.png')"
   },
   {
     title: "Bilet Değişikliği",
     description: "Mevcut biletinizde tarih ve güzergah değişikliği yapabilirsiniz.",
     icon: RefreshCw,
     link: "/services/ticket-change",
-    bgImage: "url('/lovable-uploads/b370a96a-7693-471e-be22-6b3cc2a2d4a6.png')"
+    bgImage: "url('/lovable-uploads/1f65f478-a215-44da-9727-ceb49f5e3b74.png')"
   },
   {
     title: "Koltuk Seçimi",
     description: "Uçuşunuz için istediğiniz koltuğu önceden seçin.",
     icon: ArrowRightLeft,
     link: "/services/seat-selection",
-    bgImage: "url('https://images.unsplash.com/photo-1540339832862-46d6239d0157?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/5bc51257-584d-4039-b174-07ba6c2b1766.png')"
   },
   {
     title: "Bagaj Ekleme",
     description: "Ek bagaj hakkı satın alma ve bagaj işlemlerinizi yönetin.",
     icon: Luggage,
     link: "/services/baggage",
-    bgImage: "url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/7398e5b3-2469-4357-9789-94408bad853b.png')"
   },
   {
     title: "Evcil Hayvan",
@@ -57,6 +57,6 @@ export const mainServices = [
     description: "Online check-in yaparak havalimanında zaman kazanın.",
     icon: CheckCircle,
     link: "/services/check-in",
-    bgImage: "url('https://images.unsplash.com/photo-1537538086243-1c61db1b0e4d?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/27efca33-969c-481d-b23b-39da51b5d24d.png')"
   }
 ];
