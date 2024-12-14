@@ -13,8 +13,7 @@ const ClassUpgrade = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <div className="container py-8 space-y-12">
-        {/* Hero Section */}
+      <div className="container py-12 md:py-16 space-y-16 mb-16">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <ArrowUpCircle className="h-10 w-10 text-primary" />
@@ -26,7 +25,6 @@ const ClassUpgrade = () => {
           </p>
         </div>
 
-        {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
             src={classUpgradeContent.mainImage}
@@ -42,7 +40,7 @@ const ClassUpgrade = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -90,7 +88,7 @@ const ClassUpgrade = () => {
         </div>
 
         {/* Detailed Information */}
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none space-y-12">
           <h2 className="text-3xl font-bold mb-6">Kapsamlı Sınıf Yükseltme Avantajları</h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
