@@ -34,21 +34,21 @@ export const mainServices = [
     description: "Evcil hayvanınızla seyahat için özel hizmetler ve rezervasyon.",
     icon: PawPrint,
     link: "/pet-services",
-    bgImage: "url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/c48f57d6-d6eb-4189-8a1a-03d89a22cef0.png')"
   },
   {
     title: "Refakatsiz Çocuk",
     description: "Yalnız seyahat eden çocuklar için özel refakat hizmeti.",
     icon: Users,
     link: "/services/unaccompanied-minor",
-    bgImage: "url('https://images.unsplash.com/photo-1566454544259-f4b94c3d758c?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/354f0595-1ec0-45e4-8552-3172df97bb8a.png')"
   },
   {
     title: "İlave Sınıf Yükseltme",
     description: "Seyahat konforunuzu artırmak için sınıf yükseltme seçenekleri.",
     icon: ArrowUp,
     link: "/services/class-upgrade",
-    bgImage: "url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/0fe02586-04af-4d3d-842e-56c37907739b.png')"
   },
   {
     title: "Check-in",
