@@ -17,7 +17,7 @@ const TicketPurchase = () => {
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <Ticket className="h-10 w-10 text-primary" />
-            Bilet Satın Alma Hizmetleri
+            Bilet Satın Alma
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Seyahat planlarınızı kolaylaştırmak için en uygun uçuş biletlerini bulmanıza 

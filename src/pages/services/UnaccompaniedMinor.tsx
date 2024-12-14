@@ -17,7 +17,7 @@ const UnaccompaniedMinor = () => {
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <Baby className="h-10 w-10 text-primary" />
-            Refakatsiz Çocuk Hizmeti
+            Refakatsiz Çocuk
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Çocuğunuzun güvenli ve konforlu seyahati için özel refakat hizmetimiz ile
