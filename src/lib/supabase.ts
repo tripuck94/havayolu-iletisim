@@ -12,7 +12,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey);
 export async function getServiceContent(serviceName: string) {
   try {
     const { data, error } = await supabase
-      .from('service_contents')
+      .from('servis-icerik')
       .select('*')
       .eq('service_name', serviceName)
       .single();
