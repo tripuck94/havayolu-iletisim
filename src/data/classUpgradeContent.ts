@@ -11,13 +11,13 @@ export const classUpgradeContent = {
   sections: [
     {
       title: "Sınıf Yükseltme Avantajları",
-      content: "Sınıf yükseltme hizmetimiz ile daha konforlu bir seyahat deneyimi yaşayabilirsiniz. Geniş koltuklar, özel ikram hizmetleri ve lounge erişimi gibi ayrıcalıklardan yararlanabilirsiniz.",
-      image: "/lovable-uploads/f510d99a-f3fd-490e-9038-ad0aeefb14b0.png"
+      content: "Business Class ve First Class deneyimi ile seyahatinizi unutulmaz kılın. Özel check-in kontuarları, geniş koltuklar, özel ikram hizmetleri ve daha fazlası ile konforlu bir yolculuk sizi bekliyor.",
+      image: "/lovable-uploads/0fe02586-04af-4d3d-842e-56c37907739b.png"
     },
     {
       title: "Yükseltme Süreci",
       content: "Sınıf yükseltme işleminizi kolayca gerçekleştirebilirsiniz. Size özel fırsatlar ve kampanyalar hakkında bilgi almak için müşteri temsilcilerimizle görüşebilirsiniz.",
-      image: "/lovable-uploads/f510d99a-f3fd-490e-9038-ad0aeefb14b0.png"
+      image: "/lovable-uploads/6a40b069-eb8d-4674-b153-0a6b2ea219a4.png"
     }
   ],
   features: [
