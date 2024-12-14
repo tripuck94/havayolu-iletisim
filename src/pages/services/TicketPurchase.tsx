@@ -16,7 +16,7 @@ const TicketPurchase = () => {
           
           <div className="mb-12">
             <img
-              src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166"
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
               alt="Bilet Satın Alma"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
             />

@@ -16,7 +16,7 @@ const TicketChange = () => {
           
           <div className="mb-12">
             <img
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+              src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166"
               alt="Bilet Değişikliği"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
             />
