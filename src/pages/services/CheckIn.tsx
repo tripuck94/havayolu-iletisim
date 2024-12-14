@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
-import { BadgeCheck, CheckCircle, Clock, HeartHandshake, Shield } from "lucide-react";
+import { BadgeCheck, CheckCircle, Clock, HeartHandshake, Shield, Plane, Calendar, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -20,9 +20,9 @@ const CheckIn = () => {
             Check-in Hizmeti
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Seyahatinizi daha konforlu hale getirmek için online check-in hizmetimizden 
-            yararlanabilirsiniz. Havalimanında bekleme sürenizi minimize ederek, 
-            yolculuğunuza hızlı ve sorunsuz bir başlangıç yapın.
+            Seyahatinizi daha konforlu ve sorunsuz hale getirmek için tasarlanmış online check-in 
+            hizmetimizle tanışın. Havalimanında bekleme sürenizi minimize ederek, yolculuğunuza 
+            hızlı ve keyifli bir başlangıç yapın.
           </p>
         </div>
 
@@ -46,8 +46,8 @@ const CheckIn = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Shield className="h-6 w-6 text-primary" />
-                Online Check-in
+                <Calendar className="h-6 w-6 text-primary" />
+                24 Saat Önceden Check-in
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -62,8 +62,8 @@ const CheckIn = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Clock className="h-6 w-6 text-primary" />
-                Hızlı Geçiş
+                <Plane className="h-6 w-6 text-primary" />
+                Hızlı Geçiş İmkanı
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -77,8 +77,8 @@ const CheckIn = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <HeartHandshake className="h-6 w-6 text-primary" />
-                Özel Yardım
+                <User className="h-6 w-6 text-primary" />
+                Özel Yardım Hizmeti
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -103,13 +103,15 @@ const CheckIn = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold">Online Check-in Avantajları</h3>
               <p>
-                Online check-in hizmeti ile uçuşunuzdan 24 saat önce check-in 
-                işlemlerinizi tamamlayabilir, koltuk seçiminizi yapabilir ve 
-                boarding pass'inizi mobil cihazınıza indirebilirsiniz.
+                Online check-in hizmeti, modern havayolu seyahatinin vazgeçilmez bir parçası haline gelmiştir. 
+                Bu hizmet sayesinde, uçuşunuzdan 24 saat öncesinden başlayarak check-in işlemlerinizi 
+                tamamlayabilir, koltuk seçiminizi yapabilir ve biniş kartınızı mobil cihazınıza 
+                indirebilirsiniz.
               </p>
               <p>
-                Bu hizmet sayesinde havalimanında check-in kuyruğunda beklemenize 
-                gerek kalmaz, direkt olarak güvenlik kontrolüne geçebilirsiniz.
+                Mobil biniş kartı ile havalimanına geldiğinizde doğrudan güvenlik kontrolüne 
+                geçebilir, check-in kuyruğunda bekleme sürenizi ortadan kaldırabilirsiniz. Bu sayede 
+                hem zamandan tasarruf eder hem de daha az stresli bir seyahat deneyimi yaşarsınız.
               </p>
             </div>
           </div>
@@ -118,13 +120,14 @@ const CheckIn = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold">Havalimanı Check-in Hizmetleri</h3>
               <p>
-                Havalimanında check-in yapmayı tercih eden yolcularımız için 
-                geniş kontuar ağımız ve deneyimli personelimiz ile hızlı ve 
-                kaliteli hizmet sunuyoruz.
+                Havalimanında check-in yapmayı tercih eden yolcularımız için geniş kontuar ağımız ve 
+                deneyimli personelimiz ile hızlı ve kaliteli hizmet sunuyoruz. Business Class ve sadık 
+                müşteri programı üyelerimiz için özel check-in kontuarları ile ayrıcalıklı hizmet sağlıyoruz.
               </p>
               <p>
-                Business Class ve sadık müşteri programı üyelerimiz için 
-                özel check-in kontuarları ile ayrıcalıklı hizmet sağlıyoruz.
+                Özel yardıma ihtiyaç duyan yolcularımız, yaşlılar, hamileler ve çocuklu aileler için 
+                öncelikli check-in hizmeti sunuyor, seyahat deneyimlerini kolaylaştırıyoruz. Deneyimli 
+                personelimiz, tüm özel ihtiyaçlarınızda size yardımcı olmak için hazır bekliyor.
               </p>
             </div>
             <img
@@ -139,11 +142,11 @@ const CheckIn = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
                 <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-                <span>Online check-in ile zaman kazanın</span>
+                <span>Online check-in ile zaman kazanın ve kuyruklarda beklemeyin</span>
               </li>
               <li className="flex items-start gap-2">
                 <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-                <span>Mobil boarding pass kolaylığı</span>
+                <span>Mobil biniş kartı ile kolay ve hızlı seyahat</span>
               </li>
               <li className="flex items-start gap-2">
                 <BadgeCheck className="h-6 w-6 text-primary mt-1" />
@@ -151,7 +154,7 @@ const CheckIn = () => {
               </li>
               <li className="flex items-start gap-2">
                 <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-                <span>Grup check-in imkanı</span>
+                <span>Grup check-in imkanı ve özel destek</span>
               </li>
             </ul>
           </div>
