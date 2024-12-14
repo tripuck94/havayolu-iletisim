@@ -13,7 +13,7 @@ export const mainServices = [
     description: "Mevcut biletinizde tarih ve güzergah değişikliği yapabilirsiniz.",
     icon: RefreshCw,
     link: "/services/ticket-change",
-    bgImage: "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3')"
+    bgImage: "url('/lovable-uploads/b370a96a-7693-471e-be22-6b3cc2a2d4a6.png')"
   },
   {
     title: "Koltuk Seçimi",
