@@ -17,7 +17,7 @@ const TicketChange = () => {
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <RefreshCw className="h-10 w-10 text-primary" />
-            Bilet Değişikliği Hizmetleri
+            Bilet Değişikliği
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Seyahat planlarınızda değişiklik mi gerekiyor? Endişelenmeyin! Bilet değişikliği 

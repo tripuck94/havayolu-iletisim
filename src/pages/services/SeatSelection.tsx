@@ -17,7 +17,7 @@ const SeatSelection = () => {
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <Armchair className="h-10 w-10 text-primary" />
-            Koltuk Seçimi Hizmetleri
+            Koltuk Seçimi
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Seyahatinizi daha konforlu hale getirmek için koltuk seçimi hizmetimizden 
