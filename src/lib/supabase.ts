@@ -10,16 +10,21 @@ if (!supabaseUrl || !supabaseKey) {
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function getServiceContent(serviceName: string) {
-  const { data, error } = await supabase
-    .from('service_contents')
-    .select('*')
-    .eq('service_name', serviceName)
-    .single();
+  try {
+    const { data, error } = await supabase
+      .from('service_contents')
+      .select('*')
+      .eq('service_name', serviceName)
+      .single();
 
-  if (error) {
-    console.error('Error fetching service content:', error);
-    return null;
+    if (error) {
+      console.error('Error fetching service content:', error);
+      throw error;
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error in getServiceContent:', error);
+    throw error;
   }
-
-  return data;
 }
