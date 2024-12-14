@@ -8,15 +8,30 @@ interface ServiceCardProps {
   icon: LucideIcon;
   link: string;
   bgImage: string;
+  bgSize?: string;
+  bgPosition?: string;
 }
 
-export const ServiceCard = ({ title, description, icon: Icon, link, bgImage }: ServiceCardProps) => {
+export const ServiceCard = ({ 
+  title, 
+  description, 
+  icon: Icon, 
+  link, 
+  bgImage,
+  bgSize = "cover",
+  bgPosition = "center"
+}: ServiceCardProps) => {
   return (
     <Link to={link}>
       <Card className="group relative h-[300px] overflow-hidden rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-          style={{ backgroundImage: bgImage }}
+          style={{ 
+            backgroundImage: bgImage,
+            backgroundSize: bgSize,
+            backgroundPosition: bgPosition,
+            backgroundRepeat: "no-repeat"
+          }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         </div>
