@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShoppingCart, Phone, Plane, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard } from "lucide-react";
+import { ShoppingCart, Phone, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
@@ -16,27 +16,27 @@ const TicketPurchase = () => {
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
-            <ShoppingCart className="h-10 w-10 text-primary" />
+            <Ticket className="h-10 w-10 text-primary" />
             Bilet Satın Alma Hizmetleri
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Seyahat planlarınızı kolaylaştırmak için en uygun uçuş biletlerini bulmanıza 
-            yardımcı oluyoruz. Online bilet satın alma hizmetimiz ile tüm havayollarının 
-            biletlerini tek bir noktadan, en uygun fiyatlarla satın alabilirsiniz.
+            yardımcı oluyoruz. Uzman ekibimiz, size en uygun fiyatlı ve konforlu uçuş 
+            seçeneklerini sunmak için 7/24 hizmetinizdedir.
           </p>
         </div>
 
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
             alt="Bilet Satın Alma"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-8 text-white">
-              <h2 className="text-3xl font-bold mb-2">Online Bilet Satın Alma</h2>
-              <p className="text-lg">Hızlı, güvenli ve ekonomik bilet satın alma deneyimi</p>
+              <h2 className="text-3xl font-bold mb-2">Profesyonel Biletleme Hizmeti</h2>
+              <p className="text-lg">En uygun fiyatlarla güvenli bilet satın alma</p>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ const TicketPurchase = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
               alt="Online Bilet Satın Alma"
               className="rounded-lg h-[300px] w-full object-cover"
             />
