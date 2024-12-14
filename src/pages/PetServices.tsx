@@ -1,46 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PawPrint, Plane } from "lucide-react";
+import { PawPrint, Phone, Plane, Shield, Clock, HeartHandshake, Scale, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-
-const airlines = [
-  {
-    name: "Türk Hava Yolları",
-    description: "Evcil hayvan taşıma prosedürleri ve kuralları için bizimle iletişime geçin.",
-    requirements: [
-      "Kabin içi taşıma için maksimum 8 kg",
-      "Kargo bölümünde taşıma için veteriner raporu",
-      "Önceden rezervasyon yapılması zorunludur",
-    ],
-  },
-  {
-    name: "Pegasus",
-    description: "Evcil hayvanınızla seyahat için gerekli bilgiler ve destek.",
-    requirements: [
-      "Kabin içi taşıma için maksimum 7 kg",
-      "Taşıma kafesi zorunludur",
-      "24 saat önceden bildirim gereklidir",
-    ],
-  },
-  {
-    name: "SunExpress",
-    description: "Evcil hayvan taşıma hizmetleri ve kuralları hakkında bilgi alın.",
-    requirements: [
-      "Kabin içi ve kargo taşıma seçenekleri",
-      "Uluslararası uçuşlarda ek belgeler gereklidir",
-      "Özel taşıma kafesi şartları",
-    ],
-  },
-  {
-    name: "AJet",
-    description: "Evcil hayvanınızla güvenli seyahat için bizimle iletişime geçin.",
-    requirements: [
-      "Sadece kargo bölümünde taşıma",
-      "Sağlık belgesi zorunludur",
-      "Rezervasyon sırasında bildirim gereklidir",
-    ],
-  },
-];
+import { CallButton } from "@/components/CallButton";
 
 const PetServices = () => {
   const handleCall = () => {
@@ -48,44 +10,169 @@ const PetServices = () => {
   };
 
   return (
-    <div className="min-h-screen bg-secondary">
+    <div className="min-h-screen bg-gray-50">
       <Header />
-      <div className="container py-8">
-        <div className="text-center mb-12">
+      <div className="container py-8 space-y-12">
+        {/* Hero Section */}
+        <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <PawPrint className="h-10 w-10 text-primary" />
             Evcil Hayvan Taşıma Hizmetleri
           </h1>
-          <p className="text-lg text-gray-600">
-            Türkiye'deki tüm havayolları için evcil hayvan taşıma işlemlerinizi güvenle gerçekleştiriyoruz.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Sevgili dostlarınızın güvenli ve konforlu seyahati için özel çözümler sunuyoruz. 
+            Deneyimli ekibimiz, evcil hayvanınızın ihtiyaçlarına uygun en iyi hizmeti almanız için 
+            7/24 yanınızda.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {airlines.map((airline) => (
-            <Card key={airline.name} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Plane className="h-6 w-6 text-primary" />
-                  {airline.name}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 text-gray-600">{airline.description}</p>
-                <ul className="list-disc list-inside mb-6 space-y-2 text-sm text-gray-600">
-                  {airline.requirements.map((req) => (
-                    <li key={req}>{req}</li>
-                  ))}
-                </ul>
-                <Button onClick={handleCall} className="w-full gap-2">
-                  <PawPrint className="h-4 w-4" />
-                  Rezervasyon Yap
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Main Image Section */}
+        <div className="relative h-[400px] rounded-xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1450778869180-41d0601e046e"
+            alt="Evcil Hayvan Taşıma"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+            <div className="p-8 text-white">
+              <h2 className="text-3xl font-bold mb-2">Profesyonel Taşıma Hizmeti</h2>
+              <p className="text-lg">Evcil hayvanınızın konforu bizim önceliğimiz</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Shield className="h-6 w-6 text-primary" />
+                Güvenlik Standartları
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">
+                Uluslararası standartlara uygun taşıma kafesleri ve ekipmanlar kullanıyoruz. 
+                Evcil hayvanınızın güvenliği için tüm önlemler titizlikle alınmaktadır.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Clock className="h-6 w-6 text-primary" />
+                7/24 Destek
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">
+                Seyahat sürecinin her aşamasında uzman ekibimiz size destek olmak için hazır. 
+                Çağrı merkezimiz 7/24 hizmetinizdedir.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <HeartHandshake className="h-6 w-6 text-primary" />
+                Özel Bakım
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">
+                Her evcil hayvanın özel ihtiyaçlarını dikkate alıyor, seyahat süresince 
+                gerekli tüm bakım hizmetlerini sağlıyoruz.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Detailed Information */}
+        <div className="prose prose-lg max-w-none">
+          <h2 className="text-3xl font-bold mb-6">Kapsamlı Evcil Hayvan Taşıma Hizmetlerimiz</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <img
+              src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6"
+              alt="Evcil Hayvan Bakımı"
+              className="rounded-lg h-[300px] w-full object-cover"
+            />
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold">Profesyonel Taşıma Standartları</h3>
+              <p>
+                Evcil hayvanınızın güvenli ve konforlu seyahati için uluslararası standartlara 
+                uygun özel taşıma kafesleri kullanıyoruz. Her kafes, hayvanınızın türüne ve 
+                boyutuna göre özel olarak seçilmektedir.
+              </p>
+              <p>
+                Taşıma sürecinde kullanılan tüm ekipmanlar düzenli olarak dezenfekte edilmekte 
+                ve her seyahat öncesi detaylı kontrolden geçirilmektedir.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold">Sağlık ve Güvenlik Önlemleri</h3>
+              <p>
+                Seyahat öncesi veteriner kontrolü ve gerekli sağlık belgelerinin temini 
+                konusunda rehberlik sağlıyoruz. Evcil hayvanınızın sağlığı bizim için 
+                en önemli öncelik.
+              </p>
+              <p>
+                Özel ihtiyaçları olan evcil hayvanlar için ek hizmetler sunuyor, 
+                düzenli beslenme ve ilaç takibi yapıyoruz.
+              </p>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1566454544259-f4b94c3d758c"
+              alt="Evcil Hayvan Sağlığı"
+              className="rounded-lg h-[300px] w-full object-cover"
+            />
+          </div>
+
+          <div className="bg-primary/5 p-8 rounded-lg mb-8">
+            <h3 className="text-2xl font-semibold mb-4">Neden Bizi Tercih Etmelisiniz?</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-2">
+                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <span>Deneyimli ve uzman ekip</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <span>7/24 müşteri desteği</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <span>Güvenli ve konforlu taşıma hizmeti</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <span>Özel bakım ve beslenme takibi</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="text-center bg-primary text-white p-8 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6">
+              Evcil hayvanınızın taşınması ile ilgili tüm sorularınız için çağrı merkezimizi 
+              7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
+            </p>
+            <Button 
+              onClick={handleCall} 
+              variant="secondary"
+              className="gap-2"
+            >
+              <Phone className="h-4 w-4" />
+              Hemen Arayın
+            </Button>
+          </div>
         </div>
       </div>
+      <CallButton />
     </div>
   );
 };
