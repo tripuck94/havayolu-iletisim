@@ -1,21 +1,29 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "react-router-dom";
 
 export const CallButton = () => {
+  const location = useLocation();
+  
+  const getButtonColor = (path: string) => {
+    if (path.includes('/thy')) return 'bg-thy hover:bg-thy-hover';
+    if (path.includes('/pegasus')) return 'bg-pegasus hover:bg-pegasus-hover';
+    if (path.includes('/sunexpress')) return 'bg-sunexpress hover:bg-sunexpress-hover text-black';
+    if (path.includes('/ajet')) return 'bg-ajet hover:bg-ajet-hover';
+    return 'bg-primary hover:bg-primary/90';
+  };
+
   const handleCall = () => {
-    window.location.href = "tel:+905555555555"; // Telefon numaranızı buraya ekleyin
+    window.location.href = "tel:08502428117";
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg z-50">
-      <Button
-        className="w-full bg-accent hover:bg-accent/90 text-lg gap-2"
-        size="lg"
-        onClick={handleCall}
-      >
-        <Phone className="h-5 w-5" />
-        Hemen Ara
-      </Button>
-    </div>
+    <Button
+      className={`fixed bottom-4 right-4 ${getButtonColor(location.pathname)} text-white shadow-lg rounded-full w-16 h-16 flex items-center justify-center`}
+      size="icon"
+      onClick={handleCall}
+    >
+      <Phone className="h-6 w-6" />
+    </Button>
   );
 };

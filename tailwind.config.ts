@@ -36,6 +36,22 @@ export default {
           DEFAULT: "#00A3FF",
           foreground: "#FFFFFF",
         },
+        thy: {
+          DEFAULT: "#E81932",
+          hover: "#c4152b",
+        },
+        pegasus: {
+          DEFAULT: "#FF9200",
+          hover: "#e68200",
+        },
+        sunexpress: {
+          DEFAULT: "#FFCD00",
+          hover: "#e6b800",
+        },
+        ajet: {
+          DEFAULT: "#1B365D",
+          hover: "#152a4a",
+        },
       },
       keyframes: {
         "accordion-down": {

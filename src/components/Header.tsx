@@ -1,14 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
+  const location = useLocation();
   const handleCall = () => {
     window.location.href = "tel:08502428117";
   };
 
+  const getHeaderColor = (path: string) => {
+    if (path.includes('/thy')) return 'bg-thy';
+    if (path.includes('/pegasus')) return 'bg-pegasus';
+    if (path.includes('/sunexpress')) return 'bg-sunexpress';
+    if (path.includes('/ajet')) return 'bg-ajet';
+    return 'bg-accent';
+  };
+
+  const getButtonColor = (path: string) => {
+    if (path.includes('/thy')) return 'bg-white text-thy hover:bg-white/90';
+    if (path.includes('/pegasus')) return 'bg-white text-pegasus hover:bg-white/90';
+    if (path.includes('/sunexpress')) return 'bg-white text-sunexpress hover:bg-white/90';
+    if (path.includes('/ajet')) return 'bg-white text-ajet hover:bg-white/90';
+    return 'bg-white text-primary hover:bg-white/90';
+  };
+
   return (
-    <header className="bg-accent text-accent-foreground relative z-50">
+    <header className={`${getHeaderColor(location.pathname)} text-white relative z-50`}>
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
@@ -107,7 +124,7 @@ export const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="flex items-center gap-2 bg-white text-primary hover:bg-white/90 rounded-lg px-4 py-2 shadow-md border-2 border-primary/20"
+            className={`flex items-center gap-2 ${getButtonColor(location.pathname)} rounded-lg px-4 py-2 shadow-md border-2 border-white/20`}
             onClick={handleCall}
           >
             <Phone className="h-4 w-4" />
