@@ -2,8 +2,8 @@ import { v2 as cloudinary } from 'cloudinary';
 
 // Cloudinary configuration
 cloudinary.config({
-  cloud_name: 'your_cloud_name',
-  api_key: 'your_api_key',
+  cloud_name: 'tripuck',
+  api_key: '417349661273938',
   api_secret: 'your_api_secret'
 });
 
@@ -25,10 +25,10 @@ export const uploadImageFile = async (file: File) => {
   try {
     const formData = new FormData();
     formData.append('file', file);
-    formData.append('upload_preset', 'your_upload_preset');
+    formData.append('upload_preset', 'ml_default');
 
     const response = await fetch(
-      `https://api.cloudinary.com/v1_1/your_cloud_name/image/upload`,
+      `https://api.cloudinary.com/v1_1/tripuck/image/upload`,
       {
         method: 'POST',
         body: formData,
