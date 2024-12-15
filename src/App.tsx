@@ -16,6 +16,7 @@ import BaggageService from "./pages/services/BaggageService";
 import UnaccompaniedMinor from "./pages/services/UnaccompaniedMinor";
 import ClassUpgrade from "./pages/services/ClassUpgrade";
 import CheckIn from "./pages/services/CheckIn";
+import ThyTicketPurchase from "./pages/thy/TicketPurchase";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/services/unaccompanied-minor" element={<UnaccompaniedMinor />} />
           <Route path="/services/class-upgrade" element={<ClassUpgrade />} />
           <Route path="/services/check-in" element={<CheckIn />} />
+          <Route path="/thy/ticket-purchase" element={<ThyTicketPurchase />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
