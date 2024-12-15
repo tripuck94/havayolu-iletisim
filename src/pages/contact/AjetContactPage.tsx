@@ -50,11 +50,11 @@ const AjetContactPage = () => {
         <div className="max-w-xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-8 mb-20">
             <div className="flex items-center justify-center gap-2 mb-6">
-              <Phone className="h-8 w-8 text-[#1B365D]" />
+              <Phone className="h-8 w-8 text-ajet" />
               <h2 className="text-2xl font-bold">Müşteri Hizmetleri</h2>
             </div>
             <p className="text-3xl font-bold text-center mb-6">0850 242 81 17</p>
-            <Button onClick={handleCall} className="w-full bg-[#1B365D] hover:bg-[#152a4a] text-white text-lg">
+            <Button onClick={handleCall} className="w-full bg-ajet hover:bg-ajet-hover text-white text-lg">
               <Phone className="h-5 w-5 mr-2" />
               Hemen Ara
             </Button>
@@ -62,7 +62,7 @@ const AjetContactPage = () => {
         </div>
 
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-          <Button onClick={handleCall} className="w-full bg-[#1B365D] hover:bg-[#152a4a] text-white text-lg">
+          <Button onClick={handleCall} className="w-full bg-ajet hover:bg-ajet-hover text-white text-lg">
             <Phone className="h-5 w-5 mr-2" />
             Hemen Ara
           </Button>
