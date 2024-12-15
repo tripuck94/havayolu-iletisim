@@ -25,16 +25,16 @@ export const Header = () => {
                 Havayolları
               </span>
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link to="/contact/thy" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <Link to="/thy/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   Türk Hava Yolları
                 </Link>
-                <Link to="/contact/pegasus" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <Link to="/pegasus/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   Pegasus
                 </Link>
-                <Link to="/contact/sunexpress" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <Link to="/sunexpress/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   SunExpress
                 </Link>
-                <Link to="/contact/ajet" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <Link to="/ajet/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   AJet
                 </Link>
               </div>
