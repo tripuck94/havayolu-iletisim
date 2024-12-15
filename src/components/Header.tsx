@@ -12,7 +12,7 @@ export const Header = () => {
     if (path.includes('/thy')) return 'bg-thy';
     if (path.includes('/pegasus')) return 'bg-pegasus';
     if (path.includes('/sunexpress')) return 'bg-sunexpress';
-    if (path.includes('/ajet')) return 'bg-ajet';
+    if (path.includes('/ajet') || path.includes('/vf')) return 'bg-ajet';
     return 'bg-accent';
   };
 
@@ -20,7 +20,7 @@ export const Header = () => {
     if (path.includes('/thy')) return 'bg-white text-thy hover:bg-white/90';
     if (path.includes('/pegasus')) return 'bg-white text-pegasus hover:bg-white/90';
     if (path.includes('/sunexpress')) return 'bg-white text-sunexpress hover:bg-white/90';
-    if (path.includes('/ajet')) return 'bg-white text-ajet hover:bg-white/90';
+    if (path.includes('/ajet') || path.includes('/vf')) return 'bg-white text-ajet hover:bg-white/90';
     return 'bg-white text-primary hover:bg-white/90';
   };
 
