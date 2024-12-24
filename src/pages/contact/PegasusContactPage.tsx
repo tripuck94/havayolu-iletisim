@@ -1,6 +1,5 @@
 import { Phone, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 
 const PegasusContactPage = () => {
@@ -12,9 +11,6 @@ const PegasusContactPage = () => {
     <div className="min-h-screen bg-secondary">
       <Header />
       <div className="container py-8">
-        <Link to="/" className="text-primary hover:underline mb-8 inline-block">
-          ← Ana Sayfaya Dön
-        </Link>
         
         <div className="text-center mb-12">
           <img 
