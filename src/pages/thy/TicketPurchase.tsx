@@ -30,15 +30,16 @@ const ThyTicketPurchase = () => {
           </p>
         </div>
 
+        {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-            alt="THY Bilet Satın Alma"
+            src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
+            alt="Türk Hava Yolları Bilet Satın Alma"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-8 text-white">
-              <h2 className="text-3xl font-bold mb-2">THY Biletleme Hizmeti</h2>
+              <h2 className="text-3xl font-bold mb-2">Türk Hava Yolları Biletleme Hizmeti</h2>
               <p className="text-lg">En uygun fiyatlarla güvenli bilet satın alma</p>
             </div>
           </div>
@@ -49,14 +50,14 @@ const ThyTicketPurchase = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Shield className="h-6 w-6 text-primary" />
-                Miles&Smiles Avantajları
+                <Shield className="h-6 w-6 text-thy" />
+                Türk Hava Yolları Avantajları
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                THY Miles&Smiles programı ile bilet alımlarınızda mil kazanın ve 
-                biriken millerinizi ücretsiz uçuşlara dönüştürün.
+                Türk Hava Yolları ile bilet alımlarınızda özel avantajlardan yararlanın ve 
+                konforlu bir seyahat deneyimi yaşayın.
               </p>
             </CardContent>
           </Card>
@@ -64,7 +65,7 @@ const ThyTicketPurchase = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Clock className="h-6 w-6 text-primary" />
+                <Clock className="h-6 w-6 text-thy" />
                 7/24 Destek
               </CardTitle>
             </CardHeader>
@@ -79,13 +80,13 @@ const ThyTicketPurchase = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <HeartHandshake className="h-6 w-6 text-primary" />
+                <HeartHandshake className="h-6 w-6 text-thy" />
                 Özel Kampanyalar
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                THY'nin özel kampanyaları ve indirimli biletleri hakkında bilgi alın. 
+                Türk Hava Yolları'nın özel kampanyaları ve indirimli biletleri hakkında bilgi alın. 
                 Size en uygun fırsatları sunuyoruz.
               </p>
             </CardContent>
@@ -94,48 +95,46 @@ const ThyTicketPurchase = () => {
 
         {/* Detailed Information */}
         <div className="prose prose-lg max-w-none">
-          <h2 className="text-3xl font-bold mb-6">THY Bilet Satın Alma Avantajları</h2>
+          <h2 className="text-3xl font-bold mb-6">Türk Hava Yolları Bilet Satın Alma Avantajları</h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
-              alt="THY Uçuş Deneyimi"
+              src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
+              alt="Türk Hava Yolları Uçuş Deneyimi"
               className="rounded-lg h-[300px] w-full object-cover"
             />
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold">Türk Hava Yolları ile Seyahat</h3>
               <p>
-                Türk Hava Yolları, 128 ülkede 340'tan fazla noktaya uçuş gerçekleştiren, 
-                dünyanın en geniş uçuş ağına sahip havayollarından biridir. Modern filosu, 
-                konforlu uçuş deneyimi ve kaliteli hizmet anlayışıyla yolcularına unutulmaz 
-                bir seyahat deneyimi sunar.
+                Türk Hava Yolları, Türkiye'nin en büyük havayolu şirketidir. 
+                Modern filosu ve kaliteli hizmet anlayışıyla yolcularına 
+                konforlu bir seyahat deneyimi sunar.
               </p>
               <p>
-                Miles&Smiles üyeliği ile bilet alımlarınızda mil kazanabilir, bu milleri 
-                ücretsiz uçuşlara, kabin yükseltmelerine veya fazla bagaj hakkı gibi ek 
-                hizmetlere dönüştürebilirsiniz.
+                Özel kampanyalar ve avantajlı fiyatlarla bilet alabilir, 
+                seyahatinizi daha ekonomik hale getirebilirsiniz.
               </p>
             </div>
           </div>
 
           <div className="bg-primary/5 p-8 rounded-lg mb-8">
-            <h3 className="text-2xl font-semibold mb-4">THY Bilet Satın Alma Seçenekleri</h3>
+            <h3 className="text-2xl font-semibold mb-4">Türk Hava Yolları Bilet Satın Alma Seçenekleri</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-                <span>Ekonomi, Business ve First Class bilet seçenekleri</span>
+                <BadgeCheck className="h-6 w-6 text-thy mt-1" />
+                <span>Yurt içi ve yurt dışı uçuşlar</span>
               </li>
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <BadgeCheck className="h-6 w-6 text-thy mt-1" />
                 <span>Esnek tarih değişikliği imkanı</span>
               </li>
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-                <span>Çoklu şehir ve aktarmalı uçuş seçenekleri</span>
+                <BadgeCheck className="h-6 w-6 text-thy mt-1" />
+                <span>Online check-in ve koltuk seçimi</span>
               </li>
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-                <span>Online check-in ve koltuk seçimi</span>
+                <BadgeCheck className="h-6 w-6 text-thy mt-1" />
+                <span>Özel kampanya fırsatları</span>
               </li>
             </ul>
           </div>
@@ -143,7 +142,7 @@ const ThyTicketPurchase = () => {
           <div className="text-center bg-thy text-white p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
             <p className="mb-6">
-              THY bilet satın alma işleminiz ile ilgili tüm sorularınız için çağrı merkezimizi 
+              Türk Hava Yolları bilet satın alma işleminiz ile ilgili tüm sorularınız için çağrı merkezimizi 
               7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
             </p>
             <Button 
