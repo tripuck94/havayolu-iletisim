@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
+import { Users, Shield, Clock, HeartHandshake, BadgeCheck, CheckCircle2, Plane, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
+import { unaccompaniedMinorContent } from "@/data/unaccompaniedMinorContent";
 
 const AjetUnaccompaniedMinor = () => {
   const handleCall = () => {
@@ -28,6 +29,21 @@ const AjetUnaccompaniedMinor = () => {
             AJet ile çocuğunuzun güvenli ve konforlu seyahati için özel refakat hizmetimiz ile
             yanınızdayız. Deneyimli ekibimiz, çocuğunuzun tüm seyahati boyunca güvende olmasını sağlar.
           </p>
+        </div>
+
+        {/* Main Image Section */}
+        <div className="relative h-[400px] rounded-xl overflow-hidden">
+          <img
+            src={unaccompaniedMinorContent.mainImage}
+            alt="Refakatsiz Çocuk Hizmeti"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+            <div className="p-8 text-white">
+              <h2 className="text-3xl font-bold mb-2">Profesyonel Refakat Hizmeti</h2>
+              <p className="text-lg">Çocuğunuzun güvenliği bizim önceliğimiz</p>
+            </div>
+          </div>
         </div>
 
         {/* Services Grid */}
@@ -76,6 +92,57 @@ const AjetUnaccompaniedMinor = () => {
               </p>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Additional Features */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Hizmet Detayları</h3>
+            <ul className="space-y-4">
+              {unaccompaniedMinorContent.features.map((feature, index) => (
+                <li key={index} className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-ajet" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Plane className="h-6 w-6 text-ajet" />
+                  Seyahat Süreci
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Check-in'den varış noktasına kadar özel refakatçi eşliğinde seyahat eden çocuğunuz için
+                  sürekli iletişim ve takip hizmeti sunuyoruz.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <UserCheck className="h-6 w-6 text-ajet" />
+                  Deneyimli Personel
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Özel eğitimli personelimiz, çocuğunuzun konforu ve güvenliği için
+                  tüm seyahat boyunca yanında olacaktır.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="bg-gray-50 p-8 rounded-xl text-center space-y-4">
+          <h3 className="text-2xl font-bold">{unaccompaniedMinorContent.callToAction.title}</h3>
+          <p className="text-gray-600">{unaccompaniedMinorContent.callToAction.description}</p>
         </div>
 
         {/* Fixed Bottom Button */}
