@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const PegasusTicketChange = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502350235";
+    window.location.href = "tel:08502428117";
   };
 
   return (
@@ -20,7 +20,7 @@ const PegasusTicketChange = () => {
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 
-            src="https://www.flypgs.com/assets/images/pegasus-logo.svg" 
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp"
             alt="Pegasus Logo" 
             className="h-16 mx-auto mb-6"
           />

@@ -20,7 +20,7 @@ const ThyTicketChange = () => {
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 
-            src="https://www.turkishairlines.com/theme/img/thy_logo.png" 
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp"
             alt="Türk Hava Yolları Logo" 
             className="h-16 mx-auto mb-6"
           />
