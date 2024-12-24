@@ -12,7 +12,7 @@ export const Header = () => {
     if (path.includes('/thy')) return 'bg-thy';
     if (path.includes('/pegasus')) return 'bg-pegasus';
     if (path.includes('/sunexpress')) return 'bg-sunexpress';
-    if (path.includes('/ajet') || path.includes('/vf')) return 'bg-ajet';
+    if (path.includes('/ajet') || path.includes('/vf')) return 'bg-ajet'; // VF is AJet's flight code
     return 'bg-accent';
   };
 
