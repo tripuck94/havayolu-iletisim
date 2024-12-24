@@ -24,6 +24,10 @@ import ThyTicketChange from "./pages/thy/TicketChange";
 import PegasusTicketChange from "./pages/pegasus/TicketChange";
 import SunExpressTicketChange from "./pages/sunexpress/TicketChange";
 import AjetTicketChange from "./pages/ajet/TicketChange";
+import ThySeatSelection from "./pages/thy/SeatSelection";
+import PegasusSeatSelection from "./pages/pegasus/SeatSelection";
+import SunExpressSeatSelection from "./pages/sunexpress/SeatSelection";
+import AjetSeatSelection from "./pages/ajet/SeatSelection";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +59,10 @@ const App = () => (
           <Route path="/pegasus/ticket-change" element={<PegasusTicketChange />} />
           <Route path="/sunexpress/ticket-change" element={<SunExpressTicketChange />} />
           <Route path="/ajet/ticket-change" element={<AjetTicketChange />} />
+          <Route path="/thy/seat-selection" element={<ThySeatSelection />} />
+          <Route path="/pegasus/seat-selection" element={<PegasusSeatSelection />} />
+          <Route path="/sunexpress/seat-selection" element={<SunExpressSeatSelection />} />
+          <Route path="/ajet/seat-selection" element={<AjetSeatSelection />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
