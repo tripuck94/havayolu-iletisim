@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Luggage, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
+import { Luggage, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
