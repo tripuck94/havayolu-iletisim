@@ -5,6 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PetServices from "./pages/PetServices";
+import ThyPetServices from "./pages/thy/PetServices";
+import PegasusPetServices from "./pages/pegasus/PetServices";
+import SunExpressPetServices from "./pages/sunexpress/PetServices";
+import AjetPetServices from "./pages/ajet/PetServices";
 import ThyContactPage from "./pages/contact/ThyContactPage";
 import PegasusContactPage from "./pages/contact/PegasusContactPage";
 import SunexpressContactPage from "./pages/contact/SunexpressContactPage";
@@ -44,6 +48,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/pet-services" element={<PetServices />} />
+          <Route path="/thy/pet-services" element={<ThyPetServices />} />
+          <Route path="/pegasus/pet-services" element={<PegasusPetServices />} />
+          <Route path="/sunexpress/pet-services" element={<SunExpressPetServices />} />
+          <Route path="/ajet/pet-services" element={<AjetPetServices />} />
           <Route path="/thy/contact" element={<ThyContactPage />} />
           <Route path="/pegasus/contact" element={<PegasusContactPage />} />
           <Route path="/sunexpress/contact" element={<SunexpressContactPage />} />
