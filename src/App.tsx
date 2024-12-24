@@ -17,6 +17,9 @@ import UnaccompaniedMinor from "./pages/services/UnaccompaniedMinor";
 import ClassUpgrade from "./pages/services/ClassUpgrade";
 import CheckIn from "./pages/services/CheckIn";
 import ThyTicketPurchase from "./pages/thy/TicketPurchase";
+import PegasusTicketPurchase from "./pages/pegasus/TicketPurchase";
+import SunExpressTicketPurchase from "./pages/sunexpress/TicketPurchase";
+import AjetTicketPurchase from "./pages/ajet/TicketPurchase";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +44,9 @@ const App = () => (
           <Route path="/services/class-upgrade" element={<ClassUpgrade />} />
           <Route path="/services/check-in" element={<CheckIn />} />
           <Route path="/thy/ticket-purchase" element={<ThyTicketPurchase />} />
+          <Route path="/pegasus/ticket-purchase" element={<PegasusTicketPurchase />} />
+          <Route path="/sunexpress/ticket-purchase" element={<SunExpressTicketPurchase />} />
+          <Route path="/ajet/ticket-purchase" element={<AjetTicketPurchase />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
