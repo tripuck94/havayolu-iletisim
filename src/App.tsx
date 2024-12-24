@@ -6,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PetServices from "./pages/PetServices";
 import ThyContactPage from "./pages/contact/ThyContactPage";
-import PegasusContactPage from "./pages/contact/PegasusContactPage";
+import Pegasus
+
+ContactPage from "./pages/contact/PegasusContactPage";
 import SunexpressContactPage from "./pages/contact/SunexpressContactPage";
 import AjetContactPage from "./pages/contact/AjetContactPage";
 import TicketPurchase from "./pages/services/TicketPurchase";
@@ -28,6 +30,10 @@ import ThySeatSelection from "./pages/thy/SeatSelection";
 import PegasusSeatSelection from "./pages/pegasus/SeatSelection";
 import SunExpressSeatSelection from "./pages/sunexpress/SeatSelection";
 import AjetSeatSelection from "./pages/ajet/SeatSelection";
+import ThyBaggageService from "./pages/thy/BaggageService";
+import PegasusBaggageService from "./pages/pegasus/BaggageService";
+import SunExpressBaggageService from "./pages/sunexpress/BaggageService";
+import AjetBaggageService from "./pages/ajet/BaggageService";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +69,10 @@ const App = () => (
           <Route path="/pegasus/seat-selection" element={<PegasusSeatSelection />} />
           <Route path="/sunexpress/seat-selection" element={<SunExpressSeatSelection />} />
           <Route path="/ajet/seat-selection" element={<AjetSeatSelection />} />
+          <Route path="/thy/baggage" element={<ThyBaggageService />} />
+          <Route path="/pegasus/baggage" element={<PegasusBaggageService />} />
+          <Route path="/sunexpress/baggage" element={<SunExpressBaggageService />} />
+          <Route path="/ajet/baggage" element={<AjetBaggageService />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
