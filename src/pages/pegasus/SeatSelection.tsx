@@ -13,10 +13,6 @@ const PegasusSeatSelection = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <div className="container py-8 space-y-12">
-        <Link to="/" className="text-primary hover:underline mb-8 inline-block">
-          ← Ana Sayfaya Dön
-        </Link>
-        
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 

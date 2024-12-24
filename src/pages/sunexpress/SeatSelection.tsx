@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRightLeft, Phone, Shield, Clock, HeartHandshake, BadgeCheck, Armchair } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { Link } from "react-router-dom";
 
 const SunExpressSeatSelection = () => {
   const handleCall = () => {
@@ -13,10 +12,6 @@ const SunExpressSeatSelection = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <div className="container py-8 space-y-12">
-        <Link to="/" className="text-primary hover:underline mb-8 inline-block">
-          ← Ana Sayfaya Dön
-        </Link>
-        
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 
