@@ -2,7 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { B
+
+rowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PetServices from "./pages/PetServices";
 import ThyContactPage from "./pages/contact/ThyContactPage";
@@ -20,6 +22,10 @@ import ThyTicketPurchase from "./pages/thy/TicketPurchase";
 import PegasusTicketPurchase from "./pages/pegasus/TicketPurchase";
 import SunExpressTicketPurchase from "./pages/sunexpress/TicketPurchase";
 import AjetTicketPurchase from "./pages/ajet/TicketPurchase";
+import ThyTicketChange from "./pages/thy/TicketChange";
+import PegasusTicketChange from "./pages/pegasus/TicketChange";
+import SunExpressTicketChange from "./pages/sunexpress/TicketChange";
+import AjetTicketChange from "./pages/ajet/TicketChange";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +53,10 @@ const App = () => (
           <Route path="/pegasus/ticket-purchase" element={<PegasusTicketPurchase />} />
           <Route path="/sunexpress/ticket-purchase" element={<SunExpressTicketPurchase />} />
           <Route path="/ajet/ticket-purchase" element={<AjetTicketPurchase />} />
+          <Route path="/thy/ticket-change" element={<ThyTicketChange />} />
+          <Route path="/pegasus/ticket-change" element={<PegasusTicketChange />} />
+          <Route path="/sunexpress/ticket-change" element={<SunExpressTicketChange />} />
+          <Route path="/ajet/ticket-change" element={<AjetTicketChange />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
