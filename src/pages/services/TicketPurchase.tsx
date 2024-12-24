@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShoppingCart, Phone, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard, Ticket } from "lucide-react";
+import { ShoppingCart, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
@@ -26,7 +26,6 @@ const TicketPurchase = () => {
           </p>
         </div>
 
-        {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
@@ -164,7 +163,6 @@ const TicketPurchase = () => {
               variant="secondary"
               className="gap-2"
             >
-              <Phone className="h-4 w-4" />
               Hemen Arayın
             </Button>
           </div>
