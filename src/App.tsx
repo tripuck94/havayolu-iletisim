@@ -40,6 +40,14 @@ import ThyUnaccompaniedMinor from "./pages/thy/UnaccompaniedMinor";
 import PegasusUnaccompaniedMinor from "./pages/pegasus/UnaccompaniedMinor";
 import SunExpressUnaccompaniedMinor from "./pages/sunexpress/UnaccompaniedMinor";
 import AjetUnaccompaniedMinor from "./pages/ajet/UnaccompaniedMinor";
+import ThyClassUpgrade from "./pages/thy/ClassUpgrade";
+import PegasusClassUpgrade from "./pages/pegasus/ClassUpgrade";
+import SunExpressClassUpgrade from "./pages/sunexpress/ClassUpgrade";
+import AjetClassUpgrade from "./pages/ajet/ClassUpgrade";
+import ThyCheckIn from "./pages/thy/CheckIn";
+import PegasusCheckIn from "./pages/pegasus/CheckIn";
+import SunExpressCheckIn from "./pages/sunexpress/CheckIn";
+import AjetCheckIn from "./pages/ajet/CheckIn";
 
 const queryClient = new QueryClient();
 
@@ -87,6 +95,16 @@ const App = () => (
           <Route path="/pegasus/unaccompanied-minor" element={<PegasusUnaccompaniedMinor />} />
           <Route path="/sunexpress/unaccompanied-minor" element={<SunExpressUnaccompaniedMinor />} />
           <Route path="/ajet/unaccompanied-minor" element={<AjetUnaccompaniedMinor />} />
+          <Route path="/thy/class-upgrade" element={<ThyClassUpgrade />} />
+          <Route path="/pegasus/class-upgrade" element={<PegasusClassUpgrade />} />
+          <Route path="/sunexpress/class-upgrade" element={<SunExpressClassUpgrade />} />
+          <Route path="/ajet/class-upgrade" element={<AjetClassUpgrade />} />
+          <Route path="/thy/check-in" element={<Th
+
+yCheckIn />} />
+          <Route path="/pegasus/check-in" element={<PegasusCheckIn />} />
+          <Route path="/sunexpress/check-in" element={<SunExpressCheckIn />} />
+          <Route path="/ajet/check-in" element={<AjetCheckIn />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
