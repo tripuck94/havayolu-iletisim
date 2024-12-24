@@ -20,7 +20,7 @@ const AjetTicketChange = () => {
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 
-            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/AJ.webp"
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp"
             alt="AJet Logo" 
             className="h-16 mx-auto mb-6"
           />
