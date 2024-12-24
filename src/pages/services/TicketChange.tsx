@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { RefreshCw, Phone, Shield, Clock, HeartHandshake, BadgeCheck, CalendarCheck, Calendar } from "lucide-react";
+import { RefreshCw, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
@@ -172,7 +172,14 @@ const TicketChange = () => {
           </div>
         </div>
       </div>
-      <CallButton />
+      
+      {/* Fixed Bottom Button */}
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-lg">
+          <Phone className="h-5 w-5 mr-2" />
+          Hemen Ara
+        </Button>
+      </div>
     </div>
   );
 };
