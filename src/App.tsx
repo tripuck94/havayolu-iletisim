@@ -6,9 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PetServices from "./pages/PetServices";
 import ThyContactPage from "./pages/contact/ThyContactPage";
-import Pegasus
-
-ContactPage from "./pages/contact/PegasusContactPage";
+import PegasusContactPage from "./pages/contact/PegasusContactPage";
 import SunexpressContactPage from "./pages/contact/SunexpressContactPage";
 import AjetContactPage from "./pages/contact/AjetContactPage";
 import TicketPurchase from "./pages/services/TicketPurchase";
