@@ -99,9 +99,7 @@ const App = () => (
           <Route path="/pegasus/class-upgrade" element={<PegasusClassUpgrade />} />
           <Route path="/sunexpress/class-upgrade" element={<SunExpressClassUpgrade />} />
           <Route path="/ajet/class-upgrade" element={<AjetClassUpgrade />} />
-          <Route path="/thy/check-in" element={<Th
-
-yCheckIn />} />
+          <Route path="/thy/check-in" element={<ThyCheckIn />} />
           <Route path="/pegasus/check-in" element={<PegasusCheckIn />} />
           <Route path="/sunexpress/check-in" element={<SunExpressCheckIn />} />
           <Route path="/ajet/check-in" element={<AjetCheckIn />} />
