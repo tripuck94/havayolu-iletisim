@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShoppingCart, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
+import { ShoppingCart, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
@@ -16,7 +16,7 @@ const ThyTicketPurchase = () => {
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 
-            src="https://www.turkishairlines.com/theme/img/thy_logo.png" 
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp"
             alt="Türk Hava Yolları Logo" 
             className="h-16 mx-auto mb-6"
           />
@@ -30,7 +30,6 @@ const ThyTicketPurchase = () => {
           </p>
         </div>
 
-        {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
@@ -141,7 +140,7 @@ const ThyTicketPurchase = () => {
             </ul>
           </div>
 
-          <div className="text-center bg-primary text-white p-8 rounded-lg">
+          <div className="text-center bg-thy text-white p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
             <p className="mb-6">
               THY bilet satın alma işleminiz ile ilgili tüm sorularınız için çağrı merkezimizi 
@@ -152,7 +151,6 @@ const ThyTicketPurchase = () => {
               variant="secondary"
               className="gap-2"
             >
-              <Phone className="h-4 w-4" />
               Hemen Arayın
             </Button>
           </div>
@@ -161,7 +159,6 @@ const ThyTicketPurchase = () => {
         {/* Fixed Bottom Button */}
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
           <Button onClick={handleCall} className="w-full bg-thy hover:bg-thy-hover text-white text-lg">
-            <Phone className="h-5 w-5 mr-2" />
             Hemen Ara
           </Button>
         </div>

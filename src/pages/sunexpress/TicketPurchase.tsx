@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShoppingCart, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
+import { ShoppingCart, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
@@ -16,7 +16,7 @@ const SunExpressTicketPurchase = () => {
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 
-            src="https://www.sunexpress.com/static/assets/images/sunexpress-logo.svg" 
+            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp"
             alt="SunExpress Logo" 
             className="h-16 mx-auto mb-6"
           />
@@ -150,10 +150,16 @@ const SunExpressTicketPurchase = () => {
               variant="secondary"
               className="gap-2"
             >
-              <Phone className="h-4 w-4" />
               Hemen Arayın
             </Button>
           </div>
+        </div>
+
+        {/* Fixed Bottom Button */}
+        <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+          <Button onClick={handleCall} className="w-full bg-sunexpress hover:bg-sunexpress-hover text-white text-lg">
+            Hemen Ara
+          </Button>
         </div>
       </div>
       <CallButton />
