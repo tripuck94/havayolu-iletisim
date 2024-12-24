@@ -146,7 +146,6 @@ const BaggageService = () => {
               variant="secondary"
               className="gap-2"
             >
-              <Phone className="h-4 w-4" />
               Hemen Arayın
             </Button>
           </div>
