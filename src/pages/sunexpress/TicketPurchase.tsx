@@ -15,6 +15,11 @@ const SunExpressTicketPurchase = () => {
       <div className="container py-8 space-y-12">
         {/* Hero Section */}
         <div className="text-center space-y-4">
+          <img 
+            src="https://www.sunexpress.com/static/assets/images/sunexpress-logo.svg" 
+            alt="SunExpress Logo" 
+            className="h-16 mx-auto mb-6"
+          />
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <ShoppingCart className="h-10 w-10 text-sunexpress" />
             SunExpress Bilet Satın Alma
@@ -152,14 +157,6 @@ const SunExpressTicketPurchase = () => {
         </div>
       </div>
       <CallButton />
-      
-      {/* Fixed Bottom Button */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-        <Button onClick={handleCall} className="w-full bg-sunexpress hover:bg-sunexpress-hover text-white text-lg">
-          <Phone className="h-5 w-5 mr-2" />
-          Hemen Ara
-        </Button>
-      </div>
     </div>
   );
 };

@@ -19,6 +19,11 @@ const AjetTicketChange = () => {
         
         {/* Hero Section */}
         <div className="text-center space-y-4">
+          <img 
+            src="https://www.ajet.com.tr/assets/images/ajet-logo.svg" 
+            alt="AJet Logo" 
+            className="h-16 mx-auto mb-6"
+          />
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <RefreshCw className="h-10 w-10 text-ajet" />
             AJet Bilet Değişikliği

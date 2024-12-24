@@ -15,6 +15,11 @@ const PegasusTicketPurchase = () => {
       <div className="container py-8 space-y-12">
         {/* Hero Section */}
         <div className="text-center space-y-4">
+          <img 
+            src="https://www.flypgs.com/assets/images/pegasus-logo.svg" 
+            alt="Pegasus Logo" 
+            className="h-16 mx-auto mb-6"
+          />
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
             <ShoppingCart className="h-10 w-10 text-pegasus" />
             Pegasus Bilet Satın Alma
