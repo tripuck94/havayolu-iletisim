@@ -36,6 +36,10 @@ import ThyBaggageService from "./pages/thy/BaggageService";
 import PegasusBaggageService from "./pages/pegasus/BaggageService";
 import SunExpressBaggageService from "./pages/sunexpress/BaggageService";
 import AjetBaggageService from "./pages/ajet/BaggageService";
+import ThyUnaccompaniedMinor from "./pages/thy/UnaccompaniedMinor";
+import PegasusUnaccompaniedMinor from "./pages/pegasus/UnaccompaniedMinor";
+import SunExpressUnaccompaniedMinor from "./pages/sunexpress/UnaccompaniedMinor";
+import AjetUnaccompaniedMinor from "./pages/ajet/UnaccompaniedMinor";
 
 const queryClient = new QueryClient();
 
@@ -79,6 +83,10 @@ const App = () => (
           <Route path="/pegasus/baggage" element={<PegasusBaggageService />} />
           <Route path="/sunexpress/baggage" element={<SunExpressBaggageService />} />
           <Route path="/ajet/baggage" element={<AjetBaggageService />} />
+          <Route path="/thy/unaccompanied-minor" element={<ThyUnaccompaniedMinor />} />
+          <Route path="/pegasus/unaccompanied-minor" element={<PegasusUnaccompaniedMinor />} />
+          <Route path="/sunexpress/unaccompanied-minor" element={<SunExpressUnaccompaniedMinor />} />
+          <Route path="/ajet/unaccompanied-minor" element={<AjetUnaccompaniedMinor />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
