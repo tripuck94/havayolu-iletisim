@@ -1,3 +1,4 @@
+
 export const Airlines = () => {
   const airlines = [
     { 
@@ -16,13 +17,17 @@ export const Airlines = () => {
       name: "AJet", 
       logo: "https://www.ajet.com.tr/assets/images/ajet-logo.svg"
     },
+    {
+      name: "AZAL",
+      logo: "https://www.azal.az/media/2021/01/azal-logo.png"
+    }
   ];
 
   return (
     <section className="py-16 bg-white">
       <div className="container">
         <h2 className="text-center text-3xl font-bold mb-12">Çalıştığımız Havayolları</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
           {airlines.map((airline) => (
             <div
               key={airline.name}

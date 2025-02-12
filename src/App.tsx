@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,10 +10,12 @@ import ThyPetServices from "./pages/thy/PetServices";
 import PegasusPetServices from "./pages/pegasus/PetServices";
 import SunExpressPetServices from "./pages/sunexpress/PetServices";
 import AjetPetServices from "./pages/ajet/PetServices";
+import AzalPetServices from "./pages/azal/PetServices";
 import ThyContactPage from "./pages/contact/ThyContactPage";
 import PegasusContactPage from "./pages/contact/PegasusContactPage";
 import SunexpressContactPage from "./pages/contact/SunexpressContactPage";
 import AjetContactPage from "./pages/contact/AjetContactPage";
+import AzalContactPage from "./pages/contact/AzalContactPage";
 import TicketPurchase from "./pages/services/TicketPurchase";
 import TicketChange from "./pages/services/TicketChange";
 import SeatSelection from "./pages/services/SeatSelection";
@@ -24,30 +27,37 @@ import ThyTicketPurchase from "./pages/thy/TicketPurchase";
 import PegasusTicketPurchase from "./pages/pegasus/TicketPurchase";
 import SunExpressTicketPurchase from "./pages/sunexpress/TicketPurchase";
 import AjetTicketPurchase from "./pages/ajet/TicketPurchase";
+import AzalTicketPurchase from "./pages/azal/TicketPurchase";
 import ThyTicketChange from "./pages/thy/TicketChange";
 import PegasusTicketChange from "./pages/pegasus/TicketChange";
 import SunExpressTicketChange from "./pages/sunexpress/TicketChange";
 import AjetTicketChange from "./pages/ajet/TicketChange";
+import AzalTicketChange from "./pages/azal/TicketChange";
 import ThySeatSelection from "./pages/thy/SeatSelection";
 import PegasusSeatSelection from "./pages/pegasus/SeatSelection";
 import SunExpressSeatSelection from "./pages/sunexpress/SeatSelection";
 import AjetSeatSelection from "./pages/ajet/SeatSelection";
+import AzalSeatSelection from "./pages/azal/SeatSelection";
 import ThyBaggageService from "./pages/thy/BaggageService";
 import PegasusBaggageService from "./pages/pegasus/BaggageService";
 import SunExpressBaggageService from "./pages/sunexpress/BaggageService";
 import AjetBaggageService from "./pages/ajet/BaggageService";
+import AzalBaggageService from "./pages/azal/BaggageService";
 import ThyUnaccompaniedMinor from "./pages/thy/UnaccompaniedMinor";
 import PegasusUnaccompaniedMinor from "./pages/pegasus/UnaccompaniedMinor";
 import SunExpressUnaccompaniedMinor from "./pages/sunexpress/UnaccompaniedMinor";
 import AjetUnaccompaniedMinor from "./pages/ajet/UnaccompaniedMinor";
+import AzalUnaccompaniedMinor from "./pages/azal/UnaccompaniedMinor";
 import ThyClassUpgrade from "./pages/thy/ClassUpgrade";
 import PegasusClassUpgrade from "./pages/pegasus/ClassUpgrade";
 import SunExpressClassUpgrade from "./pages/sunexpress/ClassUpgrade";
 import AjetClassUpgrade from "./pages/ajet/ClassUpgrade";
+import AzalClassUpgrade from "./pages/azal/ClassUpgrade";
 import ThyCheckIn from "./pages/thy/CheckIn";
 import PegasusCheckIn from "./pages/pegasus/CheckIn";
 import SunExpressCheckIn from "./pages/sunexpress/CheckIn";
 import AjetCheckIn from "./pages/ajet/CheckIn";
+import AzalCheckIn from "./pages/azal/CheckIn";
 
 const queryClient = new QueryClient();
 
@@ -64,10 +74,12 @@ const App = () => (
           <Route path="/pegasus/pet-services" element={<PegasusPetServices />} />
           <Route path="/sunexpress/pet-services" element={<SunExpressPetServices />} />
           <Route path="/ajet/pet-services" element={<AjetPetServices />} />
+          <Route path="/azal/pet-services" element={<AzalPetServices />} />
           <Route path="/thy/contact" element={<ThyContactPage />} />
           <Route path="/pegasus/contact" element={<PegasusContactPage />} />
           <Route path="/sunexpress/contact" element={<SunexpressContactPage />} />
           <Route path="/ajet/contact" element={<AjetContactPage />} />
+          <Route path="/azal/contact" element={<AzalContactPage />} />
           <Route path="/services/ticket-purchase" element={<TicketPurchase />} />
           <Route path="/services/ticket-change" element={<TicketChange />} />
           <Route path="/services/seat-selection" element={<SeatSelection />} />
@@ -79,30 +91,37 @@ const App = () => (
           <Route path="/pegasus/ticket-purchase" element={<PegasusTicketPurchase />} />
           <Route path="/sunexpress/ticket-purchase" element={<SunExpressTicketPurchase />} />
           <Route path="/ajet/ticket-purchase" element={<AjetTicketPurchase />} />
+          <Route path="/azal/ticket-purchase" element={<AzalTicketPurchase />} />
           <Route path="/thy/ticket-change" element={<ThyTicketChange />} />
           <Route path="/pegasus/ticket-change" element={<PegasusTicketChange />} />
           <Route path="/sunexpress/ticket-change" element={<SunExpressTicketChange />} />
           <Route path="/ajet/ticket-change" element={<AjetTicketChange />} />
+          <Route path="/azal/ticket-change" element={<AzalTicketChange />} />
           <Route path="/thy/seat-selection" element={<ThySeatSelection />} />
           <Route path="/pegasus/seat-selection" element={<PegasusSeatSelection />} />
           <Route path="/sunexpress/seat-selection" element={<SunExpressSeatSelection />} />
           <Route path="/ajet/seat-selection" element={<AjetSeatSelection />} />
+          <Route path="/azal/seat-selection" element={<AzalSeatSelection />} />
           <Route path="/thy/baggage" element={<ThyBaggageService />} />
           <Route path="/pegasus/baggage" element={<PegasusBaggageService />} />
           <Route path="/sunexpress/baggage" element={<SunExpressBaggageService />} />
           <Route path="/ajet/baggage" element={<AjetBaggageService />} />
+          <Route path="/azal/baggage" element={<AzalBaggageService />} />
           <Route path="/thy/unaccompanied-minor" element={<ThyUnaccompaniedMinor />} />
           <Route path="/pegasus/unaccompanied-minor" element={<PegasusUnaccompaniedMinor />} />
           <Route path="/sunexpress/unaccompanied-minor" element={<SunExpressUnaccompaniedMinor />} />
           <Route path="/ajet/unaccompanied-minor" element={<AjetUnaccompaniedMinor />} />
+          <Route path="/azal/unaccompanied-minor" element={<AzalUnaccompaniedMinor />} />
           <Route path="/thy/class-upgrade" element={<ThyClassUpgrade />} />
           <Route path="/pegasus/class-upgrade" element={<PegasusClassUpgrade />} />
           <Route path="/sunexpress/class-upgrade" element={<SunExpressClassUpgrade />} />
           <Route path="/ajet/class-upgrade" element={<AjetClassUpgrade />} />
+          <Route path="/azal/class-upgrade" element={<AzalClassUpgrade />} />
           <Route path="/thy/check-in" element={<ThyCheckIn />} />
           <Route path="/pegasus/check-in" element={<PegasusCheckIn />} />
           <Route path="/sunexpress/check-in" element={<SunExpressCheckIn />} />
           <Route path="/ajet/check-in" element={<AjetCheckIn />} />
+          <Route path="/azal/check-in" element={<AzalCheckIn />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
