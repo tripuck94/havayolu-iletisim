@@ -9,7 +9,7 @@ const SunExpressSeatSelection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
       <div className="container py-8 space-y-12">
         {/* Hero Section */}
@@ -133,8 +133,8 @@ const SunExpressSeatSelection = () => {
       </div>
       
       {/* Fixed Bottom Button */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-        <Button onClick={handleCall} className="w-full bg-sunexpress hover:bg-sunexpress-hover text-white text-lg">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+        <Button onClick={handleCall} className="w-full bg-sunexpress hover:bg-sunexpress-hover text-white text-xl py-6">
           <Phone className="h-5 w-5 mr-2" />
           Hemen Ara
         </Button>

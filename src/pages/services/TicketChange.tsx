@@ -2,15 +2,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RefreshCw, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
 
 const TicketChange = () => {
   const handleCall = () => {
-    window.location.href = "tel:+905555555555";
+    window.location.href = "tel:08502428117";
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
       <div className="container py-8 space-y-12">
         {/* Hero Section */}
@@ -174,8 +173,8 @@ const TicketChange = () => {
       </div>
       
       {/* Fixed Bottom Button */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-lg">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-xl py-6">
           <Phone className="h-5 w-5 mr-2" />
           Hemen Ara
         </Button>

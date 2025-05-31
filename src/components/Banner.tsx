@@ -26,7 +26,7 @@ export const Banner = () => {
         </p>
         <Button
           size="lg"
-          className="animate-float bg-accent hover:bg-accent/90 text-lg"
+          className="bg-blue-600 hover:bg-blue-700 hover:scale-105 text-white text-lg font-bold shadow-xl border-2 border-white/20 px-8 py-6 transition-all duration-300 hover:shadow-2xl"
           onClick={handleCall}
         >
           <Phone className="mr-2 h-5 w-5" />

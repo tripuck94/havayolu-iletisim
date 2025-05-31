@@ -10,7 +10,7 @@ const ThyCheckIn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
       <div className="container py-12 md:py-16 space-y-16 mb-16">
         <div className="text-center space-y-4">
@@ -132,8 +132,8 @@ const ThyCheckIn = () => {
         </div>
 
         {/* Fixed Bottom Button */}
-        <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-          <Button onClick={handleCall} className="w-full bg-thy hover:bg-thy-hover text-white text-lg">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+          <Button onClick={handleCall} className="w-full bg-thy hover:bg-thy-hover text-white text-xl py-6">
             <Phone className="h-5 w-5 mr-2" />
             Hemen Ara
           </Button>

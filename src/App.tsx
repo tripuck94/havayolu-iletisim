@@ -1,38 +1,30 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 import PetServices from "./pages/PetServices";
 import ThyPetServices from "./pages/thy/PetServices";
 import PegasusPetServices from "./pages/pegasus/PetServices";
 import SunExpressPetServices from "./pages/sunexpress/PetServices";
 import AjetPetServices from "./pages/ajet/PetServices";
 import AzalPetServices from "./pages/azal/PetServices";
-import ThyContactPage from "./pages/contact/ThyContactPage";
-import PegasusContactPage from "./pages/contact/PegasusContactPage";
-import SunexpressContactPage from "./pages/contact/SunexpressContactPage";
-import AjetContactPage from "./pages/contact/AjetContactPage";
-import AzalContactPage from "./pages/contact/AzalContactPage";
+import AirlineContactPage from "./pages/contact/AirlineContactPage";
 import TicketPurchase from "./pages/services/TicketPurchase";
+import AirlineTicketPurchase from "./pages/services/AirlineTicketPurchase";
 import TicketChange from "./pages/services/TicketChange";
+import GeneralNameChange from "./pages/services/NameChange";
+import GeneralCancelRefund from "./pages/services/CancelRefund";
+import AirlineTicketChange from "./pages/TicketChange";
+import NameChange from "./pages/NameChange";
+import CancelRefund from "./pages/CancelRefund";
 import SeatSelection from "./pages/services/SeatSelection";
 import BaggageService from "./pages/services/BaggageService";
 import UnaccompaniedMinor from "./pages/services/UnaccompaniedMinor";
 import ClassUpgrade from "./pages/services/ClassUpgrade";
 import CheckIn from "./pages/services/CheckIn";
-import ThyTicketPurchase from "./pages/thy/TicketPurchase";
-import PegasusTicketPurchase from "./pages/pegasus/TicketPurchase";
-import SunExpressTicketPurchase from "./pages/sunexpress/TicketPurchase";
-import AjetTicketPurchase from "./pages/ajet/TicketPurchase";
-import AzalTicketPurchase from "./pages/azal/TicketPurchase";
-import ThyTicketChange from "./pages/thy/TicketChange";
-import PegasusTicketChange from "./pages/pegasus/TicketChange";
-import SunExpressTicketChange from "./pages/sunexpress/TicketChange";
-import AjetTicketChange from "./pages/ajet/TicketChange";
-import AzalTicketChange from "./pages/azal/TicketChange";
 import ThySeatSelection from "./pages/thy/SeatSelection";
 import PegasusSeatSelection from "./pages/pegasus/SeatSelection";
 import SunExpressSeatSelection from "./pages/sunexpress/SeatSelection";
@@ -75,28 +67,43 @@ const App = () => (
           <Route path="/sunexpress/pet-services" element={<SunExpressPetServices />} />
           <Route path="/ajet/pet-services" element={<AjetPetServices />} />
           <Route path="/azal/pet-services" element={<AzalPetServices />} />
-          <Route path="/thy/contact" element={<ThyContactPage />} />
-          <Route path="/pegasus/contact" element={<PegasusContactPage />} />
-          <Route path="/sunexpress/contact" element={<SunexpressContactPage />} />
-          <Route path="/ajet/contact" element={<AjetContactPage />} />
-          <Route path="/azal/contact" element={<AzalContactPage />} />
-          <Route path="/services/ticket-purchase" element={<TicketPurchase />} />
-          <Route path="/services/ticket-change" element={<TicketChange />} />
+          <Route path="/thy-iletisim" element={<AirlineContactPage />} />
+          <Route path="/pegasus-iletisim" element={<AirlineContactPage />} />
+          <Route path="/sunexpress-iletisim" element={<AirlineContactPage />} />
+          <Route path="/ajet-iletisim" element={<AirlineContactPage />} />
+          <Route path="/azal-iletisim" element={<AirlineContactPage />} />
+          <Route path="/hizmetler/bilet-satin-alma" element={<TicketPurchase />} />
+          <Route path="/hizmetler/bilet-degisikligi" element={<TicketChange />} />
+          <Route path="/hizmetler/isim-degisikligi" element={<GeneralNameChange />} />
+          <Route path="/hizmetler/iptal-iade" element={<GeneralCancelRefund />} />
           <Route path="/services/seat-selection" element={<SeatSelection />} />
           <Route path="/services/baggage" element={<BaggageService />} />
           <Route path="/services/unaccompanied-minor" element={<UnaccompaniedMinor />} />
           <Route path="/services/class-upgrade" element={<ClassUpgrade />} />
           <Route path="/services/check-in" element={<CheckIn />} />
-          <Route path="/thy/ticket-purchase" element={<ThyTicketPurchase />} />
-          <Route path="/pegasus/ticket-purchase" element={<PegasusTicketPurchase />} />
-          <Route path="/sunexpress/ticket-purchase" element={<SunExpressTicketPurchase />} />
-          <Route path="/ajet/ticket-purchase" element={<AjetTicketPurchase />} />
-          <Route path="/azal/ticket-purchase" element={<AzalTicketPurchase />} />
-          <Route path="/thy/ticket-change" element={<ThyTicketChange />} />
-          <Route path="/pegasus/ticket-change" element={<PegasusTicketChange />} />
-          <Route path="/sunexpress/ticket-change" element={<SunExpressTicketChange />} />
-          <Route path="/ajet/ticket-change" element={<AjetTicketChange />} />
-          <Route path="/azal/ticket-change" element={<AzalTicketChange />} />
+          <Route path="/thy-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/pegasus-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/sunexpress-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/ajet-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/azal-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/thy-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/pegasus-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/sunexpress-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/ajet-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/azal-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/bilet-degisikligi/:airline" element={<AirlineTicketChange />} />
+          <Route path="/thy-isim-degisikligi" element={<NameChange />} />
+          <Route path="/pegasus-isim-degisikligi" element={<NameChange />} />
+          <Route path="/sunexpress-isim-degisikligi" element={<NameChange />} />
+          <Route path="/ajet-isim-degisikligi" element={<NameChange />} />
+          <Route path="/azal-isim-degisikligi" element={<NameChange />} />
+          <Route path="/isim-degisikligi/:airline" element={<NameChange />} />
+          <Route path="/thy-iptal-iade" element={<CancelRefund />} />
+          <Route path="/pegasus-iptal-iade" element={<CancelRefund />} />
+          <Route path="/sunexpress-iptal-iade" element={<CancelRefund />} />
+          <Route path="/ajet-iptal-iade" element={<CancelRefund />} />
+          <Route path="/azal-iptal-iade" element={<CancelRefund />} />
+          <Route path="/iptal-iade/:airline" element={<CancelRefund />} />
           <Route path="/thy/seat-selection" element={<ThySeatSelection />} />
           <Route path="/pegasus/seat-selection" element={<PegasusSeatSelection />} />
           <Route path="/sunexpress/seat-selection" element={<SunExpressSeatSelection />} />
@@ -122,6 +129,7 @@ const App = () => (
           <Route path="/sunexpress/check-in" element={<SunExpressCheckIn />} />
           <Route path="/ajet/check-in" element={<AjetCheckIn />} />
           <Route path="/azal/check-in" element={<AzalCheckIn />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

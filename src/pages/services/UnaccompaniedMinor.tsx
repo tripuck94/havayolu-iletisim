@@ -10,7 +10,7 @@ const UnaccompaniedMinor = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
       {/* Hero Section */}
       <div className="text-center space-y-4">

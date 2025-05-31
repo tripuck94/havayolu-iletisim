@@ -10,7 +10,7 @@ const PetServices = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
       <div className="container py-12 md:py-16 space-y-16 mb-16">
         {/* Hero Section */}

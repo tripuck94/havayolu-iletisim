@@ -12,17 +12,17 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen pb-20">
+    <div className="min-h-screen pb-20 md:pb-0">
       <Header />
       <Banner />
       <Services />
       <Airlines />
       <Contact />
       
-      {/* Fixed Bottom Button */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-lg">
-          <Phone className="h-5 w-5 mr-2" />
+      {/* Fixed Bottom Button - Sadece Mobilde Görünür */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-xl py-6 font-bold">
+          <Phone className="h-6 w-6 mr-3" />
           Hemen Ara
         </Button>
       </div>

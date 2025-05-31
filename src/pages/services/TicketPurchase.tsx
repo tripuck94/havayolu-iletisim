@@ -10,7 +10,7 @@ const TicketPurchase = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
       <div className="container py-8 space-y-12">
         {/* Hero Section */}
