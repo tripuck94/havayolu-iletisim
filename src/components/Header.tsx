@@ -421,12 +421,64 @@ export const Header = () => {
                     </div>
                   </div>
                   
-                  <Link to="/" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-amber-50 hover:text-amber-600 rounded-lg transition-all duration-200 group/item">
-                    <div className="h-6 w-6 bg-amber-100 rounded-full flex items-center justify-center">
-                      <Luggage className="h-3 w-3 text-amber-600" />
+                  <div className="relative group/submenu">
+                    <Link to="/hizmetler/bagaj-ekleme" className="flex items-center justify-between gap-3 px-4 py-3 text-gray-800 hover:bg-amber-50 hover:text-amber-600 rounded-lg transition-all duration-200 group/item">
+                      <div className="flex items-center gap-3">
+                        <div className="h-6 w-6 bg-amber-100 rounded-full flex items-center justify-center">
+                          <Luggage className="h-3 w-3 text-amber-600" />
+                        </div>
+                        <span className="font-medium">Bagaj Ekleme</span>
+                      </div>
+                      <ArrowLeft className="h-4 w-4 rotate-180 text-gray-400" />
+                    </Link>
+                    
+                    {/* Right-side submenu for airline-specific baggage */}
+                    <div className="absolute left-full top-0 ml-1 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-300 border border-gray-100">
+                      <div className="p-2">
+                        <Link to="/thy-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp"
+                            alt="THY" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">THY Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/pegasus-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp"
+                            alt="Pegasus" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Pegasus Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/sunexpress-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp"
+                            alt="SunExpress" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">SunExpress Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/ajet-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp"
+                            alt="AJet" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">AJet Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/azal-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/j2.webp"
+                            alt="AZAL" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">AZAL Bagaj Ekleme</span>
+                        </Link>
+                      </div>
                     </div>
-                    <span className="font-medium">Bagaj Politikası</span>
-                  </Link>
+                  </div>
+                  
                   <Link to="/" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-green-50 hover:text-green-600 rounded-lg transition-all duration-200 group/item">
                     <div className="h-6 w-6 bg-green-100 rounded-full flex items-center justify-center">
                       <CheckCircle className="h-3 w-3 text-green-600" />

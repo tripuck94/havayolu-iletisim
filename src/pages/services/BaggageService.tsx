@@ -1,12 +1,11 @@
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Luggage, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
+import { Luggage, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const BaggageService = () => {
   const handleCall = () => {
-    window.location.href = "tel:+905555555555";
+    window.location.href = "tel:08502428117";
   };
 
   return (
@@ -29,7 +28,7 @@ const BaggageService = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="/lovable-uploads/7398e5b3-2469-4357-9789-94408bad853b.png"
+            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
             alt="Bagaj Ekleme"
             className="w-full h-full object-cover"
           />
@@ -95,7 +94,7 @@ const BaggageService = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="/lovable-uploads/04790e9a-9300-402d-92ec-824ca1c5a0db.png"
+              src="https://images.unsplash.com/photo-1586453720540-d810293cd484"
               alt="Bagaj İşlemleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -146,12 +145,20 @@ const BaggageService = () => {
               variant="secondary"
               className="gap-2"
             >
+              <Phone className="h-4 w-4" />
               Hemen Arayın
             </Button>
           </div>
         </div>
       </div>
-      <CallButton />
+      
+      {/* Fixed Bottom Button */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-xl py-6">
+          <Phone className="h-5 w-5 mr-2" />
+          Hemen Ara
+        </Button>
+      </div>
     </div>
   );
 };

@@ -20,8 +20,8 @@ import GeneralCancelRefund from "./pages/services/CancelRefund";
 import AirlineTicketChange from "./pages/TicketChange";
 import NameChange from "./pages/NameChange";
 import CancelRefund from "./pages/CancelRefund";
-import SeatSelection from "./pages/services/SeatSelection";
-import BaggageService from "./pages/services/BaggageService";
+import SeatSelection from "./pages/SeatSelection";
+import BaggageService from "./pages/BaggageService";
 import UnaccompaniedMinor from "./pages/services/UnaccompaniedMinor";
 import ClassUpgrade from "./pages/services/ClassUpgrade";
 import CheckIn from "./pages/services/CheckIn";
@@ -77,6 +77,7 @@ const App = () => (
           <Route path="/hizmetler/isim-degisikligi" element={<GeneralNameChange />} />
           <Route path="/hizmetler/iptal-iade" element={<GeneralCancelRefund />} />
           <Route path="/hizmetler/koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/hizmetler/bagaj-ekleme" element={<BaggageService />} />
           <Route path="/services/seat-selection" element={<SeatSelection />} />
           <Route path="/services/baggage" element={<BaggageService />} />
           <Route path="/services/unaccompanied-minor" element={<UnaccompaniedMinor />} />
@@ -99,6 +100,12 @@ const App = () => (
           <Route path="/ajet-koltuk-secimi" element={<SeatSelection />} />
           <Route path="/azal-koltuk-secimi" element={<SeatSelection />} />
           <Route path="/koltuk-secimi/:airline" element={<SeatSelection />} />
+          <Route path="/thy-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/pegasus-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/sunexpress-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/ajet-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/azal-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/bagaj-ekleme/:airline" element={<BaggageService />} />
           <Route path="/thy-isim-degisikligi" element={<NameChange />} />
           <Route path="/pegasus-isim-degisikligi" element={<NameChange />} />
           <Route path="/sunexpress-isim-degisikligi" element={<NameChange />} />
