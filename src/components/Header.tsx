@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Phone, RefreshCw, Edit, XCircle, PawPrint, Users, ArrowUp, Luggage, CheckCircle, Clock, Search, Calendar, BookOpen, Heart, HelpCircle, CreditCard, ArrowLeft } from "lucide-react";
+import { Phone, RefreshCw, Edit, XCircle, PawPrint, Users, ArrowUp, Luggage, CheckCircle, Clock, Search, Calendar, BookOpen, Heart, HelpCircle, CreditCard, ArrowLeft, Armchair } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
@@ -363,6 +363,64 @@ export const Header = () => {
               </span>
               <div className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-1 border border-gray-100">
                 <div className="p-2">
+                  <div className="relative group/submenu">
+                    <Link to="/hizmetler/koltuk-secimi" className="flex items-center justify-between gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 group/item">
+                      <div className="flex items-center gap-3">
+                        <div className="h-6 w-6 bg-blue-100 rounded-full flex items-center justify-center">
+                          <Armchair className="h-3 w-3 text-blue-600" />
+                        </div>
+                        <span className="font-medium">Koltuk Seçimi</span>
+                      </div>
+                      <ArrowLeft className="h-4 w-4 rotate-180 text-gray-400" />
+                    </Link>
+                    
+                    {/* Right-side submenu for airline-specific seat selection */}
+                    <div className="absolute left-full top-0 ml-1 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-300 border border-gray-100">
+                      <div className="p-2">
+                        <Link to="/thy-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp"
+                            alt="THY" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">THY Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/pegasus-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp"
+                            alt="Pegasus" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Pegasus Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/sunexpress-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp"
+                            alt="SunExpress" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">SunExpress Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/ajet-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp"
+                            alt="AJet" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">AJet Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/azal-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/j2.webp"
+                            alt="AZAL" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">AZAL Koltuk Seçimi</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  
                   <Link to="/" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-amber-50 hover:text-amber-600 rounded-lg transition-all duration-200 group/item">
                     <div className="h-6 w-6 bg-amber-100 rounded-full flex items-center justify-center">
                       <Luggage className="h-3 w-3 text-amber-600" />

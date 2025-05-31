@@ -76,6 +76,7 @@ const App = () => (
           <Route path="/hizmetler/bilet-degisikligi" element={<TicketChange />} />
           <Route path="/hizmetler/isim-degisikligi" element={<GeneralNameChange />} />
           <Route path="/hizmetler/iptal-iade" element={<GeneralCancelRefund />} />
+          <Route path="/hizmetler/koltuk-secimi" element={<SeatSelection />} />
           <Route path="/services/seat-selection" element={<SeatSelection />} />
           <Route path="/services/baggage" element={<BaggageService />} />
           <Route path="/services/unaccompanied-minor" element={<UnaccompaniedMinor />} />
@@ -92,6 +93,12 @@ const App = () => (
           <Route path="/ajet-bilet-degisikligi" element={<AirlineTicketChange />} />
           <Route path="/azal-bilet-degisikligi" element={<AirlineTicketChange />} />
           <Route path="/bilet-degisikligi/:airline" element={<AirlineTicketChange />} />
+          <Route path="/thy-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/pegasus-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/sunexpress-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/ajet-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/azal-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/koltuk-secimi/:airline" element={<SeatSelection />} />
           <Route path="/thy-isim-degisikligi" element={<NameChange />} />
           <Route path="/pegasus-isim-degisikligi" element={<NameChange />} />
           <Route path="/sunexpress-isim-degisikligi" element={<NameChange />} />
