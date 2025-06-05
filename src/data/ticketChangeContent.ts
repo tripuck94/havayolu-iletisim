@@ -1,11 +1,19 @@
 export const ticketChangeContent = {
   title: "Bilet Değişikliği",
   description: "Seyahat planlarınızda değişiklik mi var? Bilet değişikliği işlemlerinizi kolayca gerçekleştirmenize yardımcı oluyoruz.",
-  mainImage: "/lovable-uploads/1f65f478-a215-44da-9727-ceb49f5e3b74.png",
+  mainImage: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_800,h_400,c_fill/v1749081955/images/call-center/static/1f65f478-a215-44da-9727-ceb49f5e3b74.png",
   advantages: [
     {
-      title: "Esnek Değişiklik İmkanı",
-      description: "Biletinizi ihtiyaçlarınıza göre kolayca değiştirin."
+      icon: "Shield",
+      title: "Güvenli İşlem",
+      description: "Bilet değişiklik işlemlerinizi güvenli bir şekilde gerçekleştirin.",
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/0fe02586-04af-4d3d-842e-56c37907739b.png"
+    },
+    {
+      icon: "Clock",
+      title: "Hızlı Çözüm",
+      description: "Değişiklik taleplerini hızlı bir şekilde sonuçlandırın.",
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/ce88f604-b3ab-47b4-987f-7671ee4f2587.png"
     }
   ],
   sections: [

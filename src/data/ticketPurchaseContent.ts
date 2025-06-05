@@ -1,11 +1,19 @@
 export const ticketPurchaseContent = {
   title: "Bilet Satın Alma",
   description: "Seyahat planlarınızı kolaylaştırmak ve size en uygun uçuş biletlerini bulmanıza yardımcı olmak için buradayız.",
-  mainImage: "/lovable-uploads/fcf6d3d4-46ef-4c5e-8a48-a2e4159997a5.png",
+  mainImage: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_800,h_400,c_fill/v1749081955/images/call-center/static/fcf6d3d4-46ef-4c5e-8a48-a2e4159997a5.png",
   advantages: [
     {
-      title: "Kolay ve Güvenli Bilet Satın Alma",
-      description: "Tüm havayollarının biletlerini tek bir noktadan, en uygun fiyatlarla satın almanıza yardımcı oluyoruz."
+      icon: "Shield",
+      title: "Güvenli Rezervasyon",
+      description: "Profesyonel ekibimizle güvenli bilet rezervasyonu yapın.",
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/ce88f604-b3ab-47b4-987f-7671ee4f2587.png"
+    },
+    {
+      icon: "Clock",
+      title: "Hızlı İşlem",
+      description: "Dakikalar içinde rezervasyonunuzu tamamlayın.",
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/04790e9a-9300-402d-92ec-824ca1c5a0db.png"
     }
   ],
   sections: [
