@@ -27,7 +27,7 @@ const AirlinePetServices = () => {
       case 'thy':
         return {
           name: 'Türk Hava Yolları',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
           colorClass: 'text-thy',
           bgClass: 'bg-thy',
           hoverClass: 'hover:bg-thy-hover',
@@ -36,7 +36,7 @@ const AirlinePetServices = () => {
       case 'pegasus':
         return {
           name: 'Pegasus',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
           colorClass: 'text-pegasus',
           bgClass: 'bg-pegasus',
           hoverClass: 'hover:bg-pegasus-hover',
@@ -45,7 +45,7 @@ const AirlinePetServices = () => {
       case 'sunexpress':
         return {
           name: 'SunExpress',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
           colorClass: 'text-sunexpress',
           bgClass: 'bg-sunexpress',
           hoverClass: 'hover:bg-sunexpress-hover',
@@ -54,7 +54,7 @@ const AirlinePetServices = () => {
       case 'ajet':
         return {
           name: 'AJet',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
           colorClass: 'text-ajet',
           bgClass: 'bg-ajet',
           hoverClass: 'hover:bg-ajet-hover',
@@ -63,7 +63,7 @@ const AirlinePetServices = () => {
       case 'azal':
         return {
           name: 'AZAL',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/j2.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
           colorClass: 'text-azal',
           bgClass: 'bg-azal',
           hoverClass: 'hover:bg-azal-hover',

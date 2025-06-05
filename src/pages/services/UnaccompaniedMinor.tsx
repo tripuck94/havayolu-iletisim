@@ -37,7 +37,7 @@ const UnaccompaniedMinor = () => {
       case 'thy':
         return {
           name: 'Türk Hava Yolları',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
           colorClass: 'text-thy',
           bgColorClass: 'bg-thy',
           hoverColorClass: 'hover:bg-thy-hover'
@@ -45,7 +45,7 @@ const UnaccompaniedMinor = () => {
       case 'pegasus':
         return {
           name: 'Pegasus',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
           colorClass: 'text-pegasus',
           bgColorClass: 'bg-pegasus',
           hoverColorClass: 'hover:bg-pegasus-hover'
@@ -53,7 +53,7 @@ const UnaccompaniedMinor = () => {
       case 'sunexpress':
         return {
           name: 'SunExpress',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
           colorClass: 'text-sunexpress',
           bgColorClass: 'bg-sunexpress',
           hoverColorClass: 'hover:bg-sunexpress-hover'
@@ -61,7 +61,7 @@ const UnaccompaniedMinor = () => {
       case 'ajet':
         return {
           name: 'AJet',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
           colorClass: 'text-ajet',
           bgColorClass: 'bg-ajet',
           hoverColorClass: 'hover:bg-ajet-hover'
@@ -69,7 +69,7 @@ const UnaccompaniedMinor = () => {
       case 'azal':
         return {
           name: 'AZAL',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/j2.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
           colorClass: 'text-azal',
           bgColorClass: 'bg-azal',
           hoverColorClass: 'hover:bg-azal/90'

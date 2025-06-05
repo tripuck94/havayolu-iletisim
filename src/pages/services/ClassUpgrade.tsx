@@ -26,7 +26,7 @@ const ClassUpgrade = () => {
       case 'thy':
         return {
           name: 'Türk Hava Yolları',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
           color: 'thy',
           loyalty: 'Miles&Smiles',
           phone: 'tel:08502600849'
@@ -34,7 +34,7 @@ const ClassUpgrade = () => {
       case 'pegasus':
         return {
           name: 'Pegasus',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
           color: 'pegasus',
           loyalty: 'BolBol',
           phone: 'tel:08502428117'
@@ -42,7 +42,7 @@ const ClassUpgrade = () => {
       case 'sunexpress':
         return {
           name: 'SunExpress',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
           color: 'sunexpress',
           loyalty: 'SunExpress Club',
           phone: 'tel:08502428117'
@@ -50,7 +50,7 @@ const ClassUpgrade = () => {
       case 'ajet':
         return {
           name: 'AJet',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
           color: 'ajet',
           loyalty: 'AJet Club',
           phone: 'tel:08502428117'
@@ -58,7 +58,7 @@ const ClassUpgrade = () => {
       case 'azal':
         return {
           name: 'AZAL',
-          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/j2.webp',
+          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
           color: 'azal',
           loyalty: 'AZAL Miles',
           phone: 'tel:08502428117'
