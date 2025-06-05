@@ -20,12 +20,12 @@ export const ticketChangeContent = {
     {
       title: "Bilet Değişikliği Avantajları",
       content: "Bilet değişikliği hizmetimiz ile seyahat planlarınızdaki değişiklikleri minimum maliyetle gerçekleştirebilirsiniz. Uzman ekibimiz, size en uygun alternatifleri sunarak değişiklik sürecini kolaylaştırır.",
-      image: "/lovable-uploads/0fe02586-04af-4d3d-842e-56c37907739b.png"
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/0fe02586-04af-4d3d-842e-56c37907739b.png"
     },
     {
       title: "Değişiklik Süreci",
       content: "Bilet değişikliği sürecinde havayollarının politikalarını ve ücretlendirmelerini sizin için değerlendiriyor, en avantajlı seçeneği sunuyoruz. 7/24 destek hizmetimiz ile her an yanınızdayız.",
-      image: "/lovable-uploads/ce88f604-b3ab-47b4-987f-7671ee4f2587.png"
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/ce88f604-b3ab-47b4-987f-7671ee4f2587.png"
     }
   ],
   features: [

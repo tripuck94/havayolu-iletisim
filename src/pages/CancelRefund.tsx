@@ -102,7 +102,7 @@ const CancelRefund = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081583/images/call-center/static/public/lovable-uploads/1f65f478-a215-44da-9727-ceb49f5e3b74"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081583/images/call-center/static/1f65f478-a215-44da-9727-ceb49f5e3b74"
             alt={`${airlineInfo.name} İptal ve İade`}
             className="w-full h-full object-cover"
           />
@@ -168,7 +168,7 @@ const CancelRefund = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081582/images/call-center/static/public/lovable-uploads/0fe02586-04af-4d3d-842e-56c37907739b"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081582/images/call-center/static/0fe02586-04af-4d3d-842e-56c37907739b"
               alt={`${airlineInfo.name} İptal ve İade İşlemleri`}
               className="rounded-lg h-[300px] w-full object-cover"
             />

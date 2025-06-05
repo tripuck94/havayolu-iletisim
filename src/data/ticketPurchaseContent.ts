@@ -20,12 +20,12 @@ export const ticketPurchaseContent = {
     {
       title: "Online Bilet Satın Alma Avantajları",
       content: "Online bilet satın alma ile seyahat planlarınızı kolayca yapabilir, farklı havayollarının fiyatlarını karşılaştırabilir ve size en uygun bileti seçebilirsiniz.",
-      image: "/lovable-uploads/ce88f604-b3ab-47b4-987f-7671ee4f2587.png"
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/ce88f604-b3ab-47b4-987f-7671ee4f2587.png"
     },
     {
       title: "Bilet Satın Alma Süreci",
       content: "Bilet satın alma sürecinde size yardımcı olmak için uzman ekibimiz hazır bekliyor. Seyahat tarihlerinizi, rotanızı ve tercihlerinizi belirledikten sonra size en uygun seçenekleri sunuyoruz.",
-      image: "/lovable-uploads/04790e9a-9300-402d-92ec-824ca1c5a0db.png"
+      image: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_400,h_300,c_fill/v1749081955/images/call-center/static/04790e9a-9300-402d-92ec-824ca1c5a0db.png"
     }
   ],
   features: [

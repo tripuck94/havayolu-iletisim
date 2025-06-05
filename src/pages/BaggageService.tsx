@@ -110,7 +110,7 @@ const BaggageService = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081589/images/call-center/static/public/lovable-uploads/7398e5b3-2469-4357-9789-94408bad853b"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081589/images/call-center/static/7398e5b3-2469-4357-9789-94408bad853b"
             alt={`${airline ? airline.name : ''} Bagaj Hizmeti`}
             className="w-full h-full object-cover"
           />
@@ -178,7 +178,7 @@ const BaggageService = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081580/images/call-center/static/public/lovable-uploads/04790e9a-9300-402d-92ec-824ca1c5a0db"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081580/images/call-center/static/04790e9a-9300-402d-92ec-824ca1c5a0db"
               alt={`${airline ? airline.name : ''} Bagaj İşlemleri`}
               className="rounded-lg h-[300px] w-full object-cover"
             />

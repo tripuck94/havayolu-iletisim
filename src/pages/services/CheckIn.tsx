@@ -29,7 +29,7 @@ const CheckIn = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081584/images/call-center/static/public/lovable-uploads/27efca33-969c-481d-b23b-39da51b5d24d"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081584/images/call-center/static/27efca33-969c-481d-b23b-39da51b5d24d"
             alt="Check-in"
             className="w-full h-full object-cover"
           />
