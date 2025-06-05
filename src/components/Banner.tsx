@@ -1,21 +1,40 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export const Banner = () => {
   const handleCall = () => {
     window.location.href = "tel:08502428117";
   };
 
+  // Preload critical LCP image
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_600,c_fill/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg';
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, []);
+
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2048&q=80')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+      {/* Critical LCP image with optimizations */}
+      <img
+        src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_600,c_fill/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
+        alt="Uçak Bileti Rezervasyonu"
+        className="absolute inset-0 w-full h-full object-cover"
+        fetchPriority="high"
+        loading="eager"
+        decoding="sync"
+      />
+      <div className="absolute inset-0 bg-black/50" />
       
       <div className="relative flex h-full flex-col items-center justify-center px-4 text-center">
         <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">

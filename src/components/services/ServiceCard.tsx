@@ -32,9 +32,7 @@ export const ServiceCard = ({
             backgroundPosition: bgPosition,
             backgroundRepeat: "no-repeat"
           }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
-        </div>
+        />
         <div className="relative h-full p-8 flex flex-col justify-end text-white">
           <div className="mb-4 transform transition-transform duration-500 group-hover:-translate-y-2">
             <Icon className="h-12 w-12 mb-4 text-primary-foreground" />

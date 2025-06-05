@@ -36,7 +36,7 @@ const NotFound = () => {
           <div className="mb-12">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+                src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
                 alt="Uçak"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />

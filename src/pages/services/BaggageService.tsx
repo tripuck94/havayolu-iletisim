@@ -28,7 +28,7 @@ const BaggageService = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1553062407-98eeb64c6a62.jpg"
             alt="Bagaj Ekleme"
             className="w-full h-full object-cover"
           />

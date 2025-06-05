@@ -6,11 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PetServices from "./pages/PetServices";
-import ThyPetServices from "./pages/thy/PetServices";
-import PegasusPetServices from "./pages/pegasus/PetServices";
-import SunExpressPetServices from "./pages/sunexpress/PetServices";
-import AjetPetServices from "./pages/ajet/PetServices";
-import AzalPetServices from "./pages/azal/PetServices";
+import AirlinePetServices from "./pages/services/PetServices";
 import AirlineContactPage from "./pages/contact/AirlineContactPage";
 import TicketPurchase from "./pages/services/TicketPurchase";
 import AirlineTicketPurchase from "./pages/services/AirlineTicketPurchase";
@@ -25,31 +21,14 @@ import BaggageService from "./pages/BaggageService";
 import UnaccompaniedMinor from "./pages/services/UnaccompaniedMinor";
 import ClassUpgrade from "./pages/services/ClassUpgrade";
 import CheckIn from "./pages/services/CheckIn";
-import ThySeatSelection from "./pages/thy/SeatSelection";
-import PegasusSeatSelection from "./pages/pegasus/SeatSelection";
-import SunExpressSeatSelection from "./pages/sunexpress/SeatSelection";
-import AjetSeatSelection from "./pages/ajet/SeatSelection";
-import AzalSeatSelection from "./pages/azal/SeatSelection";
-import ThyBaggageService from "./pages/thy/BaggageService";
-import PegasusBaggageService from "./pages/pegasus/BaggageService";
-import SunExpressBaggageService from "./pages/sunexpress/BaggageService";
-import AjetBaggageService from "./pages/ajet/BaggageService";
-import AzalBaggageService from "./pages/azal/BaggageService";
-import ThyUnaccompaniedMinor from "./pages/thy/UnaccompaniedMinor";
-import PegasusUnaccompaniedMinor from "./pages/pegasus/UnaccompaniedMinor";
-import SunExpressUnaccompaniedMinor from "./pages/sunexpress/UnaccompaniedMinor";
-import AjetUnaccompaniedMinor from "./pages/ajet/UnaccompaniedMinor";
-import AzalUnaccompaniedMinor from "./pages/azal/UnaccompaniedMinor";
-import ThyClassUpgrade from "./pages/thy/ClassUpgrade";
-import PegasusClassUpgrade from "./pages/pegasus/ClassUpgrade";
-import SunExpressClassUpgrade from "./pages/sunexpress/ClassUpgrade";
-import AjetClassUpgrade from "./pages/ajet/ClassUpgrade";
-import AzalClassUpgrade from "./pages/azal/ClassUpgrade";
-import ThyCheckIn from "./pages/thy/CheckIn";
-import PegasusCheckIn from "./pages/pegasus/CheckIn";
-import SunExpressCheckIn from "./pages/sunexpress/CheckIn";
-import AjetCheckIn from "./pages/ajet/CheckIn";
-import AzalCheckIn from "./pages/azal/CheckIn";
+import FlightDelay from "./pages/services/FlightDelay";
+import LostBaggage from "./pages/services/LostBaggage";
+import ReservationManagement from "./pages/services/ReservationManagement";
+import TicketInquiry from "./pages/services/TicketInquiry";
+import SpecialAssistance from "./pages/services/SpecialAssistance";
+import FAQ from "./pages/services/FAQ";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsOfService from "./pages/legal/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -61,12 +40,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/evcil-hayvan" element={<PetServices />} />
+          <Route path="/thy-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/pegasus-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/sunexpress-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/ajet-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/azal-evcil-hayvan" element={<AirlinePetServices />} />
           <Route path="/pet-services" element={<PetServices />} />
-          <Route path="/thy/pet-services" element={<ThyPetServices />} />
-          <Route path="/pegasus/pet-services" element={<PegasusPetServices />} />
-          <Route path="/sunexpress/pet-services" element={<SunExpressPetServices />} />
-          <Route path="/ajet/pet-services" element={<AjetPetServices />} />
-          <Route path="/azal/pet-services" element={<AzalPetServices />} />
+          <Route path="/:airline/pet-services" element={<AirlinePetServices />} />
           <Route path="/thy-iletisim" element={<AirlineContactPage />} />
           <Route path="/pegasus-iletisim" element={<AirlineContactPage />} />
           <Route path="/sunexpress-iletisim" element={<AirlineContactPage />} />
@@ -78,9 +59,20 @@ const App = () => (
           <Route path="/hizmetler/iptal-iade" element={<GeneralCancelRefund />} />
           <Route path="/hizmetler/koltuk-secimi" element={<SeatSelection />} />
           <Route path="/hizmetler/bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/hizmetler/evcil-hayvan" element={<PetServices />} />
+          <Route path="/hizmetler/refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/hizmetler/sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/hizmetler/check-in" element={<CheckIn />} />
+          <Route path="/hizmetler/ucus-gecikmesi" element={<FlightDelay />} />
+          <Route path="/hizmetler/kayip-esya" element={<LostBaggage />} />
+          <Route path="/hizmetler/rezervasyon-yonetimi" element={<ReservationManagement />} />
+          <Route path="/hizmetler/bilet-sorgulama" element={<TicketInquiry />} />
+          <Route path="/hizmetler/ozel-yardim" element={<SpecialAssistance />} />
+          <Route path="/hizmetler/sik-sorulan-sorular" element={<FAQ />} />
           <Route path="/services/seat-selection" element={<SeatSelection />} />
           <Route path="/services/baggage" element={<BaggageService />} />
           <Route path="/services/unaccompanied-minor" element={<UnaccompaniedMinor />} />
+          <Route path="/refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
           <Route path="/services/class-upgrade" element={<ClassUpgrade />} />
           <Route path="/services/check-in" element={<CheckIn />} />
           <Route path="/thy-bilet-satin-alma" element={<AirlineTicketPurchase />} />
@@ -118,31 +110,46 @@ const App = () => (
           <Route path="/ajet-iptal-iade" element={<CancelRefund />} />
           <Route path="/azal-iptal-iade" element={<CancelRefund />} />
           <Route path="/iptal-iade/:airline" element={<CancelRefund />} />
-          <Route path="/thy/seat-selection" element={<ThySeatSelection />} />
-          <Route path="/pegasus/seat-selection" element={<PegasusSeatSelection />} />
-          <Route path="/sunexpress/seat-selection" element={<SunExpressSeatSelection />} />
-          <Route path="/ajet/seat-selection" element={<AjetSeatSelection />} />
-          <Route path="/azal/seat-selection" element={<AzalSeatSelection />} />
-          <Route path="/thy/baggage" element={<ThyBaggageService />} />
-          <Route path="/pegasus/baggage" element={<PegasusBaggageService />} />
-          <Route path="/sunexpress/baggage" element={<SunExpressBaggageService />} />
-          <Route path="/ajet/baggage" element={<AjetBaggageService />} />
-          <Route path="/azal/baggage" element={<AzalBaggageService />} />
-          <Route path="/thy/unaccompanied-minor" element={<ThyUnaccompaniedMinor />} />
-          <Route path="/pegasus/unaccompanied-minor" element={<PegasusUnaccompaniedMinor />} />
-          <Route path="/sunexpress/unaccompanied-minor" element={<SunExpressUnaccompaniedMinor />} />
-          <Route path="/ajet/unaccompanied-minor" element={<AjetUnaccompaniedMinor />} />
-          <Route path="/azal/unaccompanied-minor" element={<AzalUnaccompaniedMinor />} />
-          <Route path="/thy/class-upgrade" element={<ThyClassUpgrade />} />
-          <Route path="/pegasus/class-upgrade" element={<PegasusClassUpgrade />} />
-          <Route path="/sunexpress/class-upgrade" element={<SunExpressClassUpgrade />} />
-          <Route path="/ajet/class-upgrade" element={<AjetClassUpgrade />} />
-          <Route path="/azal/class-upgrade" element={<AzalClassUpgrade />} />
-          <Route path="/thy/check-in" element={<ThyCheckIn />} />
-          <Route path="/pegasus/check-in" element={<PegasusCheckIn />} />
-          <Route path="/sunexpress/check-in" element={<SunExpressCheckIn />} />
-          <Route path="/ajet/check-in" element={<AjetCheckIn />} />
-          <Route path="/azal/check-in" element={<AzalCheckIn />} />
+          <Route path="/sunexpress/seat-selection" element={<SeatSelection />} />
+          <Route path="/ajet/seat-selection" element={<SeatSelection />} />
+          <Route path="/azal/seat-selection" element={<SeatSelection />} />
+          <Route path="/thy-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/pegasus-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/sunexpress-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/ajet-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/azal-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/thy/unaccompanied-minor" element={<UnaccompaniedMinor />} />
+          <Route path="/pegasus/unaccompanied-minor" element={<UnaccompaniedMinor />} />
+          <Route path="/sunexpress/unaccompanied-minor" element={<UnaccompaniedMinor />} />
+          <Route path="/ajet/unaccompanied-minor" element={<UnaccompaniedMinor />} />
+          <Route path="/azal/unaccompanied-minor" element={<UnaccompaniedMinor />} />
+          <Route path="/thy-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/pegasus-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/sunexpress-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/ajet-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/azal-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/thy/class-upgrade" element={<ClassUpgrade />} />
+          <Route path="/pegasus/class-upgrade" element={<ClassUpgrade />} />
+          <Route path="/sunexpress/class-upgrade" element={<ClassUpgrade />} />
+          <Route path="/ajet/class-upgrade" element={<ClassUpgrade />} />
+          <Route path="/azal/class-upgrade" element={<ClassUpgrade />} />
+          <Route path="/thy-check-in" element={<CheckIn />} />
+          <Route path="/pegasus-check-in" element={<CheckIn />} />
+          <Route path="/sunexpress-check-in" element={<CheckIn />} />
+          <Route path="/ajet-check-in" element={<CheckIn />} />
+          <Route path="/azal-check-in" element={<CheckIn />} />
+          <Route path="/thy/check-in" element={<CheckIn />} />
+          <Route path="/pegasus/check-in" element={<CheckIn />} />
+          <Route path="/sunexpress/check-in" element={<CheckIn />} />
+          <Route path="/ajet/check-in" element={<CheckIn />} />
+          <Route path="/azal/check-in" element={<CheckIn />} />
+          <Route path="/kisisel-verilerin-korunmasi" element={<PrivacyPolicy />} />
+          <Route path="/mesafeli-satis-sozlesmesi" element={<PrivacyPolicy />} />
+          <Route path="/hakkimizda" element={<PrivacyPolicy />} />
+          <Route path="/kullanim-kosullari" element={<TermsOfService />} />
+          <Route path="/iptal-iade-sartlari" element={<PrivacyPolicy />} />
+          <Route path="/gizlilik-ve-guvenlik" element={<PrivacyPolicy />} />
+          <Route path="/iletisim" element={<AirlineContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

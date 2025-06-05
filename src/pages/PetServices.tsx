@@ -29,7 +29,7 @@ const PetServices = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1450778869180-41d0601e046e"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1450778869180-41d0601e046e.jpg"
             alt="Evcil Hayvan Taşıma"
             className="w-full h-full object-cover"
           />
@@ -95,7 +95,7 @@ const PetServices = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1596394516093-501ba68a0ba6.jpg"
               alt="Evcil Hayvan Bakımı"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -127,7 +127,7 @@ const PetServices = () => {
               </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1566454544259-f4b94c3d758c"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1566454544259-f4b94c3d758c.jpg"
               alt="Evcil Hayvan Sağlığı"
               className="rounded-lg h-[300px] w-full object-cover"
             />

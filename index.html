@@ -5,15 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Havayolu İletişim</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23006bb3'><path d='M21 16v-2l-8-5V5.5c0-.83-.67-1.5-1.5-1.5S10 4.67 10 5.5V9l-8 5v2l8-2.5V17l-2 1.5V20l3.5-1 3.5 1v-1.5L13 17v-3.5l8 2.5z'/></svg>">
+    
+    <!-- Meta Tags -->
     <meta name="description" content="THY, Pegasus, SunExpress ve AJet için bilet satış, değişiklik ve iptal işlemleri" />
     <meta name="author" content="Havayolu İletişim" />
     <meta property="og:title" content="Havayolu İletişim - Uçak Bileti Rezervasyonu" />
     <meta property="og:description" content="THY, Pegasus, SunExpress ve AJet için bilet satış, değişiklik ve iptal işlemleri" />
     <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.gpteng.co">
+    
+    <!-- Critical CSS Preload -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    
+    <!-- Font Display Optimization -->
+    <style>
+      /* Critical CSS for initial render */
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-display: swap;
+      }
+      
+      #root {
+        min-height: 100vh;
+        background-color: #f9fafb;
+      }
+      
+      /* Loading state */
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-size: 18px;
+        color: #6b7280;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading">Yükleniyor...</div>
+    </div>
+    
+    <!-- Scripts -->
+    <script>
+      // Remove loading state when React loads
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loading = document.querySelector('.loading');
+          if (loading && window.React) {
+            loading.style.display = 'none';
+          }
+        }, 100);
+      });
+    </script>
+    
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>

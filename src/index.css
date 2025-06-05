@@ -2,7 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Critical CSS for LCP optimization */
 @layer base {
+  /* Preload key font families */
+  html {
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Critical above-the-fold styles */
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+  }
+
+  /* Image loading optimizations */
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Critical layout prevents CLS */
+  .hero-container {
+    contain: layout;
+  }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-auto {
+    will-change: auto;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -97,5 +131,13 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Container query for responsive images */
+@container (min-width: 768px) {
+  .responsive-image {
+    width: auto;
+    height: auto;
   }
 }

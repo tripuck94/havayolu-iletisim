@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
 import { useLocation, Navigate } from "react-router-dom";
 import { getAirlineData } from "@/data/airlineData";
+import { useEffect } from "react";
 
 const AirlineTicketPurchase = () => {
   const location = useLocation();
@@ -21,6 +22,22 @@ const AirlineTicketPurchase = () => {
   if (!airlineData) {
     return <Navigate to="/" replace />;
   }
+
+  // Preload critical LCP image
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg';
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, []);
 
   const getSpecialProgram = (id: string) => {
     switch (id) {
@@ -65,12 +82,15 @@ const AirlineTicketPurchase = () => {
           </p>
         </div>
 
-        {/* Main Image Section */}
+        {/* Main Image Section - LCP Critical */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
             alt={`${airlineData.name} Bilet Satın Alma`}
             className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-8 text-white">

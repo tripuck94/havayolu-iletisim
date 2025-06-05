@@ -2,11 +2,28 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Edit, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
+import { useEffect } from "react";
 
 const NameChange = () => {
   const handleCall = () => {
     window.location.href = "tel:08502428117";
   };
+
+  // Preload critical LCP image
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1554224155-6726b3ff858f.jpg';
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
@@ -25,12 +42,15 @@ const NameChange = () => {
           </p>
         </div>
 
-        {/* Main Image Section */}
+        {/* Main Image Section - LCP Critical */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1554224155-6726b3ff858f.jpg"
             alt="İsim Değişikliği"
             className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-8 text-white">
@@ -94,7 +114,7 @@ const NameChange = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1450101499163-c8848c66ca85.jpg"
               alt="İsim Değişikliği İşlemleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -125,7 +145,7 @@ const NameChange = () => {
               </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1586953208448-b95a79798f07"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1586953208448-b95a79798f07.jpg"
               alt="İsim Değişikliği Politikaları"
               className="rounded-lg h-[300px] w-full object-cover"
             />

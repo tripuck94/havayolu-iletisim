@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Luggage, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
+import { CallButton } from "@/components/CallButton";
 import { useLocation } from "react-router-dom";
 
 const airlineData = {
@@ -100,7 +101,7 @@ const BaggageService = () => {
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             {airline 
-              ? `${airline.name} uçuşunuz için ihtiyacınız olan ek bagaj hakkı ve bagaj işlemlerinizi kolayca gerçekleştirebilirsiniz.`
+              ? `${airline.name} uçuşlarınız için bagaj hizmetlerimizden faydalanın. Ek bagaj hakkı ve özel bagaj hizmetleri için bizimle iletişime geçin.`
               : 'Seyahatiniz için ihtiyacınız olan ek bagaj hakkı ve bagaj işlemlerinizi kolayca gerçekleştirebilirsiniz. Bagaj politikaları ve ücretleri hakkında detaylı bilgi için çağrı merkezimizi arayabilirsiniz.'
             }
           </p>
@@ -109,16 +110,16 @@ const BaggageService = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
-            alt="Bagaj Ekleme"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081589/images/call-center/static/public/lovable-uploads/7398e5b3-2469-4357-9789-94408bad853b"
+            alt={`${airline ? airline.name : ''} Bagaj Hizmeti`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-8 text-white">
               <h2 className="text-3xl font-bold mb-2">
-                {airline ? `${airline.name} Bagaj Ekleme` : 'Özel Bagaj Çözümleri'}
+                {airline ? `${airline.name} Bagaj Hizmetleri` : 'Özel Bagaj Çözümleri'}
               </h2>
-              <p className="text-lg">Her türlü bagaj ihtiyacınız için özel çözümler</p>
+              <p className="text-lg">Konforlu bir seyahat için bagaj çözümleri</p>
             </div>
           </div>
         </div>
@@ -134,8 +135,8 @@ const BaggageService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                Bagaj işlemleriniz güvenli bir şekilde gerçekleştirilir. 
-                Tüm işlemleriniz kayıt altına alınır ve takip edilir.
+                {airline ? airline.name : ''} Bagaj işlemleriniz güvenli bir şekilde gerçekleştirilir. 
+                Tüm işlemleriniz kayıt altına alınır.
               </p>
             </CardContent>
           </Card>
@@ -149,8 +150,7 @@ const BaggageService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                Bagaj işlemlerinizin her aşamasında uzman ekibimiz size destek olmak için hazır. 
-                Çağrı merkezimiz 7/24 hizmetinizdedir.
+                Bagaj hizmetleri sürecinin her aşamasında uzman ekibimiz size destek olmak için hazır.
               </p>
             </CardContent>
           </Card>
@@ -159,13 +159,12 @@ const BaggageService = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <HeartHandshake className={`h-6 w-6 ${getColorClass('text')}`} />
-                Uygun Fiyatlar
+                Özel Hizmet
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                En uygun bagaj ücretleri ve kampanyalar ile bagaj ekleme 
-                işlemlerinizi ekonomik şekilde gerçekleştirin.
+                Spor ekipmanları, müzik aletleri ve özel eşyalarınız için özel bagaj hizmetleri sunuyoruz.
               </p>
             </CardContent>
           </Card>
@@ -174,63 +173,42 @@ const BaggageService = () => {
         {/* Detailed Information */}
         <div className="prose prose-lg max-w-none">
           <h2 className="text-3xl font-bold mb-6">
-            {airline ? `${airline.name} Bagaj Ekleme Hizmetlerimiz` : 'Bagaj Ekleme Avantajları'}
+            {airline ? `${airline.name} Bagaj Hizmetleri` : 'Bagaj Ekleme Avantajları'}
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1586453720540-d810293cd484"
-              alt="Online Bagaj Ekleme"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081580/images/call-center/static/public/lovable-uploads/04790e9a-9300-402d-92ec-824ca1c5a0db"
+              alt={`${airline ? airline.name : ''} Bagaj İşlemleri`}
               className="rounded-lg h-[300px] w-full object-cover"
             />
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Online Bagaj Ekleme</h3>
+              <h3 className="text-2xl font-semibold">
+                Profesyonel {airline ? airline.name : ''} Bagaj Hizmeti
+              </h3>
               <p>
-                Bagaj ekleme işlemlerinizi en uygun şartlarda ve hızlı bir şekilde 
-                gerçekleştiriyoruz. Havayollarının bagaj politikalarını sizin için 
-                değerlendiriyor ve en avantajlı seçeneği sunuyoruz.
-              </p>
-              <p>
-                Ekleme sürecinde kullanılan tüm sistemler güvenli ve güncel, 
-                işlemleriniz anında gerçekleşiyor.
+                {airline ? airline.name : ''} Bagaj hizmetlerinizi en uygun şartlarda ve hızlı bir şekilde 
+                gerçekleştiriyoruz. Size en uygun bagaj seçeneklerini sunuyoruz.
               </p>
             </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Özel Bagaj Çözümleri</h3>
-              <p>
-                Spor ekipmanları, müzik aletleri ve değerli eşyalar için özel 
-                bagaj çözümleri sunuyoruz. Her türlü bagaj ihtiyacınıza uygun 
-                seçenekler mevcuttur.
-              </p>
-              <p>
-                Grup seyahatlerinde toplu bagaj ekleme imkanı ve özel 
-                indirimlerden faydalanabilirsiniz.
-              </p>
-            </div>
-            <img
-              src="https://images.unsplash.com/photo-1544008503-f47be8d07c6c"
-              alt="Özel Bagaj Çözümleri"
-              className="rounded-lg h-[300px] w-full object-cover"
-            />
           </div>
 
           <div className="bg-primary/5 p-8 rounded-lg mb-8">
-            <h3 className="text-2xl font-semibold mb-4">Bagaj Ekleme Seçenekleri</h3>
+            <h3 className="text-2xl font-semibold mb-4">
+              {airline ? `${airline.name} Bagaj Hizmetleri` : 'Bagaj Ekleme'} Avantajları
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
                 <BadgeCheck className={`h-6 w-6 ${getColorClass('text')} mt-1`} />
-                <span>Ek bagaj hakkı satın alma</span>
+                <span>Ek bagaj hakkı</span>
               </li>
               <li className="flex items-start gap-2">
                 <BadgeCheck className={`h-6 w-6 ${getColorClass('text')} mt-1`} />
-                <span>Spor ekipmanları için özel bagaj</span>
+                <span>Spor ekipmanları taşıma</span>
               </li>
               <li className="flex items-start gap-2">
                 <BadgeCheck className={`h-6 w-6 ${getColorClass('text')} mt-1`} />
-                <span>Değerli eşya taşıma prosedürleri</span>
+                <span>Özel eşya taşıma</span>
               </li>
               <li className="flex items-start gap-2">
                 <BadgeCheck className={`h-6 w-6 ${getColorClass('text')} mt-1`} />
@@ -238,32 +216,16 @@ const BaggageService = () => {
               </li>
             </ul>
           </div>
-
-          <div className={`text-center ${getColorClass('bg')} text-white p-8 rounded-lg`}>
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
-              Bagaj ekleme ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 
-              arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
-            </p>
-            <Button 
-              onClick={handleCall} 
-              variant="secondary"
-              className="gap-2"
-            >
-              <Phone className="h-4 w-4" />
-              Hemen Arayın
-            </Button>
-          </div>
         </div>
       </div>
       
       {/* Fixed Bottom Button */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
         <Button onClick={handleCall} className={`w-full ${getColorClass('bg')} ${getColorClass('hover')} text-white text-xl py-6`}>
-          <Phone className="h-5 w-5 mr-2" />
           Hemen Ara
         </Button>
       </div>
+      <CallButton />
     </div>
   );
 };

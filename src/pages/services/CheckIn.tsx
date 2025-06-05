@@ -29,7 +29,7 @@ const CheckIn = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="/lovable-uploads/27efca33-969c-481d-b23b-39da51b5d24d.png"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081584/images/call-center/static/public/lovable-uploads/27efca33-969c-481d-b23b-39da51b5d24d"
             alt="Check-in"
             className="w-full h-full object-cover"
           />
@@ -95,7 +95,7 @@ const CheckIn = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1605810230434-7631ac76ec81.jpg"
               alt="Online Check-in"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -127,7 +127,7 @@ const CheckIn = () => {
               </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1519389950473-47ba0277781c.jpg"
               alt="Check-in Seçenekleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />

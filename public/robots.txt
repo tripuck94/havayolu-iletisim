@@ -1,0 +1,46 @@
+User-agent: *
+Allow: /
+
+# Havayolu İletişim Sayfaları
+Allow: /thy-iletisim
+Allow: /pegasus-iletisim
+Allow: /sunexpress-iletisim
+Allow: /ajet-iletisim
+Allow: /azal-iletisim
+
+# Hizmet Sayfaları
+Allow: /hizmetler/
+Allow: /thy-bilet-degisikligi
+Allow: /pegasus-bilet-degisikligi
+Allow: /sunexpress-bilet-degisikligi
+Allow: /ajet-bilet-degisikligi
+Allow: /azal-bilet-degisikligi
+Allow: /thy-isim-degisikligi
+Allow: /pegasus-isim-degisikligi
+Allow: /sunexpress-isim-degisikligi
+Allow: /ajet-isim-degisikligi
+Allow: /azal-isim-degisikligi
+Allow: /thy-iptal-iade
+Allow: /pegasus-iptal-iade
+Allow: /sunexpress-iptal-iade
+Allow: /ajet-iptal-iade
+Allow: /azal-iptal-iade
+Allow: /thy-koltuk-secimi
+Allow: /pegasus-koltuk-secimi
+Allow: /sunexpress-koltuk-secimi
+Allow: /ajet-koltuk-secimi
+Allow: /azal-koltuk-secimi
+Allow: /thy-bagaj-ekleme
+Allow: /pegasus-bagaj-ekleme
+Allow: /sunexpress-bagaj-ekleme
+Allow: /ajet-bagaj-ekleme
+Allow: /azal-bagaj-ekleme
+
+# Özel Hizmetler
+Allow: /pet-services
+
+# Crawl-Delay
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://iletisim-8kz47oo59-tripuck94s-projects.vercel.app/sitemap.xml 

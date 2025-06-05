@@ -1,52 +1,70 @@
 export interface AirlineData {
   id: string;
   name: string;
+  shortName: string;
   logo: string;
   primaryColor: string;
   hoverColor: string;
+  bgColor: string;
+  textColor: string;
   description: string;
 }
 
 export const airlines: Record<string, AirlineData> = {
   thy: {
     id: "thy",
-    name: "Türk Hava Yolları İletişim",
-    logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp",
+    name: "Türk Hava Yolları",
+    shortName: "THY",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_48,w_48,q_auto/images/airline/small/TK.webp",
     primaryColor: "thy",
-    hoverColor: "thy-hover",
-    description: "7/24 hizmetinizdeyiz. Size nasıl yardımcı olabiliriz?"
+    hoverColor: "thy-dark",
+    bgColor: "bg-thy",
+    textColor: "text-thy",
+    description: "Türkiye'nin bayrak taşıyıcısı THY ile dünya geneline uçuş imkanı."
   },
   sunexpress: {
     id: "sunexpress",
-    name: "SunExpress İletişim",
-    logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp",
+    name: "SunExpress",
+    shortName: "SXS",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_48,w_48,q_auto/images/airline/small/XQ.webp",
     primaryColor: "sunexpress",
-    hoverColor: "sunexpress-hover",
-    description: "7/24 hizmetinizdeyiz. Size nasıl yardımcı olabiliriz?"
+    hoverColor: "sunexpress-dark",
+    bgColor: "bg-sunexpress",
+    textColor: "text-sunexpress",
+    description: "Güneşin rehberliğinde konforlu yolculuklar."
   },
   pegasus: {
     id: "pegasus",
-    name: "Pegasus İletişim",
-    logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp",
+    name: "Pegasus Hava Yolları",
+    shortName: "Pegasus",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_48,w_48,q_auto/images/airline/small/PC.webp",
     primaryColor: "pegasus",
-    hoverColor: "pegasus-hover",
-    description: "7/24 hizmetinizdeyiz. Size nasıl yardımcı olabiliriz?"
+    hoverColor: "pegasus-dark",
+    bgColor: "bg-pegasus",
+    textColor: "text-pegasus",
+    description: "Uygun fiyatlı biletlerle hayallerinizdeki destinasyonlara uçun."
   },
   ajet: {
     id: "ajet",
-    name: "AJet İletişim",
-    logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp",
+    name: "AJet",
+    shortName: "AJet",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_48,w_48,q_auto/images/airline/small/VF.webp",
     primaryColor: "ajet",
-    hoverColor: "ajet-hover",
-    description: "7/24 hizmetinizdeyiz. Size nasıl yardımcı olabiliriz?"
+    hoverColor: "ajet-dark",
+    bgColor: "bg-ajet",
+    textColor: "text-ajet",
+    description: "Türkiye'nin genç ve dinamik havayolu şirketi."
   },
   azal: {
     id: "azal",
-    name: "AZAL İletişim",
-    logo: "https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/j2.webp",
+    name: "AZAL",
+    shortName: "AZAL",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_48,w_48,q_auto/images/airline/small/J2.webp",
     primaryColor: "azal",
-    hoverColor: "azal-hover",
-    description: "Size yardımcı olmak için buradayız. Bize ulaşın."
+    hoverColor: "azal-dark",
+    bgColor: "bg-azal",
+    textColor: "text-azal",
+    description: "Azerbaycan Hava Yolları ile Kafkasya'ya güvenli yolculuk."
   }
 };
 

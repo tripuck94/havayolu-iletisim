@@ -1,25 +1,119 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Plane, Shield, Clock, HeartHandshake, BadgeCheck, Baby } from "lucide-react";
+import { Users, Plane, Shield, Clock, HeartHandshake, BadgeCheck, Baby, CheckCircle2, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
+import { useLocation } from "react-router-dom";
+import { unaccompaniedMinorContent } from "@/data/unaccompaniedMinorContent";
 
 const UnaccompaniedMinor = () => {
+  const location = useLocation();
+  
+  // URL'den airline bilgisini extract et
+  const getAirlineFromUrl = () => {
+    const path = location.pathname;
+    
+    // Yeni format: /thy-refakatsiz-cocuk, /pegasus-refakatsiz-cocuk vb.
+    const newFormatMatch = path.match(/^\/(\w+)-refakatsiz-cocuk$/);
+    if (newFormatMatch) {
+      return newFormatMatch[1];
+    }
+    
+    // Eski format: /thy/unaccompanied-minor, /pegasus/unaccompanied-minor vb.
+    const oldFormatMatch = path.match(/^\/(\w+)\/unaccompanied-minor$/);
+    if (oldFormatMatch) {
+      return oldFormatMatch[1];
+    }
+    
+    // Genel sayfa
+    return null;
+  };
+
+  const airline = getAirlineFromUrl();
+
+  // Airline bilgilerini tanımla
+  const getAirlineInfo = (airline: string | null) => {
+    switch (airline) {
+      case 'thy':
+        return {
+          name: 'Türk Hava Yolları',
+          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/TK.webp',
+          colorClass: 'text-thy',
+          bgColorClass: 'bg-thy',
+          hoverColorClass: 'hover:bg-thy-hover'
+        };
+      case 'pegasus':
+        return {
+          name: 'Pegasus',
+          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/PC.webp',
+          colorClass: 'text-pegasus',
+          bgColorClass: 'bg-pegasus',
+          hoverColorClass: 'hover:bg-pegasus-hover'
+        };
+      case 'sunexpress':
+        return {
+          name: 'SunExpress',
+          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/XQ.webp',
+          colorClass: 'text-sunexpress',
+          bgColorClass: 'bg-sunexpress',
+          hoverColorClass: 'hover:bg-sunexpress-hover'
+        };
+      case 'ajet':
+        return {
+          name: 'AJet',
+          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/VF.webp',
+          colorClass: 'text-ajet',
+          bgColorClass: 'bg-ajet',
+          hoverColorClass: 'hover:bg-ajet-hover'
+        };
+      case 'azal':
+        return {
+          name: 'AZAL',
+          logo: 'https://res.cloudinary.com/tripuck/image/upload/f_auto,fl_lossy,h_100,w_100,q_auto/images/airline/small/j2.webp',
+          colorClass: 'text-azal',
+          bgColorClass: 'bg-azal',
+          hoverColorClass: 'hover:bg-azal/90'
+        };
+      default:
+        return {
+          name: '',
+          logo: '',
+          colorClass: 'text-blue-600',
+          bgColorClass: 'bg-blue-600',
+          hoverColorClass: 'hover:bg-blue-700'
+        };
+    }
+  };
+
+  const airlineInfo = getAirlineInfo(airline);
+  
   const handleCall = () => {
-    window.location.href = "tel:+905555555555";
+    window.location.href = "tel:08502428117";
   };
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
+      <div className="container py-12 md:py-16 space-y-16 mb-16">
       {/* Hero Section */}
       <div className="text-center space-y-4">
+          {airline && (
+            <img 
+              src={airlineInfo.logo}
+              alt={`${airlineInfo.name} Logo`} 
+              className="h-16 mx-auto mb-6"
+            />
+          )}
         <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
-          <Baby className="h-10 w-10 text-primary" />
-          Refakatsiz Çocuk
+            {airline ? (
+              <Users className={`h-10 w-10 ${airlineInfo.colorClass}`} />
+            ) : (
+              <Baby className="h-10 w-10 text-blue-600" />
+            )}
+            {airline ? `${airlineInfo.name} Refakatsiz Çocuk Hizmeti` : 'Refakatsiz Çocuk Hizmeti'}
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Çocuğunuzun güvenli ve konforlu seyahati için özel refakat hizmetimiz ile
+            {airline ? `${airlineInfo.name} ile` : ''} Çocuğunuzun güvenli ve konforlu seyahati için özel refakat hizmetimiz ile
           yanınızdayız. Deneyimli ekibimiz, çocuğunuzun tüm seyahati boyunca
           güvende olmasını sağlar.
         </p>
@@ -28,7 +122,7 @@ const UnaccompaniedMinor = () => {
       {/* Main Image Section */}
       <div className="relative h-[400px] rounded-xl overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1517022812141-23620dba5c23"
+            src={airline ? unaccompaniedMinorContent.mainImage : "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1517022812141-23620dba5c23.jpg"}
           alt="Refakatsiz Çocuk Hizmeti"
           className="w-full h-full object-cover"
         />
@@ -41,11 +135,11 @@ const UnaccompaniedMinor = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" />
+                <Shield className={`h-6 w-6 ${airlineInfo.colorClass}`} />
               Güvenlik Standartları
             </CardTitle>
           </CardHeader>
@@ -60,7 +154,7 @@ const UnaccompaniedMinor = () => {
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Clock className="h-6 w-6 text-primary" />
+                <Clock className={`h-6 w-6 ${airlineInfo.colorClass}`} />
               7/24 Destek
             </CardTitle>
           </CardHeader>
@@ -75,7 +169,7 @@ const UnaccompaniedMinor = () => {
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <HeartHandshake className="h-6 w-6 text-primary" />
+                <HeartHandshake className={`h-6 w-6 ${airlineInfo.colorClass}`} />
               Özel İlgi
             </CardTitle>
           </CardHeader>
@@ -88,87 +182,113 @@ const UnaccompaniedMinor = () => {
         </Card>
       </div>
 
-      {/* Detailed Information */}
-      <div className="prose prose-lg max-w-none">
-        <h2 className="text-3xl font-bold mb-6">Kapsamlı Refakat Hizmetlerimiz</h2>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <img
-            src="https://images.unsplash.com/photo-1501286353178-1ec881214838"
-            alt="Refakat Hizmeti"
-            className="rounded-lg h-[300px] w-full object-cover"
-          />
-          <div className="space-y-4">
-            <h3 className="text-2xl font-semibold">Profesyonel Refakat Standartları</h3>
-            <p>
-              Çocuğunuzun güvenli ve konforlu seyahati için özel eğitimli personelimiz
-              eşlik eder. Her refakatçimiz, çocuk psikolojisi ve ilk yardım konularında
-              eğitimlidir.
+        {airline && unaccompaniedMinorContent.features && (
+          /* Additional Features for airline-specific pages */
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Hizmet Detayları</h3>
+              <ul className="space-y-4">
+                {unaccompaniedMinorContent.features.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <CheckCircle2 className={`h-5 w-5 ${airlineInfo.colorClass}`} />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Plane className={`h-6 w-6 ${airlineInfo.colorClass}`} />
+                    Seyahat Süreci
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">
+                    Check-in'den varış noktasına kadar özel refakatçi eşliğinde seyahat eden çocuğunuz için
+                    sürekli iletişim ve takip hizmeti sunuyoruz.
             </p>
-            <p>
-              Seyahat sürecinde kullanılan tüm ekipmanlar ve hizmetler düzenli olarak
-              denetlenmekte ve her seyahat öncesi detaylı kontrolden geçirilmektedir.
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <UserCheck className={`h-6 w-6 ${airlineInfo.colorClass}`} />
+                    Deneyimli Personel
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">
+                    Özel eğitimli personelimiz, çocuğunuzun konforu ve güvenliği için
+                    tüm seyahat boyunca yanında olacaktır.
             </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
+        )}
+
+        {!airline && (
+          /* Advantages Section for general page */
+          <div className="bg-gray-100 rounded-xl p-8">
+            <h2 className="text-2xl font-bold mb-6">Refakatsiz Çocuk Hizmeti Avantajları</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <BadgeCheck className="h-6 w-6 text-blue-600" />
+                <span className="text-gray-700 font-medium">Deneyimli ve özel eğitimli refakatçi ekibi</span>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-semibold">Sağlık ve Güvenlik Önlemleri</h3>
-            <p>
-              Seyahat öncesi gerekli tüm sağlık ve güvenlik önlemleri alınır.
-              Çocuğunuzun özel ihtiyaçları ve alerjileri konusunda detaylı bilgi
-              alınarak gerekli önlemler planlanır.
-            </p>
-            <p>
-              Özel ihtiyaçları olan çocuklar için ek hizmetler sunuyor, 
-              düzenli beslenme ve ilaç takibi yapıyoruz.
-            </p>
+              <div className="flex items-center gap-3">
+                <BadgeCheck className="h-6 w-6 text-blue-600" />
+                <span className="text-gray-700 font-medium">7/24 aile iletişim desteği ve bilgilendirme</span>
+        </div>
+
+              <div className="flex items-center gap-3">
+                <BadgeCheck className="h-6 w-6 text-blue-600" />
+                <span className="text-gray-700 font-medium">Güvenli ve konforlu seyahat garantisi</span>
+        </div>
+
+              <div className="flex items-center gap-3">
+                <BadgeCheck className="h-6 w-6 text-blue-600" />
+                <span className="text-gray-700 font-medium">Özel ihtiyaçlar için kişiselleştirilmiş bakım</span>
+              </div>
+            </div>
           </div>
-          <img
-            src="https://images.unsplash.com/photo-1469041797191-50ace28483c3"
-            alt="Çocuk Güvenliği"
-            className="rounded-lg h-[300px] w-full object-cover"
-          />
-        </div>
+        )}
 
-        <div className="bg-primary/5 p-8 rounded-lg mb-8">
-          <h3 className="text-2xl font-semibold mb-4">Neden Bizi Tercih Etmelisiniz?</h3>
-          <ul className="space-y-4">
-            <li className="flex items-start gap-2">
-              <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-              <span>Deneyimli ve özel eğitimli refakatçi ekibi</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-              <span>7/24 aile iletişim desteği</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-              <span>Güvenli ve konforlu seyahat garantisi</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <BadgeCheck className="h-6 w-6 text-primary mt-1" />
-              <span>Özel ilgi ve bakım hizmeti</span>
-            </li>
-          </ul>
-        </div>
+        {airline && unaccompaniedMinorContent.callToAction && (
+          /* Call to Action Section for airline-specific pages */
+          <div className="bg-gray-50 p-8 rounded-xl text-center space-y-4">
+            <h3 className="text-2xl font-bold">{unaccompaniedMinorContent.callToAction.title}</h3>
+            <p className="text-gray-600">{unaccompaniedMinorContent.callToAction.description}</p>
+          </div>
+        )}
 
-        <div className="text-center bg-primary text-white p-8 rounded-lg">
-          <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-          <p className="mb-6">
-            Refakatsiz çocuk hizmeti ile ilgili tüm sorularınız için çağrı merkezimizi 
-            7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
+        {/* Help Section */}
+        <div className={`${airlineInfo.bgColorClass} text-white rounded-xl p-8 text-center`}>
+          <h2 className="text-2xl font-bold mb-4">Size Nasıl Yardımcı Olabiliriz?</h2>
+          <p className="text-lg mb-6 max-w-4xl mx-auto">
+            Refakatsiz çocuk hizmeti ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 arayabilirsiniz. 
+            Uzman ekibimiz size en uygun refakat seçeneklerini sunmak için hazır bekliyor.
           </p>
           <Button 
             onClick={handleCall} 
-            variant="secondary"
-            className="gap-2"
+            className="bg-white text-gray-800 hover:bg-gray-100 px-8 py-3 text-lg font-semibold rounded-lg"
           >
+            <Users className="mr-2 h-5 w-5" />
             Hemen Arayın
           </Button>
         </div>
       </div>
+      
+      {/* Fixed Bottom Button - moved outside container */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+        <Button onClick={handleCall} className={`w-full ${airlineInfo.bgColorClass} ${airlineInfo.hoverColorClass} text-white text-xl py-6`}>
+          Hemen Ara
+        </Button>
+      </div>
+      
       <CallButton />
     </div>
   );

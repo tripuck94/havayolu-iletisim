@@ -3,11 +3,28 @@ import { ShoppingCart, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard, Ti
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { CallButton } from "@/components/CallButton";
+import { useEffect } from "react";
 
 const TicketPurchase = () => {
   const handleCall = () => {
     window.location.href = "tel:+905555555555";
   };
+
+  // Preload critical LCP image
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1498050108023-c5249f4df085.jpg';
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
@@ -26,16 +43,20 @@ const TicketPurchase = () => {
           </p>
         </div>
 
+        {/* Main Image Section - LCP Critical */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1498050108023-c5249f4df085.jpg"
             alt="Bilet Satın Alma"
             className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-8 text-white">
-              <h2 className="text-3xl font-bold mb-2">Profesyonel Biletleme Hizmeti</h2>
-              <p className="text-lg">En uygun fiyatlarla güvenli bilet satın alma</p>
+              <h2 className="text-3xl font-bold mb-2">En Uygun Bilet Fiyatları</h2>
+              <p className="text-lg">Güvenli ve hızlı bilet satın alma</p>
             </div>
           </div>
         </div>
@@ -94,7 +115,7 @@ const TicketPurchase = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1498050108023-c5249f4df085.jpg"
               alt="Online Bilet Satın Alma"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -124,7 +145,7 @@ const TicketPurchase = () => {
               </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1460925895917-afdab827c52f.jpg"
               alt="Güvenli Ödeme"
               className="rounded-lg h-[300px] w-full object-cover"
             />

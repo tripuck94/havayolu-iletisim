@@ -5,6 +5,7 @@ import { Contact } from "@/components/Contact";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const handleCall = () => {
@@ -18,6 +19,7 @@ const Index = () => {
       <Services />
       <Airlines />
       <Contact />
+      <Footer />
       
       {/* Fixed Bottom Button - Sadece Mobilde Görünür */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">

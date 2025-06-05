@@ -28,7 +28,7 @@ const CancelRefund = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1541888946425-d81bb19240f5.jpg"
             alt="Bilet İptal ve İade"
             className="w-full h-full object-cover"
           />
@@ -94,7 +94,7 @@ const CancelRefund = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1563013544-824ae1b704d3.jpg"
               alt="İptal ve İade İşlemleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -125,7 +125,7 @@ const CancelRefund = () => {
               </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1559526324-4b87b5e36e44.jpg"
               alt="İptal ve İade Politikaları"
               className="rounded-lg h-[300px] w-full object-cover"
             />

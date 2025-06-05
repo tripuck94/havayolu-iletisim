@@ -27,7 +27,7 @@ const SeatSelection = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
             alt="Koltuk Seçimi"
             className="w-full h-full object-cover"
           />
@@ -93,7 +93,7 @@ const SeatSelection = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1486312338219-ce68d2c6f44d.jpg"
               alt="Online Koltuk Seçimi"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -125,7 +125,7 @@ const SeatSelection = () => {
               </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1519389950473-47ba0277781c.jpg"
               alt="Özel Koltuk Seçenekleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />

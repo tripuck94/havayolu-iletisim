@@ -2,11 +2,28 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RefreshCw, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
+import { useEffect } from "react";
 
 const TicketChange = () => {
   const handleCall = () => {
     window.location.href = "tel:08502428117";
   };
+
+  // Preload critical LCP image
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1581092795360-fd1ca04f0952.jpg';
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
@@ -25,12 +42,15 @@ const TicketChange = () => {
           </p>
         </div>
 
-        {/* Main Image Section */}
+        {/* Main Image Section - LCP Critical */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1581092795360-fd1ca04f0952.jpg"
             alt="Bilet Değişikliği"
             className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-8 text-white">
@@ -94,9 +114,10 @@ const TicketChange = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_800,h_300,c_fill/v1749081995/images/call-center/content/unsplash-1483058712412-4245e9b90334.jpg"
               alt="Bilet Değişikliği İşlemleri"
               className="rounded-lg h-[300px] w-full object-cover"
+              loading="lazy"
             />
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold">Profesyonel Değişiklik Hizmeti</h3>
@@ -126,9 +147,10 @@ const TicketChange = () => {
               </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_800,h_300,c_fill/v1749081995/images/call-center/content/unsplash-1487058792275-0ad4aaf24ca7.jpg"
               alt="Bilet Değişikliği Politikaları"
               className="rounded-lg h-[300px] w-full object-cover"
+              loading="lazy"
             />
           </div>
 
