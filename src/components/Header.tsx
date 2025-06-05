@@ -32,7 +32,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_32,w_32,q_auto/images/call-center/static/520d8ba8-17f4-4293-a58e-2783bd05931c.png"
+              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_32,w_32,q_auto/images/call-center/static/public/lovable-uploads/520d8ba8-17f4-4293-a58e-2783bd05931c.png"
               alt="Call Center Icon"
               className="h-8 w-8"
               fetchPriority="high"
