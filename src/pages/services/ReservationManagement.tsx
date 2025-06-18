@@ -1,14 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, Phone, Shield, Search, Edit, Trash2, CheckCircle, Plane, User, CreditCard } from "lucide-react";
+import { Calendar, Phone, Shield, Search, Edit, Trash2, CheckCircle, Plane, User, CreditCard, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useState } from "react";
 
 const ReservationManagement = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [pnrCode, setPnrCode] = useState("");
+  const [surname, setSurname] = useState("");
+
   const handleCall = () => {
     window.location.href = "tel:08502428117";
+  };
+
+  const handleReservationSearch = () => {
+    // Rezervasyon sorgulama işlemi - her zaman "bulunamadı" sonucu döndür
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setPnrCode("");
+    setSurname("");
   };
 
   return (
@@ -38,6 +54,8 @@ const ReservationManagement = () => {
                   id="pnr" 
                   placeholder="Örn: ABC123" 
                   className="mt-1"
+                  value={pnrCode}
+                  onChange={(e) => setPnrCode(e.target.value)}
                 />
               </div>
               <div>
@@ -46,12 +64,17 @@ const ReservationManagement = () => {
                   id="surname" 
                   placeholder="Rezervasyon sahibinin soyadı" 
                   className="mt-1"
+                  value={surname}
+                  onChange={(e) => setSurname(e.target.value)}
                 />
               </div>
             </div>
             
             <div className="text-center">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+              <Button 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                onClick={handleReservationSearch}
+              >
                 <Search className="h-4 w-4 mr-2" />
                 Rezervasyonu Sorgula
               </Button>
@@ -205,6 +228,59 @@ const ReservationManagement = () => {
           </Button>
         </div>
 
+        {/* Modal */}
+        {showModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 relative">
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+              >
+                <X className="h-6 w-6" />
+              </button>
+              
+              <div className="text-center">
+                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mb-4">
+                  <Search className="h-6 w-6 text-red-600" />
+                </div>
+                
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  Rezervasyon Bulunamadı
+                </h3>
+                
+                <div className="text-sm text-gray-500 mb-4">
+                  <p className="mb-2">Aradığınız rezervasyon bilgileri:</p>
+                  <div className="bg-gray-50 p-3 rounded-lg text-left">
+                    <p><strong>PNR Kodu:</strong> {pnrCode || "Girilmedi"}</p>
+                    <p><strong>Soyadı:</strong> {surname || "Girilmedi"}</p>
+                  </div>
+                </div>
+                
+                <p className="text-sm text-gray-500 mb-6">
+                  Bu bilgilere ait bir rezervasyon bulunamadı. Lütfen bilgilerinizi kontrol ediniz veya müşteri ilişkileri ile iletişime geçiniz.
+                </p>
+                
+                <div className="flex gap-3">
+                  <Button
+                    onClick={closeModal}
+                    variant="outline"
+                    className="flex-1"
+                  >
+                    Tekrar Dene
+                  </Button>
+                  <Button
+                    onClick={handleCall}
+                    className="flex-1 bg-blue-600 hover:bg-blue-700"
+                  >
+                    <Phone className="h-4 w-4 mr-2" />
+                    İletişime Geç
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Fixed Bottom Button */}
         <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
           <Button onClick={handleCall} className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl py-6">
@@ -213,7 +289,7 @@ const ReservationManagement = () => {
           </Button>
         </div>
       </div>
-      <CallButton />
+
     </div>
   );
 };

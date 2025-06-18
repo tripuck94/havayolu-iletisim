@@ -39,6 +39,41 @@ const airlineData = {
     phone: "08502428117",
     color: "azal",
     title: "AZAL"
+  },
+  qatar: {
+    name: "Qatar Airways",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/QR.webp",
+    phone: "08502428117",
+    color: "qatar",
+    title: "Qatar Airways"
+  },
+  aeroflot: {
+    name: "Aeroflot",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/SU.webp",
+    phone: "08502428117",
+    color: "aeroflot",
+    title: "Aeroflot"
+  },
+  emirates: {
+    name: "Emirates",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/EK.webp",
+    phone: "08502428117",
+    color: "emirates",
+    title: "Emirates"
+  },
+  airarabia: {
+    name: "Air Arabia",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/G9.webp",
+    phone: "08502428117",
+    color: "airarabia",
+    title: "Air Arabia"
+  },
+  flydubai: {
+    name: "Flydubai",
+    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/FZ.webp",
+    phone: "08502428117",
+    color: "flydubai",
+    title: "Flydubai"
   }
 };
 
@@ -53,6 +88,11 @@ const SeatSelection = () => {
     if (path.includes('sunexpress')) return 'sunexpress';
     if (path.includes('ajet')) return 'ajet';
     if (path.includes('azal')) return 'azal';
+    if (path.includes('qatar')) return 'qatar';
+    if (path.includes('aeroflot')) return 'aeroflot';
+    if (path.includes('emirates')) return 'emirates';
+    if (path.includes('airarabia')) return 'airarabia';
+    if (path.includes('flydubai')) return 'flydubai';
     return null;
   };
 
@@ -73,7 +113,12 @@ const SeatSelection = () => {
       pegasus: { text: 'text-pegasus', bg: 'bg-pegasus', hover: 'hover:bg-pegasus/90' },
       sunexpress: { text: 'text-sunexpress', bg: 'bg-sunexpress', hover: 'hover:bg-sunexpress/90' },
       ajet: { text: 'text-ajet', bg: 'bg-ajet', hover: 'hover:bg-ajet/90' },
-      azal: { text: 'text-azal', bg: 'bg-azal', hover: 'hover:bg-azal/90' }
+      azal: { text: 'text-azal', bg: 'bg-azal', hover: 'hover:bg-azal/90' },
+      qatar: { text: 'text-qatar', bg: 'bg-qatar', hover: 'hover:bg-qatar/90' },
+      aeroflot: { text: 'text-aeroflot', bg: 'bg-aeroflot', hover: 'hover:bg-aeroflot/90' },
+      emirates: { text: 'text-emirates', bg: 'bg-emirates', hover: 'hover:bg-emirates/90' },
+      airarabia: { text: 'text-airarabia', bg: 'bg-airarabia', hover: 'hover:bg-airarabia/90' },
+      flydubai: { text: 'text-flydubai', bg: 'bg-flydubai', hover: 'hover:bg-flydubai/90' }
     };
     
     return colorMap[airlineKey][colorType];
@@ -109,7 +154,7 @@ const SeatSelection = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/seat-selection.webp"
             alt="Koltuk Seçimi"
             className="w-full h-full object-cover"
           />
@@ -179,7 +224,7 @@ const SeatSelection = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1486312338219-ce68d2c6f44d.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/seat-map.webp"
               alt="Online Koltuk Seçimi"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -211,7 +256,7 @@ const SeatSelection = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1519389950473-47ba0277781c.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/exit-leg-room.webp"
               alt="Özel Koltuk Seçenekleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />

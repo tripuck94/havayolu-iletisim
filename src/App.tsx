@@ -46,6 +46,11 @@ const App = () => (
           <Route path="/sunexpress-evcil-hayvan" element={<AirlinePetServices />} />
           <Route path="/ajet-evcil-hayvan" element={<AirlinePetServices />} />
           <Route path="/azal-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/qatar-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/aeroflot-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/emirates-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/airarabia-evcil-hayvan" element={<AirlinePetServices />} />
+          <Route path="/flydubai-evcil-hayvan" element={<AirlinePetServices />} />
           <Route path="/pet-services" element={<PetServices />} />
           <Route path="/:airline/pet-services" element={<AirlinePetServices />} />
           <Route path="/thy-iletisim" element={<AirlineContactPage />} />
@@ -53,6 +58,11 @@ const App = () => (
           <Route path="/sunexpress-iletisim" element={<AirlineContactPage />} />
           <Route path="/ajet-iletisim" element={<AirlineContactPage />} />
           <Route path="/azal-iletisim" element={<AirlineContactPage />} />
+          <Route path="/qatar-iletisim" element={<AirlineContactPage />} />
+          <Route path="/aeroflot-iletisim" element={<AirlineContactPage />} />
+          <Route path="/emirates-iletisim" element={<AirlineContactPage />} />
+          <Route path="/airarabia-iletisim" element={<AirlineContactPage />} />
+          <Route path="/flydubai-iletisim" element={<AirlineContactPage />} />
           <Route path="/hizmetler/bilet-satin-alma" element={<TicketPurchase />} />
           <Route path="/hizmetler/bilet-degisikligi" element={<TicketChange />} />
           <Route path="/hizmetler/isim-degisikligi" element={<GeneralNameChange />} />
@@ -80,35 +90,65 @@ const App = () => (
           <Route path="/sunexpress-bilet-satin-alma" element={<AirlineTicketPurchase />} />
           <Route path="/ajet-bilet-satin-alma" element={<AirlineTicketPurchase />} />
           <Route path="/azal-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/qatar-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/aeroflot-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/emirates-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/airarabia-bilet-satin-alma" element={<AirlineTicketPurchase />} />
+          <Route path="/flydubai-bilet-satin-alma" element={<AirlineTicketPurchase />} />
           <Route path="/thy-bilet-degisikligi" element={<AirlineTicketChange />} />
           <Route path="/pegasus-bilet-degisikligi" element={<AirlineTicketChange />} />
           <Route path="/sunexpress-bilet-degisikligi" element={<AirlineTicketChange />} />
           <Route path="/ajet-bilet-degisikligi" element={<AirlineTicketChange />} />
           <Route path="/azal-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/qatar-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/aeroflot-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/emirates-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/airarabia-bilet-degisikligi" element={<AirlineTicketChange />} />
+          <Route path="/flydubai-bilet-degisikligi" element={<AirlineTicketChange />} />
           <Route path="/bilet-degisikligi/:airline" element={<AirlineTicketChange />} />
           <Route path="/thy-koltuk-secimi" element={<SeatSelection />} />
           <Route path="/pegasus-koltuk-secimi" element={<SeatSelection />} />
           <Route path="/sunexpress-koltuk-secimi" element={<SeatSelection />} />
           <Route path="/ajet-koltuk-secimi" element={<SeatSelection />} />
           <Route path="/azal-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/qatar-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/aeroflot-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/emirates-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/airarabia-koltuk-secimi" element={<SeatSelection />} />
+          <Route path="/flydubai-koltuk-secimi" element={<SeatSelection />} />
           <Route path="/koltuk-secimi/:airline" element={<SeatSelection />} />
           <Route path="/thy-bagaj-ekleme" element={<BaggageService />} />
           <Route path="/pegasus-bagaj-ekleme" element={<BaggageService />} />
           <Route path="/sunexpress-bagaj-ekleme" element={<BaggageService />} />
           <Route path="/ajet-bagaj-ekleme" element={<BaggageService />} />
           <Route path="/azal-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/qatar-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/aeroflot-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/emirates-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/airarabia-bagaj-ekleme" element={<BaggageService />} />
+          <Route path="/flydubai-bagaj-ekleme" element={<BaggageService />} />
           <Route path="/bagaj-ekleme/:airline" element={<BaggageService />} />
           <Route path="/thy-isim-degisikligi" element={<NameChange />} />
           <Route path="/pegasus-isim-degisikligi" element={<NameChange />} />
           <Route path="/sunexpress-isim-degisikligi" element={<NameChange />} />
           <Route path="/ajet-isim-degisikligi" element={<NameChange />} />
           <Route path="/azal-isim-degisikligi" element={<NameChange />} />
+          <Route path="/qatar-isim-degisikligi" element={<NameChange />} />
+          <Route path="/aeroflot-isim-degisikligi" element={<NameChange />} />
+          <Route path="/emirates-isim-degisikligi" element={<NameChange />} />
+          <Route path="/airarabia-isim-degisikligi" element={<NameChange />} />
+          <Route path="/flydubai-isim-degisikligi" element={<NameChange />} />
           <Route path="/isim-degisikligi/:airline" element={<NameChange />} />
           <Route path="/thy-iptal-iade" element={<CancelRefund />} />
           <Route path="/pegasus-iptal-iade" element={<CancelRefund />} />
           <Route path="/sunexpress-iptal-iade" element={<CancelRefund />} />
           <Route path="/ajet-iptal-iade" element={<CancelRefund />} />
           <Route path="/azal-iptal-iade" element={<CancelRefund />} />
+          <Route path="/qatar-iptal-iade" element={<CancelRefund />} />
+          <Route path="/aeroflot-iptal-iade" element={<CancelRefund />} />
+          <Route path="/emirates-iptal-iade" element={<CancelRefund />} />
+          <Route path="/airarabia-iptal-iade" element={<CancelRefund />} />
+          <Route path="/flydubai-iptal-iade" element={<CancelRefund />} />
           <Route path="/iptal-iade/:airline" element={<CancelRefund />} />
           <Route path="/sunexpress/seat-selection" element={<SeatSelection />} />
           <Route path="/ajet/seat-selection" element={<SeatSelection />} />
@@ -118,6 +158,11 @@ const App = () => (
           <Route path="/sunexpress-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
           <Route path="/ajet-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
           <Route path="/azal-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/qatar-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/aeroflot-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/emirates-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/airarabia-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
+          <Route path="/flydubai-refakatsiz-cocuk" element={<UnaccompaniedMinor />} />
           <Route path="/thy/unaccompanied-minor" element={<UnaccompaniedMinor />} />
           <Route path="/pegasus/unaccompanied-minor" element={<UnaccompaniedMinor />} />
           <Route path="/sunexpress/unaccompanied-minor" element={<UnaccompaniedMinor />} />
@@ -128,6 +173,11 @@ const App = () => (
           <Route path="/sunexpress-sinif-yukseltme" element={<ClassUpgrade />} />
           <Route path="/ajet-sinif-yukseltme" element={<ClassUpgrade />} />
           <Route path="/azal-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/qatar-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/aeroflot-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/emirates-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/airarabia-sinif-yukseltme" element={<ClassUpgrade />} />
+          <Route path="/flydubai-sinif-yukseltme" element={<ClassUpgrade />} />
           <Route path="/thy/class-upgrade" element={<ClassUpgrade />} />
           <Route path="/pegasus/class-upgrade" element={<ClassUpgrade />} />
           <Route path="/sunexpress/class-upgrade" element={<ClassUpgrade />} />
@@ -138,6 +188,11 @@ const App = () => (
           <Route path="/sunexpress-check-in" element={<CheckIn />} />
           <Route path="/ajet-check-in" element={<CheckIn />} />
           <Route path="/azal-check-in" element={<CheckIn />} />
+          <Route path="/qatar-check-in" element={<CheckIn />} />
+          <Route path="/aeroflot-check-in" element={<CheckIn />} />
+          <Route path="/emirates-check-in" element={<CheckIn />} />
+          <Route path="/airarabia-check-in" element={<CheckIn />} />
+          <Route path="/flydubai-check-in" element={<CheckIn />} />
           <Route path="/thy/check-in" element={<CheckIn />} />
           <Route path="/pegasus/check-in" element={<CheckIn />} />
           <Route path="/sunexpress/check-in" element={<CheckIn />} />

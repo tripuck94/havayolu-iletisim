@@ -10,6 +10,12 @@ export const CallButton = () => {
     if (path.includes('/pegasus')) return 'bg-pegasus hover:bg-pegasus-hover text-white';
     if (path.includes('/sunexpress')) return 'bg-sunexpress hover:bg-sunexpress-hover text-white';
     if (path.includes('/ajet') || path.includes('/vf')) return 'bg-ajet hover:bg-ajet-hover text-white';
+    if (path.includes('/azal')) return 'bg-azal hover:bg-azal-hover text-white';
+    if (path.includes('/qatar')) return 'bg-qatar hover:bg-qatar-hover text-white';
+    if (path.includes('/aeroflot')) return 'bg-aeroflot hover:bg-aeroflot-hover text-white';
+    if (path.includes('/emirates')) return 'bg-emirates hover:bg-emirates-hover text-white';
+    if (path.includes('/airarabia')) return 'bg-airarabia hover:bg-airarabia-hover text-white';
+    if (path.includes('/flydubai')) return 'bg-flydubai hover:bg-flydubai-hover text-white';
     return 'bg-primary hover:bg-primary/90 text-white';
   };
 

@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Phone, Shield, Accessibility, Baby, Stethoscope, CheckCircle, Users, Clock, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 
 const SpecialAssistance = () => {
   const handleCall = () => {
@@ -94,7 +94,7 @@ const SpecialAssistance = () => {
           </Button>
         </div>
       </div>
-      <CallButton />
+
     </div>
   );
 };

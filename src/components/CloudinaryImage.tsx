@@ -6,7 +6,7 @@ import { format, quality } from '@cloudinary/url-gen/actions/delivery';
 // Cloudinary instance'ı oluştur
 const cld = new Cloudinary({
   cloud: {
-    cloudName: 'gidasta'
+    cloudName: 'destek'
   }
 });
 

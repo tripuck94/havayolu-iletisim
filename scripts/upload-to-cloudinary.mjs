@@ -4,9 +4,9 @@ import path from 'path';
 
 // Cloudinary configuration
 cloudinary.config({
-  cloud_name: 'gidasta',
-  api_key: '962675384647377',
-  api_secret: '1RZKTY1SXv67oSqv8eLPgyPLGzw'
+  cloud_name: 'destek',
+  api_key: '231518716858529',
+  api_secret: 'm_YENHUgjh3eBLbzVbG9SwWrcGM'
 });
 
 // Function to upload a single file

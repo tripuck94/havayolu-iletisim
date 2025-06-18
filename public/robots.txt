@@ -7,6 +7,7 @@ Allow: /pegasus-iletisim
 Allow: /sunexpress-iletisim
 Allow: /ajet-iletisim
 Allow: /azal-iletisim
+Allow: /qatar-iletisim
 Allow: /hizmetler/*
 
 # Disallow admin or sensitive areas (if any)

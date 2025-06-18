@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, Phone, Shield, MapPin, Clock, FileText, CheckCircle, Package, AlertCircle, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 
 const LostBaggage = () => {
   const handleCall = () => {
@@ -28,7 +28,7 @@ const LostBaggage = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1488646953014-85cb44e25828.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/unsplash-1488646953014-85cb44e25828.webp"
             alt="Kayıp Bagaj"
             className="w-full h-full object-cover"
           />
@@ -210,7 +210,7 @@ const LostBaggage = () => {
           </Button>
         </div>
       </div>
-      <CallButton />
+
     </div>
   );
 };

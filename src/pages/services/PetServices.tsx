@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PawPrint, Shield, Clock, HeartHandshake, Phone, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 import { useLocation } from "react-router-dom";
 
 const AirlinePetServices = () => {
@@ -27,7 +27,7 @@ const AirlinePetServices = () => {
       case 'thy':
         return {
           name: 'Türk Hava Yolları',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
           colorClass: 'text-thy',
           bgClass: 'bg-thy',
           hoverClass: 'hover:bg-thy-hover',
@@ -36,7 +36,7 @@ const AirlinePetServices = () => {
       case 'pegasus':
         return {
           name: 'Pegasus',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
           colorClass: 'text-pegasus',
           bgClass: 'bg-pegasus',
           hoverClass: 'hover:bg-pegasus-hover',
@@ -45,7 +45,7 @@ const AirlinePetServices = () => {
       case 'sunexpress':
         return {
           name: 'SunExpress',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
           colorClass: 'text-sunexpress',
           bgClass: 'bg-sunexpress',
           hoverClass: 'hover:bg-sunexpress-hover',
@@ -54,7 +54,7 @@ const AirlinePetServices = () => {
       case 'ajet':
         return {
           name: 'AJet',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
           colorClass: 'text-ajet',
           bgClass: 'bg-ajet',
           hoverClass: 'hover:bg-ajet-hover',
@@ -63,11 +63,56 @@ const AirlinePetServices = () => {
       case 'azal':
         return {
           name: 'AZAL',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
           colorClass: 'text-azal',
           bgClass: 'bg-azal',
           hoverClass: 'hover:bg-azal-hover',
           iconColor: 'text-azal'
+        };
+      case 'qatar':
+        return {
+          name: 'Qatar Airways',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/QR.webp',
+          colorClass: 'text-qatar',
+          bgClass: 'bg-qatar',
+          hoverClass: 'hover:bg-qatar-hover',
+          iconColor: 'text-qatar'
+        };
+      case 'aeroflot':
+        return {
+          name: 'Aeroflot',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/SU.webp',
+          colorClass: 'text-aeroflot',
+          bgClass: 'bg-aeroflot',
+          hoverClass: 'hover:bg-aeroflot-hover',
+          iconColor: 'text-aeroflot'
+        };
+      case 'emirates':
+        return {
+          name: 'Emirates',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/EK.webp',
+          colorClass: 'text-emirates',
+          bgClass: 'bg-emirates',
+          hoverClass: 'hover:bg-emirates-hover',
+          iconColor: 'text-emirates'
+        };
+      case 'airarabia':
+        return {
+          name: 'Air Arabia',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/G9.webp',
+          colorClass: 'text-airarabia',
+          bgClass: 'bg-airarabia',
+          hoverClass: 'hover:bg-airarabia-hover',
+          iconColor: 'text-airarabia'
+        };
+      case 'flydubai':
+        return {
+          name: 'Flydubai',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/FZ.webp',
+          colorClass: 'text-flydubai',
+          bgClass: 'bg-flydubai',
+          hoverClass: 'hover:bg-flydubai-hover',
+          iconColor: 'text-flydubai'
         };
       default:
         return {
@@ -108,7 +153,7 @@ const AirlinePetServices = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1450778869180-41d0601e046e.jpg"
+                          src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/pets-policy.webp"
             alt="Evcil Hayvan Taşıma"
             className="w-full h-full object-cover"
           />
@@ -196,8 +241,8 @@ const AirlinePetServices = () => {
 
         {/* Help Section */}
         <div className={`${airlineInfo.bgClass} text-white rounded-xl p-8 text-center`}>
-          <h2 className="text-2xl font-bold mb-4">Size Nasıl Yardımcı Olabiliriz?</h2>
-          <p className="text-lg mb-6 max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h2>
+          <p className="text-lg mb-6 max-w-4xl mx-auto text-white">
             Evcil hayvan taşıma ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 arayabilirsiniz. 
             Uzman ekibimiz size en uygun taşıma seçeneklerini bulmanızda yardımcı olmak için hazır bekliyor.
           </p>
@@ -217,7 +262,7 @@ const AirlinePetServices = () => {
           </Button>
         </div>
       </div>
-      <CallButton />
+
     </div>
   );
 };

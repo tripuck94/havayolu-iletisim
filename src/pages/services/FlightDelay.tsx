@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Phone, Shield, AlertTriangle, Heart, Info, CheckCircle, Calendar, FileText, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 
 const FlightDelay = () => {
   const handleCall = () => {
@@ -28,7 +28,7 @@ const FlightDelay = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/unsplash-1436491865332-7a61a109cc05.webp"
             alt="Uçuş Gecikmesi"
             className="w-full h-full object-cover"
           />
@@ -178,7 +178,7 @@ const FlightDelay = () => {
           </Button>
         </div>
       </div>
-      <CallButton />
+
     </div>
   );
 };

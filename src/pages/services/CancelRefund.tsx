@@ -28,7 +28,7 @@ const CancelRefund = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1541888946425-d81bb19240f5.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/flight-canceled.webp"
             alt="Bilet İptal ve İade"
             className="w-full h-full object-cover"
           />
@@ -94,7 +94,7 @@ const CancelRefund = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1563013544-824ae1b704d3.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/unsplash-1563013544-824ae1b704d3.webp"
               alt="İptal ve İade İşlemleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -125,7 +125,7 @@ const CancelRefund = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1559526324-4b87b5e36e44.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/cancelation-rules.webp"
               alt="İptal ve İade Politikaları"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -154,8 +154,8 @@ const CancelRefund = () => {
           </div>
 
           <div className="text-center bg-primary text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               Bilet iptal ve iade ile ilgili tüm sorularınız için çağrı merkezimizi 
               7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
             </p>

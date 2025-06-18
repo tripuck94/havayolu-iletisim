@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 import { Shield, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
           </Button>
         </div>
       </div>
-      <CallButton />
+
     </div>
   );
 };

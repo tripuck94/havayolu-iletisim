@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HelpCircle, Phone, Search, ChevronDown, Clock, Users, CreditCard, Luggage } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 import { useState } from "react";
 import {
   Collapsible,
@@ -129,7 +129,7 @@ const FAQ = () => {
           </Button>
         </div>
       </div>
-      <CallButton />
+
     </div>
   );
 };

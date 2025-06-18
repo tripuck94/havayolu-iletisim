@@ -28,7 +28,7 @@ const BaggageService = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1553062407-98eeb64c6a62.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/unsplash-1553062407-98eeb64c6a62.webp"
             alt="Bagaj Ekleme"
             className="w-full h-full object-cover"
           />
@@ -135,8 +135,8 @@ const BaggageService = () => {
           </div>
 
           <div className="text-center bg-primary text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               Bagaj ekleme ile ilgili tüm sorularınız için çağrı merkezimizi 
               7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
             </p>

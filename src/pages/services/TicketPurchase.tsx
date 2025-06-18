@@ -1,13 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShoppingCart, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard, Ticket } from "lucide-react";
+import { ShoppingCart, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard, Ticket, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
 import { useEffect } from "react";
 
 const TicketPurchase = () => {
   const handleCall = () => {
-    window.location.href = "tel:+905555555555";
+    window.location.href = "tel:08502428117";
   };
 
   // Preload critical LCP image
@@ -15,7 +14,7 @@ const TicketPurchase = () => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1498050108023-c5249f4df085.jpg';
+    link.href = 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1336,h_400,c_fill/images/call-center/buy-flight-ticket.webp';
     link.fetchPriority = 'high';
     document.head.appendChild(link);
 
@@ -46,7 +45,7 @@ const TicketPurchase = () => {
         {/* Main Image Section - LCP Critical */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1498050108023-c5249f4df085.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1336,h_400,c_fill/images/call-center/buy-flight-ticket.webp"
             alt="Bilet Satın Alma"
             className="w-full h-full object-cover"
             fetchPriority="high"
@@ -115,7 +114,7 @@ const TicketPurchase = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1498050108023-c5249f4df085.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/buy-flight-ticket.webp"
               alt="Online Bilet Satın Alma"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -145,7 +144,7 @@ const TicketPurchase = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1460925895917-afdab827c52f.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/secure-payment.webp"
               alt="Güvenli Ödeme"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -174,8 +173,8 @@ const TicketPurchase = () => {
           </div>
 
           <div className="text-center bg-primary text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               Bilet satın alma işleminiz ile ilgili tüm sorularınız için çağrı merkezimizi 
               7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
             </p>
@@ -189,7 +188,14 @@ const TicketPurchase = () => {
           </div>
         </div>
       </div>
-      <CallButton />
+      
+      {/* Fixed Bottom Button */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
+        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-xl py-6">
+          <Phone className="h-5 w-5 mr-2" />
+          Bilet Satın Al - Hemen Arayın
+        </Button>
+      </div>
     </div>
   );
 };

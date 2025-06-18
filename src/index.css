@@ -2,32 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Critical CSS for LCP optimization */
+/* Non-critical CSS - will be loaded async */
 @layer base {
-  /* Preload key font families */
-  html {
-    font-display: swap;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Critical above-the-fold styles */
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.5;
-  }
-
-  /* Image loading optimizations */
-  img {
-    height: auto;
-    max-width: 100%;
-  }
-
-  /* Critical layout prevents CLS */
-  .hero-container {
-    contain: layout;
-  }
-
   /* Performance optimizations */
   .will-change-transform {
     will-change: transform;
@@ -35,6 +11,21 @@
 
   .will-change-auto {
     will-change: auto;
+  }
+
+  /* Layout containment for performance */
+  .hero-container {
+    contain: layout;
+  }
+
+  /* Advanced image optimizations */
+  .responsive-image {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .responsive-image:hover {
+    transform: scale(1.02);
   }
 
   :root {

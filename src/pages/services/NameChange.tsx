@@ -14,7 +14,7 @@ const NameChange = () => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1554224155-6726b3ff858f.jpg';
+    link.href = 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1200,h_400/images/call-center/name-change.webp';
     link.fetchPriority = 'high';
     document.head.appendChild(link);
 
@@ -45,7 +45,7 @@ const NameChange = () => {
         {/* Main Image Section - LCP Critical */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1554224155-6726b3ff858f.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1200,h_400/images/call-center/name-change.webp"
             alt="İsim Değişikliği"
             className="w-full h-full object-cover"
             fetchPriority="high"
@@ -114,7 +114,7 @@ const NameChange = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1450101499163-c8848c66ca85.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/professional-name-change.webp"
               alt="İsim Değişikliği İşlemleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -145,7 +145,7 @@ const NameChange = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1586953208448-b95a79798f07.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/airlines-name-change-policy.webp"
               alt="İsim Değişikliği Politikaları"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -174,8 +174,8 @@ const NameChange = () => {
           </div>
 
           <div className="text-center bg-primary text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               İsim değişikliği ile ilgili tüm sorularınız için çağrı merkezimizi 
               7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
             </p>

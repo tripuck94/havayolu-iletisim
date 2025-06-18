@@ -2,11 +2,103 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+import { useLocation } from "react-router-dom";
+
+const airlineData = {
+  thy: {
+    name: "Türk Hava Yolları",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp",
+    phone: "08502600849",
+    color: "thy",
+    title: "THY"
+  },
+  pegasus: {
+    name: "Pegasus",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp",
+    phone: "08502428117",
+    color: "pegasus",
+    title: "Pegasus"
+  },
+  sunexpress: {
+    name: "SunExpress",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp",
+    phone: "08502428117",
+    color: "sunexpress",
+    title: "SunExpress"
+  },
+  ajet: {
+    name: "AJet",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp",
+    phone: "08502428117",
+    color: "ajet",
+    title: "AJet"
+  },
+  azal: {
+    name: "AZAL",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp",
+    phone: "08502428117",
+    color: "azal",
+    title: "AZAL"
+  },
+  qatar: {
+    name: "Qatar Airways",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/QR.webp",
+    phone: "08502428117",
+    color: "qatar",
+    title: "Qatar Airways"
+  },
+  aeroflot: {
+    name: "Aeroflot",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/SU.webp",
+    phone: "08502428117",
+    color: "aeroflot",
+    title: "Aeroflot"
+  },
+  emirates: {
+    name: "Emirates",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/EK.webp",
+    phone: "08502428117",
+    color: "emirates",
+    title: "Emirates"
+  },
+  airarabia: {
+    name: "Air Arabia",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/G9.webp",
+    phone: "08502428117",
+    color: "airarabia",
+    title: "Air Arabia"
+  },
+  flydubai: {
+    name: "Flydubai",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/FZ.webp",
+    phone: "08502428117",
+    color: "flydubai",
+    title: "Flydubai"
+  }
+};
 
 const CheckIn = () => {
+  const location = useLocation();
+  
+  // URL'den havayolu adını çıkar
+  let airlineKey = "";
+  const pathname = location.pathname;
+  if (pathname.includes('thy')) airlineKey = 'thy';
+  else if (pathname.includes('pegasus')) airlineKey = 'pegasus';
+  else if (pathname.includes('sunexpress')) airlineKey = 'sunexpress';
+  else if (pathname.includes('ajet')) airlineKey = 'ajet';
+  else if (pathname.includes('azal')) airlineKey = 'azal';
+  else if (pathname.includes('qatar')) airlineKey = 'qatar';
+  else if (pathname.includes('aeroflot')) airlineKey = 'aeroflot';
+  else if (pathname.includes('emirates')) airlineKey = 'emirates';
+  else if (pathname.includes('airarabia')) airlineKey = 'airarabia';
+  else if (pathname.includes('flydubai')) airlineKey = 'flydubai';
+
+  const airlineInfo = airlineKey ? airlineData[airlineKey as keyof typeof airlineData] : null;
+
   const handleCall = () => {
-    window.location.href = "tel:+905555555555";
+    const phone = airlineInfo ? airlineInfo.phone : "+905555555555";
+    window.location.href = `tel:${phone}`;
   };
 
   return (
@@ -15,12 +107,19 @@ const CheckIn = () => {
       <div className="container py-12 md:py-16 space-y-16 mb-16">
         {/* Hero Section */}
         <div className="text-center space-y-4">
+          {airlineInfo && (
+            <img 
+              src={airlineInfo.logo}
+              alt={`${airlineInfo.name} Logo`} 
+              className="h-16 mx-auto mb-6"
+            />
+          )}
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
-            <CheckCircle className="h-10 w-10 text-primary" />
-            Check-in
+            <CheckCircle className={`h-10 w-10 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'}`} />
+            {airlineInfo ? `${airlineInfo.name} Check-in` : 'Check-in'}
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Seyahatiniz öncesinde online check-in yaparak havaalanında zaman kazanın. 
+            {airlineInfo ? `${airlineInfo.name} seyahatiniz öncesinde online check-in yaparak havaalanında zaman kazanın.` : 'Seyahatiniz öncesinde online check-in yaparak havaalanında zaman kazanın.'} 
             Deneyimli ekibimiz, check-in işlemlerinizi hızlı ve kolay bir şekilde 
             gerçekleştirmeniz için 7/24 yanınızda.
           </p>
@@ -29,7 +128,7 @@ const CheckIn = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081584/images/call-center/static/27efca33-969c-481d-b23b-39da51b5d24d"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto/27efca33-969c-481d-b23b-39da51b5d24d.webp"
             alt="Check-in"
             className="w-full h-full object-cover"
           />
@@ -46,7 +145,7 @@ const CheckIn = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Shield className="h-6 w-6 text-primary" />
+                <Shield className={`h-6 w-6 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'}`} />
                 Güvenli İşlem
               </CardTitle>
             </CardHeader>
@@ -61,7 +160,7 @@ const CheckIn = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Clock className="h-6 w-6 text-primary" />
+                <Clock className={`h-6 w-6 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'}`} />
                 7/24 Destek
               </CardTitle>
             </CardHeader>
@@ -76,7 +175,7 @@ const CheckIn = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <HeartHandshake className="h-6 w-6 text-primary" />
+                <HeartHandshake className={`h-6 w-6 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'}`} />
                 Özel Hizmet
               </CardTitle>
             </CardHeader>
@@ -95,7 +194,7 @@ const CheckIn = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1605810230434-7631ac76ec81.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/online-check-in.webp"
               alt="Online Check-in"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -127,7 +226,7 @@ const CheckIn = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1519389950473-47ba0277781c.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/kiosk-check-in.webp"
               alt="Check-in Seçenekleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -137,27 +236,27 @@ const CheckIn = () => {
             <h3 className="text-2xl font-semibold mb-4">Check-in Avantajları</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <BadgeCheck className={`h-6 w-6 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'} mt-1`} />
                 <span>Havalimanında sıra beklemeden hızlı check-in</span>
               </li>
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <BadgeCheck className={`h-6 w-6 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'} mt-1`} />
                 <span>Mobil boarding pass seçeneği</span>
               </li>
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <BadgeCheck className={`h-6 w-6 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'} mt-1`} />
                 <span>Koltuk seçimi imkanı</span>
               </li>
               <li className="flex items-start gap-2">
-                <BadgeCheck className="h-6 w-6 text-primary mt-1" />
+                <BadgeCheck className={`h-6 w-6 ${airlineInfo ? `text-${airlineInfo.color}` : 'text-primary'} mt-1`} />
                 <span>Bagaj etiketleme hizmeti</span>
               </li>
             </ul>
           </div>
 
-          <div className="text-center bg-primary text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+          <div className={`text-center ${airlineInfo ? `bg-${airlineInfo.color}` : 'bg-primary'} text-white p-8 rounded-lg`}>
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               Check-in işleminiz ile ilgili tüm sorularınız için çağrı merkezimizi 
               7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
             </p>
@@ -175,7 +274,7 @@ const CheckIn = () => {
       
       {/* Fixed Bottom Button */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
-        <Button onClick={handleCall} className="w-full bg-primary hover:bg-primary/90 text-white text-xl py-6">
+        <Button onClick={handleCall} className={`w-full ${airlineInfo ? `bg-${airlineInfo.color} hover:bg-${airlineInfo.color}-hover` : 'bg-primary hover:bg-primary/90'} text-white text-xl py-6`}>
           <Phone className="h-5 w-5 mr-2" />
           Hemen Ara
         </Button>

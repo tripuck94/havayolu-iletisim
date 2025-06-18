@@ -2,43 +2,78 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { XCircle, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { Link, useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 const airlineData = {
   thy: {
     name: "Türk Hava Yolları",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp",
     phone: "08502600849",
     color: "thy",
     title: "THY"
   },
   pegasus: {
     name: "Pegasus",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp",
     phone: "08502428117",
     color: "pegasus",
     title: "Pegasus"
   },
   sunexpress: {
     name: "SunExpress",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp",
     phone: "08502428117",
     color: "sunexpress",
     title: "SunExpress"
   },
   ajet: {
     name: "AJet",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp",
     phone: "08502428117",
     color: "ajet",
     title: "AJet"
   },
   azal: {
     name: "AZAL",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp",
     phone: "08502428117",
     color: "azal",
     title: "AZAL"
+  },
+  qatar: {
+    name: "Qatar Airways",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/QR.webp",
+    phone: "08502428117",
+    color: "qatar",
+    title: "Qatar Airways"
+  },
+  aeroflot: {
+    name: "Aeroflot",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/SU.webp",
+    phone: "08502428117",
+    color: "aeroflot",
+    title: "Aeroflot"
+  },
+  emirates: {
+    name: "Emirates",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/EK.webp",
+    phone: "08502428117",
+    color: "emirates",
+    title: "Emirates"
+  },
+  airarabia: {
+    name: "Air Arabia",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/G9.webp",
+    phone: "08502428117",
+    color: "airarabia",
+    title: "Air Arabia"
+  },
+  flydubai: {
+    name: "Flydubai",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/FZ.webp",
+    phone: "08502428117",
+    color: "flydubai",
+    title: "Flydubai"
   }
 };
 
@@ -55,6 +90,11 @@ const CancelRefund = () => {
     else if (pathname.includes('sunexpress')) airlineKey = 'sunexpress';
     else if (pathname.includes('ajet')) airlineKey = 'ajet';
     else if (pathname.includes('azal')) airlineKey = 'azal';
+    else if (pathname.includes('qatar')) airlineKey = 'qatar';
+    else if (pathname.includes('aeroflot')) airlineKey = 'aeroflot';
+    else if (pathname.includes('emirates')) airlineKey = 'emirates';
+    else if (pathname.includes('airarabia')) airlineKey = 'airarabia';
+    else if (pathname.includes('flydubai')) airlineKey = 'flydubai';
   }
 
   const airlineInfo = airlineKey ? airlineData[airlineKey as keyof typeof airlineData] : null;
@@ -78,10 +118,6 @@ const CancelRefund = () => {
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Header />
       <div className="container py-8 space-y-12">
-        <Link to="/" className="text-primary hover:underline mb-8 inline-block">
-          ← Ana Sayfaya Dön
-        </Link>
-        
         {/* Hero Section */}
         <div className="text-center space-y-4">
           <img 
@@ -102,7 +138,7 @@ const CancelRefund = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081583/images/call-center/static/1f65f478-a215-44da-9727-ceb49f5e3b74"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto/1f65f478-a215-44da-9727-ceb49f5e3b74.webp"
             alt={`${airlineInfo.name} İptal ve İade`}
             className="w-full h-full object-cover"
           />
@@ -168,7 +204,7 @@ const CancelRefund = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081582/images/call-center/static/0fe02586-04af-4d3d-842e-56c37907739b"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto/0fe02586-04af-4d3d-842e-56c37907739b.webp"
               alt={`${airlineInfo.name} İptal ve İade İşlemleri`}
               className="rounded-lg h-[300px] w-full object-cover"
             />

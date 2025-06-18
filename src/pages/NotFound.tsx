@@ -36,7 +36,7 @@ const NotFound = () => {
           <div className="mb-12">
             <div className="relative">
               <img
-                src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
+                src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/unsplash-1436491865332-7a61a109cc05.webp"
                 alt="Uçak"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
@@ -85,7 +85,7 @@ const NotFound = () => {
                 className="bg-white hover:bg-red-50 border border-gray-200 hover:border-thy rounded-lg p-4 transition-all duration-200"
               >
                 <img 
-                  src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp"
+                  src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp"
                   alt="THY" 
                   className="h-8 w-8 mx-auto mb-2"
                 />
@@ -97,7 +97,7 @@ const NotFound = () => {
                 className="bg-white hover:bg-yellow-50 border border-gray-200 hover:border-pegasus rounded-lg p-4 transition-all duration-200"
               >
                 <img 
-                  src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp"
+                  src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp"
                   alt="Pegasus" 
                   className="h-8 w-8 mx-auto mb-2"
                 />
@@ -109,7 +109,7 @@ const NotFound = () => {
                 className="bg-white hover:bg-orange-50 border border-gray-200 hover:border-sunexpress rounded-lg p-4 transition-all duration-200"
               >
                 <img 
-                  src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp"
+                  src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp"
                   alt="SunExpress" 
                   className="h-8 w-8 mx-auto mb-2"
                 />

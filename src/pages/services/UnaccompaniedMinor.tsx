@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Plane, Shield, Clock, HeartHandshake, BadgeCheck, Baby, CheckCircle2, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 import { useLocation } from "react-router-dom";
 import { unaccompaniedMinorContent } from "@/data/unaccompaniedMinorContent";
 
@@ -37,7 +37,7 @@ const UnaccompaniedMinor = () => {
       case 'thy':
         return {
           name: 'Türk Hava Yolları',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
           colorClass: 'text-thy',
           bgColorClass: 'bg-thy',
           hoverColorClass: 'hover:bg-thy-hover'
@@ -45,7 +45,7 @@ const UnaccompaniedMinor = () => {
       case 'pegasus':
         return {
           name: 'Pegasus',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
           colorClass: 'text-pegasus',
           bgColorClass: 'bg-pegasus',
           hoverColorClass: 'hover:bg-pegasus-hover'
@@ -53,7 +53,7 @@ const UnaccompaniedMinor = () => {
       case 'sunexpress':
         return {
           name: 'SunExpress',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
           colorClass: 'text-sunexpress',
           bgColorClass: 'bg-sunexpress',
           hoverColorClass: 'hover:bg-sunexpress-hover'
@@ -61,7 +61,7 @@ const UnaccompaniedMinor = () => {
       case 'ajet':
         return {
           name: 'AJet',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
           colorClass: 'text-ajet',
           bgColorClass: 'bg-ajet',
           hoverColorClass: 'hover:bg-ajet-hover'
@@ -69,10 +69,50 @@ const UnaccompaniedMinor = () => {
       case 'azal':
         return {
           name: 'AZAL',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
           colorClass: 'text-azal',
           bgColorClass: 'bg-azal',
           hoverColorClass: 'hover:bg-azal/90'
+        };
+      case 'qatar':
+        return {
+          name: 'Qatar Airways',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/QR.webp',
+          colorClass: 'text-qatar',
+          bgColorClass: 'bg-qatar',
+          hoverColorClass: 'hover:bg-qatar-hover'
+        };
+      case 'aeroflot':
+        return {
+          name: 'Aeroflot',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/SU.webp',
+          colorClass: 'text-aeroflot',
+          bgColorClass: 'bg-aeroflot',
+          hoverColorClass: 'hover:bg-aeroflot-hover'
+        };
+      case 'emirates':
+        return {
+          name: 'Emirates',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/EK.webp',
+          colorClass: 'text-emirates',
+          bgColorClass: 'bg-emirates',
+          hoverColorClass: 'hover:bg-emirates-hover'
+        };
+      case 'airarabia':
+        return {
+          name: 'Air Arabia',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/G9.webp',
+          colorClass: 'text-airarabia',
+          bgColorClass: 'bg-airarabia',
+          hoverColorClass: 'hover:bg-airarabia-hover'
+        };
+      case 'flydubai':
+        return {
+          name: 'Flydubai',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/FZ.webp',
+          colorClass: 'text-flydubai',
+          bgColorClass: 'bg-flydubai',
+          hoverColorClass: 'hover:bg-flydubai-hover'
         };
       default:
         return {
@@ -122,7 +162,7 @@ const UnaccompaniedMinor = () => {
       {/* Main Image Section */}
       <div className="relative h-[400px] rounded-xl overflow-hidden">
         <img
-            src={airline ? unaccompaniedMinorContent.mainImage : "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1517022812141-23620dba5c23.jpg"}
+            src={airline ? unaccompaniedMinorContent.mainImage : "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/unaccompanied-minor.webp"}
           alt="Refakatsiz Çocuk Hizmeti"
           className="w-full h-full object-cover"
         />
@@ -267,8 +307,8 @@ const UnaccompaniedMinor = () => {
 
         {/* Help Section */}
         <div className={`${airlineInfo.bgColorClass} text-white rounded-xl p-8 text-center`}>
-          <h2 className="text-2xl font-bold mb-4">Size Nasıl Yardımcı Olabiliriz?</h2>
-          <p className="text-lg mb-6 max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h2>
+          <p className="text-lg mb-6 max-w-4xl mx-auto text-white">
             Refakatsiz çocuk hizmeti ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 arayabilirsiniz. 
             Uzman ekibimiz size en uygun refakat seçeneklerini sunmak için hazır bekliyor.
           </p>
@@ -289,7 +329,7 @@ const UnaccompaniedMinor = () => {
         </Button>
       </div>
       
-      <CallButton />
+
     </div>
   );
 };

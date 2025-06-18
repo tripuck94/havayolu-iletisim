@@ -9,12 +9,17 @@ export const Header = () => {
   };
 
   const getHeaderColor = (path: string) => {
-    if (path.includes('/thy')) return 'bg-thy';
-    if (path.includes('/pegasus')) return 'bg-pegasus';
-    if (path.includes('/sunexpress')) return 'bg-sunexpress';
-    if (path.includes('/ajet') || path.includes('/vf')) return 'bg-ajet'; // VF is AJet's flight code
-    if (path.includes('/azal')) return 'bg-azal';
-    return 'bg-gray-800'; // Ana sayfa için koyu gri arka plan
+    if (path.includes('/thy')) return 'bg-thy hover:bg-thy-hover transition-colors duration-200';
+    if (path.includes('/pegasus')) return 'bg-pegasus hover:bg-pegasus-hover transition-colors duration-200';
+    if (path.includes('/sunexpress')) return 'bg-sunexpress hover:bg-sunexpress-hover transition-colors duration-200';
+    if (path.includes('/ajet') || path.includes('/vf')) return 'bg-ajet hover:bg-ajet-hover transition-colors duration-200'; // VF is AJet's flight code
+    if (path.includes('/azal')) return 'bg-azal hover:bg-azal-hover transition-colors duration-200';
+    if (path.includes('/qatar')) return 'bg-qatar hover:bg-qatar-hover transition-colors duration-200';
+    if (path.includes('/aeroflot')) return 'bg-aeroflot hover:bg-aeroflot-hover transition-colors duration-200';
+    if (path.includes('/emirates')) return 'bg-emirates hover:bg-emirates-hover transition-colors duration-200';
+    if (path.includes('/airarabia')) return 'bg-airarabia hover:bg-airarabia-hover transition-colors duration-200';
+    if (path.includes('/flydubai')) return 'bg-flydubai hover:bg-flydubai-hover transition-colors duration-200';
+    return 'bg-gray-800 hover:bg-gray-700 transition-colors duration-200'; // Ana sayfa için koyu gri arka plan
   };
 
   const getButtonColor = (path: string) => {
@@ -23,6 +28,11 @@ export const Header = () => {
     if (path.includes('/sunexpress')) return 'bg-white text-sunexpress hover:bg-white/90';
     if (path.includes('/ajet') || path.includes('/vf')) return 'bg-white text-ajet hover:bg-white/90';
     if (path.includes('/azal')) return 'bg-white text-azal hover:bg-white/90';
+    if (path.includes('/qatar')) return 'bg-white text-qatar hover:bg-white/90';
+    if (path.includes('/aeroflot')) return 'bg-white text-aeroflot hover:bg-white/90';
+    if (path.includes('/emirates')) return 'bg-white text-emirates hover:bg-white/90';
+    if (path.includes('/airarabia')) return 'bg-white text-airarabia hover:bg-white/90';
+    if (path.includes('/flydubai')) return 'bg-white text-flydubai hover:bg-white/90';
     return 'bg-white text-gray-800 hover:bg-white/90';
   };
 
@@ -31,10 +41,10 @@ export const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_32,w_32,q_auto/images/call-center/static/public/lovable-uploads/520d8ba8-17f4-4293-a58e-2783bd05931c.png"
-              alt="Call Center Icon"
-              className="h-8 w-8"
+                          <img
+                src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_32,w_32,q_auto/520d8ba8-17f4-4293-a58e-2783bd05931c.webp"
+                alt="Call Center Icon"
+                className="h-8 w-8"
               fetchPriority="high"
               loading="eager"
               decoding="sync"
@@ -51,7 +61,7 @@ export const Header = () => {
                 <div className="p-2">
                   <Link to="/thy-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 group/item">
                     <img 
-                      src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                       alt="THY Logo" 
                       className="h-6 w-6 rounded-full"
                     />
@@ -59,7 +69,7 @@ export const Header = () => {
                   </Link>
                   <Link to="/pegasus-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 group/item">
                     <img 
-                      src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                       alt="Pegasus Logo" 
                       className="h-6 w-6 rounded-full"
                     />
@@ -67,7 +77,7 @@ export const Header = () => {
                 </Link>
                   <Link to="/sunexpress-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 group/item">
                     <img 
-                      src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                       alt="SunExpress Logo" 
                       className="h-6 w-6 rounded-full"
                     />
@@ -75,7 +85,7 @@ export const Header = () => {
                 </Link>
                   <Link to="/ajet-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 group/item">
                     <img 
-                      src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                       alt="AJet Logo" 
                       className="h-6 w-6 rounded-full"
                     />
@@ -83,11 +93,51 @@ export const Header = () => {
                 </Link>
                   <Link to="/azal-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 group/item">
                     <img 
-                      src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                       alt="AZAL Logo" 
                       className="h-6 w-6 rounded-full"
                     />
                     <span className="font-medium">AZAL</span>
+                </Link>
+                  <Link to="/qatar-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 group/item">
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                      alt="Qatar Airways Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Qatar Airways</span>
+                </Link>
+                  <Link to="/aeroflot-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 group/item">
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                      alt="Aeroflot Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Aeroflot</span>
+                </Link>
+                  <Link to="/emirates-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 group/item">
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                      alt="Emirates Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Emirates</span>
+                </Link>
+                  <Link to="/airarabia-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 group/item">
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                      alt="Air Arabia Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Air Arabia</span>
+                </Link>
+                  <Link to="/flydubai-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 group/item">
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                      alt="Flydubai Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Flydubai</span>
                 </Link>
                 </div>
               </div>
@@ -115,7 +165,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -123,7 +173,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -131,7 +181,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -139,7 +189,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -147,11 +197,51 @@ export const Header = () => {
                         </Link>
                         <Link to="/azal-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Bilet Satın Alma</span>
+                        </Link>
+                        <Link to="/qatar-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Bilet Satın Alma</span>
+                        </Link>
+                        <Link to="/aeroflot-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Bilet Satın Alma</span>
+                        </Link>
+                        <Link to="/emirates-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Bilet Satın Alma</span>
+                        </Link>
+                        <Link to="/airarabia-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Bilet Satın Alma</span>
+                        </Link>
+                        <Link to="/flydubai-bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Bilet Satın Alma</span>
                         </Link>
                       </div>
                     </div>
@@ -173,7 +263,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -181,7 +271,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -189,7 +279,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -197,7 +287,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -205,11 +295,51 @@ export const Header = () => {
                         </Link>
                         <Link to="/azal-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Bilet Değişikliği</span>
+                        </Link>
+                        <Link to="/qatar-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Bilet Değişikliği</span>
+                        </Link>
+                        <Link to="/aeroflot-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Bilet Değişikliği</span>
+                        </Link>
+                        <Link to="/emirates-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Bilet Değişikliği</span>
+                        </Link>
+                        <Link to="/airarabia-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Bilet Değişikliği</span>
+                        </Link>
+                        <Link to="/flydubai-bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Bilet Değişikliği</span>
                         </Link>
                       </div>
                     </div>
@@ -231,7 +361,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -239,7 +369,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -247,7 +377,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -255,7 +385,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -263,11 +393,51 @@ export const Header = () => {
                         </Link>
                         <Link to="/azal-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL İsim Değişikliği</span>
+                        </Link>
+                        <Link to="/qatar-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways İsim Değişikliği</span>
+                        </Link>
+                        <Link to="/aeroflot-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot İsim Değişikliği</span>
+                        </Link>
+                        <Link to="/emirates-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates İsim Değişikliği</span>
+                        </Link>
+                        <Link to="/airarabia-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia İsim Değişikliği</span>
+                        </Link>
+                        <Link to="/flydubai-isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai İsim Değişikliği</span>
                         </Link>
                       </div>
                     </div>
@@ -289,7 +459,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -297,7 +467,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -305,7 +475,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -313,7 +483,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -321,11 +491,51 @@ export const Header = () => {
                         </Link>
                         <Link to="/azal-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL İptal ve İade</span>
+                        </Link>
+                        <Link to="/qatar-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways İptal ve İade</span>
+                        </Link>
+                        <Link to="/aeroflot-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot İptal ve İade</span>
+                        </Link>
+                        <Link to="/emirates-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates İptal ve İade</span>
+                        </Link>
+                        <Link to="/airarabia-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia İptal ve İade</span>
+                        </Link>
+                        <Link to="/flydubai-iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai İptal ve İade</span>
                         </Link>
                       </div>
                     </div>
@@ -347,7 +557,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -355,7 +565,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -363,7 +573,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -371,7 +581,7 @@ export const Header = () => {
                 </Link>
                         <Link to="/ajet-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -379,11 +589,51 @@ export const Header = () => {
                 </Link>
                         <Link to="/azal-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Sınıf Yükseltme</span>
+                </Link>
+                        <Link to="/qatar-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Sınıf Yükseltme</span>
+                </Link>
+                        <Link to="/aeroflot-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Sınıf Yükseltme</span>
+                </Link>
+                        <Link to="/emirates-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Sınıf Yükseltme</span>
+                </Link>
+                        <Link to="/airarabia-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Sınıf Yükseltme</span>
+                </Link>
+                        <Link to="/flydubai-sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Sınıf Yükseltme</span>
                 </Link>
                       </div>
                     </div>
@@ -413,7 +663,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -421,7 +671,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -429,7 +679,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -437,7 +687,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -445,11 +695,51 @@ export const Header = () => {
                         </Link>
                         <Link to="/azal-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Evcil Hayvan</span>
+                        </Link>
+                        <Link to="/qatar-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Evcil Hayvan</span>
+                        </Link>
+                        <Link to="/aeroflot-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Evcil Hayvan</span>
+                        </Link>
+                        <Link to="/emirates-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Evcil Hayvan</span>
+                        </Link>
+                        <Link to="/airarabia-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Evcil Hayvan</span>
+                        </Link>
+                        <Link to="/flydubai-evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Evcil Hayvan</span>
                         </Link>
                       </div>
                     </div>
@@ -471,7 +761,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -479,7 +769,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -487,7 +777,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -495,7 +785,7 @@ export const Header = () => {
                 </Link>
                         <Link to="/ajet-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -503,11 +793,51 @@ export const Header = () => {
                 </Link>
                         <Link to="/azal-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Refakatsiz Çocuk</span>
+                </Link>
+                        <Link to="/qatar-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Refakatsiz Çocuk</span>
+                </Link>
+                        <Link to="/aeroflot-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Refakatsiz Çocuk</span>
+                </Link>
+                        <Link to="/emirates-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Refakatsiz Çocuk</span>
+                </Link>
+                        <Link to="/airarabia-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Refakatsiz Çocuk</span>
+                </Link>
+                        <Link to="/flydubai-refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Refakatsiz Çocuk</span>
                 </Link>
                       </div>
                     </div>
@@ -538,7 +868,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -546,7 +876,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -554,7 +884,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -562,7 +892,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -570,11 +900,51 @@ export const Header = () => {
                         </Link>
                         <Link to="/azal-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/qatar-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/aeroflot-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/emirates-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/airarabia-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Koltuk Seçimi</span>
+                        </Link>
+                        <Link to="/flydubai-koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Koltuk Seçimi</span>
                         </Link>
                       </div>
                     </div>
@@ -596,7 +966,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -604,7 +974,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -612,7 +982,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -620,7 +990,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -628,11 +998,51 @@ export const Header = () => {
                         </Link>
                         <Link to="/azal-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/qatar-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/aeroflot-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/emirates-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/airarabia-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Bagaj Ekleme</span>
+                        </Link>
+                        <Link to="/flydubai-bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Bagaj Ekleme</span>
                         </Link>
                       </div>
                     </div>
@@ -654,7 +1064,7 @@ export const Header = () => {
                       <div className="p-2">
                         <Link to="/thy-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
                             alt="THY" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -662,7 +1072,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/pegasus-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
                             alt="Pegasus" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -670,7 +1080,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/sunexpress-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
                             alt="SunExpress" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -678,7 +1088,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/ajet-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
                             alt="AJet" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
@@ -686,11 +1096,51 @@ export const Header = () => {
                 </Link>
                         <Link to="/azal-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200 whitespace-nowrap">
                           <img 
-                            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
                             alt="AZAL" 
                             className="h-6 w-6 rounded-full flex-shrink-0"
                           />
                           <span className="font-medium">AZAL Check-in</span>
+                </Link>
+                        <Link to="/qatar-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                            alt="Qatar Airways" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Qatar Airways Check-in</span>
+                </Link>
+                        <Link to="/aeroflot-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                            alt="Aeroflot" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Aeroflot Check-in</span>
+                </Link>
+                        <Link to="/emirates-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                            alt="Emirates" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Emirates Check-in</span>
+                </Link>
+                        <Link to="/airarabia-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                            alt="Air Arabia" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Air Arabia Check-in</span>
+                </Link>
+                        <Link to="/flydubai-check-in" className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200 whitespace-nowrap">
+                          <img 
+                            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                            alt="Flydubai" 
+                            className="h-6 w-6 rounded-full flex-shrink-0"
+                          />
+                          <span className="font-medium">Flydubai Check-in</span>
                 </Link>
                       </div>
                     </div>

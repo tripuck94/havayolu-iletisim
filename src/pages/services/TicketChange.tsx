@@ -14,7 +14,7 @@ const TicketChange = () => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1581092795360-fd1ca04f0952.jpg';
+    link.href = 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1326,h_400,c_fill/images/call-center/flight-change.webp';
     link.fetchPriority = 'high';
     document.head.appendChild(link);
 
@@ -45,7 +45,7 @@ const TicketChange = () => {
         {/* Main Image Section - LCP Critical */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_400,c_fill/v1749081995/images/call-center/content/unsplash-1581092795360-fd1ca04f0952.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1326,h_400,c_fill/images/call-center/flight-change.webp"
             alt="Bilet Değişikliği"
             className="w-full h-full object-cover"
             fetchPriority="high"
@@ -114,7 +114,7 @@ const TicketChange = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_800,h_300,c_fill/v1749081995/images/call-center/content/unsplash-1483058712412-4245e9b90334.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_800,h_300,c_fill/images/call-center/professional-airline-change.webp"
               alt="Bilet Değişikliği İşlemleri"
               className="rounded-lg h-[300px] w-full object-cover"
               loading="lazy"
@@ -147,7 +147,7 @@ const TicketChange = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_800,h_300,c_fill/v1749081995/images/call-center/content/unsplash-1487058792275-0ad4aaf24ca7.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_800,h_300,c_fill/images/call-center/flight-rules.webp"
               alt="Bilet Değişikliği Politikaları"
               className="rounded-lg h-[300px] w-full object-cover"
               loading="lazy"
@@ -177,8 +177,8 @@ const TicketChange = () => {
           </div>
 
           <div className="text-center bg-primary text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               Bilet değişikliği ile ilgili tüm sorularınız için çağrı merkezimizi 
               7/24 arayabilirsiniz. Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
             </p>

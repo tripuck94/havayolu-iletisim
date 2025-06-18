@@ -12,7 +12,7 @@ export const Banner = () => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_600,c_fill/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg';
+    link.href = 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_600,c_fill/unsplash-1436491865332-7a61a109cc05.webp';
     link.fetchPriority = 'high';
     document.head.appendChild(link);
 
@@ -27,7 +27,7 @@ export const Banner = () => {
     <div className="relative h-[600px] w-full overflow-hidden">
       {/* Critical LCP image with optimizations */}
       <img
-        src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_600,c_fill/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
+        src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_600,c_fill/unsplash-1436491865332-7a61a109cc05.webp"
         alt="Uçak Bileti Rezervasyonu"
         className="absolute inset-0 w-full h-full object-cover"
         fetchPriority="high"

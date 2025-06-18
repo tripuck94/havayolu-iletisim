@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpCircle, Phone, Shield, Clock, HeartHandshake, BadgeCheck, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 import { classUpgradeContent } from "@/data/classUpgradeContent";
 import { useLocation } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const ClassUpgrade = () => {
       case 'thy':
         return {
           name: 'Türk Hava Yolları',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp',
           color: 'thy',
           loyalty: 'Miles&Smiles',
           phone: 'tel:08502600849'
@@ -34,7 +34,7 @@ const ClassUpgrade = () => {
       case 'pegasus':
         return {
           name: 'Pegasus',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp',
           color: 'pegasus',
           loyalty: 'BolBol',
           phone: 'tel:08502428117'
@@ -42,7 +42,7 @@ const ClassUpgrade = () => {
       case 'sunexpress':
         return {
           name: 'SunExpress',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp',
           color: 'sunexpress',
           loyalty: 'SunExpress Club',
           phone: 'tel:08502428117'
@@ -50,7 +50,7 @@ const ClassUpgrade = () => {
       case 'ajet':
         return {
           name: 'AJet',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp',
           color: 'ajet',
           loyalty: 'AJet Club',
           phone: 'tel:08502428117'
@@ -58,7 +58,7 @@ const ClassUpgrade = () => {
       case 'azal':
         return {
           name: 'AZAL',
-          logo: 'https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
+          logo: 'https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp',
           color: 'azal',
           loyalty: 'AZAL Miles',
           phone: 'tel:08502428117'
@@ -205,7 +205,7 @@ const ClassUpgrade = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1486312338219-ce68d2c6f44d.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/premium-seat.webp"
               alt={`${airlineInfo.name} Sınıf Yükseltme`}
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -238,7 +238,7 @@ const ClassUpgrade = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1498050108023-c5249f4df085.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/buy-flight-ticket.webp"
               alt="Sınıf Yükseltme Seçenekleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -267,8 +267,8 @@ const ClassUpgrade = () => {
           </div>
 
           <div className={`text-center bg-${airlineInfo.color} text-white p-8 rounded-lg`}>
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               {airline 
                 ? `${airlineInfo.name} sınıf yükseltme hizmetleri ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 arayabilirsiniz.`
                 : 'Sınıf yükseltme ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 arayabilirsiniz.'
@@ -294,7 +294,7 @@ const ClassUpgrade = () => {
           Hemen Ara
         </Button>
       </div>
-      <CallButton />
+
     </div>
   );
 };

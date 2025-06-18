@@ -2,44 +2,79 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Luggage, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-import { CallButton } from "@/components/CallButton";
+
 import { useLocation } from "react-router-dom";
 
 const airlineData = {
   thy: {
     name: "Türk Hava Yolları",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp",
     phone: "08502600849",
     color: "thy",
     title: "THY"
   },
   pegasus: {
     name: "Pegasus",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp",
     phone: "08502428117",
     color: "pegasus",
     title: "Pegasus"
   },
   sunexpress: {
     name: "SunExpress",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp",
     phone: "08502428117",
     color: "sunexpress",
     title: "SunExpress"
   },
   ajet: {
     name: "AJet",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp",
     phone: "08502428117",
     color: "ajet",
     title: "AJet"
   },
   azal: {
     name: "AZAL",
-    logo: "https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp",
     phone: "08502428117",
     color: "azal",
     title: "AZAL"
+  },
+  qatar: {
+    name: "Qatar Airways",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/QR.webp",
+    phone: "08502428117",
+    color: "qatar",
+    title: "Qatar Airways"
+  },
+  aeroflot: {
+    name: "Aeroflot",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/SU.webp",
+    phone: "08502428117",
+    color: "aeroflot",
+    title: "Aeroflot"
+  },
+  emirates: {
+    name: "Emirates",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/EK.webp",
+    phone: "08502428117",
+    color: "emirates",
+    title: "Emirates"
+  },
+  airarabia: {
+    name: "Air Arabia",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/G9.webp",
+    phone: "08502428117",
+    color: "airarabia",
+    title: "Air Arabia"
+  },
+  flydubai: {
+    name: "Flydubai",
+    logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/FZ.webp",
+    phone: "08502428117",
+    color: "flydubai",
+    title: "Flydubai"
   }
 };
 
@@ -54,6 +89,11 @@ const BaggageService = () => {
     if (path.includes('sunexpress')) return 'sunexpress';
     if (path.includes('ajet')) return 'ajet';
     if (path.includes('azal')) return 'azal';
+    if (path.includes('qatar')) return 'qatar';
+    if (path.includes('aeroflot')) return 'aeroflot';
+    if (path.includes('emirates')) return 'emirates';
+    if (path.includes('airarabia')) return 'airarabia';
+    if (path.includes('flydubai')) return 'flydubai';
     return null;
   };
 
@@ -74,7 +114,12 @@ const BaggageService = () => {
       pegasus: { text: 'text-pegasus', bg: 'bg-pegasus', hover: 'hover:bg-pegasus/90' },
       sunexpress: { text: 'text-sunexpress', bg: 'bg-sunexpress', hover: 'hover:bg-sunexpress/90' },
       ajet: { text: 'text-ajet', bg: 'bg-ajet', hover: 'hover:bg-ajet/90' },
-      azal: { text: 'text-azal', bg: 'bg-azal', hover: 'hover:bg-azal/90' }
+      azal: { text: 'text-azal', bg: 'bg-azal', hover: 'hover:bg-azal/90' },
+      qatar: { text: 'text-qatar', bg: 'bg-qatar', hover: 'hover:bg-qatar/90' },
+      aeroflot: { text: 'text-aeroflot', bg: 'bg-aeroflot', hover: 'hover:bg-aeroflot/90' },
+      emirates: { text: 'text-emirates', bg: 'bg-emirates', hover: 'hover:bg-emirates/90' },
+      airarabia: { text: 'text-airarabia', bg: 'bg-airarabia', hover: 'hover:bg-airarabia/90' },
+      flydubai: { text: 'text-flydubai', bg: 'bg-flydubai', hover: 'hover:bg-flydubai/90' }
     };
     
     return colorMap[airlineKey][colorType];
@@ -110,7 +155,7 @@ const BaggageService = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081589/images/call-center/static/7398e5b3-2469-4357-9789-94408bad853b"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto/7398e5b3-2469-4357-9789-94408bad853b.webp"
             alt={`${airline ? airline.name : ''} Bagaj Hizmeti`}
             className="w-full h-full object-cover"
           />
@@ -178,7 +223,7 @@ const BaggageService = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto/v1749081580/images/call-center/static/04790e9a-9300-402d-92ec-824ca1c5a0db"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto/images/call-center/baggage-flight.webp"
               alt={`${airline ? airline.name : ''} Bagaj İşlemleri`}
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -216,6 +261,25 @@ const BaggageService = () => {
               </li>
             </ul>
           </div>
+
+          <div className={`text-center ${getColorClass('bg')} text-white p-8 rounded-lg`}>
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
+              {airline 
+                ? `${airline.name} bagaj ekleme ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 arayabilirsiniz.`
+                : 'Bagaj ekleme ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 arayabilirsiniz.'
+              } 
+              Uzman ekibimiz size en uygun çözümü sunmak için hazır bekliyor.
+            </p>
+            <Button 
+              onClick={handleCall} 
+              variant="secondary"
+              className="gap-2"
+            >
+              <Phone className="h-4 w-4" />
+              Hemen Arayın
+            </Button>
+          </div>
         </div>
       </div>
       
@@ -225,7 +289,7 @@ const BaggageService = () => {
           Hemen Ara
         </Button>
       </div>
-      <CallButton />
+
     </div>
   );
 };

@@ -13,29 +13,94 @@
     <meta property="og:description" content="THY, Pegasus, SunExpress ve AJet için bilet satış, değişiklik ve iptal işlemleri" />
     <meta property="og:image" content="/og-image.png" />
     
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MRP8QGP4');</script>
+    <!-- End Google Tag Manager -->
+    
     <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.gpteng.co">
     
-    <!-- Critical CSS Preload -->
-    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
-    
-    <!-- Font Display Optimization -->
+    <!-- Critical CSS inline -->
     <style>
-      /* Critical CSS for initial render */
+      /* Critical CSS for immediate render - Above the fold */
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+      }
+      
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: hsl(var(--border));
+      }
+      
       html, body {
         margin: 0;
         padding: 0;
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-display: swap;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
       }
       
       #root {
         min-height: 100vh;
         background-color: #f9fafb;
+      }
+      
+      /* Critical layout classes for header and hero */
+      .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      
+      .header {
+        border-bottom-width: 1px;
+        background-color: #ffffff;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      
+      .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+      
+      .btn-primary {
+        background-color: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: hsl(222.2 47.4% 8%);
       }
       
       /* Loading state */
@@ -47,10 +112,44 @@
         font-size: 18px;
         color: #6b7280;
       }
+      
+      /* Image loading optimization */
+      img {
+        height: auto;
+        max-width: 100%;
+      }
     </style>
+    
+    <!-- Async CSS loading for non-critical styles -->
+    <script>
+      // Asenkron CSS yükleme
+      const loadCSS = (href) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        link.media = 'print';
+        link.onload = () => link.media = 'all';
+        document.head.appendChild(link);
+      };
+      
+      // CSS dosyasını asenkron yükle
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => loadCSS('/src/index.css'));
+      } else {
+        setTimeout(() => loadCSS('/src/index.css'), 100);
+      }
+    </script>
+    
+    <!-- Fallback for no-js -->
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRP8QGP4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div id="root">
       <div class="loading">Yükleniyor...</div>
     </div>

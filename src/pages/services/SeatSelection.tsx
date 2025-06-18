@@ -27,7 +27,7 @@ const SeatSelection = () => {
         {/* Main Image Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden">
           <img
-            src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
+            src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/unsplash-1436491865332-7a61a109cc05.webp"
             alt="Koltuk Seçimi"
             className="w-full h-full object-cover"
           />
@@ -93,7 +93,7 @@ const SeatSelection = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1486312338219-ce68d2c6f44d.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/premium-seat.webp"
               alt="Online Koltuk Seçimi"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -125,7 +125,7 @@ const SeatSelection = () => {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1519389950473-47ba0277781c.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/kiosk-check-in.webp"
               alt="Özel Koltuk Seçenekleri"
               className="rounded-lg h-[300px] w-full object-cover"
             />
@@ -154,8 +154,8 @@ const SeatSelection = () => {
           </div>
 
           <div className="text-center bg-primary text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Size Nasıl Yardımcı Olabiliriz?</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p className="mb-6 text-white">
               Koltuk seçimi ile ilgili tüm sorularınız için çağrı merkezimizi 7/24 
               arayabilirsiniz. Uzman ekibimiz size en uygun koltuğu bulmanızda yardımcı 
               olmak için hazır bekliyor.

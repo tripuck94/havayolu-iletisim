@@ -58,10 +58,10 @@ const AirlineContactPage = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-2">E-posta</h3>
-              <p className="text-lg font-semibold mb-2">info@ucakbiletiiletisim.com</p>
+              <p className="text-lg font-semibold mb-2">info@flyevaturizm.com</p>
               <p className="text-gray-600 mb-4">24 saat içinde yanıt</p>
               <Button 
-                onClick={() => window.location.href = "mailto:info@ucakbiletiiletisim.com"}
+                onClick={() => window.location.href = "mailto:info@flyevaturizm.com"}
                 variant="outline"
                 className="w-full border-green-600 text-green-600 hover:bg-green-50"
               >
@@ -238,14 +238,14 @@ const AirlineContactPage = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="relative overflow-hidden rounded-lg">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1436491865332-7a61a109cc05.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/unsplash-1436491865332-7a61a109cc05.webp"
               alt="Uçak"
               className="w-full h-64 object-cover"
             />
           </div>
           <div className="relative overflow-hidden rounded-lg">
             <img
-              src="https://res.cloudinary.com/gidasta/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/v1749081995/images/call-center/content/unsplash-1587560699334-cc4ff634909a.jpg"
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_auto,dpr_auto/images/call-center/call-center-airline.webp"
               alt="Call Center"
               className="w-full h-64 object-cover"
             />
