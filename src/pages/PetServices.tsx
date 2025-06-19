@@ -2,11 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PawPrint, Phone, Plane, Shield, Clock, HeartHandshake, Scale, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-
+import { usePhoneTracking } from "@/hooks/use-phone-tracking";
 
 const PetServices = () => {
+  const { handlePhoneCall } = usePhoneTracking();
+  
   const handleCall = () => {
-    window.location.href = "tel:+905555555555";
+    handlePhoneCall("08502428117", "pet_services_page");
   };
 
   return (

@@ -98,7 +98,7 @@ const CheckIn = () => {
   const airlineInfo = airlineKey ? airlineData[airlineKey as keyof typeof airlineData] : null;
 
   const handleCall = () => {
-    const phone = airlineInfo ? airlineInfo.phone : "+905555555555";
+    const phone = airlineInfo ? airlineInfo.phone : "08502428117";
     const airlineName = airlineInfo ? airlineInfo.title : "unknown";
     
     // GTM tracking ekle - havayolu bilgisi ile

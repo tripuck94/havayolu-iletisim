@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePhoneTracking } from "@/hooks/use-phone-tracking";
 
 const airlines = [
   {
@@ -42,8 +43,10 @@ const airlines = [
 ];
 
 const ContactServices = () => {
+  const { handlePhoneCall } = usePhoneTracking();
+  
   const handleCall = () => {
-    window.location.href = "tel:+905555555555";
+    handlePhoneCall("08502428117", "contact_services_page");
   };
 
   return (
