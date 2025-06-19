@@ -1,9 +1,11 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
+import { usePhoneTracking } from "@/hooks/use-phone-tracking";
 
 export const CallButton = () => {
   const location = useLocation();
+  const { handlePhoneCall } = usePhoneTracking();
   
   const getButtonColor = (path: string) => {
     if (path.includes('/thy')) return 'bg-thy hover:bg-thy-hover text-white';
@@ -20,7 +22,7 @@ export const CallButton = () => {
   };
 
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    handlePhoneCall("08502428117", `floating_button_${location.pathname}`);
   };
 
   return (

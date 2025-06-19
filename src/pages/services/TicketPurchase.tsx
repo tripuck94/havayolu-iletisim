@@ -3,10 +3,13 @@ import { ShoppingCart, Shield, Clock, HeartHandshake, BadgeCheck, CreditCard, Ti
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { useEffect } from "react";
+import { usePhoneTracking } from "@/hooks/use-phone-tracking";
 
 const TicketPurchase = () => {
+  const { handlePhoneCall } = usePhoneTracking();
+  
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    handlePhoneCall("08502428117", "ticket_purchase_page");
   };
 
   // Preload critical LCP image

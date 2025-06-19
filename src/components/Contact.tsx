@@ -1,9 +1,12 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePhoneTracking } from "@/hooks/use-phone-tracking";
 
 export const Contact = () => {
+  const { handlePhoneCall } = usePhoneTracking();
+  
   const handleCall = () => {
-    window.location.href = "tel:+905555555555"; // Telefon numaranızı buraya ekleyin
+    handlePhoneCall("08502428117", "contact_section");
   };
 
   return (
