@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RefreshCw, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
+import { MetaTags } from "@/components/MetaTags";
 import { Link, useParams, useLocation } from "react-router-dom";
 
 const airlineData = {
@@ -102,6 +103,12 @@ const TicketChange = () => {
   if (!airlineInfo) {
     return (
       <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+        <MetaTags 
+          title="Bilet Değişikliği - Havayolu İletişim"
+          description="Havayolu biletinizde değişiklik yapmak hiç bu kadar kolay olmamıştı."
+          path={location.pathname}
+          keywords="bilet değişikliği, uçak bileti değişikliği, havayolu bilet değişikliği"
+        />
         <Header />
         <div className="container py-8">
           <p className="text-center text-gray-600">Havayolu bulunamadı.</p>
@@ -116,6 +123,12 @@ const TicketChange = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title={`${airlineInfo.name} Bilet Değişikliği - Havayolu İletişim`}
+        description={`${airlineInfo.name} biletinizde değişiklik yapmak hiç bu kadar kolay olmamıştı. Uzman ekibimiz size yardımcı olmak için hazır.`}
+        path={location.pathname}
+        keywords={`${airlineInfo.name.toLowerCase()} bilet değişikliği, ${airlineInfo.name.toLowerCase()} uçak bileti değişikliği, havayolu bilet değişikliği`}
+      />
       <Header />
       <div className="container py-8 space-y-12">
         <Link to="/" className="text-primary hover:underline mb-8 inline-block">

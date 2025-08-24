@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpCircle, Phone, Shield, Clock, HeartHandshake, BadgeCheck, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-
+import { MetaTags } from "@/components/MetaTags";
 import { classUpgradeContent } from "@/data/classUpgradeContent";
 import { useLocation } from "react-router-dom";
 
@@ -82,6 +82,18 @@ const ClassUpgrade = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title={airline ? `${airlineInfo.name} Sınıf Yükseltme - Havayolu İletişim` : 'Sınıf Yükseltme - Havayolu İletişim'}
+        description={airline 
+          ? `${airlineInfo.name} ile seyahat deneyiminizi daha konforlu hale getirmek için sınıf yükseltme seçeneklerimizden yararlanabilirsiniz.`
+          : 'Seyahat deneyiminizi daha konforlu hale getirmek için sınıf yükseltme seçeneklerimizden yararlanabilirsiniz. Size özel fırsatlar ve avantajlar sunuyoruz.'
+        }
+        path={location.pathname}
+        keywords={airline 
+          ? `${airlineInfo.name.toLowerCase()} sınıf yükseltme, ${airlineInfo.name.toLowerCase()} business class, havayolu premium seyahat`
+          : 'sınıf yükseltme, business class, premium seyahat, havayolu konfor'
+        }
+      />
       <Header />
       <div className="container py-12 md:py-16 space-y-16 mb-16">
         <div className="text-center space-y-4">

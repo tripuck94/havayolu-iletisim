@@ -1,13 +1,13 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://xjrhfxwjisjkkknofcjl.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhqcmhmeHdqaXNqa2trbm9mY2psIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQxODY3MzAsImV4cCI6MjA0OTc2MjczMH0.cLnWzna5-x5lVG7sKCI3SrzmhkWl6DHe3eb9kGxkokI';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 
-if (!supabaseUrl || !supabaseKey) {
-  throw new Error('Supabase URL ve API Key environment variables eksik. Lütfen .env dosyasını kontrol edin.');
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Supabase URL veya Anon Key bulunamadı. Lütfen .env dosyasındaki VITE_SUPABASE_URL ve VITE_SUPABASE_ANON_KEY değerlerini ayarlayın.');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export async function getServiceContent(serviceName: string) {
   try {

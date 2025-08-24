@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Plane, Shield, Clock, HeartHandshake, BadgeCheck, Baby, CheckCircle2, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-
+import { MetaTags } from "@/components/MetaTags";
 import { useLocation } from "react-router-dom";
 import { unaccompaniedMinorContent } from "@/data/unaccompaniedMinorContent";
 
@@ -133,6 +133,18 @@ const UnaccompaniedMinor = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title={airline ? `${airlineInfo.name} Refakatsiz Çocuk Hizmeti - Havayolu İletişim` : 'Refakatsiz Çocuk Hizmeti - Havayolu İletişim'}
+        description={airline 
+          ? `${airlineInfo.name} ile çocuğunuzun güvenli ve konforlu seyahati için özel refakat hizmetimiz ile yanınızdayız.`
+          : 'Çocuğunuzun güvenli ve konforlu seyahati için özel refakat hizmetimiz ile yanınızdayız. Deneyimli ekibimiz, çocuğunuzun tüm seyahati boyunca güvende olmasını sağlar.'
+        }
+        path={location.pathname}
+        keywords={airline 
+          ? `${airlineInfo.name.toLowerCase()} refakatsiz çocuk, ${airlineInfo.name.toLowerCase()} çocuk seyahat, unaccompanied minor, çocuk havayolu`
+          : 'refakatsiz çocuk, unaccompanied minor, çocuk seyahat, havayolu çocuk hizmeti'
+        }
+      />
       <Header />
       <div className="container py-12 md:py-16 space-y-16 mb-16">
       {/* Hero Section */}

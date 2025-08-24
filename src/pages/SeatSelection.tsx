@@ -3,6 +3,7 @@ import { Armchair, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "luci
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { useLocation } from "react-router-dom";
+import { MetaTags } from "@/components/MetaTags";
 
 const airlineData = {
   thy: {
@@ -128,6 +129,18 @@ const SeatSelection = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title={airline ? `${airline.name} Koltuk Seçimi - Havayolu İletişim` : 'Koltuk Seçimi - Havayolu İletişim'}
+        description={airline 
+          ? `${airline.name} uçuşunuz için koltuğunuzu önceden seçin ve rahat bir yolculuk deneyimi yaşayın. 7/24 destek hizmetimizle size yardımcı oluyoruz.`
+          : 'Seyahatinizi daha konforlu hale getirmek için koltuk seçimi hizmetimizden yararlanabilirsiniz. Size en uygun koltuğu seçmenize yardımcı olmak için buradayız.'
+        }
+        path={location.pathname}
+        keywords={airline 
+          ? `${airline.name.toLowerCase()} koltuk seçimi, ${airline.name.toLowerCase()} koltuk rezervasyonu, uçuş konforu, havayolu koltuk`
+          : 'koltuk seçimi, uçak koltuk rezervasyonu, havayolu koltuk, uçuş konforu'
+        }
+      />
       <Header />
       <div className="container py-8 space-y-12">
         {/* Hero Section */}

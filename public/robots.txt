@@ -1,4 +1,4 @@
-# Robots.txt for Turkish Airlines Call Center
+# Robots.txt for Flyeva Turizm & Havayolu İletişim
 
 User-agent: *
 Allow: /
@@ -50,4 +50,4 @@ Allow: /cerez-politikasi
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://iletisim-44jz2axgp-tripuck94s-projects.vercel.app/sitemap.xml 
+Sitemap: https://havayoluiletisim.com/sitemap.xml 

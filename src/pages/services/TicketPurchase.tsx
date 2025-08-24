@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { useEffect } from "react";
 import { usePhoneTracking } from "@/hooks/use-phone-tracking";
+import { MetaTags } from "@/components/MetaTags";
 
 const TicketPurchase = () => {
   const { handlePhoneCall } = usePhoneTracking();
@@ -30,6 +31,12 @@ const TicketPurchase = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title="Bilet Satın Alma - Havayolu İletişim"
+        description="En uygun fiyatlı uçak biletlerini güvenli şekilde satın alın. 7/24 destek ile THY, Pegasus, SunExpress ve diğer havayolları biletleri."
+        path="/hizmetler/bilet-satin-alma"
+        keywords="uçak bileti satın alma, bilet rezervasyonu, en uygun bilet fiyatları, güvenli ödeme"
+      />
       <Header />
       <div className="container py-8 space-y-12">
         {/* Hero Section */}

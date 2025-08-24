@@ -1,3 +1,13 @@
+Dev API Base
+
+Local geliştirmede serverless API'lara erişmek için `.env` içine aşağıyı ekleyin (Vercel dev veya prod URL'nize göre değişir):
+
+```
+VITE_API_BASE=
+```
+
+Prod ortamında boş bırakabilirsiniz; aynı domain altında `/api/*` çalışacaktır.
+
 # Welcome to your Lovable project
 
 ## Project info
@@ -67,3 +77,24 @@ Simply open [Lovable](https://lovable.dev/projects/b631a3ae-923e-4d0d-9b2c-e415c
 ## I want to use a custom domain - is that possible?
 
 We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+
+## Supabase yapılandırması
+
+Proje Supabase kullanır. Geliştirme için `.env` dosyasına aşağıdakileri ekleyin:
+
+```
+VITE_SUPABASE_URL=https://<PROJECT_REF>.supabase.co
+VITE_SUPABASE_ANON_KEY=<ANON_KEY>
+```
+
+Yönetim scriptleri için (istemci kodunda asla kullanmayın):
+
+```
+SUPABASE_SERVICE_ROLE_KEY=<SERVICE_ROLE>
+```
+
+Test kullanıcı oluşturma:
+
+```
+node scripts/create-test-user.mjs test@havayoluiletisim.com Test1234!
+```

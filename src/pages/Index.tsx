@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MetaTags } from "@/components/MetaTags";
 
 const Index = () => {
   const handleCall = () => {
@@ -14,6 +15,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen pb-20 md:pb-0">
+      <MetaTags 
+        title="Havayolu İletişim - Uçak Bileti Rezervasyonu"
+        description="THY, Pegasus, SunExpress ve AJet için bilet satış, değişiklik ve iptal işlemleri"
+        path="/"
+        keywords="uçak bileti, havayolu, THY, Pegasus, SunExpress, AJet, bilet rezervasyonu, uçuş iptal"
+      />
       <Header />
       <Banner />
       <Services />

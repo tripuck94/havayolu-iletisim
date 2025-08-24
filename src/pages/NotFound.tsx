@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Home, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
+import { MetaTags } from "@/components/MetaTags";
 
 const NotFound = () => {
   const handleCall = () => {
@@ -10,6 +11,12 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title="404 - Sayfa Bulunamadı | Havayolu İletişim"
+        description="Aradığınız sayfa mevcut değil veya taşınmış olabilir. Yardıma mı ihtiyacınız var? Müşteri hizmetlerimiz 7/24 hizmetinizde!"
+        path="/404"
+        keywords="404, sayfa bulunamadı, hata, havayolu iletişim, müşteri hizmetleri"
+      />
       <Header />
       <div className="container py-16">
         <div className="max-w-2xl mx-auto text-center">

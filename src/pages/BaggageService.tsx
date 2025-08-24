@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Luggage, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
-
+import { MetaTags } from "@/components/MetaTags";
 import { useLocation } from "react-router-dom";
 
 const airlineData = {
@@ -129,6 +129,18 @@ const BaggageService = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title={airline ? `${airline.name} Bagaj Ekleme - Havayolu İletişim` : 'Bagaj Ekleme - Havayolu İletişim'}
+        description={airline 
+          ? `${airline.name} uçuşunuza ek bagaj ekleyin. Bagaj limitleri, fiyatları ve koşulları hakkında detaylı bilgi alın.`
+          : 'Uçuşunuza ek bagaj ekleme hizmetimizden yararlanabilirsiniz. Bagaj limitleri, fiyatları ve koşulları hakkında size yardımcı oluyoruz.'
+        }
+        path={location.pathname}
+        keywords={airline 
+          ? `${airline.name.toLowerCase()} bagaj, ${airline.name.toLowerCase()} ek bagaj, havayolu bagaj fiyatları, bagaj ekleme`
+          : 'ek bagaj, bagaj ekleme, havayolu bagaj, bagaj fiyatları, bagaj limiti'
+        }
+      />
       <Header />
       <div className="container py-8 space-y-12">
         {/* Hero Section */}

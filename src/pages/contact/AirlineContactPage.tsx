@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { useLocation, Navigate } from "react-router-dom";
 import { getAirlineData } from "@/data/airlineData";
+import { MetaTags } from "@/components/MetaTags";
 
 const AirlineContactPage = () => {
   const location = useLocation();
@@ -19,6 +20,12 @@ const AirlineContactPage = () => {
   if (location.pathname === '/iletisim') {
     return (
       <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+        <MetaTags 
+          title="İletişim - Havayolu İletişim"
+          description="7/24 müşteri hizmetleri ile sizlere yardımcı olmak için buradayız. Telefon: 0850 242 81 17"
+          path="/iletisim"
+          keywords="iletişim, müşteri hizmetleri, telefon, 7/24 destek, havayolu destek"
+        />
         <Header />
         <div className="container py-12 md:py-16 space-y-16 mb-16">
           
@@ -218,6 +225,12 @@ const AirlineContactPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+      <MetaTags 
+        title={`${airlineData.name} İletişim - Havayolu İletişim`}
+        description={`${airlineData.name} müşteri hizmetleri ve bilet işlemleri için 7/24 destek. ${airlineData.description}`}
+        path={location.pathname}
+        keywords={`${airlineData.name}, ${airlineData.name.toLowerCase()} iletişim, ${airlineData.name.toLowerCase()} telefon, havayolu iletişim`}
+      />
       <Header />
       <div className="container py-8">
         
