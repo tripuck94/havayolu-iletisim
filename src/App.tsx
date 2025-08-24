@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PetServices from "./pages/PetServices";
@@ -29,15 +30,24 @@ import SpecialAssistance from "./pages/services/SpecialAssistance";
 import FAQ from "./pages/services/FAQ";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsOfService from "./pages/legal/TermsOfService";
+import Login from "@/pages/crm/Login";
+import CrmLayout from "@/pages/crm/Layout";
+import CrmHome from "@/pages/crm/Home";
+import ChangePassword from "@/pages/crm/ChangePassword";
+import Records from "@/pages/crm/Records";
+import { AuthGate } from "@/components/AuthGate";
+import Users from "@/pages/crm/Users";
+import Reports from "@/pages/crm/Reports";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+    <HelmetProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/evcil-hayvan" element={<PetServices />} />
@@ -205,10 +215,26 @@ const App = () => (
           <Route path="/iptal-iade-sartlari" element={<PrivacyPolicy />} />
           <Route path="/gizlilik-ve-guvenlik" element={<PrivacyPolicy />} />
           <Route path="/iletisim" element={<AirlineContactPage />} />
+          <Route path="/crm/login" element={<Login />} />
+          <Route
+            path="/crm"
+            element={
+              <AuthGate>
+                <CrmLayout />
+              </AuthGate>
+            }
+          >
+            <Route index element={<CrmHome />} />
+            <Route path="change-password" element={<ChangePassword />} />
+            <Route path="records" element={<Records />} />
+            <Route path="users" element={<Users />} />
+            <Route path="reports" element={<Reports />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 
