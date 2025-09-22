@@ -1,12 +1,4 @@
 {
-  "routes": [
-    {
-      "src": "/src/(.*)",
-      "headers": {
-        "Content-Type": "text/css"
-      }
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
