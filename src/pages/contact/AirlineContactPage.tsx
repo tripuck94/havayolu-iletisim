@@ -87,8 +87,10 @@ const AirlineContactPage = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-2">Adres</h3>
-              <p className="font-semibold mb-2">İstanbul, Türkiye</p>
-              <p className="text-gray-600 mb-4">Merkez Ofis</p>
+              <p className="font-semibold mb-1">FLYEVA TURİZM TİCARET LTD. ŞTİ.</p>
+              <p className="text-sm text-gray-600 mb-2">İDEALTEPE MAH. TURGUT ÖZAL BUL.</p>
+              <p className="text-sm text-gray-600 mb-2">İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5</p>
+              <p className="font-semibold mb-2">MALTEPE / İSTANBUL</p>
               <Button 
                 variant="outline"
                 className="w-full border-purple-600 text-purple-600 hover:bg-purple-50"
@@ -118,29 +120,82 @@ const AirlineContactPage = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Supported Airlines */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 rounded-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-center mb-6">Hizmetlerimiz</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <h3 className="text-2xl font-bold text-center mb-6">Desteklenen Havayolları</h3>
+            <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <h4 className="font-semibold mb-2 text-xl">✈️ Havayolu Hizmetleri</h4>
-                <ul className="space-y-1 text-blue-100">
-                  <li>• THY, Pegasus, SunExpress</li>
-                  <li>• AJet, AZAL</li>
-                  <li>• Bilet Satın Alma</li>
-                  <li>• Bilet Değişiklikleri</li>
-                  <li>• İptal ve İade İşlemleri</li>
+                <h4 className="font-semibold mb-3 text-xl">🇹🇷 Türk Havayolları</h4>
+                <ul className="space-y-2 text-blue-100">
+                  <li>• Turkish Airlines (THY)</li>
+                  <li>• Pegasus Airlines</li>
+                  <li>• SunExpress</li>
+                  <li>• AJet (Anadolujet)</li>
+                  <li>• Borajet</li>
+                  <li>• Onur Air</li>
                 </ul>
               </div>
+              
               <div>
-                <h4 className="font-semibold mb-2 text-xl">🎯 Özel Hizmetler</h4>
-                <ul className="space-y-1 text-blue-100">
-                  <li>• Koltuk Seçimi</li>
-                  <li>• Bagaj Ekleme</li>
-                  <li>• Sınıf Yükseltme</li>
-                  <li>• Check-in İşlemleri</li>
-                  <li>• Özel Yardım Hizmetleri</li>
+                <h4 className="font-semibold mb-3 text-xl">🌍 Uluslararası</h4>
+                <ul className="space-y-2 text-blue-100">
+                  <li>• AZAL (Azerbaijan Airlines)</li>
+                  <li>• Qatar Airways</li>
+                  <li>• Emirates</li>
+                  <li>• Aeroflot</li>
+                  <li>• Air Arabia</li>
+                  <li>• FlyDubai</li>
                 </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold mb-3 text-xl">🎯 Özel Hizmetler</h4>
+                <ul className="space-y-2 text-blue-100">
+                  <li>• Grup rezervasyonları</li>
+                  <li>• Kurumsal anlaşmalar</li>
+                  <li>• VIP hizmetler</li>
+                  <li>• Engelli yolcu desteği</li>
+                  <li>• Refakatsiz çocuk</li>
+                  <li>• Pet seyahati</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* How We Work */}
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">Nasıl Çalışıyoruz?</h3>
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-indigo-600">1</span>
+                </div>
+                <h4 className="font-semibold mb-2">İletişim</h4>
+                <p className="text-sm text-gray-600">Telefon veya e-posta ile bizimle iletişime geçin</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-green-600">2</span>
+                </div>
+                <h4 className="font-semibold mb-2">Analiz</h4>
+                <p className="text-sm text-gray-600">İhtiyacınızı analiz edip en uygun çözümü buluyoruz</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-purple-600">3</span>
+                </div>
+                <h4 className="font-semibold mb-2">İşlem</h4>
+                <p className="text-sm text-gray-600">Rezervasyon veya değişikliklerinizi gerçekleştiriyoruz</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-orange-600">4</span>
+                </div>
+                <h4 className="font-semibold mb-2">Takip</h4>
+                <p className="text-sm text-gray-600">Seyahatiniz boyunca size destek sağlıyoruz</p>
               </div>
             </div>
           </div>
@@ -188,11 +243,258 @@ const AirlineContactPage = () => {
             </div>
           </div>
 
+          {/* Company Information */}
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">Şirket Bilgileri</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold mb-4 text-gray-800">📋 Yasal Bilgiler</h4>
+                <div className="space-y-3">
+                  <div>
+                    <span className="font-medium text-gray-600">Şirket Unvanı:</span>
+                    <p className="text-gray-800">FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</p>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-600">Faaliyet Konusu:</span>
+                    <p className="text-gray-800">Havayolu Bilet Satış ve Müşteri Hizmetleri</p>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-600">Kuruluş Tarihi:</span>
+                    <p className="text-gray-800">2024</p>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-600">TURSAB Belge No:</span>
+                    <p className="text-gray-800">A-XXXX (Başvuru Aşamasında)</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="text-lg font-semibold mb-4 text-gray-800">🏢 İletişim Detayları</h4>
+                <div className="space-y-3">
+                  <div>
+                    <span className="font-medium text-gray-600">Merkez Adres:</span>
+                    <p className="text-gray-800">İDEALTEPE MAH. TURGUT ÖZAL BUL. İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5 MALTEPE / İSTANBUL</p>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-600">Posta Kodu:</span>
+                    <p className="text-gray-800">34844</p>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-600">Fax:</span>
+                    <p className="text-gray-800">+90 216 XXX XX XX</p>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-600">Website:</span>
+                    <p className="text-gray-800">havayoluiletisim.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Areas */}
+          <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">Hizmet Alanlarımız</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <h4 className="font-semibold mb-3 text-xl">🎫 Bilet İşlemleri</h4>
+                <ul className="space-y-2 text-green-100">
+                  <li>• Yeni bilet satışı</li>
+                  <li>• Bilet değişikliği</li>
+                  <li>• Bilet iptali</li>
+                  <li>• İade işlemleri</li>
+                  <li>• Bilet sorgulama</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold mb-3 text-xl">✈️ Uçuş Hizmetleri</h4>
+                <ul className="space-y-2 text-green-100">
+                  <li>• Online check-in</li>
+                  <li>• Koltuk seçimi</li>
+                  <li>• Bagaj ekleme</li>
+                  <li>• Özel yemek talebi</li>
+                  <li>• Sınıf yükseltme</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold mb-3 text-xl">🔧 Teknik Destek</h4>
+                <ul className="space-y-2 text-green-100">
+                  <li>• Website sorunları</li>
+                  <li>• Ödeme problemleri</li>
+                  <li>• Mobil uygulama</li>
+                  <li>• E-bilet indirme</li>
+                  <li>• Sistem güncellemeleri</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Quality Assurance */}
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">Kalite Güvencemiz</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold mb-2">%99.9 Güvenilirlik</h4>
+                <p className="text-sm text-gray-600">Yüksek sistem güvenilirliği</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold mb-2">5 Dakika Yanıt</h4>
+                <p className="text-sm text-gray-600">Ortalama yanıt süresi</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold mb-2">Uzman Ekip</h4>
+                <p className="text-sm text-gray-600">Deneyimli müşteri temsilcileri</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold mb-2">SSL Güvenlik</h4>
+                <p className="text-sm text-gray-600">256-bit şifreleme</p>
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-8">Sık Sorulan Sorular</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ Bilet rezervasyonu nasıl yapılır?</h4>
+                  <p className="text-sm text-gray-600">0850 242 81 17 numaralı telefonumuzu arayarak uzman ekibimizden bilet rezervasyonu yapabilirsiniz. Size en uygun uçuş seçeneklerini sunuyoruz.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">💳 Hangi ödeme yöntemlerini kabul ediyorsunuz?</h4>
+                  <p className="text-sm text-gray-600">Kredi kartı, havale/EFT ve kapıda ödeme seçeneklerini kabul ediyoruz. Tüm ödemeler güvenli SSL sertifikası ile korunmaktadır.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">📞 Müşteri hizmetleri kaç saat çalışıyor?</h4>
+                  <p className="text-sm text-gray-600">7/24 kesintisiz hizmet vermekteyiz. Gece 3'te bile arayabilirsiniz, size yardımcı olacak bir temsilcimiz hazır.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">✈️ Hangi havayolları ile çalışıyorsunuz?</h4>
+                  <p className="text-sm text-gray-600">THY, Pegasus, SunExpress, AJet, AZAL ve daha birçok ulusal ve uluslararası havayolu ile çalışıyoruz.</p>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">🔄 Bilet değişikliği mümkün mü?</h4>
+                  <p className="text-sm text-gray-600">Evet, havayolu kurallarına göre bilet değişikliği yapabilirsiniz. Ekibimiz size en ekonomik değişiklik seçeneklerini sunar.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎒 Bagaj politikası nasıl?</h4>
+                  <p className="text-sm text-gray-600">Her havayolunun kendine özgü bagaj politikası vardır. Size bilet alırken tüm detayları açıklıyoruz ve ek bagaj seçenekleri sunuyoruz.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">🏥 Sağlık sorunları durumunda ne yapmalıyım?</h4>
+                  <p className="text-sm text-gray-600">Sağlık sorunu olan yolcular için özel destek hizmetleri bulunmaktadır. Medical clearance ve özel yardım koordinasyonu yapıyoruz.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">💰 İptal durumunda param iade edilir mi?</h4>
+                  <p className="text-sm text-gray-600">Havayolu kurallarına göre iade işlemleri yapılmaktadır. Flex biletlerde iade oranı daha yüksektir. Detayları size açıklıyoruz.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Statistics */}
+          <div className="bg-gray-800 text-white p-8 rounded-lg max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">İstatistikler</h3>
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">50,000+</div>
+                <p className="text-gray-300">Mutlu Müşteri</p>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-green-400 mb-2">15+</div>
+                <p className="text-gray-300">Havayolu Partneri</p>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">100,000+</div>
+                <p className="text-gray-300">İşlem Tamamlandı</p>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">%99.8</div>
+                <p className="text-gray-300">Müşteri Memnuniyeti</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Working Principles */}
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">Çalışma Prensplerimiz</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold mb-2">Güvenilirlik</h4>
+                <p className="text-sm text-gray-600">Her zaman doğru bilgi, güvenli ödeme ve zamanında teslimat</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold mb-2">Hız</h4>
+                <p className="text-sm text-gray-600">Hızlı rezervasyon, anında onay ve ivedi çözümler</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-16 w-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold mb-2">Müşteri Odaklılık</h4>
+                <p className="text-sm text-gray-600">Müşteri memnuniyeti bizim için en önemli değer</p>
+              </div>
+            </div>
+          </div>
+
           {/* Emergency Contact */}
           <div className="text-center bg-red-600 text-white p-8 rounded-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4">🚨 Acil Durum</h3>
-            <p className="mb-6">
+            <h3 className="text-2xl font-semibold mb-4">🚨 Acil Durum Desteği</h3>
+            <p className="mb-4">
               Acil durumlar için 7/24 ulaşabileceğiniz destek hattımız.
+            </p>
+            <p className="text-sm mb-6 text-red-100">
+              Uçuş iptalleri, gecikmeleri, bagaj kayıpları ve diğer acil durumlar için anında destek alın.
             </p>
             <Button 
               onClick={handleCall} 
