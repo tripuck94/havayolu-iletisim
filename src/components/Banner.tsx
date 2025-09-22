@@ -43,7 +43,7 @@ export const Banner = () => {
   }, []);
 
   return (
-    <div className="relative h-[600px] w-full overflow-hidden">
+    <div className="relative h-[800px] md:h-[600px] w-full overflow-hidden">
       {/* Critical LCP image with optimizations */}
       <img
         src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_1920,h_600,c_fill/unsplash-1436491865332-7a61a109cc05.webp"
@@ -55,7 +55,7 @@ export const Banner = () => {
       />
       <div className="absolute inset-0 bg-black/50" />
       
-      <div className="relative flex h-full flex-col items-center justify-center px-4 text-center pt-20 md:pt-8">
+      <div className="relative flex h-full flex-col items-center justify-center px-4 text-center pt-8">
         {/* tpwidg Widget Container */}
         <div id="tpwidg-container" className="mb-8 w-full max-w-7xl bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
           {/* Widget script will be injected here */}
