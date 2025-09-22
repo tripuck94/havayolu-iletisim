@@ -32,80 +32,33 @@ export const Banner = () => {
     };
   }, []);
 
-  // tpwidg Widget Script - Geliştirilmiş method
+  // tpwidg Widget - Basit implementation, script index.html'de
   useEffect(() => {
-    let widgetCheckInterval: NodeJS.Timeout;
-    
-    const loadWidget = () => {
-      console.log('Widget yükleme başlatılıyor...');
-      
-      // Script'i dinamik olarak yükle
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://tpwidg.com/content?trs=27165&shmarker=144371&locale=tr&curr=TRY&powered_by=false&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121';
-      script.charset = 'utf-8';
-      script.id = 'tpwidg-script-dynamic';
-      
-      // Widget container'ı kontrol et
+    // Widget'ı 5 saniye sonra kontrol et, fallback'i gizle
+    const timer = setTimeout(() => {
       const container = document.getElementById('tpwidg-container');
       const fallback = document.getElementById('fallback-search');
       
-      if (container && !document.getElementById('tpwidg-script-dynamic')) {
-        document.head.appendChild(script);
+      if (container && fallback) {
+        // Widget içeriği var mı kontrol et
+        const widgetContent = container.querySelector('iframe, div[class*="tpwidg"], div[id*="widget"], script + div, script + iframe');
         
-        // Script yüklendikten sonra
-        script.onload = () => {
-          console.log('tpwidg script başarıyla yüklendi');
-          
-          // Widget'ın container'da görünüp görünmediğini kontrol et
-          let checkCount = 0;
-          widgetCheckInterval = setInterval(() => {
-            checkCount++;
-            
-            // Widget content kontrol et (iframe veya div içeriği var mı?)
-            const widgetContent = container.querySelector('iframe, div[class*="tpwidg"], div[id*="tpwidg"]');
-            
-            if (widgetContent) {
-              console.log('Widget başarıyla yüklendi ve render oldu');
-              if (fallback) fallback.style.display = 'none';
-              clearInterval(widgetCheckInterval);
-            } else if (checkCount > 10) {
-              // 10 saniye sonra hala widget yoksa fallback göster
-              console.log('Widget yüklenemedi, fallback gösteriliyor');
-              if (fallback) {
-                fallback.style.display = 'block';
-                const loadingText = fallback.querySelector('.text-white\\/80');
-                if (loadingText) {
-                  loadingText.textContent = '⚠️ Widget yüklenemedi, manuel arama kullanın:';
-                }
-              }
-              clearInterval(widgetCheckInterval);
-            }
-          }, 1000);
-        };
-        
-        script.onerror = () => {
-          console.error('tpwidg script yüklenemedi');
-          if (fallback) {
-            const loadingText = fallback.querySelector('.text-white\\/80');
-            if (loadingText) {
-              loadingText.textContent = '❌ Bağlantı hatası, manuel arama kullanın:';
-            }
+        if (widgetContent) {
+          console.log('Widget başarıyla yüklendi');
+          fallback.style.display = 'none';
+        } else {
+          console.log('Widget bulunamadı, fallback gösteriliyor');
+          // Fallback'te loading mesajını güncelle
+          const loadingText = fallback.querySelector('.text-white\\/80');
+          if (loadingText) {
+            loadingText.textContent = 'ℹ️ Manuel arama kullanın:';
           }
-        };
+        }
       }
-    };
-
-    // DOM tamamen yüklendikten sonra widget'ı yükle
-    const timer = setTimeout(loadWidget, 1000);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
-      if (widgetCheckInterval) clearInterval(widgetCheckInterval);
-      const existingScript = document.getElementById('tpwidg-script-dynamic');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
     };
   }, []);
 
@@ -124,8 +77,13 @@ export const Banner = () => {
       
       <div className="relative flex h-full flex-col items-center justify-center px-4 text-center">
         {/* tpwidg Widget Container */}
-        <div id="tpwidg-container" className="mb-8 w-full max-w-7xl">
-          {/* Fallback content while widget loads */}
+        <div className="mb-8 w-full max-w-7xl">
+          {/* tpwidg widget buraya otomatik yüklenecek */}
+          <div id="tpwidg-container" className="min-h-[200px]">
+            {/* Widget content will be injected here by tpwidg script */}
+          </div>
+          
+          {/* Fallback content if widget doesn't load */}
           <div id="fallback-search" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <div className="text-center text-white/80 text-sm mb-4">
               🔍 Uçak bileti arama widget'ı yükleniyor...
