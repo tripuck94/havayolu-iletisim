@@ -128,7 +128,7 @@ const TermsOfService = () => {
           </Button>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

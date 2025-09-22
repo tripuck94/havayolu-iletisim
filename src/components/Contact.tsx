@@ -42,7 +42,9 @@ export const Contact = () => {
           <div className="flex flex-col items-center text-center">
             <MapPin className="h-10 w-10 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Adres</h3>
-            <p>İstanbul, Türkiye</p>
+            <p className="text-sm">İDEALTEPE MAH. TURGUT ÖZAL BUL.</p>
+            <p className="text-sm">İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5</p>
+            <p className="font-semibold">MALTEPE / İSTANBUL</p>
           </div>
         </div>
       </div>

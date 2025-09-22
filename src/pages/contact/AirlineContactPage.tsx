@@ -265,7 +265,7 @@ const AirlineContactPage = () => {
                   </div>
                   <div>
                     <span className="font-medium text-gray-600">TURSAB Belge No:</span>
-                    <p className="text-gray-800">A-XXXX (Başvuru Aşamasında)</p>
+                    <p className="text-gray-800">A-10782</p>
                   </div>
                 </div>
               </div>
@@ -280,10 +280,6 @@ const AirlineContactPage = () => {
                   <div>
                     <span className="font-medium text-gray-600">Posta Kodu:</span>
                     <p className="text-gray-800">34844</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Fax:</span>
-                    <p className="text-gray-800">+90 216 XXX XX XX</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-600">Website:</span>

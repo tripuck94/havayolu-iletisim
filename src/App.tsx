@@ -30,6 +30,7 @@ import SpecialAssistance from "./pages/services/SpecialAssistance";
 import FAQ from "./pages/services/FAQ";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsOfService from "./pages/legal/TermsOfService";
+import MesafeliSatisSozlesmesi from "./pages/legal/MesafeliSatisSozlesmesi";
 import Login from "@/pages/crm/Login";
 import CrmLayout from "@/pages/crm/Layout";
 import CrmHome from "@/pages/crm/Home";
@@ -209,7 +210,7 @@ const App = () => (
           <Route path="/ajet/check-in" element={<CheckIn />} />
           <Route path="/azal/check-in" element={<CheckIn />} />
           <Route path="/kisisel-verilerin-korunmasi" element={<PrivacyPolicy />} />
-          <Route path="/mesafeli-satis-sozlesmesi" element={<PrivacyPolicy />} />
+          <Route path="/mesafeli-satis-sozlesmesi" element={<MesafeliSatisSozlesmesi />} />
           <Route path="/hakkimizda" element={<PrivacyPolicy />} />
           <Route path="/kullanim-kosullari" element={<TermsOfService />} />
           <Route path="/iptal-iade-sartlari" element={<PrivacyPolicy />} />

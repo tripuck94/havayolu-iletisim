@@ -305,29 +305,29 @@ export default function Users() {
               </ModalHeader>
               <form onSubmit={createUser} className="grid grid-cols-1 md:grid-cols-12 gap-4">
                 <div className="md:col-span-3">
-                  <label className="text-sm">Ad</label>
-                  <Input value={firstName} onChange={e=>setFirstName(e.target.value)} required />
-                </div>
+              <label className="text-sm">Ad</label>
+              <Input value={firstName} onChange={e=>setFirstName(e.target.value)} required />
+            </div>
                 <div className="md:col-span-3">
-                  <label className="text-sm">Soyad</label>
-                  <Input value={lastName} onChange={e=>setLastName(e.target.value)} required />
-                </div>
+              <label className="text-sm">Soyad</label>
+              <Input value={lastName} onChange={e=>setLastName(e.target.value)} required />
+            </div>
                 <div className="md:col-span-4">
-                  <label className="text-sm">E‑posta</label>
-                  <Input value={email} onChange={e=>setEmail(e.target.value)} type="email" required />
-                </div>
+              <label className="text-sm">E‑posta</label>
+              <Input value={email} onChange={e=>setEmail(e.target.value)} type="email" required />
+            </div>
                 <div className="md:col-span-3">
-                  <label className="text-sm">Şifre</label>
-                  <Input value={password} onChange={e=>setPassword(e.target.value)} type="password" required />
-                </div>
+              <label className="text-sm">Şifre</label>
+              <Input value={password} onChange={e=>setPassword(e.target.value)} type="password" required />
+            </div>
                 <div className="md:col-span-3">
                   <label className="text-sm">Telefon</label>
                   <Input value={phone} onChange={e=>handlePhoneChange(e.target.value, setPhone)} placeholder="(5xx) xxx xx xx" />
                 </div>
                 <div className="flex items-center gap-2 md:col-span-2">
-                  <Checkbox checked={isAdmin} onCheckedChange={(v)=>setIsAdmin(Boolean(v))} />
-                  <span className="text-sm">Admin</span>
-                </div>
+              <Checkbox checked={isAdmin} onCheckedChange={(v)=>setIsAdmin(Boolean(v))} />
+              <span className="text-sm">Admin</span>
+            </div>
                 <div className="flex items-center flex-wrap gap-4 md:col-span-12">
                   <div className="flex items-center gap-2">
                     <Checkbox checked={isActive} onCheckedChange={(v)=>setIsActive(Boolean(v))} />
@@ -349,7 +349,7 @@ export default function Users() {
                 <DialogFooter>
                   <Button type="submit" disabled={loading}>Kaydet</Button>
                 </DialogFooter>
-              </form>
+          </form>
               </DialogContent>
             </Dialog>
           </div>
