@@ -25,19 +25,22 @@ export const Banner = () => {
 
   // tpwidg Widget Script
   useEffect(() => {
+    // Script'i head'e ekle
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://tpwidg.com/content?trs=27165&shmarker=144371&locale=tr&curr=TRY&powered_by=false&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121';
     script.charset = 'utf-8';
+    script.id = 'tpwidg-script';
     
-    const widgetContainer = document.getElementById('tpwidg-container');
-    if (widgetContainer) {
-      widgetContainer.appendChild(script);
+    // Eğer script zaten yoksa head'e ekle
+    if (!document.getElementById('tpwidg-script')) {
+      document.head.appendChild(script);
     }
 
     return () => {
-      if (widgetContainer && widgetContainer.contains(script)) {
-        widgetContainer.removeChild(script);
+      const existingScript = document.getElementById('tpwidg-script');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
       }
     };
   }, []);
@@ -57,7 +60,7 @@ export const Banner = () => {
       
       <div className="relative flex h-full flex-col items-center justify-center px-4 text-center">
         {/* tpwidg Widget Container */}
-        <div id="tpwidg-container" className="mb-8 w-full max-w-7xl bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <div id="tpwidg-container" className="mb-8 w-full max-w-7xl">
           {/* Widget script will be injected here */}
         </div>
         
