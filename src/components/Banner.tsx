@@ -23,6 +23,25 @@ export const Banner = () => {
     };
   }, []);
 
+  // tpwidg Widget Script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://tpwidg.com/content?trs=27165&shmarker=144371&locale=tr&curr=TRY&powered_by=false&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121';
+    script.charset = 'utf-8';
+    
+    const widgetContainer = document.getElementById('tpwidg-container');
+    if (widgetContainer) {
+      widgetContainer.appendChild(script);
+    }
+
+    return () => {
+      if (widgetContainer && widgetContainer.contains(script)) {
+        widgetContainer.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
       {/* Critical LCP image with optimizations */}
@@ -37,6 +56,11 @@ export const Banner = () => {
       <div className="absolute inset-0 bg-black/50" />
       
       <div className="relative flex h-full flex-col items-center justify-center px-4 text-center">
+        {/* tpwidg Widget Container */}
+        <div id="tpwidg-container" className="mb-8 w-full max-w-7xl bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+          {/* Widget script will be injected here */}
+        </div>
+        
         <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
           Uçak Bileti Rezervasyonu
         </h1>

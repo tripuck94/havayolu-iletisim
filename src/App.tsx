@@ -31,6 +31,9 @@ import FAQ from "./pages/services/FAQ";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsOfService from "./pages/legal/TermsOfService";
 import MesafeliSatisSozlesmesi from "./pages/legal/MesafeliSatisSozlesmesi";
+import Hakkimizda from "./pages/legal/Hakkimizda";
+import IptalIadeSartlari from "./pages/legal/IptalIadeSartlari";
+import GizlilikGuvenlik from "./pages/legal/GizlilikGuvenlik";
 import Login from "@/pages/crm/Login";
 import CrmLayout from "@/pages/crm/Layout";
 import CrmHome from "@/pages/crm/Home";
@@ -211,10 +214,10 @@ const App = () => (
           <Route path="/azal/check-in" element={<CheckIn />} />
           <Route path="/kisisel-verilerin-korunmasi" element={<PrivacyPolicy />} />
           <Route path="/mesafeli-satis-sozlesmesi" element={<MesafeliSatisSozlesmesi />} />
-          <Route path="/hakkimizda" element={<PrivacyPolicy />} />
+          <Route path="/hakkimizda" element={<Hakkimizda />} />
           <Route path="/kullanim-kosullari" element={<TermsOfService />} />
-          <Route path="/iptal-iade-sartlari" element={<PrivacyPolicy />} />
-          <Route path="/gizlilik-ve-guvenlik" element={<PrivacyPolicy />} />
+          <Route path="/iptal-iade-sartlari" element={<IptalIadeSartlari />} />
+            <Route path="/gizlilik-ve-guvenlik" element={<GizlilikGuvenlik />} />
           <Route path="/iletisim" element={<AirlineContactPage />} />
           <Route path="/crm/login" element={<Login />} />
           <Route
