@@ -3,11 +3,14 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Supabase URL veya Anon Key bulunamadı. Lütfen .env dosyasındaki VITE_SUPABASE_URL ve VITE_SUPABASE_ANON_KEY değerlerini ayarlayın.');
-}
+// Development için varsayılan değerler (gerçek projede bu değerleri .env dosyasında tanımlayın)
+const defaultUrl = 'https://your-project.supabase.co';
+const defaultKey = 'your-anon-key-here';
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const finalUrl = supabaseUrl || defaultUrl;
+const finalKey = supabaseAnonKey || defaultKey;
+
+export const supabase = createClient(finalUrl, finalKey);
 
 export async function getServiceContent(serviceName: string) {
   try {
