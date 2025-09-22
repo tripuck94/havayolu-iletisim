@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 import { Shield, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -68,7 +69,8 @@ const PrivacyPolicy = () => {
           </Button>
         </div>
       </div>
-
+      
+      <Footer />
     </div>
   );
 };
