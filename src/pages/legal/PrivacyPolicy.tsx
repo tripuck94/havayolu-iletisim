@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
               <p><strong>Şirket Unvanı:</strong> FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</p>
               <p><strong>Adres:</strong> İDEALTEPE MAH. TURGUT ÖZAL BUL. İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5 MALTEPE / İSTANBUL</p>
               <p><strong>Telefon:</strong> 0850 242 81 17</p>
-              <p><strong>E-posta:</strong> info@flyevaturizm.com</p>
+              <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
             </div>
 
             <h2 className="text-xl font-bold text-gray-800 border-b pb-2">2. Hangi Kişisel Veriler İşlenmektedir?</h2>
@@ -136,7 +136,7 @@ const PrivacyPolicy = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-semibold mb-2">📧 E-posta</h4>
-                  <p className="text-sm">info@flyevaturizm.com</p>
+                  <p className="text-sm">info@havayoluiletisim.com</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">📞 Telefon</h4>

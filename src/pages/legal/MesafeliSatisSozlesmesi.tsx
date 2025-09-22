@@ -37,7 +37,7 @@ const MesafeliSatisSozlesmesi = () => {
               <p><strong>Şirket Unvanı:</strong> FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</p>
               <p><strong>Adres:</strong> İDEALTEPE MAH. TURGUT ÖZAL BUL. İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5 MALTEPE / İSTANBUL</p>
               <p><strong>Telefon:</strong> 0850 242 81 17</p>
-              <p><strong>E-posta:</strong> info@flyevaturizm.com</p>
+              <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
               <p><strong>TURSAB Belge No:</strong> A-10782</p>
             </div>
 
@@ -195,7 +195,7 @@ const MesafeliSatisSozlesmesi = () => {
                     <svg className="h-4 w-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <span><strong>E-posta:</strong> info@flyevaturizm.com</span>
+                    <span><strong>E-posta:</strong> info@havayoluiletisim.com</span>
                   </div>
                 </div>
               </div>

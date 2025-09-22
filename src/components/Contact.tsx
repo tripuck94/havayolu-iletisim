@@ -36,7 +36,7 @@ export const Contact = () => {
           <div className="flex flex-col items-center text-center">
             <Mail className="h-10 w-10 mb-4" />
             <h3 className="text-xl font-semibold mb-2">E-posta</h3>
-            <p>info@flyevaturizm.com</p>
+            <p>info@havayoluiletisim.com</p>
           </div>
 
           <div className="flex flex-col items-center text-center">

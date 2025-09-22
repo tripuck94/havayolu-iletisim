@@ -284,7 +284,7 @@ const Hakkimizda = () => {
                   <h4 className="font-semibold text-gray-800 mb-3">📞 İletişim Kanalları</h4>
                   <div className="space-y-2 text-gray-700">
                     <p><strong>Telefon:</strong> 0850 242 81 17 (7/24)</p>
-                    <p><strong>E-posta:</strong> info@flyevaturizm.com</p>
+                    <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
                     <p><strong>Website:</strong> havayoluiletisim.com</p>
                     <p><strong>Yanıt Süresi:</strong> Ortalama 5 dakika</p>
                   </div>

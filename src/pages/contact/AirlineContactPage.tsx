@@ -66,10 +66,10 @@ const AirlineContactPage = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-2">E-posta</h3>
-              <p className="text-lg font-semibold mb-2">info@flyevaturizm.com</p>
+              <p className="text-lg font-semibold mb-2">info@havayoluiletisim.com</p>
               <p className="text-gray-600 mb-4">24 saat içinde yanıt</p>
               <Button 
-                onClick={() => window.location.href = "mailto:info@flyevaturizm.com"}
+                onClick={() => window.location.href = "mailto:info@havayoluiletisim.com"}
                 variant="outline"
                 className="w-full border-green-600 text-green-600 hover:bg-green-50"
               >
