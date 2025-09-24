@@ -1270,15 +1270,28 @@ export const Header = () => {
             </div>
           </div>
 
+          {/* Desktop phone button */}
           <Button
             variant="ghost"
             size="sm"
-            className={`flex items-center gap-2 ${getButtonColor(location.pathname)} rounded-lg px-4 py-2 shadow-md border-2 border-white/20 font-bold`}
+            className={`hidden md:flex items-center gap-2 ${getButtonColor(location.pathname)} rounded-lg px-4 py-2 shadow-md border-2 border-white/20 font-bold`}
             onClick={handleCall}
           >
             <Phone className="h-4 w-4" />
             <span className="font-semibold">0850 242 81 17</span>
           </Button>
+
+          {/* Mobile phone button (icon only) */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              className={`flex items-center justify-center ${getButtonColor(location.pathname)} rounded-lg p-2 shadow-md border-2 border-white/20`}
+              onClick={handleCall}
+            >
+              <Phone className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </nav>
       
