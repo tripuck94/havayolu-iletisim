@@ -52,24 +52,73 @@ export const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth < 768);
+      const width = window.innerWidth;
+      setIsMobileView(width < 768);
+      console.log('Screen width:', width, 'Mobile view:', width < 768);
     };
 
+    // Force immediate check
     handleResize();
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
+    };
   }, []);
 
   return (
     <header className={`${getHeaderColor(location.pathname)} text-white relative z-50 shadow-lg`}>
       <nav className="container mx-auto px-4 py-4">
+        {/* Force show hamburger on small screens */}
+        <div className="block sm:hidden">
+          <div className="flex items-center justify-between w-full">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleMobileMenu}
+              className="text-white hover:bg-white/10 p-2 border-2 border-yellow-400 bg-red-600/50"
+              style={{ display: 'block !important', visibility: 'visible !important', minWidth: '40px', minHeight: '40px' }}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_32,w_32,q_auto/520d8ba8-17f4-4293-a58e-2783bd05931c.webp"
+                alt="Call Center Icon"
+                className="h-8 w-8"
+                fetchPriority="high"
+                loading="eager"
+                decoding="sync"
+              />
+              <span className="text-lg font-bold">Havayolu İletişim</span>
+            </Link>
+
+            <Button
+              variant="ghost"
+              size="sm"
+              className={`flex items-center gap-2 ${getButtonColor(location.pathname)} rounded-lg px-3 py-2 shadow-md border-2 border-white/20 font-bold`}
+              onClick={handleCall}
+            >
+              <Phone className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+
         {isMobileView ? (
           <div className="flex items-center justify-between w-full">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleMobileMenu}
-              className="text-white hover:bg-white/10 p-2 border border-white/30"
+              className="text-white hover:bg-white/10 p-2 border-2 border-white bg-black/20"
+              style={{ display: 'block !important', visibility: 'visible !important' }}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -100,7 +149,7 @@ export const Header = () => {
             </Button>
           </div>
         ) : (
-          <div className="flex items-center justify-between w-full">
+          <div className="hidden sm:flex items-center justify-between w-full">
             <Link to="/" className="flex items-center gap-2">
               <img
                 src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_32,w_32,q_auto/520d8ba8-17f4-4293-a58e-2783bd05931c.webp"
@@ -1262,7 +1311,8 @@ export const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-200 z-40 max-h-screen overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-200 z-40 max-h-screen overflow-y-auto" 
+             style={{ display: 'block !important' }}>
           <div className="p-4 space-y-2">
             
             {/* Havayolları Section */}
