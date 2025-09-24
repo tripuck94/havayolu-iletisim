@@ -1,11 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import { Phone, RefreshCw, Edit, XCircle, PawPrint, Users, ArrowUp, Luggage, CheckCircle, Clock, Search, Calendar, BookOpen, Heart, HelpCircle, CreditCard, ArrowLeft, Armchair, Menu, X } from "lucide-react";
+import { Phone, RefreshCw, Edit, XCircle, PawPrint, Users, ArrowUp, Luggage, CheckCircle, Clock, Search, Calendar, BookOpen, Heart, HelpCircle, CreditCard, ArrowLeft, Armchair, Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 export const Header = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   
   const handleCall = () => {
     window.location.href = "tel:08502428117";
@@ -13,6 +14,11 @@ export const Header = () => {
   
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    setOpenSubmenu(null); // Close any open submenus when toggling main menu
+  };
+  
+  const toggleSubmenu = (submenu: string) => {
+    setOpenSubmenu(openSubmenu === submenu ? null : submenu);
   };
 
   const getHeaderColor = (path: string) => {
@@ -1222,26 +1228,281 @@ export const Header = () => {
         </div>
       </nav>
       
-      {/* Simple Mobile Menu */}
+      {/* Comprehensive Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg border-t">
-          <div className="p-4">
-            <div className="space-y-2">
-              <Link to="/thy-iletisim" className="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>
-                THY İletişim
-              </Link>
-              <Link to="/pegasus-iletisim" className="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>
-                Pegasus İletişim
-              </Link>
-              <Link to="/sunexpress-iletisim" className="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>
-                SunExpress İletişim
-              </Link>
-              <Link to="/hizmetler/bilet-satin-alma" className="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>
-                Bilet Satın Alma
-              </Link>
-              <Link to="/hizmetler/bilet-degisikligi" className="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>
-                Bilet Değişiklik
-              </Link>
+        <div className="md:hidden bg-white shadow-lg border-t max-h-screen overflow-y-auto">
+          <div className="p-4 space-y-4">
+            
+            {/* Havayolları Section */}
+            <div className="border-b border-gray-100 pb-4">
+              <button
+                onClick={() => toggleSubmenu('airlines')}
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-800 font-medium hover:bg-gray-50 rounded-lg transition-all duration-200"
+              >
+                <span>Havayolları</span>
+                {openSubmenu === 'airlines' ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </button>
+              
+              {openSubmenu === 'airlines' && (
+                <div className="mt-2 pl-4 space-y-1">
+                  <Link to="/thy-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-thy rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/TK.webp"
+                      alt="THY Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Türk Hava Yolları</span>
+                  </Link>
+                  <Link to="/pegasus-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-pegasus rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/PC.webp"
+                      alt="Pegasus Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Pegasus</span>
+                  </Link>
+                  <Link to="/sunexpress-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-sunexpress rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/XQ.webp"
+                      alt="SunExpress Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">SunExpress</span>
+                  </Link>
+                  <Link to="/ajet-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-ajet rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/VF.webp"
+                      alt="AJet Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">AJet</span>
+                  </Link>
+                  <Link to="/azal-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-azal rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/J2.webp"
+                      alt="AZAL Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">AZAL</span>
+                  </Link>
+                  <Link to="/qatar-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-qatar rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/QR.webp"
+                      alt="Qatar Airways Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Qatar Airways</span>
+                  </Link>
+                  <Link to="/aeroflot-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-aeroflot rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/SU.webp"
+                      alt="Aeroflot Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Aeroflot</span>
+                  </Link>
+                  <Link to="/emirates-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-emirates rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/EK.webp"
+                      alt="Emirates Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Emirates</span>
+                  </Link>
+                  <Link to="/airarabia-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-airarabia rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/G9.webp"
+                      alt="Air Arabia Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Air Arabia</span>
+                  </Link>
+                  <Link to="/flydubai-iletisim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-flydubai rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_24,w_24,q_auto/images/airline/small/FZ.webp"
+                      alt="Flydubai Logo" 
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <span className="font-medium">Flydubai</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Bilet İşlemleri Section */}
+            <div className="border-b border-gray-100 pb-4">
+              <button
+                onClick={() => toggleSubmenu('ticket-operations')}
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-800 font-medium hover:bg-gray-50 rounded-lg transition-all duration-200"
+              >
+                <span>Bilet İşlemleri</span>
+                {openSubmenu === 'ticket-operations' ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </button>
+              
+              {openSubmenu === 'ticket-operations' && (
+                <div className="mt-2 pl-4 space-y-1">
+                  <Link to="/hizmetler/bilet-satin-alma" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-purple-100 rounded-full flex items-center justify-center">
+                      <CreditCard className="h-3 w-3 text-purple-600" />
+                    </div>
+                    <span className="font-medium">Bilet Satın Alma</span>
+                  </Link>
+                  <Link to="/hizmetler/bilet-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <RefreshCw className="h-3 w-3 text-blue-600" />
+                    </div>
+                    <span className="font-medium">Bilet Değişiklik</span>
+                  </Link>
+                  <Link to="/hizmetler/isim-degisikligi" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-green-100 rounded-full flex items-center justify-center">
+                      <Edit className="h-3 w-3 text-green-600" />
+                    </div>
+                    <span className="font-medium">İsim Değişikliği</span>
+                  </Link>
+                  <Link to="/hizmetler/iptal-iade" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-red-100 rounded-full flex items-center justify-center">
+                      <XCircle className="h-3 w-3 text-red-600" />
+                    </div>
+                    <span className="font-medium">İptal ve İade</span>
+                  </Link>
+                  <Link to="/hizmetler/sinif-yukseltme" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-indigo-100 rounded-full flex items-center justify-center">
+                      <ArrowUp className="h-3 w-3 text-indigo-600" />
+                    </div>
+                    <span className="font-medium">Sınıf Yükseltme</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Özel Hizmetler Section */}
+            <div className="border-b border-gray-100 pb-4">
+              <button
+                onClick={() => toggleSubmenu('special-services')}
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-800 font-medium hover:bg-gray-50 rounded-lg transition-all duration-200"
+              >
+                <span>Özel Hizmetler</span>
+                {openSubmenu === 'special-services' ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </button>
+              
+              {openSubmenu === 'special-services' && (
+                <div className="mt-2 pl-4 space-y-1">
+                  <Link to="/hizmetler/evcil-hayvan" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-orange-100 rounded-full flex items-center justify-center">
+                      <PawPrint className="h-3 w-3 text-orange-600" />
+                    </div>
+                    <span className="font-medium">Evcil Hayvan</span>
+                  </Link>
+                  <Link to="/hizmetler/refakatsiz-cocuk" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <Users className="h-3 w-3 text-blue-600" />
+                    </div>
+                    <span className="font-medium">Refakatsiz Çocuk</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Yolcu Hizmetleri Section */}
+            <div className="pb-4">
+              <button
+                onClick={() => toggleSubmenu('passenger-services')}
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-800 font-medium hover:bg-gray-50 rounded-lg transition-all duration-200"
+              >
+                <span>Yolcu Hizmetleri</span>
+                {openSubmenu === 'passenger-services' ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </button>
+              
+              {openSubmenu === 'passenger-services' && (
+                <div className="mt-2 pl-4 space-y-1">
+                  <Link to="/hizmetler/koltuk-secimi" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <Armchair className="h-3 w-3 text-blue-600" />
+                    </div>
+                    <span className="font-medium">Koltuk Seçimi</span>
+                  </Link>
+                  <Link to="/hizmetler/bagaj-ekleme" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-amber-100 rounded-full flex items-center justify-center">
+                      <Luggage className="h-3 w-3 text-amber-600" />
+                    </div>
+                    <span className="font-medium">Bagaj Ekleme</span>
+                  </Link>
+                  <Link to="/hizmetler/check-in" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-green-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-3 w-3 text-green-600" />
+                    </div>
+                    <span className="font-medium">Check-in</span>
+                  </Link>
+                  <Link to="/hizmetler/ucus-gecikmesi" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-orange-100 rounded-full flex items-center justify-center">
+                      <Clock className="h-3 w-3 text-orange-600" />
+                    </div>
+                    <span className="font-medium">Uçuş Gecikmesi</span>
+                  </Link>
+                  <Link to="/hizmetler/kayip-esya" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-red-100 rounded-full flex items-center justify-center">
+                      <Search className="h-3 w-3 text-red-600" />
+                    </div>
+                    <span className="font-medium">Kayıp Eşya</span>
+                  </Link>
+                  <Link to="/hizmetler/rezervasyon-yonetimi" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <Calendar className="h-3 w-3 text-blue-600" />
+                    </div>
+                    <span className="font-medium">Rezervasyon Yönetimi</span>
+                  </Link>
+                  <Link to="/hizmetler/bilet-sorgulama" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-indigo-100 rounded-full flex items-center justify-center">
+                      <BookOpen className="h-3 w-3 text-indigo-600" />
+                    </div>
+                    <span className="font-medium">Bilet Sorgulama</span>
+                  </Link>
+                  <Link to="/hizmetler/ozel-yardim" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-pink-100 rounded-full flex items-center justify-center">
+                      <Heart className="h-3 w-3 text-pink-600" />
+                    </div>
+                    <span className="font-medium">Özel Yardım</span>
+                  </Link>
+                  <Link to="/hizmetler/sik-sorulan-sorular" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-600 rounded-lg transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                    <div className="h-6 w-6 bg-gray-100 rounded-full flex items-center justify-center">
+                      <HelpCircle className="h-3 w-3 text-gray-600" />
+                    </div>
+                    <span className="font-medium">Sık Sorulan Sorular</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Call Button */}
+            <div className="pt-4 border-t border-gray-200">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="w-full flex items-center justify-center gap-2 bg-gray-800 text-white hover:bg-gray-700 rounded-lg px-4 py-3 shadow-md font-bold"
+                onClick={() => {
+                  handleCall();
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                <Phone className="h-4 w-4" />
+                <span className="font-semibold">0850 242 81 17</span>
+              </Button>
             </div>
           </div>
         </div>
