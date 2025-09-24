@@ -2,6 +2,7 @@ import { Phone, Plane, MapPin, Briefcase, Users, Award, Clock, Shield } from "lu
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FlightSearchWidget } from "@/components/FlightSearchWidget";
 import { useLocation, Navigate } from "react-router-dom";
 import { getAirlineData } from "@/data/airlineData";
 import { MetaTags } from "@/components/MetaTags";
@@ -132,8 +133,6 @@ const AirlineContactPage = () => {
                   <li>• Pegasus Airlines</li>
                   <li>• SunExpress</li>
                   <li>• AJet (Anadolujet)</li>
-                  <li>• Borajet</li>
-                  <li>• Onur Air</li>
                 </ul>
               </div>
               
@@ -533,204 +532,234 @@ const AirlineContactPage = () => {
         keywords={`${airlineData.name}, ${airlineData.name.toLowerCase()} iletişim, ${airlineData.name.toLowerCase()} telefon, havayolu iletişim`}
       />
       <Header />
-      
-      <div className="container mx-auto px-4 py-8 space-y-12">
-        {/* Hero Section */}
-        <div className="flex flex-col items-center text-center">
-          <img 
-            src={airlineData.logo} 
-            alt={airlineData.name} 
-            className="w-24 h-24 mb-6"
-          />
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            {airlineData.name}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mb-6">
-            {airlineData.description}
-          </p>
-          <div className="flex items-center gap-4 text-sm text-gray-500">
-            <span className="flex items-center gap-1">
-              <Clock className="h-4 w-4" />
-              Kuruluş: {airlineData.founded}
-            </span>
-            <span className="flex items-center gap-1">
-              <MapPin className="h-4 w-4" />
-              {airlineData.headquarters}
-            </span>
-          </div>
-        </div>
+       
+       <div className="space-y-12">
+         {/* Hero Section with Background */}
+         <section className="relative -mx-0 -mt-6 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
+           <div className="absolute inset-0">
+             <img
+               src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_2400,h_1200,c_fill/unsplash-1529070538774-1843cb3265df.webp"
+               alt={`${airlineData.name} arka planı`}
+               className="h-full w-full object-cover"
+               loading="lazy"
+             />
+             <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-slate-900/85" />
+             <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
+           </div>
 
-        {/* About Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Plane className="h-6 w-6 text-blue-600" />
-            Havayolu Hakkında
-          </h2>
-          <p className="text-gray-700 leading-relaxed text-lg">
-            {airlineData.about}
-          </p>
-        </div>
+           <div className="container mx-auto px-4 md:px-8">
+             <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
+               <img
+                 src={airlineData.logo}
+                 alt={airlineData.name}
+                 className="h-28 w-28 drop-shadow-[0_12px_40px_rgba(0,0,0,0.4)] bg-white/10 backdrop-blur-sm rounded-2xl p-4"
+                 loading="lazy"
+               />
+               <div className="space-y-4">
+                 <h1 className="text-4xl font-bold tracking-tight md:text-6xl drop-shadow-2xl">
+                   {airlineData.name}
+                 </h1>
+                 <p className="mx-auto max-w-3xl text-lg text-white/90 md:text-xl drop-shadow-lg">
+                   {airlineData.description}
+                 </p>
+               </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Fleet */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-              <Plane className="h-5 w-5 text-blue-600" />
-              Filo
-            </h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {airlineData.fleet.map((aircraft, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
-                  {aircraft}
-                </li>
-              ))}
-            </ul>
-          </div>
+               <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-white">
+                 <span className="flex items-center gap-2 rounded-full bg-white/15 px-5 py-2 backdrop-blur ring-1 ring-white/30">
+                   <Clock className="h-4 w-4" />
+                   Kuruluş: {airlineData.founded}
+                 </span>
+                 <span className="flex items-center gap-2 rounded-full bg-white/15 px-5 py-2 backdrop-blur ring-1 ring-white/30">
+                   <MapPin className="h-4 w-4" />
+                   {airlineData.headquarters}
+                 </span>
+               </div>
 
-          {/* Destinations */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-green-600" />
-              Destinasyonlar
-            </h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {airlineData.destinations.map((destination, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <div className="w-1 h-1 bg-green-600 rounded-full"></div>
-                  {destination}
-                </li>
-              ))}
-            </ul>
-          </div>
+               <div className="relative w-full max-w-6xl overflow-hidden rounded-[2rem] bg-white/95 p-6 shadow-[0_32px_70px_rgba(15,23,42,0.35)] ring-1 ring-white/30 md:p-8">
+                 <div className="pointer-events-none absolute inset-0 rounded-[2rem] border border-white/60" />
+                 <FlightSearchWidget
+                   loadingMessage="Uçuş araması hazırlanıyor..."
+                   className="relative min-h-[120px]"
+                 />
+               </div>
+             </div>
+           </div>
+         </section>
 
-          {/* Services */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-              <Users className="h-5 w-5 text-purple-600" />
-              Hizmetler
-            </h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {airlineData.services.map((service, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <div className="w-1 h-1 bg-purple-600 rounded-full"></div>
-                  {service}
-                </li>
-              ))}
-            </ul>
-          </div>
+         <div className="container mx-auto px-4 space-y-12 md:px-8">
+           
+           {/* About Section */}
+           <div className="bg-white rounded-lg shadow-lg p-8">
+             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+               <Plane className="h-6 w-6 text-blue-600" />
+               Havayolu Hakkında
+             </h2>
+             <p className="text-gray-700 leading-relaxed text-lg">
+               {airlineData.about}
+             </p>
+           </div>
 
-          {/* Quick Contact */}
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Hızlı İletişim
-            </h3>
-            <p className="text-2xl font-bold mb-2">0850 242 81 17</p>
-            <p className="text-sm opacity-90 mb-4">7/24 Müşteri Hizmetleri</p>
-            <Button 
-              onClick={handleCall} 
-              className="w-full bg-white text-blue-600 hover:bg-gray-100"
-            >
-              <Phone className="h-4 w-4 mr-2" />
-              Hemen Ara
-            </Button>
-          </div>
-        </div>
+           {/* Services Grid */}
+           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+             {/* Fleet */}
+             <div className="bg-white rounded-lg shadow-lg p-6">
+               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                 <Plane className="h-5 w-5 text-blue-600" />
+                 Filo
+               </h3>
+               <ul className="space-y-2 text-sm text-gray-700">
+                 {airlineData.fleet.map((aircraft, index) => (
+                   <li key={index} className="flex items-center gap-2">
+                     <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
+                     {aircraft}
+                   </li>
+                 ))}
+               </ul>
+             </div>
 
-        {/* Policies Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Shield className="h-6 w-6 text-blue-600" />
-            Politikalar ve Kurallar
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="border-l-4 border-red-500 pl-4">
-              <h3 className="font-bold text-red-800 mb-2">İptal Koşulları</h3>
-              <p className="text-sm text-gray-700">{airlineData.policies.cancellation}</p>
-            </div>
-            <div className="border-l-4 border-yellow-500 pl-4">
-              <h3 className="font-bold text-yellow-800 mb-2">Değişiklik Koşulları</h3>
-              <p className="text-sm text-gray-700">{airlineData.policies.changes}</p>
-            </div>
-            <div className="border-l-4 border-green-500 pl-4">
-              <h3 className="font-bold text-green-800 mb-2">Bagaj Hakları</h3>
-              <p className="text-sm text-gray-700">{airlineData.policies.baggage}</p>
-            </div>
-          </div>
-        </div>
+             {/* Destinations */}
+             <div className="bg-white rounded-lg shadow-lg p-6">
+               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                 <MapPin className="h-5 w-5 text-green-600" />
+                 Destinasyonlar
+               </h3>
+               <ul className="space-y-2 text-sm text-gray-700">
+                 {airlineData.destinations.map((destination, index) => (
+                   <li key={index} className="flex items-center gap-2">
+                     <div className="w-1 h-1 bg-green-600 rounded-full"></div>
+                     {destination}
+                   </li>
+                 ))}
+               </ul>
+             </div>
 
-        {/* Our Services */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Briefcase className="h-6 w-6 text-blue-600" />
-            Bizim Hizmetlerimiz
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-bold mb-4 text-blue-800">Bilet İşlemleri</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  Yeni bilet satışı ve rezervasyon
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  Tarih ve saat değişiklikleri
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  Rota değişiklikleri
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  İptal işlemleri ve iade
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-bold mb-4 text-green-800">Ek Hizmetler</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  Bagaj işlemleri ve bilgilendirme
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  Koltuk seçimi ve upgrade
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  Özel yolcu hizmetleri
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  Check-in desteği
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+             {/* Services */}
+             <div className="bg-white rounded-lg shadow-lg p-6">
+               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                 <Users className="h-5 w-5 text-purple-600" />
+                 Hizmetler
+               </h3>
+               <ul className="space-y-2 text-sm text-gray-700">
+                 {airlineData.services.map((service, index) => (
+                   <li key={index} className="flex items-center gap-2">
+                     <div className="w-1 h-1 bg-purple-600 rounded-full"></div>
+                     {service}
+                   </li>
+                 ))}
+               </ul>
+             </div>
 
-        {/* Contact CTA */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">
-            {airlineData.name} için her türlü işleminizde yanınızdayız
-          </h2>
-          <p className="text-lg opacity-90 mb-6">
-            7/24 profesyonel müşteri hizmetleri ile size yardımcı olmaktan mutluluk duyarız
-          </p>
-          <Button 
-            onClick={handleCall} 
-            className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3"
-          >
-            <Phone className="h-5 w-5 mr-2" />
-            0850 242 81 17 - Hemen Arayın
-          </Button>
-        </div>
-      </div>
+             {/* Quick Contact */}
+             <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg shadow-lg p-6">
+               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                 <Phone className="h-5 w-5" />
+                 Hızlı İletişim
+               </h3>
+               <p className="text-2xl font-bold mb-2">0850 242 81 17</p>
+               <p className="text-sm opacity-90 mb-4">7/24 Müşteri Hizmetleri</p>
+               <Button 
+                 onClick={handleCall} 
+                 className="w-full bg-white text-blue-600 hover:bg-gray-100"
+               >
+                 <Phone className="h-4 w-4 mr-2" />
+                 Hemen Ara
+               </Button>
+             </div>
+           </div>
+
+           {/* Policies Section */}
+           <div className="bg-white rounded-lg shadow-lg p-8">
+             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+               <Shield className="h-6 w-6 text-blue-600" />
+               Politikalar ve Kurallar
+             </h2>
+             <div className="grid md:grid-cols-3 gap-6">
+               <div className="border-l-4 border-red-500 pl-4">
+                 <h3 className="font-bold text-red-800 mb-2">İptal Koşulları</h3>
+                 <p className="text-sm text-gray-700">{airlineData.policies.cancellation}</p>
+               </div>
+               <div className="border-l-4 border-yellow-500 pl-4">
+                 <h3 className="font-bold text-yellow-800 mb-2">Değişiklik Koşulları</h3>
+                 <p className="text-sm text-gray-700">{airlineData.policies.changes}</p>
+               </div>
+               <div className="border-l-4 border-green-500 pl-4">
+                 <h3 className="font-bold text-green-800 mb-2">Bagaj Hakları</h3>
+                 <p className="text-sm text-gray-700">{airlineData.policies.baggage}</p>
+               </div>
+             </div>
+           </div>
+
+           {/* Our Services */}
+           <div className="bg-white rounded-lg shadow-lg p-8">
+             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+               <Briefcase className="h-6 w-6 text-blue-600" />
+               Bizim Hizmetlerimiz
+             </h2>
+             <div className="grid md:grid-cols-2 gap-8">
+               <div>
+                 <h3 className="text-lg font-bold mb-4 text-blue-800">Bilet İşlemleri</h3>
+                 <ul className="space-y-2 text-gray-700">
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                     Yeni bilet satışı ve rezervasyon
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                     Tarih ve saat değişiklikleri
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                     Rota değişiklikleri
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                     İptal işlemleri ve iade
+                   </li>
+                 </ul>
+               </div>
+               
+               <div>
+                 <h3 className="text-lg font-bold mb-4 text-green-800">Ek Hizmetler</h3>
+                 <ul className="space-y-2 text-gray-700">
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                     Bagaj işlemleri ve bilgilendirme
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                     Koltuk seçimi ve upgrade
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                     Özel yolcu hizmetleri
+                   </li>
+                   <li className="flex items-center gap-2">
+                     <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                     Check-in desteği
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+
+           {/* Contact CTA */}
+           <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
+             <h2 className="text-2xl font-bold mb-4">
+               {airlineData.name} için her türlü işleminizde yanınızdayız
+             </h2>
+             <p className="text-lg opacity-90 mb-6">
+               7/24 profesyonel müşteri hizmetleri ile size yardımcı olmaktan mutluluk duyarız
+             </p>
+             <Button 
+               onClick={handleCall} 
+               className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3"
+             >
+               <Phone className="h-5 w-5 mr-2" />
+               0850 242 81 17 - Hemen Arayın
+             </Button>
+           </div>
+         </div>
+       </div>
 
       {/* Mobile Fixed Button */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
@@ -743,7 +772,9 @@ const AirlineContactPage = () => {
         </Button>
       </div>
       
-      <Footer />
+      <div className="mt-16">
+        <Footer />
+      </div>
     </div>
   );
 };

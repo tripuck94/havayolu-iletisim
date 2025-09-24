@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FlightSearchWidget } from "@/components/FlightSearchWidget";
 import { useEffect } from "react";
 
 export const Banner = () => {
@@ -23,25 +24,6 @@ export const Banner = () => {
     };
   }, []);
 
-  // tpwidg Widget Script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://tpwidg.com/content?trs=27165&shmarker=144371&locale=tr&curr=TRY&powered_by=false&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121';
-    script.charset = 'utf-8';
-    
-    const widgetContainer = document.getElementById('tpwidg-container');
-    if (widgetContainer) {
-      widgetContainer.appendChild(script);
-    }
-
-    return () => {
-      if (widgetContainer && widgetContainer.contains(script)) {
-        widgetContainer.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <div className="relative h-[800px] md:h-[600px] w-full overflow-hidden">
       {/* Critical LCP image with optimizations */}
@@ -56,17 +38,20 @@ export const Banner = () => {
       <div className="absolute inset-0 bg-black/50" />
       
       <div className="relative flex h-full flex-col items-center justify-center px-4 text-center pt-8">
-        {/* tpwidg Widget Container */}
-        <div id="tpwidg-container" className="mb-8 w-full max-w-7xl bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-          {/* Widget script will be injected here */}
-        </div>
-        
-        <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
+        <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl drop-shadow-2xl">
           Uçak Bileti Rezervasyonu
         </h1>
-        <p className="mb-8 max-w-2xl text-lg text-white/90">
+        <p className="mb-8 max-w-2xl text-lg text-white/90 drop-shadow-lg">
           THY, Pegasus, SunExpress ve AJet için bilet satış, değişiklik ve iptal işlemleriniz için hizmetinizdeyiz.
         </p>
+        
+        <div className="relative w-full max-w-6xl overflow-hidden rounded-[2rem] bg-white/95 p-6 shadow-[0_32px_70px_rgba(15,23,42,0.35)] ring-1 ring-white/30 md:p-8 mb-8">
+          <div className="pointer-events-none absolute inset-0 rounded-[2rem] border border-white/60" />
+          <FlightSearchWidget 
+            loadingMessage="Uçuş arama aracı yükleniyor..." 
+            className="relative min-h-[120px]"
+          />
+        </div>
         <Button
           size="lg"
           className="bg-blue-600 hover:bg-blue-700 hover:scale-105 text-white text-lg font-bold shadow-xl border-2 border-white/20 px-8 py-6 transition-all duration-300 hover:shadow-2xl"
