@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePhoneTracking } from "@/hooks/use-phone-tracking";
 
@@ -19,7 +19,7 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <div className="flex flex-col items-center text-center">
             <Phone className="h-10 w-10 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Telefon</h3>
@@ -37,14 +37,6 @@ export const Contact = () => {
             <Mail className="h-10 w-10 mb-4" />
             <h3 className="text-xl font-semibold mb-2">E-posta</h3>
             <p>info@havayoluiletisim.com</p>
-          </div>
-
-          <div className="flex flex-col items-center text-center">
-            <MapPin className="h-10 w-10 mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Adres</h3>
-            <p className="text-sm">İDEALTEPE MAH. TURGUT ÖZAL BUL.</p>
-            <p className="text-sm">İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5</p>
-            <p className="font-semibold">MALTEPE / İSTANBUL</p>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Hakkimizda = () => {
             Hakkımızda
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            FLYEVA Turizm olarak kim olduğumuz, misyonumuz ve vizyonumuz hakkında bilgi alın.
+            Kim olduğumuz, misyonumuz ve vizyonumuz hakkında bilgi alın.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ const Hakkimizda = () => {
             
             <div className="mb-8">
               <p className="text-gray-600 mb-4 text-lg">
-                <strong>FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</strong> olarak, havayolu sektöründe güvenilir ve kaliteli hizmet sunma amacıyla kurulmuş bir firmayız. Müşteri memnuniyetini en üst seviyede tutarak, seyahat deneyiminizi mükemmelleştirmek için buradayız.
+                <strong>TRIPUCK TURİZM LİMİTED ŞİRKETİ</strong> olarak, havayolu sektöründe güvenilir ve kaliteli hizmet sunma amacıyla kurulmuş bir firmayız. Müşteri memnuniyetini en üst seviyede tutarak, seyahat deneyiminizi mükemmelleştirmek için buradayız.
               </p>
             </div>
 
@@ -39,19 +39,15 @@ const Hakkimizda = () => {
                 <div className="space-y-3">
                   <div>
                     <span className="font-medium text-gray-600">Şirket Unvanı:</span>
-                    <p className="text-gray-800">FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</p>
+                    <p className="text-gray-800">TRIPUCK TURİZM LİMİTED ŞİRKETİ</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-600">Kuruluş Yılı:</span>
-                    <p className="text-gray-800">2024</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">TURSAB Belge No:</span>
-                    <p className="text-gray-800">A-10782</p>
+                    <p className="text-gray-800">2019</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-600">Merkez:</span>
-                    <p className="text-gray-800">İstanbul, Türkiye</p>
+                    <p className="text-gray-800">Antalya, Türkiye</p>
                   </div>
                 </div>
               </div>
@@ -272,15 +268,6 @@ const Hakkimizda = () => {
             <div className="bg-gray-50 p-6 rounded-lg">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">📍 Merkez Ofis</h4>
-                  <div className="space-y-2 text-gray-700">
-                    <p><strong>Adres:</strong> İDEALTEPE MAH. TURGUT ÖZAL BUL. İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5 MALTEPE / İSTANBUL</p>
-                    <p><strong>Posta Kodu:</strong> 34844</p>
-                    <p><strong>Şehir:</strong> İstanbul, Türkiye</p>
-                  </div>
-                </div>
-                
-                <div>
                   <h4 className="font-semibold text-gray-800 mb-3">📞 İletişim Kanalları</h4>
                   <div className="space-y-2 text-gray-700">
                     <p><strong>Telefon:</strong> 0850 242 81 17 (7/24)</p>
@@ -293,7 +280,7 @@ const Hakkimizda = () => {
             </div>
 
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg text-center">
-              <h3 className="text-2xl font-semibold mb-4">💙 FLYEVA Ailesi Olarak</h3>
+              <h3 className="text-2xl font-semibold mb-4">💙 Ekibimiz Olarak</h3>
               <p className="text-blue-100 mb-6 max-w-3xl mx-auto">
                 Sizlere en iyi hizmeti sunabilmek için sürekli kendimizi geliştiriyor, 
                 teknolojiye yatırım yapıyor ve ekibimizi güçlendiriyoruz. 

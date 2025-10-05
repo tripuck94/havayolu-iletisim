@@ -225,18 +225,13 @@ const GizlilikGuvenlik = () => {
               <h3 className="text-lg font-semibold text-gray-800 mb-4">📧 Bizimle İletişime Geçin</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</h4>
-                  <div className="space-y-2 text-sm text-gray-700">
-                    <p><strong>Adres:</strong> İDEALTEPE MAH. TURGUT ÖZAL BUL.</p>
-                    <p>İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5</p>
-                    <p><strong>MALTEPE / İSTANBUL</strong></p>
-                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">TRIPUCK TURİZM LİMİTED ŞİRKETİ</h4>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">İletişim Bilgileri</h4>
                   <div className="space-y-2 text-sm text-gray-700">
-                    <p><strong>Telefon:</strong> +90 216 385 98 98</p>
+                    <p><strong>Telefon:</strong> 0850 242 81 17</p>
                     <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
                     <p><strong>Gizlilik:</strong> privacy@havayoluiletisim.com</p>
                   </div>

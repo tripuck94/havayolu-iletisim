@@ -95,9 +95,9 @@ const TermsOfService = () => {
 
             <h2 className="text-xl font-bold text-gray-800 border-b pb-2">Şirket Bilgileri</h2>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="font-semibold text-gray-800">FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</p>
+              <p className="font-semibold text-gray-800">TRIPUCK TURİZM LİMİTED ŞİRKETİ</p>
               <p className="text-gray-600 mt-2">
-                <strong>Adres:</strong> İDEALTEPE MAH. TURGUT ÖZAL BUL. İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5 / MALTEPE - İSTANBUL
+                <strong>Adres:</strong> Güzeloluk Mah, Lavınya Sitesi, 1830. Sk. E blok, 07200 Muratpaşa/Antalya
               </p>
               <p className="text-gray-600 mt-1">
                 <strong>Web sitesi:</strong> havayoluiletisim.com

@@ -89,10 +89,10 @@ const AirlineContactPage = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-2">Adres</h3>
-              <p className="font-semibold mb-1">FLYEVA TURİZM TİCARET LTD. ŞTİ.</p>
-              <p className="text-sm text-gray-600 mb-2">İDEALTEPE MAH. TURGUT ÖZAL BUL.</p>
-              <p className="text-sm text-gray-600 mb-2">İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5</p>
-              <p className="font-semibold mb-2">MALTEPE / İSTANBUL</p>
+              <p className="font-semibold mb-1">TRIPUCK TURİZM LİMİTED ŞİRKETİ</p>
+              <p className="text-sm text-gray-600 mb-2">Güzeloluk Mah, Lavınya Sitesi</p>
+              <p className="text-sm text-gray-600 mb-2">1830. Sk. E blok, 07200</p>
+              <p className="font-semibold mb-2">Muratpaşa / ANTALYA</p>
               <Button 
                 variant="outline"
                 className="w-full border-purple-600 text-purple-600 hover:bg-purple-50"
@@ -252,7 +252,7 @@ const AirlineContactPage = () => {
                 <div className="space-y-3">
                   <div>
                     <span className="font-medium text-gray-600">Şirket Unvanı:</span>
-                    <p className="text-gray-800">FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</p>
+                    <p className="text-gray-800">TRIPUCK TURİZM LİMİTED ŞİRKETİ</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-600">Faaliyet Konusu:</span>
@@ -260,11 +260,7 @@ const AirlineContactPage = () => {
                   </div>
                   <div>
                     <span className="font-medium text-gray-600">Kuruluş Tarihi:</span>
-                    <p className="text-gray-800">2024</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">TURSAB Belge No:</span>
-                    <p className="text-gray-800">A-10782</p>
+                    <p className="text-gray-800">2019</p>
                   </div>
                 </div>
               </div>
@@ -274,11 +270,7 @@ const AirlineContactPage = () => {
                 <div className="space-y-3">
                   <div>
                     <span className="font-medium text-gray-600">Merkez Adres:</span>
-                    <p className="text-gray-800">İDEALTEPE MAH. TURGUT ÖZAL BUL. İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5 MALTEPE / İSTANBUL</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Posta Kodu:</span>
-                    <p className="text-gray-800">34844</p>
+                    <p className="text-gray-800">Güzeloluk Mah, Lavınya Sitesi, 1830. Sk. E blok, 07200 Muratpaşa/Antalya</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-600">Website:</span>

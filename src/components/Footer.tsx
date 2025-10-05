@@ -50,6 +50,13 @@ export const Footer = () => {
           </Link>
         </div>
 
+        {/* Company Info */}
+        <div className="text-center text-sm text-gray-300 space-y-1 mb-6">
+          <p className="font-semibold text-white">
+            TRIPUCK TURİZM LİMİTED ŞİRKETİ
+          </p>
+        </div>
+
         {/* Copyright */}
         <div className="text-center border-t border-gray-700 pt-6">
           <p className="text-gray-400 text-sm">

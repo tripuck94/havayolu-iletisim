@@ -34,7 +34,7 @@ const IptalIadeSartlari = () => {
                 </div>
                 <p className="text-gray-700">
                   İptal ve iade işlemleri tamamen <strong>havayolu şirketlerinin kendi kurallarına</strong> tabidir. 
-                  Her havayolu için farklı şartlar geçerlidir. FLYEVA Turizm, aracı bir firma olarak havayolu 
+                  Her havayolu için farklı şartlar geçerlidir. Aracı firma olarak havayolu 
                   kurallarını uygular ve bu konuda takdir yetkisi yoktur.
                 </p>
               </div>
@@ -325,7 +325,7 @@ const IptalIadeSartlari = () => {
                       <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      <span><strong>E-posta:</strong> iptal@flyevaturizm.com</span>
+                      <span><strong>E-posta:</strong> info@havayoluiletisim.com</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Clock className="h-5 w-5" />

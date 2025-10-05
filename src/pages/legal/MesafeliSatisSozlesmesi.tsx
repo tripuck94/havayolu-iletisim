@@ -34,11 +34,9 @@ const MesafeliSatisSozlesmesi = () => {
 
             <h2 className="text-xl font-bold text-gray-800 border-b pb-2">1. Satıcı Bilgileri</h2>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p><strong>Şirket Unvanı:</strong> FLYEVA TURİZM TİCARET LİMİTED ŞİRKETİ</p>
-              <p><strong>Adres:</strong> İDEALTEPE MAH. TURGUT ÖZAL BUL. İDEAL SİTESİ NO: 127C İÇ KAPI NO: 5 MALTEPE / İSTANBUL</p>
+              <p><strong>Şirket Unvanı:</strong> TRIPUCK TURİZM LİMİTED ŞİRKETİ</p>
               <p><strong>Telefon:</strong> 0850 242 81 17</p>
               <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
-              <p><strong>TURSAB Belge No:</strong> A-10782</p>
             </div>
 
             <h2 className="text-xl font-bold text-gray-800 border-b pb-2">2. Mal/Hizmet Bilgileri</h2>
