@@ -7,21 +7,23 @@ import { Phone } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MetaTags } from "@/components/MetaTags";
+import { DisclaimerBanner } from "@/components/DisclaimerBanner";
 
 const Index = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
 
   return (
     <div className="min-h-screen pb-20 md:pb-0">
       <MetaTags 
-        title="Havayolu İletişim - Uçak Bileti Rezervasyonu"
-        description="THY, Pegasus, SunExpress ve AJet için bilet satış, değişiklik ve iptal işlemleri"
+        title="Havayolu İletişim - Uçak Bileti Karşılaştırma"
+        description="THY, Pegasus, SunExpress ve AJet uçuşlarını karşılaştırın. Metasearch platformu ile en uygun uçuşu bulun"
         path="/"
-        keywords="uçak bileti, havayolu, THY, Pegasus, SunExpress, AJet, bilet rezervasyonu, uçuş iptal"
+        keywords="uçak bileti, havayolu, THY, Pegasus, SunExpress, AJet, uçuş karşılaştırma, metasearch, uçak bileti arama"
       />
       <Header />
+      <DisclaimerBanner />
       <Banner />
       <Services />
       <Airlines />

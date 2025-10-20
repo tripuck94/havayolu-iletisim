@@ -22,7 +22,7 @@ export const CallButton = () => {
   };
 
   const handleCall = () => {
-    handlePhoneCall("08502428117", `floating_button_${location.pathname}`);
+    handlePhoneCall("08503089840", `floating_button_${location.pathname}`);
   };
 
   return (

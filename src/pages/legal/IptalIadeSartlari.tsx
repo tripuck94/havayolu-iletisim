@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const IptalIadeSartlari = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
 
   return (
@@ -235,7 +235,7 @@ const IptalIadeSartlari = () => {
                     <span className="text-2xl font-bold text-blue-600">1</span>
                   </div>
                   <h4 className="font-semibold mb-2">İletişim</h4>
-                  <p className="text-sm text-gray-600">0850 242 81 17 numaralı telefonu arayın veya e-posta gönderin</p>
+                  <p className="text-sm text-gray-600">0850 308 98 40 numaralı telefonu arayın veya e-posta gönderin</p>
                 </div>
                 
                 <div className="text-center">
@@ -319,7 +319,7 @@ const IptalIadeSartlari = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5" />
-                      <span><strong>Telefon:</strong> 0850 242 81 17</span>
+                      <span><strong>Telefon:</strong> 0850 308 98 40</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

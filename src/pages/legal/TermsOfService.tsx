@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const TermsOfService = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
 
   return (

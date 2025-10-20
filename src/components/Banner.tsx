@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export const Banner = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
 
   // Preload critical LCP image
@@ -39,10 +39,10 @@ export const Banner = () => {
       
       <div className="relative flex h-full flex-col items-center justify-center px-4 text-center pt-8">
         <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl drop-shadow-2xl">
-          Uçak Bileti Rezervasyonu
+          Uçak Bileti Karşılaştırma
         </h1>
         <p className="mb-8 max-w-2xl text-lg text-white/90 drop-shadow-lg">
-          THY, Pegasus, SunExpress ve AJet için bilet satış, değişiklik ve iptal işlemleriniz için hizmetinizdeyiz.
+          THY, Pegasus, SunExpress ve AJet uçuşlarını karşılaştırın, en uygun seçeneği bulun, danışmanlık desteğimizle rezervasyon yapın.
         </p>
         
         <div className="relative w-full max-w-6xl overflow-hidden rounded-[2rem] bg-white/95 p-6 shadow-[0_32px_70px_rgba(15,23,42,0.35)] ring-1 ring-white/30 md:p-8 mb-8">

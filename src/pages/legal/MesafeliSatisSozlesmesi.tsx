@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const MesafeliSatisSozlesmesi = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
 
   return (
@@ -35,7 +35,7 @@ const MesafeliSatisSozlesmesi = () => {
             <h2 className="text-xl font-bold text-gray-800 border-b pb-2">1. Satıcı Bilgileri</h2>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p><strong>Şirket Unvanı:</strong> TRIPUCK TURİZM LİMİTED ŞİRKETİ</p>
-              <p><strong>Telefon:</strong> 0850 242 81 17</p>
+              <p><strong>Telefon:</strong> 0850 308 98 40</p>
               <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
             </div>
 
@@ -187,7 +187,7 @@ const MesafeliSatisSozlesmesi = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-blue-600" />
-                    <span><strong>Telefon:</strong> 0850 242 81 17</span>
+                    <span><strong>Telefon:</strong> 0850 308 98 40</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <svg className="h-4 w-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

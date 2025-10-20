@@ -231,7 +231,7 @@ const GizlilikGuvenlik = () => {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">İletişim Bilgileri</h4>
                   <div className="space-y-2 text-sm text-gray-700">
-                    <p><strong>Telefon:</strong> 0850 242 81 17</p>
+                    <p><strong>Telefon:</strong> 0850 308 98 40</p>
                     <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
                     <p><strong>Gizlilik:</strong> privacy@havayoluiletisim.com</p>
                   </div>

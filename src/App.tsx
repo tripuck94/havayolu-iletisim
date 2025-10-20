@@ -42,6 +42,7 @@ import Records from "@/pages/crm/Records";
 import { AuthGate } from "@/components/AuthGate";
 import Users from "@/pages/crm/Users";
 import Reports from "@/pages/crm/Reports";
+import HowItWorks from "@/pages/HowItWorks";
 
 const queryClient = new QueryClient();
 
@@ -218,6 +219,7 @@ const App = () => (
           <Route path="/kullanim-kosullari" element={<TermsOfService />} />
           <Route path="/iptal-iade-sartlari" element={<IptalIadeSartlari />} />
             <Route path="/gizlilik-ve-guvenlik" element={<GizlilikGuvenlik />} />
+          <Route path="/nasil-calisir" element={<HowItWorks />} />
           <Route path="/iletisim" element={<AirlineContactPage />} />
           <Route path="/crm/login" element={<Login />} />
           <Route

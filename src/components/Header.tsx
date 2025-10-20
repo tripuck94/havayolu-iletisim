@@ -9,7 +9,7 @@ export const Header = () => {
   const [openMobileSection, setOpenMobileSection] = useState<string | null>(null);
   
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
   
   const toggleMobileMenu = () => {
@@ -1278,7 +1278,7 @@ export const Header = () => {
             onClick={handleCall}
           >
             <Phone className="h-4 w-4" />
-            <span className="font-semibold">0850 242 81 17</span>
+            <span className="font-semibold">0850 308 98 40</span>
           </Button>
 
           {/* Mobile phone button (icon only) */}

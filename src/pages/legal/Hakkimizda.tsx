@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const Hakkimizda = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
 
   return (
@@ -28,8 +28,13 @@ const Hakkimizda = () => {
             
             <div className="mb-8">
               <p className="text-gray-600 mb-4 text-lg">
-                <strong>TRIPUCK TURİZM LİMİTED ŞİRKETİ</strong> olarak, havayolu sektöründe güvenilir ve kaliteli hizmet sunma amacıyla kurulmuş bir firmayız. Müşteri memnuniyetini en üst seviyede tutarak, seyahat deneyiminizi mükemmelleştirmek için buradayız.
+                <strong>TRIPUCK TURİZM TİCARET LİMİTED ŞİRKETİ</strong> olarak, havayolu sektöründe metasearch (meta arama) platformu hizmeti sunuyoruz. Müşterilerimizin en uygun uçuş seçeneklerini bulmalarına yardımcı olan bir teknoloji platformuyuz.
               </p>
+              <div className="bg-blue-100 border-l-4 border-blue-500 p-4 rounded">
+                <p className="text-blue-800 font-semibold">
+                  💡 İş Modelimiz: Metasearch (meta arama) platformuyuz. Havayollarının uçuşlarını topluca gösterip karşılaştırma imkanı sunuyoruz. Rezervasyon işlemleri için müşterilerimizi havayolları veya yetkili acenteleriyle buluşturuyoruz.
+                </p>
+              </div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">🏢 Şirket Kimliğimiz</h2>
@@ -57,23 +62,23 @@ const Hakkimizda = () => {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center gap-2">
                     <Plane className="h-4 w-4 text-purple-600" />
-                    Havayolu bilet satış ve rezervasyonu
+                    Uçuş arama ve karşılaştırma platformu
                   </li>
                   <li className="flex items-center gap-2">
                     <Plane className="h-4 w-4 text-purple-600" />
-                    Uçuş değişikliği ve iptal işlemleri
+                    En uygun uçuş seçeneklerini bulma
                   </li>
                   <li className="flex items-center gap-2">
                     <Plane className="h-4 w-4 text-purple-600" />
-                    Ek hizmetler (bagaj, koltuk, yemek)
+                    Havayolu firmaları ile müşteri buluşturma
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Plane className="h-4 w-4 text-purple-600" />
+                    Uçuş danışmanlığı ve bilgilendirme
                   </li>
                   <li className="flex items-center gap-2">
                     <Plane className="h-4 w-4 text-purple-600" />
                     7/24 müşteri destek hizmetleri
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Plane className="h-4 w-4 text-purple-600" />
-                    Özel grup rezervasyonları
                   </li>
                 </ul>
               </div>
@@ -270,7 +275,7 @@ const Hakkimizda = () => {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-3">📞 İletişim Kanalları</h4>
                   <div className="space-y-2 text-gray-700">
-                    <p><strong>Telefon:</strong> 0850 242 81 17 (7/24)</p>
+                    <p><strong>Telefon:</strong> 0850 308 98 40 (7/24)</p>
                     <p><strong>E-posta:</strong> info@havayoluiletisim.com</p>
                     <p><strong>Website:</strong> havayoluiletisim.com</p>
                     <p><strong>Yanıt Süresi:</strong> Ortalama 5 dakika</p>

@@ -6,7 +6,7 @@ export const Contact = () => {
   const { handlePhoneCall } = usePhoneTracking();
   
   const handleCall = () => {
-    handlePhoneCall("08502428117", "contact_section");
+    handlePhoneCall("08503089840", "contact_section");
   };
 
   return (
@@ -23,7 +23,7 @@ export const Contact = () => {
           <div className="flex flex-col items-center text-center">
             <Phone className="h-10 w-10 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Telefon</h3>
-            <p className="mb-4">0850 242 81 17</p>
+            <p className="mb-4">0850 308 98 40</p>
             <Button
               variant="secondary"
               className="bg-white text-primary hover:bg-white/90"
