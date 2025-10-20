@@ -7,7 +7,6 @@ import { Phone } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MetaTags } from "@/components/MetaTags";
-import { DisclaimerBanner } from "@/components/DisclaimerBanner";
 
 const Index = () => {
   const handleCall = () => {
@@ -23,7 +22,6 @@ const Index = () => {
         keywords="uçak bileti, havayolu, THY, Pegasus, SunExpress, AJet, uçuş karşılaştırma, metasearch, uçak bileti arama"
       />
       <Header />
-      <DisclaimerBanner />
       <Banner />
       <Services />
       <Airlines />
