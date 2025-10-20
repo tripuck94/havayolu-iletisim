@@ -1,4 +1,4 @@
-# Robots.txt for Flyeva Turizm & Havayolu İletişim
+# Robots.txt for TRIPUCK TURİZM TİCARET LİMİTED ŞİRKETİ - Havayolu İletişim
 
 User-agent: *
 Allow: /
@@ -13,6 +13,7 @@ Allow: /hizmetler/*
 # Disallow admin or sensitive areas (if any)
 Disallow: /admin/
 Disallow: /private/
+Disallow: /crm/
 
 # Allow search engines to crawl all service pages
 Allow: /hizmetler/bilet-satin-alma
@@ -39,12 +40,17 @@ Allow: /sunexpress-*
 Allow: /ajet-*
 Allow: /azal-*
 
-# Contact pages
-Allow: /iletisim
+# Important pages
+Allow: /nasil-calisir
 Allow: /hakkimizda
-Allow: /gizlilik-politikasi
+Allow: /iletisim
+
+# Legal pages
+Allow: /kisisel-verilerin-korunmasi
+Allow: /mesafeli-satis-sozlesmesi
 Allow: /kullanim-kosullari
-Allow: /cerez-politikasi
+Allow: /iptal-iade-sartlari
+Allow: /gizlilik-ve-guvenlik
 
 # Crawl delay
 Crawl-delay: 1
