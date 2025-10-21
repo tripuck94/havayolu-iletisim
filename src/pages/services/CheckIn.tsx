@@ -3,7 +3,6 @@ import { CheckCircle, Phone, Shield, Clock, HeartHandshake, BadgeCheck } from "l
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { useLocation } from "react-router-dom";
-import { gtmEvents } from "@/lib/gtm";
 
 const airlineData = {
   thy: {
@@ -99,11 +98,8 @@ const CheckIn = () => {
 
   const handleCall = () => {
     const phone = airlineInfo ? airlineInfo.phone : "08502428117";
-    const airlineName = airlineInfo ? airlineInfo.title : "unknown";
     
-    // GTM tracking ekle - havayolu bilgisi ile
-    gtmEvents.trackPhoneClick(phone, `checkin_page_${airlineName.toLowerCase()}`);
-    
+    // Direkt telefon araması - tracking kaldırıldı (Google Ads policy)
     window.location.href = `tel:${phone}`;
   };
 

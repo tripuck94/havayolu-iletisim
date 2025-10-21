@@ -1,12 +1,22 @@
-# Google Tag Manager ve AdWords Telefon Dönüşüm Takibi Kurulumu
+# Google Tag Manager ve AdWords Kurulumu
 
-Bu kılavuz, telefon numarası tıklamalarını Google Tag Manager (GTM) ile takip etmek ve AdWords'te dönüşümleri izlemek için gerekli adımları açıklar.
+⚠️ **ÖNEMLİ NOT:** Telefon tracking sistemi Google Ads "Sistemleri Atlatma" politikası nedeniyle KALDIRILMIŞTIR.
 
 ## 1. Mevcut Durum
 
-✅ **Google Tag Manager** zaten sitenizde kurulu (GTM-MRP8QGP4)
-✅ **Telefon tracking kodu** tüm sayfalara eklendi
-✅ **Event sistemi** çalışır durumda
+✅ **Google Tag Manager** sitenizde kurulu (GTM-MRP8QGP4)
+❌ **Telefon tracking kodu** Google policy compliance için KALDIRILDI
+✅ **Sadece sayfa görüntüleme tracking'i** aktif
+
+## 2. Neden Telefon Tracking Kaldırıldı?
+
+Google AdWords "Circumventing Systems" (Sistemleri Atlatma) politikası gereği:
+- Otomatik conversion tracking şüpheli görülüyor
+- Telefon tıklaması ≠ gerçek telefon araması
+- Sabit değer ataması (value: 50) manipülasyon riski
+- Metasearch platformları için ek kısıtlamalar var
+
+**Alternatif:** Google Ads'te manuel conversion reporting veya Google Call Extensions kullanın.
 
 ## 2. Google Tag Manager Konfigürasyonu
 
