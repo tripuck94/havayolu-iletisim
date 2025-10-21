@@ -664,14 +664,6 @@ const AirlineContactPage = () => {
                 <Phone className="h-4 w-4 mr-2" />
                 Hemen Ara
               </Button>
-              {airlineData.officialPhone && (
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <p className="text-[10px] text-white/60 leading-relaxed">
-                    <span className="font-medium">{airlineData.name} Resmi İletişim:</span><br />
-                    <span className="select-none pointer-events-none">{airlineData.officialPhone}</span>
-                  </p>
-                </div>
-              )}
             </div>
            </div>
 
