@@ -152,7 +152,73 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
-            <h2 className="text-xl font-bold text-gray-800 border-b pb-2">6. Veri Güvenliği</h2>
+            <h2 className="text-xl font-bold text-gray-800 border-b pb-2">6. Kullandığımız Tracking ve Analiz Sistemleri</h2>
+            <div className="space-y-4">
+              <p className="text-gray-700">
+                Web sitemizde kullanıcı deneyimini iyileştirmek ve hizmet kalitemizi artırmak amacıyla aşağıdaki sistemleri kullanmaktayız:
+              </p>
+              
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-800 mb-2">✅ Aktif Sistemler</h4>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">✓</span>
+                    <div>
+                      <strong>Google Tag Manager (GTM):</strong> Sadece sayfa görüntüleme tracking'i aktif. Hangi sayfaların ziyaret edildiğini anlamamızı sağlar.
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">✓</span>
+                    <div>
+                      <strong>TravelPayouts Widget:</strong> Uçuş arama widget'ı 3. parti (TravelPayouts) tarafından sağlanmaktadır. Anlık fiyat karşılaştırması sunar.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                <h4 className="font-semibold text-red-800 mb-2">❌ Kullanılmayan / Kaldırılan Sistemler</h4>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600 mt-1">✗</span>
+                    <div>
+                      <strong>Telefon Conversion Tracking:</strong> Google Ads policy compliance nedeniyle KALDIRILMIŞTIR.
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600 mt-1">✗</span>
+                    <div>
+                      <strong>Microsoft Clarity:</strong> Session recording sistemi KALDIRILMIŞTIR.
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600 mt-1">✗</span>
+                    <div>
+                      <strong>ClickGuard:</strong> Click tracking sistemi KALDIRILMIŞTIR.
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600 mt-1">✗</span>
+                    <div>
+                      <strong>Otomatik Click Tracking:</strong> Kullanmıyoruz. Manuel conversion reporting kullanıyoruz.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-blue-800 mb-2">🔒 Gizlilik Taahhüdümüz</h4>
+                <ul className="space-y-1 text-gray-700 text-sm">
+                  <li>• Sadece gerekli ve minimal veri topluyoruz</li>
+                  <li>• Telefon numaranız veya kişisel bilgileriniz otomatik tracking sistemlerinde SAKLANMAZ</li>
+                  <li>• 3. parti sistemler (TravelPayouts) kendi gizlilik politikalarına tabiidir</li>
+                  <li>• Google Ads politikalarına tam uyumluyuz</li>
+                  <li>• Session recording (ekran kaydı) yapmıyoruz</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2 className="text-xl font-bold text-gray-800 border-b pb-2 mt-8">7. Veri Güvenliği</h2>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="text-center bg-gray-50 p-4 rounded-lg">
                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">

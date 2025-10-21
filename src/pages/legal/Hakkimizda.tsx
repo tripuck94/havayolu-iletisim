@@ -37,6 +37,67 @@ const Hakkimizda = () => {
               </div>
             </div>
 
+            <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">💼 Yasal Bilgilerimiz</h2>
+            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <p className="text-sm"><span className="font-semibold text-gray-700">Şirket Unvanı:</span> TRIPUCK TURİZM TİCARET LİMİTED ŞİRKETİ</p>
+                  <p className="text-sm"><span className="font-semibold text-gray-700">Vergi Dairesi:</span> Antalya Kurumlar</p>
+                  <p className="text-sm"><span className="font-semibold text-gray-700">Vergi No:</span> 8591101691</p>
+                  <p className="text-sm"><span className="font-semibold text-gray-700">Ticaret Sicil No:</span> 859110</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm"><span className="font-semibold text-gray-700">Mersis No:</span> 8591101691000017</p>
+                  <p className="text-sm"><span className="font-semibold text-gray-700">NACE Kodu:</span> 639102 - Web Arama Portalı Faaliyetleri</p>
+                  <p className="text-sm"><span className="font-semibold text-gray-700">Kuruluş:</span> 2019</p>
+                  <p className="text-sm"><span className="font-semibold text-gray-700">Merkez:</span> Antalya, Türkiye</p>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-300">
+                <p className="text-xs text-gray-600">
+                  <span className="font-semibold">Adres:</span> Güzeloluk Mahallesi 1830 Sokak Özpınarlar Lavinya Evleri E Blok No: 175 İç Kapı No: 7, Muratpaşa/Antalya
+                </p>
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">❓ Neden TURSAB Belgesi Yok?</h2>
+            <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+              <p className="text-gray-700 mb-4">
+                <strong>Metasearch platformları için TURSAB belgesi yasal zorunluluk DEĞİLDİR.</strong> İşte nedenleri:
+              </p>
+              <div className="space-y-3 text-sm text-gray-700">
+                <div className="flex items-start gap-3">
+                  <span className="text-yellow-600 font-bold">1.</span>
+                  <div>
+                    <strong>Faaliyet Alanımız:</strong> NACE kodu 639102 - Web Arama Portalı Faaliyetleri. Bu, turizm işletme belgesi gerektirmeyen bir kategoridir.
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-yellow-600 font-bold">2.</span>
+                  <div>
+                    <strong>Direkt Satış Yapmıyoruz:</strong> Bilet satışı veya ödeme toplamıyoruz. Sadece karşılaştırma ve yönlendirme hizmeti sunuyoruz.
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-yellow-600 font-bold">3.</span>
+                  <div>
+                    <strong>TURSAB A Grubu Belgesi:</strong> Sadece direkt paket tur ve bilet satışı yapan acenteler için zorunludur. Biz bu kategoride değiliz.
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-yellow-600 font-bold">4.</span>
+                  <div>
+                    <strong>Yasal Dayanak:</strong> 1618 sayılı Seyahat Acentaları ve Seyahat Acentaları Birliği Kanunu kapsamı dışındayız.
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-yellow-100 rounded">
+                <p className="text-xs text-gray-700">
+                  💡 <strong>Benzer Örnekler:</strong> Skyscanner, Kayak, Google Flights gibi global metasearch platformları da TURSAB belgesi olmadan Türkiye'de hizmet vermektedir.
+                </p>
+              </div>
+            </div>
+
             <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">🏢 Şirket Kimliğimiz</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-blue-50 p-6 rounded-lg">
@@ -157,6 +218,60 @@ const Hakkimizda = () => {
                   Anında rezervasyon onayı, hızlı değişiklik işlemleri ve 7/24 destek hattımızla 
                   ihtiyaçlarınıza en kısa sürede yanıt veriyoruz.
                 </p>
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">🛡️ Güvenlik ve Sertifikalarımız</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-blue-50 p-6 rounded-lg text-center">
+                <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-blue-800 mb-2">SSL Sertifikası</h4>
+                <p className="text-sm text-gray-700">256-bit SSL şifreleme ile tüm verileriniz güvende</p>
+              </div>
+              
+              <div className="bg-green-50 p-6 rounded-lg text-center">
+                <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-green-800 mb-2">KVKK Uyumlu</h4>
+                <p className="text-sm text-gray-700">6698 sayılı Kişisel Verilerin Korunması Kanunu'na tam uyum</p>
+              </div>
+              
+              <div className="bg-purple-50 p-6 rounded-lg text-center">
+                <div className="h-16 w-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-purple-800 mb-2">Google Ads Uyumlu</h4>
+                <p className="text-sm text-gray-700">Tüm Google reklam politikalarına uygun işletme</p>
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">🤝 İş Modelimiz ve Gelir Kaynağımız</h2>
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg border-l-4 border-indigo-500">
+              <h3 className="text-lg font-semibold text-indigo-800 mb-4">Nasıl Para Kazanıyoruz?</h3>
+              <div className="space-y-3 text-gray-700">
+                <p>
+                  <strong>Komisyon Modeli:</strong> Metasearch platformu olarak bazı rezervasyonlardan komisyon alabiliriz. 
+                  Bu sizin için ekstra ücret anlamına gelmez - fiyatlar havayolu veya acente fiyatlarıyla aynıdır.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mt-4">
+                  <div className="bg-white p-4 rounded shadow-sm">
+                    <h4 className="font-semibold text-indigo-700 mb-2">✅ Size Maliyeti</h4>
+                    <p className="text-sm">Karşılaştırma hizmetimiz tamamen <strong>ÜCRETSİZ</strong>. Hiçbir ek ücret ödemezsiniz.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded shadow-sm">
+                    <h4 className="font-semibold text-indigo-700 mb-2">💰 Gelir Kaynağımız</h4>
+                    <p className="text-sm">Havayolu/acente bize küçük bir <strong>referans komisyonu</strong> öder (sizden değil!).</p>
+                  </div>
+                </div>
               </div>
             </div>
 
