@@ -12,7 +12,7 @@ import {
 
 const FAQ = () => {
   const handleCall = () => {
-    window.location.href = "tel:08502428117";
+    window.location.href = "tel:08503089840";
   };
 
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -27,16 +27,78 @@ const FAQ = () => {
 
   const faqCategories = [
     {
+      title: "Platform ve İş Modelimiz",
+      icon: <HelpCircle className="h-6 w-6 text-purple-600" />,
+      questions: [
+        {
+          q: "Resmi havayolu web sitesi misiniz?",
+          a: "Hayır, resmi bir havayolu web sitesi değiliz. Biz bir metasearch (uçuş karşılaştırma) platformuyuz. Havayollarının uçuşlarını karşılaştırıp en uygun seçeneği bulmanıza yardımcı oluyoruz."
+        },
+        {
+          q: "Nasıl para kazanıyorsunuz?",
+          a: "Karşılaştırma platformu olarak bazı rezervasyonlardan komisyon alabiliriz. Bu sizin için ekstra ücret anlamına gelmez. Hizmetimiz tamamen ücretsizdir ve sizin lehinizdedir."
+        },
+        {
+          q: "TURSAB belgeniz var mı?",
+          a: "Metasearch platformu (web arama portalı) olarak TURSAB belgesi gerekmemektedir. NACE faaliyet kodumuz: 639102 - Web Arama Portalı Faaliyetleri. Direkt bilet satışı yapmadığımız için A grubu seyahat acentesi belgesi zorunlu değildir."
+        },
+        {
+          q: "Fiyatlar neden farklı olabiliyor?",
+          a: "Fiyatlar havayollarından ve partnerlerimizden anlık olarak çekilmektedir. Talebe, mevsime ve havayolu kampanyalarına göre değişiklik gösterebilir. En güncel fiyat için lütfen bizimle iletişime geçin."
+        }
+      ]
+    },
+    {
       title: "Rezervasyon ve Bilet İşlemleri",
       icon: <CreditCard className="h-6 w-6 text-blue-600" />,
       questions: [
         {
           q: "Nasıl rezervasyon yapabilirim?",
-          a: "Rezervasyon yapmak için web sitemizi ziyaret edebilir, müşteri hizmetlerimizi arayabilir veya yetkili acentelerimizden hizmet alabilirsiniz. Online rezervasyon 7/24 açıktır."
+          a: "Size en uygun uçuşu bulduktan sonra, rezervasyon işlemi için sizi havayolu veya yetkili acenteyle buluşturuyoruz. 7/24 danışmanlık desteğimiz ile tüm süreçte yanınızdayız."
         },
         {
           q: "Rezervasyonumu nasıl iptal edebilirim?",
-          a: "Rezervasyon iptal işlemlerini PNR kodunuz ile web sitemizden veya müşteri hizmetlerimizi arayarak gerçekleştirebilirsiniz. İptal koşulları bilet türüne göre değişiklik gösterir."
+          a: "İptal işlemleri rezervasyonu yaptığınız havayolu veya acente üzerinden gerçekleştirilir. Biz size süreçte yardımcı olur ve yönlendirme yaparız. İptal koşulları bilet türüne göre değişir."
+        },
+        {
+          q: "Ödemeyi size mi yapacağım?",
+          a: "Hayır. Ödeme işlemleri direkt olarak havayolu veya yetkili acente üzerinden yapılır. Biz sadece karşılaştırma ve danışmanlık hizmeti sunuyoruz."
+        }
+      ]
+    },
+    {
+      title: "Destek ve İletişim",
+      icon: <Phone className="h-6 w-6 text-green-600" />,
+      questions: [
+        {
+          q: "Müşteri hizmetlerinize nasıl ulaşabilirim?",
+          a: "0850 308 98 40 numaralı telefonumuzdan 7/24 bize ulaşabilirsiniz. Ayrıca info@havayoluiletisim.com e-posta adresimizden de iletişime geçebilirsiniz."
+        },
+        {
+          q: "Havayolunun resmi telefonunu nereden bulabilirim?",
+          a: "Her havayolunun resmi iletişim bilgilerini ilgili havayolu sayfalarımızda küçük gri yazı ile belirtiyoruz. Bu numaralar direkt havayolu ile iletişim kurmak istemeniz durumunda paylaşılmaktadır."
+        },
+        {
+          q: "Yanıt süresi ne kadar?",
+          a: "Telefon desteğimizde anında yanıt, e-posta desteğinde ortalama 2-4 saat içinde yanıt veriyoruz. Acil durumlar için telefon desteğimizi kullanmanızı öneririz."
+        }
+      ]
+    },
+    {
+      title: "Güvenlik ve Gizlilik",
+      icon: <Users className="h-6 w-6 text-red-600" />,
+      questions: [
+        {
+          q: "Kişisel bilgilerim güvende mi?",
+          a: "Evet. KVKK (Kişisel Verilerin Korunması Kanunu) kapsamında tüm verileriniz güvenle saklanır ve 3. kişilerle paylaşılmaz. Detaylar için Kişisel Verilerin Korunması sayfamızı inceleyebilirsiniz."
+        },
+        {
+          q: "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+          a: "Ödeme işlemleri direkt havayolu veya acente üzerinden yapıldığı için, ilgili kurumun kabul ettiği tüm ödeme yöntemlerini kullanabilirsiniz (Kredi kartı, banka kartı, havale vb.)."
+        },
+        {
+          q: "SSL sertifikanız var mı?",
+          a: "Evet, sitemiz 256-bit SSL şifreleme ile korunmaktadır. Tüm veri iletişimi güvenli kanallar üzerinden gerçekleşir."
         }
       ]
     }

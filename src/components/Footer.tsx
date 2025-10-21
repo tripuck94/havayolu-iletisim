@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HelpCircle } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -12,12 +13,19 @@ export const Footer = () => {
           >
             Hakkımızda
           </Link>
-          <Link 
-            to="/nasil-calisir" 
-            className="text-gray-300 hover:text-white transition-colors text-sm font-semibold"
-          >
-            Nasıl Çalışır?
-          </Link>
+              <Link
+                to="/nasil-calisir"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-semibold"
+              >
+                Nasıl Çalışır?
+              </Link>
+              <Link
+                to="/hizmetler/sik-sorulan-sorular"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-semibold flex items-center gap-1"
+              >
+                <HelpCircle className="h-3 w-3" />
+                Sık Sorulan Sorular
+              </Link>
           <Link 
             to="/kisisel-verilerin-korunmasi" 
             className="text-gray-300 hover:text-white transition-colors text-sm"
@@ -99,6 +107,9 @@ export const Footer = () => {
         <div className="text-center border-t border-gray-700 pt-6">
           <p className="text-gray-400 text-sm">
             ©2024 Tüm Hakkı Saklıdır.
+          </p>
+          <p className="text-xs text-gray-500 text-center leading-relaxed mt-4">
+            * Karşılaştırma platformu olarak bazı rezervasyonlardan komisyon alabiliriz. Bu sizin için ekstra ücret anlamına gelmez.
           </p>
         </div>
       </div>

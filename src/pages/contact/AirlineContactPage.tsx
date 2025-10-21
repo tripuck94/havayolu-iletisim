@@ -518,10 +518,10 @@ const AirlineContactPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <MetaTags 
-        title={`${airlineData.name} İletişim - Havayolu İletişim`}
-        description={`${airlineData.name} müşteri hizmetleri ve bilet işlemleri için 7/24 destek. ${airlineData.description}`}
+        title={`${airlineData.name} Uçuşları Karşılaştırma | ${airlineData.shortName} Bilet Fiyatları - Havayolu İletişim`}
+        description={`${airlineData.name} uçuşlarını karşılaştırın. En uygun ${airlineData.shortName} bilet fiyatlarını bulun. 7/24 danışmanlık hizmeti ile rezervasyon desteği.`}
         path={location.pathname}
-        keywords={`${airlineData.name}, ${airlineData.name.toLowerCase()} iletişim, ${airlineData.name.toLowerCase()} telefon, havayolu iletişim`}
+        keywords={`${airlineData.name}, ${airlineData.shortName} uçuş karşılaştırma, ${airlineData.name.toLowerCase()} bilet fiyatları, havayolu karşılaştırma`}
       />
       <Header />
        
@@ -580,36 +580,23 @@ const AirlineContactPage = () => {
 
          <div className="container mx-auto px-4 space-y-12 md:px-8">
            
-          {/* Disclaimer Banner */}
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg shadow-sm">
-            <div className="flex items-start gap-3">
-              <svg className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-              </svg>
-              <div className="flex-1">
-                <p className="text-sm text-yellow-800 font-medium">
-                  <strong>Önemli:</strong> Bu sayfa {airlineData.name} havayolu şirketinin resmi web sitesi değildir. 
-                  Bağımsız bir karşılaştırma ve danışmanlık platformuyuz.
-                </p>
-                {airlineData.officialPhone && (
-                  <p className="text-xs text-yellow-700 mt-2">
-                    <span className="font-medium">{airlineData.name} Resmi Telefon:</span>{' '}
-                    <span className="select-none pointer-events-none">{airlineData.officialPhone}</span>
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-
           {/* About Section */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Plane className="h-6 w-6 text-blue-600" />
               Havayolu Hakkında
             </h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-lg mb-4">
               {airlineData.about}
             </p>
+            {airlineData.officialPhone && (
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <p className="text-xs text-gray-500">
+                  <span className="font-medium text-gray-600">{airlineData.name} Resmi İletişim:</span>{' '}
+                  <span className="select-none pointer-events-none">{airlineData.officialPhone}</span>
+                </p>
+              </div>
+            )}
           </div>
 
            {/* Services Grid */}
@@ -763,24 +750,24 @@ const AirlineContactPage = () => {
              </div>
            </div>
 
-           {/* Contact CTA */}
-           <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
-             <h2 className="text-2xl font-bold mb-4">
-               {airlineData.name} için her türlü işleminizde yanınızdayız
-             </h2>
-             <p className="text-lg opacity-90 mb-6">
-               7/24 profesyonel müşteri hizmetleri ile size yardımcı olmaktan mutluluk duyarız
-             </p>
-             <Button 
-               onClick={handleCall} 
-               className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3"
-             >
-               <Phone className="h-5 w-5 mr-2" />
-               0850 242 81 17 - Hemen Arayın
-             </Button>
-           </div>
-         </div>
-       </div>
+          {/* Contact CTA */}
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold mb-4">
+              {airlineData.name} için her türlü işleminizde yanınızdayız
+            </h2>
+            <p className="text-lg opacity-90 mb-6">
+              7/24 profesyonel müşteri hizmetleri ile size yardımcı olmaktan mutluluk duyarız
+            </p>
+            <Button 
+              onClick={handleCall} 
+              className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3"
+            >
+              <Phone className="h-5 w-5 mr-2" />
+              0850 308 98 40 - Hemen Arayın
+            </Button>
+          </div>
+        </div>
+      </div>
 
       {/* Mobile Fixed Button */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">

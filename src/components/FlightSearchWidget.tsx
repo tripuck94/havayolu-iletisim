@@ -70,10 +70,21 @@ export const FlightSearchWidget = ({
   }, [resolvedId]);
 
   return (
-    <div
-      id={resolvedId}
-      className={`w-full overflow-hidden ${className ? className : ""}`}
-    >
+    <div className="w-full">
+      <div
+        id={resolvedId}
+        className={`w-full overflow-hidden ${className ? className : ""}`}
+      >
+      </div>
+      {/* Widget Disclaimer */}
+      <div className="mt-3 text-center">
+        <p className="text-xs text-gray-500 leading-relaxed">
+          * Fiyatlar anlık değişebilir. Uçuş arama widget'ı partner platformlar tarafından sağlanmaktadır.
+        </p>
+        <p className="text-xs text-gray-400 mt-1">
+          Gösterilen fiyatlar tahminidir ve rezervasyon sırasında farklılık gösterebilir.
+        </p>
+      </div>
     </div>
   );
 };
