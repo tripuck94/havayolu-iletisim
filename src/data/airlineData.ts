@@ -19,6 +19,7 @@ export interface AirlineData {
   };
   founded: string;
   headquarters: string;
+  officialPhone?: string; // Havayolunun resmi telefon numarası
 }
 
 export const airlines: Record<string, AirlineData> = {
@@ -42,7 +43,8 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "Economy Class: 20kg, Comfort Class: 25kg, Business Class: 30kg bagaj hakkı."
     },
     founded: "1933",
-    headquarters: "İstanbul, Türkiye"
+    headquarters: "İstanbul, Türkiye",
+    officialPhone: "+90 850 333 0 849"
   },
   sunexpress: {
     id: "sunexpress",
@@ -64,7 +66,8 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "SunEco: 15kg, Sunclass: 20kg bagaj hakkı. Ek bagaj satın alınabilir."
     },
     founded: "1989",
-    headquarters: "Antalya, Türkiye"
+    headquarters: "Antalya, Türkiye",
+    officialPhone: "+90 850 399 67 67"
   },
   pegasus: {
     id: "pegasus",
@@ -86,7 +89,8 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "Essentials: El bagajı dahil, Advantage: 15kg, Plus: 20kg bagaj hakkı."
     },
     founded: "1990",
-    headquarters: "İstanbul, Türkiye"
+    headquarters: "İstanbul, Türkiye",
+    officialPhone: "+90 888 228 12 12"
   },
   ajet: {
     id: "ajet",
@@ -108,7 +112,8 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "Smart: El bagajı dahil, Plus: 15kg bagaj hakkı."
     },
     founded: "2021",
-    headquarters: "Ankara, Türkiye"
+    headquarters: "Ankara, Türkiye",
+    officialPhone: "+90 850 2222 538"
   },
   azal: {
     id: "azal",

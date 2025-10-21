@@ -580,16 +580,37 @@ const AirlineContactPage = () => {
 
          <div className="container mx-auto px-4 space-y-12 md:px-8">
            
-           {/* About Section */}
-           <div className="bg-white rounded-lg shadow-lg p-8">
-             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-               <Plane className="h-6 w-6 text-blue-600" />
-               Havayolu Hakkında
-             </h2>
-             <p className="text-gray-700 leading-relaxed text-lg">
-               {airlineData.about}
-             </p>
-           </div>
+          {/* Disclaimer Banner */}
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg shadow-sm">
+            <div className="flex items-start gap-3">
+              <svg className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+              <div className="flex-1">
+                <p className="text-sm text-yellow-800 font-medium">
+                  <strong>Önemli:</strong> Bu sayfa {airlineData.name} havayolu şirketinin resmi web sitesi değildir. 
+                  Bağımsız bir karşılaştırma ve danışmanlık platformuyuz.
+                </p>
+                {airlineData.officialPhone && (
+                  <p className="text-xs text-yellow-700 mt-2">
+                    <span className="font-medium">{airlineData.name} Resmi Telefon:</span>{' '}
+                    <span className="select-none pointer-events-none">{airlineData.officialPhone}</span>
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* About Section */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Plane className="h-6 w-6 text-blue-600" />
+              Havayolu Hakkında
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              {airlineData.about}
+            </p>
+          </div>
 
            {/* Services Grid */}
            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -641,22 +662,30 @@ const AirlineContactPage = () => {
                </ul>
              </div>
 
-             {/* Quick Contact */}
-             <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg shadow-lg p-6">
-               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                 <Phone className="h-5 w-5" />
-                 Hızlı İletişim
-               </h3>
-               <p className="text-2xl font-bold mb-2">0850 242 81 17</p>
-               <p className="text-sm opacity-90 mb-4">7/24 Müşteri Hizmetleri</p>
-               <Button 
-                 onClick={handleCall} 
-                 className="w-full bg-white text-blue-600 hover:bg-gray-100"
-               >
-                 <Phone className="h-4 w-4 mr-2" />
-                 Hemen Ara
-               </Button>
-             </div>
+            {/* Quick Contact */}
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                Hızlı İletişim
+              </h3>
+              <p className="text-2xl font-bold mb-2">0850 308 98 40</p>
+              <p className="text-sm opacity-90 mb-4">7/24 Danışmanlık Hizmeti</p>
+              <Button 
+                onClick={handleCall} 
+                className="w-full bg-white text-blue-600 hover:bg-gray-100"
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                Hemen Ara
+              </Button>
+              {airlineData.officialPhone && (
+                <div className="mt-4 pt-4 border-t border-white/20">
+                  <p className="text-[10px] text-white/60 leading-relaxed">
+                    <span className="font-medium">{airlineData.name} Resmi İletişim:</span><br />
+                    <span className="select-none pointer-events-none">{airlineData.officialPhone}</span>
+                  </p>
+                </div>
+              )}
+            </div>
            </div>
 
            {/* Policies Section */}
