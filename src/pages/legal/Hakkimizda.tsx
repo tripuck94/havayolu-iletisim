@@ -91,11 +91,6 @@ const Hakkimizda = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-4 p-3 bg-yellow-100 rounded">
-                <p className="text-xs text-gray-700">
-                  💡 <strong>Benzer Örnekler:</strong> Skyscanner, Kayak, Google Flights gibi global metasearch platformları da TURSAB belgesi olmadan Türkiye'de hizmet vermektedir.
-                </p>
-              </div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-800 border-b pb-2">🏢 Şirket Kimliğimiz</h2>
