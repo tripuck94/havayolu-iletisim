@@ -887,7 +887,7 @@ const AirlineContactPage = () => {
                </a>
 
                {/* Online Check-in */}
-               <a href="/hizmetler/online-check-in" className="group block">
+               <a href={`/hizmetler/${airlineData.id}-check-in`} className="group block">
                  <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
                    <div className="flex items-center gap-3 mb-3">
                      <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
