@@ -580,23 +580,73 @@ const AirlineContactPage = () => {
 
          <div className="container mx-auto px-4 space-y-12 md:px-8">
            
+          {/* Official Contact Info Card - PROMINENT */}
+          {(airlineData.officialPhone || airlineData.officialWebsite || airlineData.officialEmail) && (
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-6 md:p-8 shadow-lg">
+              <div className="flex flex-col md:flex-row items-start gap-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Shield className="h-8 w-8 text-blue-600" />
+                </div>
+                <div className="flex-1 w-full">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    {airlineData.name} Resmi İletişim Bilgileri
+                  </h2>
+                  <div className="space-y-3">
+                    {airlineData.officialPhone && (
+                      <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg">
+                        <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-blue-600 text-lg md:text-xl">
+                            {airlineData.officialPhone}
+                          </span>
+                          <span className="text-sm text-gray-600 ml-2">(Resmi Çağrı Merkezi)</span>
+                        </div>
+                      </div>
+                    )}
+                    {airlineData.officialWebsite && (
+                      <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg">
+                        <svg className="h-5 w-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                        <a 
+                          href={airlineData.officialWebsite} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+                        >
+                          {airlineData.officialWebsite.replace('https://', '').replace('www.', '')}
+                        </a>
+                      </div>
+                    )}
+                    {airlineData.officialEmail && (
+                      <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg">
+                        <svg className="h-5 w-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span className="text-gray-700 font-medium">{airlineData.officialEmail}</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="mt-4 p-3 bg-amber-50 border-l-4 border-amber-400 rounded">
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      ℹ️ Yukarıdaki bilgiler <strong>{airlineData.name}</strong>'ın resmi iletişim bilgileridir. 
+                      Rezervasyon danışmanlığı ve uçuş karşılaştırma hizmeti için <strong className="text-blue-600">0850 308 98 40</strong> numaralı telefonu arayabilirsiniz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* About Section */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Plane className="h-6 w-6 text-blue-600" />
               Havayolu Hakkında
             </h2>
-            <p className="text-gray-700 leading-relaxed text-lg mb-4">
+            <p className="text-gray-700 leading-relaxed text-lg">
               {airlineData.about}
             </p>
-            {airlineData.officialPhone && (
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-xs text-gray-500">
-                  <span className="font-medium text-gray-600">{airlineData.name} Resmi İletişim:</span>{' '}
-                  <span className="select-none pointer-events-none">{airlineData.officialPhone}</span>
-                </p>
-              </div>
-            )}
           </div>
 
            {/* Services Grid */}
@@ -686,6 +736,198 @@ const AirlineContactPage = () => {
                  <h3 className="font-bold text-green-800 mb-2">Bagaj Hakları</h3>
                  <p className="text-sm text-gray-700">{airlineData.policies.baggage}</p>
                </div>
+             </div>
+           </div>
+
+           {/* Detailed Services Section - Mobilfly Style */}
+           <div className="bg-white rounded-lg shadow-lg p-8">
+             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+               <Briefcase className="h-6 w-6 text-blue-600" />
+               {airlineData.name} Hizmetleri
+             </h2>
+             <p className="text-gray-600 mb-6">
+               {airlineData.name} ile ilgili tüm işlemleriniz için size yardımcı oluyoruz. Aşağıdaki hizmetlerimizden faydalanabilirsiniz:
+             </p>
+             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+               {/* Bilet Satın Alma */}
+               <a href={`/${airlineData.id}-bilet-satin-alma`} className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bilet Satın Alma</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Yeni bilet rezervasyonu ve satın alma işlemleri</p>
+                 </div>
+               </a>
+
+               {/* Bilet İptal ve İade */}
+               <a href="/hizmetler/iptal-iade" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bilet İptal ve İade</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Bilet iptal işlemleri ve iade süreçleri</p>
+                 </div>
+               </a>
+
+               {/* Bilet Değişikliği */}
+               <a href="/hizmetler/bilet-degisikligi" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bilet Değişikliği</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Tarih, saat ve rota değişiklik işlemleri</p>
+                 </div>
+               </a>
+
+               {/* Online Check-in */}
+               <a href="/hizmetler/online-check-in" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Online Check-in</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Hızlı ve kolay online check-in işlemleri</p>
+                 </div>
+               </a>
+
+               {/* Bagaj Bilgileri */}
+               <a href="/hizmetler/bagaj-hizmeti" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bagaj Bilgileri</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Bagaj hakları, ek bagaj ve kayıp bagaj işlemleri</p>
+                 </div>
+               </a>
+
+               {/* Koltuk Seçimi */}
+               <a href="/hizmetler/koltuk-secimi" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Koltuk Seçimi</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Özel koltuk seçimi ve yerleştirme hizmetleri</p>
+                 </div>
+               </a>
+
+               {/* Özel Hizmetler */}
+               <a href="/hizmetler/ozel-yardim" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Özel Hizmetler</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Refakatsiz çocuk, evcil hayvan ve özel yardım</p>
+                 </div>
+               </a>
+
+               {/* Kayıp Bagaj */}
+               <a href="/hizmetler/kayip-bagaj" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Kayıp Bagaj</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Kayıp bagaj takibi ve bildirim işlemleri</p>
+                 </div>
+               </a>
+
+               {/* Sınıf Yükseltme */}
+               <a href="/hizmetler/sinif-yukseltme" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Sınıf Yükseltme</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Business ve First Class yükseltme işlemleri</p>
+                 </div>
+               </a>
+
+               {/* İsim Değişikliği */}
+               <a href="/hizmetler/isim-degisikligi" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">İsim Değişikliği</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Bilet üzerinde isim düzeltme işlemleri</p>
+                 </div>
+               </a>
+
+               {/* Uçuş Durumu */}
+               <a href="/hizmetler/ucus-gecikmesi" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Uçuş Durumu</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Gerçek zamanlı uçuş takibi ve gecikme bilgileri</p>
+                 </div>
+               </a>
+
+               {/* Rezervasyon Yönetimi */}
+               <a href="/hizmetler/rezervasyon-yonetimi" className="group block">
+                 <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
+                   <div className="flex items-center gap-3 mb-3">
+                     <div className="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center flex-shrink-0">
+                       <svg className="h-6 w-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                       </svg>
+                     </div>
+                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Rezervasyon Yönetimi</h3>
+                   </div>
+                   <p className="text-sm text-gray-600">Mevcut rezervasyonlarınızı görüntüleme ve yönetme</p>
+                 </div>
+               </a>
              </div>
            </div>
 

@@ -20,6 +20,8 @@ export interface AirlineData {
   founded: string;
   headquarters: string;
   officialPhone?: string; // Havayolunun resmi telefon numarası
+  officialWebsite?: string; // Havayolunun resmi web sitesi
+  officialEmail?: string; // Havayolunun resmi e-posta adresi
 }
 
 export const airlines: Record<string, AirlineData> = {
@@ -44,7 +46,9 @@ export const airlines: Record<string, AirlineData> = {
     },
     founded: "1933",
     headquarters: "İstanbul, Türkiye",
-    officialPhone: "+90 850 333 0 849"
+    officialPhone: "+90 850 333 0 849",
+    officialWebsite: "https://www.turkishairlines.com",
+    officialEmail: "callcenter@thy.com"
   },
   sunexpress: {
     id: "sunexpress",
@@ -67,7 +71,9 @@ export const airlines: Record<string, AirlineData> = {
     },
     founded: "1989",
     headquarters: "Antalya, Türkiye",
-    officialPhone: "+90 850 399 67 67"
+    officialPhone: "+90 850 399 67 67",
+    officialWebsite: "https://www.sunexpress.com",
+    officialEmail: "info@sunexpress.com"
   },
   pegasus: {
     id: "pegasus",
@@ -90,7 +96,9 @@ export const airlines: Record<string, AirlineData> = {
     },
     founded: "1990",
     headquarters: "İstanbul, Türkiye",
-    officialPhone: "+90 888 228 12 12"
+    officialPhone: "+90 888 228 12 12",
+    officialWebsite: "https://www.flypgs.com",
+    officialEmail: "cagrimerkezi@flypgs.com"
   },
   ajet: {
     id: "ajet",
@@ -113,7 +121,9 @@ export const airlines: Record<string, AirlineData> = {
     },
     founded: "2021",
     headquarters: "Ankara, Türkiye",
-    officialPhone: "+90 850 2222 538"
+    officialPhone: "+90 850 2222 538",
+    officialWebsite: "https://www.ajet.com",
+    officialEmail: "info@ajet.com"
   },
   azal: {
     id: "azal",
@@ -135,7 +145,9 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "Economy: 20kg, Business: 30kg bagaj hakkı."
     },
     founded: "1992",
-    headquarters: "Bakü, Azerbaycan"
+    headquarters: "Bakü, Azerbaycan",
+    officialWebsite: "https://www.azal.az",
+    officialEmail: "info@azal.az"
   },
   qatar: {
     id: "qatar",
@@ -157,7 +169,9 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "Economy: 30kg, Business: 40kg, First: 50kg bagaj hakkı."
     },
     founded: "1993",
-    headquarters: "Doha, Katar"
+    headquarters: "Doha, Katar",
+    officialWebsite: "https://www.qatarairways.com",
+    officialEmail: "help@qatarairways.com.qa"
   },
   aeroflot: {
     id: "aeroflot",
@@ -179,7 +193,9 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "Economy: 23kg, Business: 32kg bagaj hakkı."
     },
     founded: "1923",
-    headquarters: "Moskova, Rusya"
+    headquarters: "Moskova, Rusya",
+    officialWebsite: "https://www.aeroflot.ru",
+    officialEmail: "support@aeroflot.ru"
   },
   emirates: {
     id: "emirates",
@@ -201,7 +217,9 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "Economy: 30kg, Premium Economy: 35kg, Business: 40kg, First: 50kg."
     },
     founded: "1985",
-    headquarters: "Dubai, BAE"
+    headquarters: "Dubai, BAE",
+    officialWebsite: "https://www.emirates.com",
+    officialEmail: "support@emirates.com"
   },
   airarabia: {
     id: "airarabia",
@@ -223,7 +241,9 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "20kg bagaj hakkı dahil, ek bagaj seçenekleri mevcut."
     },
     founded: "2003",
-    headquarters: "Şarjah, BAE"
+    headquarters: "Şarjah, BAE",
+    officialWebsite: "https://www.airarabia.com",
+    officialEmail: "callcenter@airarabia.com"
   },
   flydubai: {
     id: "flydubai",
@@ -245,7 +265,9 @@ export const airlines: Record<string, AirlineData> = {
       baggage: "20kg bagaj hakkı, Business Class'ta 30kg."
     },
     founded: "2008",
-    headquarters: "Dubai, BAE"
+    headquarters: "Dubai, BAE",
+    officialWebsite: "https://www.flydubai.com",
+    officialEmail: "call.centre@flydubai.com"
   }
 };
 
