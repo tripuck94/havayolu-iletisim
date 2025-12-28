@@ -623,9 +623,9 @@ const AirlineContactPage = () => {
           <div className="absolute inset-0">
             <img
               src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_2400,h_1200,c_fill/unsplash-1529070538774-1843cb3265df.webp"
-              alt="Havayolu iletişim arka plan görseli"
+              alt=""
               className="h-full w-full object-cover"
-              loading="lazy"
+              loading="eager"
             />
              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-slate-900/85" />
              <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
