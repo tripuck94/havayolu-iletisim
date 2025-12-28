@@ -8,72 +8,86 @@ const airlineData = {
   thy: {
     name: "Türk Hava Yolları",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/TK.webp",
-    phone: "08502600849",
+    phone: "08503089840",
     color: "thy",
-    title: "THY"
+    title: "THY",
+    officialPhone: "+90 850 333 0 849",
+    officialWebsite: "https://www.turkishairlines.com"
   },
   pegasus: {
     name: "Pegasus",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/PC.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "pegasus",
-    title: "Pegasus"
+    title: "Pegasus",
+    officialPhone: "+90 888 228 12 12",
+    officialWebsite: "https://www.flypgs.com"
   },
   sunexpress: {
     name: "SunExpress",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/XQ.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "sunexpress",
-    title: "SunExpress"
+    title: "SunExpress",
+    officialPhone: "+90 850 399 67 67",
+    officialWebsite: "https://www.sunexpress.com"
   },
   ajet: {
     name: "AJet",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/VF.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "ajet",
-    title: "AJet"
+    title: "AJet",
+    officialPhone: "+90 850 2222 538",
+    officialWebsite: "https://www.ajet.com"
   },
   azal: {
     name: "AZAL",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/j2.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "azal",
-    title: "AZAL"
+    title: "AZAL",
+    officialWebsite: "https://www.azal.az"
   },
   qatar: {
     name: "Qatar Airways",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/QR.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "qatar",
-    title: "Qatar Airways"
+    title: "Qatar Airways",
+    officialWebsite: "https://www.qatarairways.com"
   },
   aeroflot: {
     name: "Aeroflot",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/SU.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "aeroflot",
-    title: "Aeroflot"
+    title: "Aeroflot",
+    officialWebsite: "https://www.aeroflot.ru"
   },
   emirates: {
     name: "Emirates",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/EK.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "emirates",
-    title: "Emirates"
+    title: "Emirates",
+    officialWebsite: "https://www.emirates.com"
   },
   airarabia: {
     name: "Air Arabia",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/G9.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "airarabia",
-    title: "Air Arabia"
+    title: "Air Arabia",
+    officialWebsite: "https://www.airarabia.com"
   },
   flydubai: {
     name: "Flydubai",
     logo: "https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,h_64,w_64,q_auto/images/airline/small/FZ.webp",
-    phone: "08502428117",
+    phone: "08503089840",
     color: "flydubai",
-    title: "Flydubai"
+    title: "Flydubai",
+    officialWebsite: "https://www.flydubai.com"
   }
 };
 
