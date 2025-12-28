@@ -612,7 +612,7 @@ const AirlineContactPage = () => {
              <span className="text-gray-400">/</span>
              <a href="/iletisim" className="font-medium transition-colors hover:opacity-80" style={{ color: getColorValue(airlineData.primaryColor) }}>İletişim</a>
              <span className="text-gray-400">/</span>
-             <span className="text-gray-900 font-bold">{airlineData.shortName}</span>
+             <span className="text-gray-900 font-bold">{airlineData.name}</span>
            </nav>
          </div>
        </div>
