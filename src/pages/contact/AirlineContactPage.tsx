@@ -24,6 +24,23 @@ const AirlineContactPage = () => {
     window.location.href = "tel:08503089840";
   };
 
+  // Get color value for inline styles
+  const getColorValue = (colorName: string) => {
+    const colors: Record<string, string> = {
+      'thy': '#e30a17',
+      'pegasus': '#fed501',
+      'sunexpress': '#ffb81c',
+      'ajet': '#00a651',
+      'azal': '#0066b2',
+      'qatar': '#5c0632',
+      'aeroflot': '#0078c8',
+      'emirates': '#d71921',
+      'airarabia': '#d52b1e',
+      'flydubai': '#0078c8'
+    };
+    return colors[colorName] || '#2563eb';
+  };
+
   const [openFaqItems, setOpenFaqItems] = useState<number[]>([]);
 
   const toggleFaqItem = (index: number) => {
@@ -580,19 +597,22 @@ const AirlineContactPage = () => {
       <Header />
        
        {/* Breadcrumb Navigation */}
-       <div className={`bg-gradient-to-r from-${airlineData.primaryColor}/5 to-${airlineData.primaryColor}/10 border-b-2 border-${airlineData.primaryColor}/20 shadow-sm`}>
+       <div className="bg-white border-b-2 shadow-sm" style={{ 
+         background: `linear-gradient(to right, ${getColorValue(airlineData.primaryColor)}15, ${getColorValue(airlineData.primaryColor)}25)`,
+         borderColor: `${getColorValue(airlineData.primaryColor)}40`
+       }}>
          <div className="container mx-auto px-4 md:px-8 py-4">
            <nav className="text-sm flex items-center gap-2">
-             <a href="/" className={`text-${airlineData.primaryColor} hover:text-${airlineData.hoverColor} font-medium transition-colors`}>
+             <a href="/" className="font-medium transition-colors hover:opacity-80" style={{ color: getColorValue(airlineData.primaryColor) }}>
                <svg className="h-4 w-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                </svg>
                Ana Sayfa
              </a>
              <span className="text-gray-400">/</span>
-             <a href="/iletisim" className={`text-${airlineData.primaryColor} hover:text-${airlineData.hoverColor} font-medium transition-colors`}>İletişim</a>
+             <a href="/iletisim" className="font-medium transition-colors hover:opacity-80" style={{ color: getColorValue(airlineData.primaryColor) }}>İletişim</a>
              <span className="text-gray-400">/</span>
-             <span className="text-gray-900 font-bold">{airlineData.name}</span>
+             <span className="text-gray-900 font-bold">{airlineData.shortName}</span>
            </nav>
          </div>
        </div>
