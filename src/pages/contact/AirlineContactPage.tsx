@@ -580,14 +580,19 @@ const AirlineContactPage = () => {
       <Header />
        
        {/* Breadcrumb Navigation */}
-       <div className="bg-gray-50 border-b border-gray-200">
-         <div className="container mx-auto px-4 md:px-8 py-3">
-           <nav className="text-sm text-gray-600 flex items-center gap-2">
-             <a href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</a>
-             <span>/</span>
-             <a href="/iletisim" className="hover:text-blue-600 transition-colors">İletişim</a>
-             <span>/</span>
-             <span className="text-gray-900 font-semibold">{airlineData.name}</span>
+       <div className="bg-white border-b-2 border-gray-300 shadow-sm">
+         <div className="container mx-auto px-4 md:px-8 py-4">
+           <nav className="text-sm flex items-center gap-2">
+             <a href="/" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+               <svg className="h-4 w-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+               </svg>
+               Ana Sayfa
+             </a>
+             <span className="text-gray-400">/</span>
+             <a href="/iletisim" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">İletişim</a>
+             <span className="text-gray-400">/</span>
+             <span className="text-gray-900 font-bold">{airlineData.name}</span>
            </nav>
          </div>
        </div>
