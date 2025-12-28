@@ -580,17 +580,17 @@ const AirlineContactPage = () => {
       <Header />
        
        {/* Breadcrumb Navigation */}
-       <div className="bg-white border-b-2 border-gray-300 shadow-sm">
+       <div className={`bg-gradient-to-r from-${airlineData.primaryColor}/5 to-${airlineData.primaryColor}/10 border-b-2 border-${airlineData.primaryColor}/20 shadow-sm`}>
          <div className="container mx-auto px-4 md:px-8 py-4">
            <nav className="text-sm flex items-center gap-2">
-             <a href="/" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+             <a href="/" className={`text-${airlineData.primaryColor} hover:text-${airlineData.hoverColor} font-medium transition-colors`}>
                <svg className="h-4 w-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                </svg>
                Ana Sayfa
              </a>
              <span className="text-gray-400">/</span>
-             <a href="/iletisim" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">İletişim</a>
+             <a href="/iletisim" className={`text-${airlineData.primaryColor} hover:text-${airlineData.hoverColor} font-medium transition-colors`}>İletişim</a>
              <span className="text-gray-400">/</span>
              <span className="text-gray-900 font-bold">{airlineData.name}</span>
            </nav>
@@ -600,13 +600,13 @@ const AirlineContactPage = () => {
        <div className="space-y-12">
          {/* Hero Section with Background */}
          <section className="relative -mx-0 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
-           <div className="absolute inset-0">
-             <img
-               src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_2400,h_1200,c_fill/unsplash-1529070538774-1843cb3265df.webp"
-               alt={`${airlineData.name} arka planı`}
-               className="h-full w-full object-cover"
-               loading="lazy"
-             />
+          <div className="absolute inset-0">
+            <img
+              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_2400,h_1200,c_fill/unsplash-1529070538774-1843cb3265df.webp"
+              alt="Havayolu iletişim arka plan görseli"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-slate-900/85" />
              <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
            </div>
