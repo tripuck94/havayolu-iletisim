@@ -616,7 +616,7 @@ const AirlineContactPage = () => {
            </nav>
          </div>
        </div>
-
+       
        <div className="space-y-12">
          {/* Hero Section with Background */}
         <section className="relative -mx-0 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
@@ -624,7 +624,7 @@ const AirlineContactPage = () => {
             <div className="absolute inset-0 opacity-10" style={{
               backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
             }} />
-          </div>
+           </div>
 
            <div className="container mx-auto px-4 md:px-8">
              <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
@@ -634,14 +634,14 @@ const AirlineContactPage = () => {
                  className="h-28 w-28 drop-shadow-[0_12px_40px_rgba(0,0,0,0.4)] bg-white/10 backdrop-blur-sm rounded-2xl p-4"
                  loading="lazy"
                />
-              <div className="space-y-4">
-                <h1 className="text-4xl font-bold tracking-tight md:text-6xl drop-shadow-2xl">
+               <div className="space-y-4">
+                 <h1 className="text-4xl font-bold tracking-tight md:text-6xl drop-shadow-2xl">
                   {airlineData.name} İletişim
-                </h1>
-                <p className="mx-auto max-w-3xl text-lg text-white/90 md:text-xl drop-shadow-lg">
-                  {airlineData.description}
-                </p>
-              </div>
+                 </h1>
+                 <p className="mx-auto max-w-3xl text-lg text-white/90 md:text-xl drop-shadow-lg">
+                   {airlineData.description}
+                 </p>
+               </div>
 
                <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-white">
                  <span className="flex items-center gap-2 rounded-full bg-white/15 px-5 py-2 backdrop-blur ring-1 ring-white/30">
@@ -724,17 +724,17 @@ const AirlineContactPage = () => {
               </div>
             </div>
           )}
-
-          {/* About Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <Plane className="h-6 w-6 text-blue-600" />
-              Havayolu Hakkında
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              {airlineData.about}
-            </p>
-          </div>
+           
+           {/* About Section */}
+           <div className="bg-white rounded-lg shadow-lg p-8">
+             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+               <Plane className="h-6 w-6 text-blue-600" />
+               Havayolu Hakkında
+             </h2>
+             <p className="text-gray-700 leading-relaxed text-lg">
+               {airlineData.about}
+             </p>
+           </div>
 
            {/* Services Grid */}
            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -786,22 +786,22 @@ const AirlineContactPage = () => {
                </ul>
              </div>
 
-            {/* Quick Contact */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                Hızlı İletişim
-              </h3>
+             {/* Quick Contact */}
+             <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg shadow-lg p-6">
+               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                 <Phone className="h-5 w-5" />
+                 Hızlı İletişim
+               </h3>
               <p className="text-2xl font-bold mb-2">0850 308 98 40</p>
               <p className="text-sm opacity-90 mb-4">7/24 Danışmanlık Hizmeti</p>
-              <Button 
-                onClick={handleCall} 
-                className="w-full bg-white text-blue-600 hover:bg-gray-100"
-              >
-                <Phone className="h-4 w-4 mr-2" />
-                Hemen Ara
-              </Button>
-            </div>
+               <Button 
+                 onClick={handleCall} 
+                 className="w-full bg-white text-blue-600 hover:bg-gray-100"
+               >
+                 <Phone className="h-4 w-4 mr-2" />
+                 Hemen Ara
+               </Button>
+             </div>
            </div>
 
            {/* Policies Section */}
@@ -852,7 +852,7 @@ const AirlineContactPage = () => {
                </a>
 
                {/* Bilet İptal ve İade */}
-               <a href="/hizmetler/iptal-iade" className="group block">
+               <a href="/hizmetler/iptal-ve-iade" className="group block">
                  <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
                    <div className="flex items-center gap-3 mb-3">
                      <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -897,7 +897,7 @@ const AirlineContactPage = () => {
                </a>
 
                {/* Bagaj Bilgileri */}
-               <a href="/hizmetler/bagaj-hizmeti" className="group block">
+               <a href="/hizmetler/bagaj-hizmetleri" className="group block">
                  <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
                    <div className="flex items-center gap-3 mb-3">
                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -927,7 +927,7 @@ const AirlineContactPage = () => {
                </a>
 
                {/* Özel Hizmetler */}
-               <a href="/hizmetler/ozel-yardim" className="group block">
+               <a href="/hizmetler/ozel-hizmetler" className="group block">
                  <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
                    <div className="flex items-center gap-3 mb-3">
                      <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -972,7 +972,7 @@ const AirlineContactPage = () => {
                </a>
 
                {/* İsim Değişikliği */}
-               <a href="/hizmetler/isim-degisikligi" className="group block">
+               <a href="/hizmetler/isim-duzeltme" className="group block">
                  <div className="border-2 border-gray-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all">
                    <div className="flex items-center gap-3 mb-3">
                      <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -1068,8 +1068,8 @@ const AirlineContactPage = () => {
                    </li>
                  </ul>
                </div>
-            </div>
-          </div>
+             </div>
+           </div>
 
           {/* FAQ Section */}
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -1110,24 +1110,24 @@ const AirlineContactPage = () => {
             </div>
           </div>
 
-          {/* Contact CTA */}
-          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold mb-4">
-              {airlineData.name} için her türlü işleminizde yanınızdayız
-            </h2>
-            <p className="text-lg opacity-90 mb-6">
-              7/24 profesyonel müşteri hizmetleri ile size yardımcı olmaktan mutluluk duyarız
-            </p>
-            <Button 
-              onClick={handleCall} 
-              className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3"
-            >
-              <Phone className="h-5 w-5 mr-2" />
+           {/* Contact CTA */}
+           <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
+             <h2 className="text-2xl font-bold mb-4">
+               {airlineData.name} için her türlü işleminizde yanınızdayız
+             </h2>
+             <p className="text-lg opacity-90 mb-6">
+               7/24 profesyonel müşteri hizmetleri ile size yardımcı olmaktan mutluluk duyarız
+             </p>
+             <Button 
+               onClick={handleCall} 
+               className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3"
+             >
+               <Phone className="h-5 w-5 mr-2" />
               0850 308 98 40 - Hemen Arayın
-            </Button>
-          </div>
-        </div>
-      </div>
+             </Button>
+           </div>
+         </div>
+       </div>
 
       {/* Mobile Fixed Button */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg">
