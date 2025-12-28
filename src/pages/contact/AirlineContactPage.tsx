@@ -1,4 +1,4 @@
-import { Phone, Plane, MapPin, Briefcase, Users, Award, Clock, Shield } from "lucide-react";
+import { Phone, Plane, MapPin, Briefcase, Users, Award, Clock, Shield, HelpCircle, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -6,6 +6,12 @@ import { FlightSearchWidget } from "@/components/FlightSearchWidget";
 import { useLocation, Navigate } from "react-router-dom";
 import { getAirlineData } from "@/data/airlineData";
 import { MetaTags } from "@/components/MetaTags";
+import { useState } from "react";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 const AirlineContactPage = () => {
   const location = useLocation();
@@ -16,6 +22,54 @@ const AirlineContactPage = () => {
 
   const handleCall = () => {
     window.location.href = "tel:08503089840";
+  };
+
+  const [openFaqItems, setOpenFaqItems] = useState<number[]>([]);
+
+  const toggleFaqItem = (index: number) => {
+    setOpenFaqItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  // FAQ data for each airline
+  const getFaqData = (airlineId: string, airlineName: string) => {
+    return [
+      {
+        question: `${airlineName} biletimi nasıl iptal edebilirim?`,
+        answer: `${airlineName} bilet iptal işlemleri için bizimle iletişime geçebilirsiniz. İptal koşulları bilet türünüze göre değişiklik gösterir. Flex biletlerde daha esnek iptal hakları bulunur. Detaylı bilgi için 0850 308 98 40 numaralı telefonu arayabilirsiniz.`
+      },
+      {
+        question: `${airlineName} online check-in nasıl yapılır?`,
+        answer: `${airlineName} online check-in işlemini uçuştan 24 saat önce başlatabilirsiniz. Resmi web sitesi veya mobil uygulamadan PNR kodunuz ve soyadınızla check-in yapabilirsiniz. Check-in konusunda yardıma ihtiyacınız varsa bize ulaşabilirsiniz.`
+      },
+      {
+        question: `${airlineName} bagaj hakları nelerdir?`,
+        answer: `${airlineName} bagaj hakları bilet sınıfınıza göre değişir. Economy sınıfta genellikle 20kg, Business sınıfta 30-40kg bagaj hakkı bulunur. Ek bagaj satın almak veya detaylı bilgi almak için bizimle iletişime geçebilirsiniz.`
+      },
+      {
+        question: `${airlineName} bilet değişikliği ücreti ne kadardır?`,
+        answer: `Bilet değişikliği ücretleri fare türüne, rotaya ve değişiklik zamanına göre değişir. Flex biletlerde genellikle ücretsiz veya düşük ücretli değişiklik hakkı vardır. Kesin fiyat bilgisi için lütfen bizimle iletişime geçin.`
+      },
+      {
+        question: `${airlineName} koltuk seçimi ücretli mi?`,
+        answer: `Koltuk seçimi bazı fare türlerinde ücretsiz, bazılarında ücretlidir. Özel koltuklar (acil çıkış, ekstra bacak mesafesi) genellikle ek ücrete tabidir. Koltuk seçimi yapmak için size yardımcı olabiliriz.`
+      },
+      {
+        question: `${airlineName} refakatsiz çocuk hizmeti var mı?`,
+        answer: `Evet, ${airlineName} refakatsiz çocuk (UM - Unaccompanied Minor) hizmeti sunmaktadır. Genellikle 5-12 yaş arası çocuklar için zorunlu, 12-18 yaş arası için isteğe bağlıdır. Özel prosedürler ve ücretler için bizimle iletişime geçin.`
+      },
+      {
+        question: `${airlineName} evcil hayvan kabul ediyor mu?`,
+        answer: `${airlineName} belirli koşullar altında evcil hayvan taşımacılığı yapmaktadır. Kabin içi veya kargo bölümünde taşıma seçenekleri mevcuttur. Ağırlık, kafes ölçüleri ve gerekli belgeler için detaylı bilgi alabilirsiniz.`
+      },
+      {
+        question: `${airlineName} uçuşum iptal olursa ne yapmalıyım?`,
+        answer: `Uçuş iptali durumunda ${airlineName} size alternatif uçuş veya iade seçeneği sunar. Ayrıca yemek, konaklama gibi haklar da olabilir. Uçuş iptali durumunda hemen bizimle iletişime geçin, haklarınızı kullanmanıza yardımcı olalım.`
+      }
+    ];
   };
 
   // If it's general contact page (/iletisim), show general contact info
@@ -525,6 +579,17 @@ const AirlineContactPage = () => {
       />
       <Header />
        
+       {/* Breadcrumb Navigation */}
+       <div className="container mx-auto px-4 md:px-8 pt-6">
+         <nav className="text-sm text-gray-600 flex items-center gap-2">
+           <a href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</a>
+           <span>/</span>
+           <a href="/iletisim" className="hover:text-blue-600 transition-colors">İletişim</a>
+           <span>/</span>
+           <span className="text-gray-900 font-semibold">{airlineData.name}</span>
+         </nav>
+       </div>
+
        <div className="space-y-12">
          {/* Hero Section with Background */}
          <section className="relative -mx-0 -mt-6 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
@@ -981,8 +1046,47 @@ const AirlineContactPage = () => {
                    </li>
                  </ul>
                </div>
-             </div>
-           </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <HelpCircle className="h-6 w-6 text-purple-600" />
+              Sıkça Sorulan Sorular
+            </h2>
+            <p className="text-gray-600 mb-6">
+              {airlineData.name} hakkında en çok merak edilen sorular ve cevapları
+            </p>
+            <div className="space-y-3">
+              {getFaqData(airlineData.id, airlineData.name).map((faq, index) => (
+                <Collapsible 
+                  key={index}
+                  open={openFaqItems.includes(index)}
+                  onOpenChange={() => toggleFaqItem(index)}
+                >
+                  <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 hover:bg-gray-100 rounded-lg text-left transition-colors">
+                    <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
+                    <ChevronDown className={`h-5 w-5 text-gray-600 flex-shrink-0 transition-transform ${openFaqItems.includes(index) ? 'transform rotate-180' : ''}`} />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="p-4 bg-white border-l-4 border-purple-500 mt-1">
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </CollapsibleContent>
+                </Collapsible>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+              <p className="text-sm text-gray-700">
+                <strong>Daha fazla soru mu var?</strong> Uzman ekibimiz size yardımcı olmak için hazır. 
+                <a href="tel:08503089840" className="text-blue-600 hover:underline font-semibold ml-1">
+                  0850 308 98 40
+                </a> numaralı telefonu arayabilir veya{' '}
+                <a href="/hizmetler/sik-sorulan-sorular" className="text-blue-600 hover:underline font-semibold">
+                  genel SSS sayfamızı
+                </a> ziyaret edebilirsiniz.
+              </p>
+            </div>
+          </div>
 
           {/* Contact CTA */}
           <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
