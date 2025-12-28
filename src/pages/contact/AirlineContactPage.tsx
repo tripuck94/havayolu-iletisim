@@ -619,17 +619,12 @@ const AirlineContactPage = () => {
 
        <div className="space-y-12">
          {/* Hero Section with Background */}
-         <section className="relative -mx-0 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
-          <div className="absolute inset-0">
-            <img
-              src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_2400,h_1200,c_fill/unsplash-1529070538774-1843cb3265df.webp"
-              alt=""
-              className="h-full w-full object-cover"
-              loading="eager"
-            />
-             <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-slate-900/85" />
-             <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
-           </div>
+        <section className="relative -mx-0 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
+            <div className="absolute inset-0 opacity-10" style={{
+              backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
+            }} />
+          </div>
 
            <div className="container mx-auto px-4 md:px-8">
              <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
