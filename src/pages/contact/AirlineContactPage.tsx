@@ -580,19 +580,21 @@ const AirlineContactPage = () => {
       <Header />
        
        {/* Breadcrumb Navigation */}
-       <div className="container mx-auto px-4 md:px-8 pt-6">
-         <nav className="text-sm text-gray-600 flex items-center gap-2">
-           <a href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</a>
-           <span>/</span>
-           <a href="/iletisim" className="hover:text-blue-600 transition-colors">İletişim</a>
-           <span>/</span>
-           <span className="text-gray-900 font-semibold">{airlineData.name}</span>
-         </nav>
+       <div className="bg-gray-50 border-b border-gray-200">
+         <div className="container mx-auto px-4 md:px-8 py-3">
+           <nav className="text-sm text-gray-600 flex items-center gap-2">
+             <a href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</a>
+             <span>/</span>
+             <a href="/iletisim" className="hover:text-blue-600 transition-colors">İletişim</a>
+             <span>/</span>
+             <span className="text-gray-900 font-semibold">{airlineData.name}</span>
+           </nav>
+         </div>
        </div>
 
        <div className="space-y-12">
          {/* Hero Section with Background */}
-         <section className="relative -mx-0 -mt-6 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
+         <section className="relative -mx-0 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pb-16 pt-24 text-white">
            <div className="absolute inset-0">
              <img
                src="https://res.cloudinary.com/destek/image/upload/f_auto,fl_lossy,q_auto,w_2400,h_1200,c_fill/unsplash-1529070538774-1843cb3265df.webp"
@@ -612,14 +614,14 @@ const AirlineContactPage = () => {
                  className="h-28 w-28 drop-shadow-[0_12px_40px_rgba(0,0,0,0.4)] bg-white/10 backdrop-blur-sm rounded-2xl p-4"
                  loading="lazy"
                />
-               <div className="space-y-4">
-                 <h1 className="text-4xl font-bold tracking-tight md:text-6xl drop-shadow-2xl">
-                   {airlineData.name}
-                 </h1>
-                 <p className="mx-auto max-w-3xl text-lg text-white/90 md:text-xl drop-shadow-lg">
-                   {airlineData.description}
-                 </p>
-               </div>
+              <div className="space-y-4">
+                <h1 className="text-4xl font-bold tracking-tight md:text-6xl drop-shadow-2xl">
+                  {airlineData.name} İletişim
+                </h1>
+                <p className="mx-auto max-w-3xl text-lg text-white/90 md:text-xl drop-shadow-lg">
+                  {airlineData.description}
+                </p>
+              </div>
 
                <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-white">
                  <span className="flex items-center gap-2 rounded-full bg-white/15 px-5 py-2 backdrop-blur ring-1 ring-white/30">
@@ -823,9 +825,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bilet Satın Alma</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Yeni bilet rezervasyonu ve satın alma işlemleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Bilet Satın Alma</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Yeni bilet rezervasyonu ve satın alma işlemleri</p>
                  </div>
                </a>
 
@@ -838,9 +840,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bilet İptal ve İade</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Bilet iptal işlemleri ve iade süreçleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Bilet İptal ve İade</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Bilet iptal işlemleri ve iade süreçleri</p>
                  </div>
                </a>
 
@@ -853,9 +855,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bilet Değişikliği</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Tarih, saat ve rota değişiklik işlemleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Bilet Değişikliği</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Tarih, saat ve rota değişiklik işlemleri</p>
                  </div>
                </a>
 
@@ -868,9 +870,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Online Check-in</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Hızlı ve kolay online check-in işlemleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Online Check-in</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Hızlı ve kolay online check-in işlemleri</p>
                  </div>
                </a>
 
@@ -883,9 +885,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Bagaj Bilgileri</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Bagaj hakları, ek bagaj ve kayıp bagaj işlemleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Bagaj Bilgileri</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Bagaj hakları, ek bagaj ve kayıp bagaj işlemleri</p>
                  </div>
                </a>
 
@@ -898,9 +900,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Koltuk Seçimi</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Özel koltuk seçimi ve yerleştirme hizmetleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Koltuk Seçimi</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Özel koltuk seçimi ve yerleştirme hizmetleri</p>
                  </div>
                </a>
 
@@ -913,9 +915,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Özel Hizmetler</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Refakatsiz çocuk, evcil hayvan ve özel yardım</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Özel Hizmetler</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Refakatsiz çocuk, evcil hayvan ve özel yardım</p>
                  </div>
                </a>
 
@@ -928,9 +930,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Kayıp Bagaj</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Kayıp bagaj takibi ve bildirim işlemleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Kayıp Bagaj</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Kayıp bagaj takibi ve bildirim işlemleri</p>
                  </div>
                </a>
 
@@ -943,9 +945,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Sınıf Yükseltme</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Business ve First Class yükseltme işlemleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Sınıf Yükseltme</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Business ve First Class yükseltme işlemleri</p>
                  </div>
                </a>
 
@@ -958,9 +960,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">İsim Değişikliği</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Bilet üzerinde isim düzeltme işlemleri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} İsim Değişikliği</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Bilet üzerinde isim düzeltme işlemleri</p>
                  </div>
                </a>
 
@@ -973,9 +975,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Uçuş Durumu</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Gerçek zamanlı uçuş takibi ve gecikme bilgileri</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Uçuş Durumu</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Gerçek zamanlı uçuş takibi ve gecikme bilgileri</p>
                  </div>
                </a>
 
@@ -988,9 +990,9 @@ const AirlineContactPage = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                        </svg>
                      </div>
-                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Rezervasyon Yönetimi</h3>
-                   </div>
-                   <p className="text-sm text-gray-600">Mevcut rezervasyonlarınızı görüntüleme ve yönetme</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{airlineData.shortName} Rezervasyon Yönetimi</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">Mevcut rezervasyonlarınızı görüntüleme ve yönetme</p>
                  </div>
                </a>
              </div>
